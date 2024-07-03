@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block subtitulo %}Esqueci Senha{% endblock %}
+{% block conteudo %}
+
+<body> 
+    <div class="background-image"></div>
+    <div class="container">
+            <main class="container my-100 d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+                    <div class="col-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">
+                                    <form method="post">
+
+                                        <div class="formulario-inicio">
+                                            <br>   
+                                            <h3>Recuperação de Senha</h3>
+                                            <br>
+                                            <div class="conta p">
+                                            <p>
+                                                Informe o e-mail, o número de celular ou nome do usuário associado à sua conta para recuperação de senha
+                                            </p>
+                                            <br>
+                                            </div>
+                                            <input type="text" nome ="testesenhacompleto" id="txttestesenhacompleto" size="30" maxlength="20" autocomplete="off" required placeholder="Email, número de celular ou nome de usuário">
+                                        </div> 
+                                        <br>
+                                        <div>
+                                            <input type="submit" value="Avançar" class="big-button-green">
+                                            <br> <br> <br>
+                                        </div>
+                                        
+                                    </form>
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+{%endblock%}

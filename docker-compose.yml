@@ -1,0 +1,7 @@
+version: '3.8'
+services:
+  web:
+    container_name: tupa.cachoeiro.es
+    build: .
+    ports:
+      - "8209:8000"

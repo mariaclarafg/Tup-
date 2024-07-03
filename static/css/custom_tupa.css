@@ -1,0 +1,11 @@
+/* :root {
+    --bs-dark-rgb: 255, 255, 255;
+} */
+
+.cor-navbar {
+    background-color: rgb(255, 255, 255) !important;
+}
+
+.cor-borda {
+    border-color: var(--bs-border-color);
+}

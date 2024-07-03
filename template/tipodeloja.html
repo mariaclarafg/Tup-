@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block subtitulo %}Cadastro do Artesão{% endblock %}
+
+{% block carousel %}
+<nav id="navbar-example2" class="navbar navbar-dark" style="background-color: #0F2B05;">
+    <div class="container">
+        <a class="navbar-brand" href="#">Cadastro do Artesão</a>
+    </div>
+</nav>
+{% endblock %}
+
+{% block conteudo %}
+
+<main class="container my-5"> 
+    <div class="row justify-content-center"> 
+        <div class="col-auto text-between-bold">
+            Escolha o Tipo de Loja
+        </div>
+        <div class="divisoria-5 mx-4"></div> 
+        <div class="col-auto text-between">
+            Fornecer Informações
+        </div>
+        <div class="divisoria-5 mx-4"></div> 
+        <div class="col-auto text-between">
+            Finalizar
+        </div>
+    </div>
+    <br> <br>
+    <div class="row justify-content-center">
+        <div class="card text-bg-light mb-3" style="max-width: 18rem;">
+            <div class="card-body">
+                <i class="bi bi-person-circle custom-icon" ></i>
+                <h5 class="card-title">Loja Pessoal (CPF)</h5>
+                 <p class="card-text">
+                    <a href="/cadastro/artesao/fornecerinfocpf" value="Escolher" class="small-button-green">Escolher</a>
+                </p>
+            </div>
+        </div>
+            <div class="card text-bg-light mb-3" style="max-width: 18rem;">
+                <div class="card-body">
+                    <i class="bi bi-briefcase custom-icon"></i>
+                    <h5 class="card-title"> Loja Empresarial (CNPJ)</h5>
+                    <p class="card-text">
+                    <a href="/cadastro/artesao/fornecerinfocnpj" value="Escolher" class="small-button-green">Escolher</a>
+                    </p>
+                </div>
+            </div>   
+    </div>
+</main>
+
+
+{%endblock%}  

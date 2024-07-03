@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block subtitulo %}Principal{% endblock %}
+{% block conteudo %}
+
+<body> 
+    <div class="background-image"></div>
+    <div class="container">
+        <div class="row w-100 d-flex justify-content-center">
+            
+            <main class="container my-100 d-flex justify-content-center align-items-center" style="min-height: 90vh;">
+                    <div class="col-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">
+                                    <form method="post">
+
+                                        <div class="formulario-inicio">
+                                            <br>   
+                                            <h3>Entrar</h3>
+                                            <br>
+                                            <input type="text" nome ="Emailcompleto" id="txtemailcompleto" size="30" maxlength="20" autocomplete="off" required placeholder="Email">
+                                        </div> 
+                                        <div class="formulario-inicio">  
+                                            <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline" required placeholder="Senha">
+                                        </div>
+                                        <br> 
+                                        <div>
+                                            <input type="submit" value="Enviar" class="big-button-green">
+                                        </div>
+                                        <div class="conta p">
+                                        <br>
+                                        <p>
+                                            Esqueceu a senha?
+                                        </p>
+                                        <hr class="divisoria-1"> 
+                                        <p>
+                                            Ainda não possui cadastro?
+                                        </p>
+                                        </div>                                       
+                                        <div>
+                                            <a href="/conta/cadastro" value="Cadastre-se" class="big-button-gray">Cadastre-se</a>
+                                        </div>
+                                        <br>
+                                    </form>
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+{%endblock%}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/css/custom_tupa.css">
+    <title>Tupã</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light cor-navbar border-bottom">
+        <div class="container">
+            <div class="row w-100">
+                <div class="col-5">
+                    <div class="collapse navbar-collapse p-3" id="collapsibleNavId">
+                        <ul class="navbar-nav mt-2 mt-lg-0 w-100 d-flex justify-content-evenly">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/">Início</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/produtos">Produtos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/artesaos">Artesãos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/feed">Feed</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <a class="navbar-brand" href="#">
+                        <img src="/static/img/logo/logo_tupa.svg" alt="Logotipo" height="64">
+                    </a>
+                </div>
+                <div class="col-5 d-flex align-items-center">
+                    <ul class="navbar-nav mt-2 mt-lg-0 w-100 justify-content-evenly">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/cadastro/artesao/tipoloja">Seja um Artesão</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/conta">Conta</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/carrinho">
+                                <i class="bi bi-cart"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <form class="d-flex my-2 my-lg-0">
+                        <div class="input-group">
+                            <input type="text" class="form-control form-control-sm" placeholder="Buscar..." />
+                            <button class="btn bg-white border-1 border-start-0 cor-borda" type="button">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        </div>
+    </nav>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

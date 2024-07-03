@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block subtitulo %}Cadastro{% endblock %}
+{% block conteudo %}
+
+<body> 
+    <div class="background-image"></div>
+    <div class="container-fluid">
+        
+        <div class="row w-100 d-flex justify-content-center">
+            
+            <main class="container my-100 d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+                    <div class="col-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">
+                                    <form method="post">
+                                        
+                                        <div class="formulario-inicio">
+                                            <br>   
+                                            <h3>Cadastro</h3>
+                                            <br>
+                                            <input type="text" nome ="NomeCompletocompleto" id="txtnomecompleto" size="30" maxlength="30" autocomplete="off" required placeholder="Nome Completo">
+                                        </div> 
+                                        <div class="formulario-inicio">  
+                                            <input type="text" nome ="SenhaCompleta" id="txtdatadenascimento" size="30" maxlength="20" autocomplete="off" required placeholder="Data de Nascimento">
+                                        </div>
+                                        <div class="formulario-inicio">  
+                                            <input type="text" nome ="SenhaCompleta" id="txtsenhacompleta" size="30" maxlength="30" autocomplete="off" required placeholder="Email">
+                                        </div>
+                                        <div class="formulario-inicio">  
+                                            <input type="text" nome ="SenhaCompleta" id="txtsenhacompleta" size="30" maxlength="20" autocomplete="off" required placeholder="Senha">
+                                        </div>
+                                        <div class="formulario-inicio">  
+                                            <input type="text" nome ="SenhaConfirmeCompleta" id="txtsenhaconfirmecompleta" size="30" maxlength="20" autocomplete="off" required placeholder="Confirme a senha">
+                                        </div>
+                                        <br> 
+                                        <div>
+                                            <input type="submit" value="Cadastra-se" class="big-button-green">
+                                        </div>
+                                        <br>
+                                        <div class="conta p"> 
+                                            <p>
+                                                Ao se cadastrar você concorda com 
+                                            </p>
+                                            <p>
+                                                os Termos e Condições do site.
+                                            </p>
+                                        </div>
+                                    </form>
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+{%endblock%}

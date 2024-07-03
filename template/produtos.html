@@ -1,0 +1,269 @@
+{% extends "base.html" %}
+{% block subtitulo %}Produtos{% endblock %}
+{% block carousel %}
+<nav id="navbar-example2" class="navbar navbar-dark" style="background-color: #0F2B05;">
+    <div class="container">
+        <a class="navbar-brand" href="#">Produtos</a>
+    </div>
+</nav>
+{% endblock %}
+{% block conteudo %}
+<main class="container my-5">
+    <div class="title-container"> 
+        <h5 class="display-5"><b>CATEGORIAS</b></h5> 
+        <div class="divisoria-3"></div> 
+        <h5 class="display-6"><b>Ver tudo</b></h5> 
+    </div> 
+<br> 
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 row-cols-xxl-3 g-3">
+        <div class="col">
+            <div class="card">
+                <a href="/loja/produto">
+                    <img src="/static/img/Produtos/Categorias/bolsas.png" class="card-img-top w-200 abaproduto-img">
+                </a>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <a href="/loja/produto">
+                    <img src="/static/img/Produtos/Categorias/redes.png" class="card-img-top w-200 abaproduto-img">
+                </a>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <a href="/loja/produto">
+                    <img src="/static/img/Produtos/Categorias/quadros.png" class="card-img-top w-200 abaproduto-img">
+                </a>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="title-container"> 
+        <h5 class="display-5"><b>MATÉRIA-PRIMAS</b></h5> 
+        <div class="divisoria-3"></div> 
+        <h5 class="display-6"><b>Ver tudo</b></h5> 
+    </div> 
+<br> 
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 row-cols-xxl-3 g-3">
+        <div class="col">
+            <div class="card">
+                <a href="/loja/produto">
+                    <img src="/static/img/Produtos/MateriaPrima/barro.png" class="card-img-top w-200 abaproduto-img">
+                </a>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <a href="/loja/produto">
+                    <img src="/static/img/Produtos/MateriaPrima/macrame.png" class="card-img-top w-200 abaproduto-img">
+                </a>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <a href="/loja/produto">
+                    <img src="/static/img/Produtos/MateriaPrima/algodao.png" class="card-img-top w-200 abaproduto-img">
+                </a>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="title-container"> 
+        <h5 class="display-5"><b>GRUPOS E COMUNIDADES</b></h5> 
+        <div class="divisoria-2"></div> 
+        <h5 class="display-6"><b>Ver tudo</b></h5> 
+    </div> 
+<br> 
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 row-cols-xxl-3 g-3">
+        <div class="col">
+            <div class="card">
+                <a href="/loja/produto">
+                    <img src="/static/img/Produtos/GruposComunidades/figureiros.png" class="card-img-top w-200 abaproduto-img">
+                </a>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <a href="/loja/produto">
+                    <img src="/static/img/Produtos/GruposComunidades/cipozeiros.png" class="card-img-top w-200 abaproduto-img">
+                </a>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <a href="/loja/produto">
+                    <img src="/static/img/Produtos/GruposComunidades/ribeirinhos.png" class="card-img-top w-200 abaproduto-img">
+                </a>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="title-container"> 
+        <h5 class="display-5"><b>PRODUTOS PARA CASA</b></h5> 
+        <div class="divisoria-2"></div> 
+        <h5 class="display-6"><b>Ver tudo</b></h5> 
+    </div> 
+<br> 
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-4 g-3">
+        <div class="col">
+            <div class="card">
+                <a href="/loja/produto">
+                    <img src="/static/img/Produtos/ProdutosCasa/bordadoCafe.png" class="card-img-top w-100 produto-img">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title text-center mb-4">
+                        <a href="/loja/produto" class="text-decoration-none text-black">Porta Chaves</a>
+                    </h5>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p class="lead mb-0">R$ 250,00</p>
+                        <a href="/loja/carrinho" class="btn btn-light btn-heart">
+                            <i class="bi bi-heart"></i>
+                        </a>
+                    </div>                                     
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <a href="/loja/produto">
+                    <img src="/static/img/Produtos/ProdutosCasa/peixeFofo.jpg" class="card-img-top w-100 produto-img">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title text-center mb-4">
+                        <a href="/loja/produto" class="text-decoration-none text-black">Vaso de Cerâmica</a>
+                    </h5>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p class="lead mb-0">R$ 250,00</p>
+                        <a href="/loja/carrinho" class="btn btn-light btn-heart">
+                            <i class="bi bi-heart"></i>
+                        </a>
+                    </div>                                     
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <a href="/loja/produto">
+                    <img src="/static/img/Produtos/ProdutosCasa/portachave.png" class="card-img-top w-100 produto-img">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title text-center mb-4">
+                        <a href="/loja/produto" class="text-decoration-none text-black">Vaso de Cerâmica</a>
+                    </h5>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p class="lead mb-0">R$ 250,00</p>
+                        <a href="/loja/carrinho" class="btn btn-light btn-heart">
+                            <i class="bi bi-heart"></i>
+                        </a>
+                    </div>                                     
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <a href="/loja/produto">
+                    <img src="/static/img/Produtos/ProdutosCasa/vasoCeramica.jpg" class="card-img-top w-100 produto-img">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title text-center mb-4">
+                        <a href="/loja/produto" class="text-decoration-none text-black">Vaso de Cerâmica</a>
+                    </h5>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p class="lead mb-0">R$ 250,00</p>
+                        <a href="/loja/carrinho" class="btn btn-light btn-heart">
+                            <i class="bi bi-heart"></i>
+                        </a>
+                    </div>                                     
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="title-container"> 
+        <h5 class="display-5"><b>PRODUTOS PARA O CORPO</b></h5> 
+        <div class="divisoria-2"></div> 
+        <h5 class="display-6"><b>Ver tudo</b></h5> 
+    </div> 
+<br> 
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-4 g-3">
+        <div class="col">
+            <div class="card">
+                <a href="/loja/produto">
+                    <img src="/static/img/Produtos/ProdutosCorpo/panoBordadoLavanda.png" class="card-img-top w-100 produto-img">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title text-center mb-4">
+                        <a href="/loja/produto" class="text-decoration-none text-black">Vaso de Cerâmica</a>
+                    </h5>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p class="lead mb-0">R$ 250,00</p>
+                        <a href="/loja/carrinho" class="btn btn-light btn-heart">
+                            <i class="bi bi-heart"></i>
+                        </a>
+                    </div>                                     
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <a href="/loja/produto">
+                    <img src="/static/img/Produtos/ProdutosCorpo/bolsoCamiseta.png" class="card-img-top w-100 produto-img">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title text-center mb-4">
+                        <a href="/loja/produto" class="text-decoration-none text-black">Vaso de Cerâmica</a>
+                    </h5>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p class="lead mb-0">R$ 250,00</p>
+                        <a href="/loja/carrinho" class="btn btn-light btn-heart">
+                            <i class="bi bi-heart"></i>
+                        </a>
+                    </div>                                     
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <a href="/loja/produto">
+                    <img src="/static/img/Produtos/ProdutosCorpo/ecobag.png" class="card-img-top w-100 produto-img">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title text-center mb-4">
+                        <a href="/loja/produto" class="text-decoration-none text-black">Vaso de Cerâmica</a>
+                    </h5>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p class="lead mb-0">R$ 250,00</p>
+                        <a href="/loja/carrinho" class="btn btn-light btn-heart">
+                            <i class="bi bi-heart"></i>
+                        </a>
+                    </div>                                     
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <a href="/loja/produto">
+                    <img src="/static/img/Produtos/ProdutosCorpo/colete bordado.png" class="card-img-top w-100 produto-img">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title text-center mb-4">
+                        <a href="/loja/produto" class="text-decoration-none text-black">Vaso de Cerâmica</a>
+                    </h5>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p class="lead mb-0">R$ 250,00</p>
+                        <a href="/loja/carrinho" class="btn btn-light btn-heart">
+                            <i class="bi bi-heart"></i>
+                        </a>
+                    </div>                                     
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

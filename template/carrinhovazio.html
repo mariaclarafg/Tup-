@@ -1,0 +1,29 @@
+
+{% extends "base.html" %}
+{% block subtitulo %}Carrinho{% endblock %}
+
+{% block carousel %}
+<nav id="navbar-example2" class="navbar navbar-dark" style="background-color: #0F2B05;">
+    <div class="container">
+        <a class="navbar-brand" href="#">Carrinho</a>
+    </div>
+</nav>
+{% endblock %}
+
+
+{% block conteudo %}
+<br> <br>
+<div class="card text-bg-light mb-3" style="max-width: 80rem;">
+    <div class="card-body text-center"> 
+        <i class="bi bi-cart-x custom-icon"></i>
+        <h5 class="card-title"> Seu carrinho está vazio </h5>
+        <p class="card-text">
+            <a href="/produtos" value="Escolher" class="small-button-green">Ir às compras</a>
+        </p>
+        <br>
+    </div>
+</div>
+<br>
+
+
+{%endblock%}
