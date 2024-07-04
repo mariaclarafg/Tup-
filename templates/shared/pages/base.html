@@ -11,12 +11,12 @@
 
 </head>
 <body class="d-flex flex-column min-vh-100">
-    {% include "header.html" %}
+    {% include "includes/header.html" %}
     {% block carousel %}{% endblock %}
     <main class="container">
         {% block conteudo %}{% endblock %}
     </main>
-    {% include "footer.html" %}
+    {% include "includes/footer.html" %}
     <script src="/static/lib/bootstrap/js/bootstrap.bundle.js"></script>
 </body>
 </html>
