@@ -13,3 +13,7 @@ templates = obter_jinja_templates("templates/artesaos")
 @router.get("/cadastro/fornecerinformacoescnpj", response_class=HTMLResponse)
 async def get_root(request: Request):
     return templates.TemplateResponse("pages/cadastro/fornecerinformacoescnpj.html", {"request": request})
+
+@router.get("/cadastro/fornecerinformacoescpf", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/cadastro/fornecerinformacoescpf.html", {"request": request})
