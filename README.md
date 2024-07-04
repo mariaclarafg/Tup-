@@ -1,4 +1,4 @@
-﻿# Tupa.com Alice
+﻿# Tupa.com
 
 # Membros do grupo
 1. Maria Luiza Calvi
