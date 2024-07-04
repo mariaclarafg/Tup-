@@ -25,3 +25,24 @@ async def get_root(request: Request):
 @router.get("/entrar/cadastro", response_class=HTMLResponse)
 async def get_root(request: Request):
     return templates.TemplateResponse("pages/entrarcadastro.html", {"request": request})
+
+@router.get("/entrar/esquecisenha", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/entraresquecisenha.html", {"request": request})
+
+@router.get("/feed", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/feed.html", {"request": request})
+
+@router.get("/index", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/index.html", {"request": request})
+
+@router.get("/produtos", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/produtos.html", {"request": request})
+
+@router.get("/sejaartesao/tipoloja", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/tipodeloja.html", {"request": request})
+
