@@ -8,8 +8,8 @@
 
 # Rotas feitas por cada membro
 1. Maria Calvi - /produtos - /artesaos
-2. Maria Clara - /base - /index
-3. Alice Fin - /conta - /conta/esquecisenha - /conta/cadastro - /cadastro/artesao/tipoloja
+2. Maria Clara - /
+3. Alice Fin - /entrar - /entrar/esquecisenha - /entrar/cadastro - /sejaartesao/tipoloja - artesaos/cadastro/fornecerinformacoescpf - artesaos/cadastro/fornecerinformacoescnpj
 4. Helena - /feed - /carrinho
  
 
