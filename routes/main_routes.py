@@ -49,4 +49,3 @@ async def get_root(request: Request):
 @router.get("/idk", response_class=HTMLResponse)
 async def get_root(request: Request):
     return templates.TemplateResponse("pages/idk.html", {"request": request})
-

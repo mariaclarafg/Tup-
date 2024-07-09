@@ -20,4 +20,4 @@ async def get_root(request: Request):
 
 @router.get("/centraldoartesao/listadetarefas", response_class=HTMLResponse)
 async def get_root(request: Request):
-    return templates.TemplateResponse("pages/central/listatarefas.html", {"request": request})
+    return templates.TemplateResponse("pages/central/listatarefas", {"request": request})
