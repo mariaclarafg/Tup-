@@ -432,3 +432,24 @@ body, html {
     background-color: #081803;
 }
 
+.modal {
+    width: 300px;
+  }
+  .modal-content {
+    width: 300px;
+  }
+  .list-group-item:hover {
+    background-color: rgba(59, 57, 57, 0.164) !important;
+  }
+
+.sidebar-wrapper {
+    width: 250px;
+    position: fixed;
+    height: 100%;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.container-fluid {
+    margin-left: 250px; /* Ajusta a margem para que o conteúdo não fique atrás do sidebar */
+}
