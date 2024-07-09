@@ -17,3 +17,7 @@ async def get_root(request: Request):
 @router.get("/cadastro/fornecerinformacoescpf", response_class=HTMLResponse)
 async def get_root(request: Request):
     return templates.TemplateResponse("pages/cadastro/fornecerinformacoescpf.html", {"request": request})
+
+@router.get("/centraldoartesao/listadetarefas", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/central/listatarefas.html", {"request": request})
