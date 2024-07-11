@@ -7,8 +7,47 @@
     <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="/css/custom_tupa.css">
     <title>Tupã</title>
-</head>
+    <style>
+        /* Custom CSS */
+        .navbar-nav .nav-item {
+            position: relative;
+        }
 
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 155%;
+            left: 0;
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 200px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .navbar-nav .nav-item:hover .dropdown-menu,
+        .navbar-nav .nav-item.show .dropdown-menu {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .nav-link.no-arrow:after {
+            display: none;
+        }
+
+        .navbar-expand-sm {
+            transition: height 0.3s ease-in-out;
+        }
+
+        .navbar-expanded {
+            height: auto !important;
+        }
+    </style>
+</head>
 <body>
     <nav class="navbar navbar-expand-sm navbar-light bg-light cor-navbar border-bottom">
         <div class="container">
@@ -19,11 +58,25 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="/">Início</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/produtos">Produtos</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link no-arrow" href="/produtos" id="navbarDropdownProdutos" role="button">
+                                    Produtos
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownProdutos" id="filter-box-produtos">
+                                    <a class="dropdown-item" href="#">Filtro 1</a>
+                                    <a class="dropdown-item" href="#">Filtro 2</a>
+                                    <a class="dropdown-item" href="#">Filtro 3</a>
+                                </div>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/artesaos">Artesãos</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link no-arrow" href="/artesaos" id="navbarDropdownArtesaos" role="button">
+                                    Artesãos
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownArtesaos" id="filter-box-artesaos">
+                                    <a class="dropdown-item" href="#">Filtro 1</a>
+                                    <a class="dropdown-item" href="#">Filtro 2</a>
+                                    <a class="dropdown-item" href="#">Filtro 3</a>
+                                </div>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/feed">Feed</a>
@@ -66,8 +119,28 @@
             aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        </div>
     </nav>
-    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navbar = document.querySelector('.navbar');
+            const dropdowns = document.querySelectorAll('.nav-item.dropdown');
+
+            dropdowns.forEach(dropdown => {
+                dropdown.addEventListener('mouseenter', function () {
+                    navbar.classList.add('navbar-expanded');
+                    this.querySelector('.dropdown-menu').classList.add('show');
+                });
+
+                dropdown.addEventListener('mouseleave', function () {
+                    navbar.classList.remove('navbar-expanded');
+                    this.querySelector('.dropdown-menu').classList.remove('show');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
