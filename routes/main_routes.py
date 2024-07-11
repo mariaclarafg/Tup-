@@ -46,6 +46,6 @@ async def get_root(request: Request):
 async def get_root(request: Request):
     return templates.TemplateResponse("pages/tipodeloja.html", {"request": request})
 
-@router.get("/idk", response_class=HTMLResponse)
+@router.get("/carrinho", response_class=HTMLResponse)
 async def get_root(request: Request):
-    return templates.TemplateResponse("pages/idk.html", {"request": request})
+    return templates.TemplateResponse("pages/carrinho.html", {"request": request})

@@ -1,13 +1,10 @@
 {% extends "pages/base.html" %}
 {% block subtitulo %}Cadastro{% endblock %}
 {% block conteudo %}
-
 <body> 
     <div class="background-image"></div>
-    <div class="container-fluid">
-        
-        <div class="row w-100 d-flex justify-content-center">
-            
+    <div class="container-fluid">        
+        <div class="row w-100 d-flex justify-content-center">            
             <main class="container my-100 d-flex justify-content-center align-items-center" style="min-height: 80vh;">
                     <div class="col-4">
                         <div class="card">
@@ -40,10 +37,10 @@
                                         <br>
                                         <div class="conta p"> 
                                             <p>
-                                                Ao se cadastrar você concorda com 
+                                                Ao se cadastrar você concorda com os
                                             </p>
                                             <p>
-                                                os Termos e Condições do site.
+                                                <a href="#" style="color: inherit;">Termos e Condições</a>
                                             </p>
                                         </div>
                                     </form>
@@ -54,6 +51,5 @@
                 </div>
             </main>
         </div>
-    </div>
-    
+    </div>    
 {%endblock%}
