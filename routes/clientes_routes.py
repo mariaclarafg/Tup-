@@ -10,14 +10,6 @@ router = APIRouter(prefix="/conta")
 templates = obter_jinja_templates("templates/cliente")
 
 
-@router.get("/centropessoal/meuperfil", response_class=HTMLResponse)
+@router.get("/centropessoal/perfil", response_class=HTMLResponse)
 async def get_root(request: Request):
     return templates.TemplateResponse("pages/centroPessoal/perfil.html", {"request": request})
-
-@router.get("/cadastro/fornecerinformacoescpf", response_class=HTMLResponse)
-async def get_root(request: Request):
-    return templates.TemplateResponse("pages/cadastro/fornecerinformacoescpf.html", {"request": request})
-
-@router.get("/centraldoartesao/listadetarefas", response_class=HTMLResponse)
-async def get_root(request: Request):
-    return templates.TemplateResponse("pages/central/listatarefas.html", {"request": request})
