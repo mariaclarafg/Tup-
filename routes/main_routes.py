@@ -49,3 +49,7 @@ async def get_root(request: Request):
 @router.get("/carrinho", response_class=HTMLResponse)
 async def get_root(request: Request):
     return templates.TemplateResponse("pages/carrinho.html", {"request": request})
+
+@router.get("/suporte", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/suporte.html", {"request": request})

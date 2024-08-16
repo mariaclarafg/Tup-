@@ -1,0 +1,237 @@
+{% extends "pages/base.html" %}
+{% block subtitulo %}Suporte{% endblock %}
+{% block carousel %}
+<nav id="navbar-example2" class="navbar navbar-dark" style="background-color: #0F2B05;">
+    <div class="container">
+        <a class="navbar-brand">Suporte</a>
+    </div>
+</nav>
+{% endblock %}
+{% block conteudo %}
+
+<style>
+    .section-title {
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background-color: #ffffff;
+        margin-bottom: 10px;
+        border: none; /* Remover a borda */
+    }
+    .section-title:hover {
+        background-color: #e2e6ea;
+    }
+    .section-content {
+        display: none;
+        padding: 10px;
+        border: none; /* Remover a borda */
+        border-top: none;
+    }
+    .arrow {
+        font-size: 1.2rem;
+        transition: transform 0.3s;
+    }
+    .arrow.down {
+        transform: rotate(90deg);
+    }
+    .arrow.up {
+        transform: rotate(0deg);
+    }
+    .section-title span {
+        font-size: 1.4rem; /* Ajuste o tamanho conforme necessário */
+    }
+    
+
+</style>
+
+</head>
+
+<body>
+    <div class="container mt-5">
+
+        <!-- Termos de Uso -->
+        <div class="section">
+            <div class="section-title" onclick="toggleSection('termosDeUso')">
+                <span>Termos de Uso</span>
+                <span id="arrow-termosDeUso" class="arrow down">&#9654;</span>
+            </div>
+            <div id="termosDeUso" class="section-content">
+                <p><b> 1. Aceitação dos Termos</b></p>
+                <p>Ao acessar e utilizar nosso site, você concorda em cumprir e estar legalmente vinculado aos seguintes Termos de Uso. Se você não concordar com estes termos, por favor, não utilize o site. </p>
+                <p><b>2. Criação e Gestão de Lojas Virtuais</b></p>
+                <p>Artesãos podem criar e gerenciar suas lojas virtuais, onde poderão expor diferentes produtos artesanais. A criação e gestão da loja estão sujeitas ao plano de assinatura escolhido.</p>
+                <p><b>3. Planos de Assinatura</b></p>
+                <p>Os Artesãos podem escolher entre três planos de assinatura:</p>
+                <p>- Gratuito: Acesso limitado às funcionalidades básicas do site.</p>
+                <p>- Premium: Acesso completo a todas as funcionalidades do site mediante pagamento mensal.</p>
+                <p><b>4. Personalização de Produtos</b></p>
+                <p>Os Clientes podem solicitar personalizações de produtos através de um chat direto com o Artesão. Além disso, podem fazer postagens de demandas para produtos personalizados.</p>
+                <p><b>5. Avaliações e Denúncias</b></p>
+                <p>Clientes e Artesãos podem fazer avaliações de produtos, outros Clientes e Artesãos. Também é possível realizar denúncias de produtos, Clientes ou Artesãos que violem estes Termos de Uso ou qualquer legislação aplicável.</p>
+                <p><b>6. Regras de Conduta</b></p>
+                <p>- Para Artesãos:</p>
+                <p>- Garantir que todas as informações fornecidas sobre os produtos são precisas.</p>
+                <p>- Entregar os produtos conforme descritos e no prazo acordado.</p>
+                <p>- Respeitar as solicitações de personalização acordadas com o Cliente.</p>
+                <p>- Para Clientes:</p>
+                <p>- Fornecer informações claras e precisas ao solicitar personalizações.</p>
+                <p>- Respeitar os direitos dos Artesãos e outros usuários do site.</p>
+                <p><b>7. Política de Pagamento</b></p>
+                <p>Todos os pagamentos de assinaturas e transações de compra de produtos devem ser realizados através dos métodos de pagamento disponibilizados no site.</p>
+                <p><b>8. Reembolso e Cancelamento</b></p>
+                <p>- Para Planos de Assinatura: Os reembolsos são realizados conforme a política de reembolso detalhada na página de assinaturas. O cancelamento pode ser solicitado a qualquer momento, mas não haverá reembolso para períodos já faturados.</p>
+                <p>- Para Compras de Produtos: Reembolsos e devoluções de produtos são gerenciados diretamente entre o Cliente e o Artesão, de acordo com as políticas de cada loja.</p>
+                <p><b>9. Propriedade Intelectual</b></p>
+                <p>Todos os conteúdos do site, incluindo texto, gráficos, logotipos, ícones, imagens, clipes de áudio e software, são de propriedade do site ou de seus fornecedores de conteúdo e protegidos por leis de direitos autorais.</p>
+                <p><b>10. Limitação de Responsabilidade</b></p>
+                <p>O site não se responsabiliza por quaisquer danos diretos, indiretos, incidentais, especiais ou consequenciais resultantes do uso ou da incapacidade de uso do site.</p>
+                <p><b>11. Lei Aplicável e Jurisdição</b></p>
+                <p>Estes Termos de Uso são regidos pelas leis do país em que o site está registrado. Quaisquer disputas relacionadas ao uso do site serão resolvidas exclusivamente nos tribunais dessa jurisdição.</p>
+                <p><b>12. Contato</b></p>
+                <p>Para quaisquer questões ou dúvidas sobre estes Termos de Uso, entre em contato conosco através dos meios disponibilizados no site.</p>
+                <p>Última atualização: 16/08/2024</p>
+                <p>Aceitação dos Termos</p>
+                <p>Ao utilizar nosso site, você confirma que leu, entendeu e concorda com todos os termos acima.</p>
+            </div>
+        </div>
+        <hr>
+
+                <!-- Termos de Uso -->
+            <div class="section">
+                <div class="section-title" onclick="toggleSection('trocaDevolucao')">
+                    <span>Política de Troca e Devolução</span>
+                    <span id="arrow-trocaDevolucao" class="arrow down">&#9654;</span>
+                </div>
+                <div id="trocaDevolucao" class="section-content">
+                    <p><b>1. Prazo para Troca e Devolução</b></p>
+                    <p>- Troca: Você tem até 30 dias corridos a partir da data de recebimento do produto para solicitar uma troca.</p>
+                    <p>- Devolução: Você tem até 7 dias corridos a partir da data de recebimento do produto para solicitar a devolução e reembolso integral, conforme o Código de Defesa do Consumidor.</p>
+                    <p><b>2. Condições para Troca e Devolução</b></p>
+                    <p>Para ser elegível para uma troca ou devolução, o produto deve atender às seguintes condições:</p>
+                    <p>- Estar em sua embalagem original, com todas as etiquetas e selos intactos.</p>
+                    <p>- Não apresentar sinais de uso, lavagem ou qualquer tipo de alteração.</p>
+                    <p>- Acompanhar todos os acessórios e manuais recebidos.</p>
+                    <p><b>3. Procedimento para Solicitação de Troca ou Devolução</b></p>
+                    <p>- Entre em contato com nosso Serviço de Atendimento ao Cliente pelo e-mail [email de contato] ou telefone [número de telefone].</p>
+                    <p>- Informe o número do pedido, o motivo da troca ou devolução e, se possível, anexe fotos do produto em questão.</p>
+                    <p>- Aguarde as instruções de nossa equipe para envio do produto.</p>
+                    <p><b>4. Custos de Envio</b></p>
+                    <p>- Troca: A primeira troca é gratuita. Para trocas subsequentes, o cliente arcará com os custos de envio.</p>
+                    <p>- **Devolução**: Em caso de devolução por defeito ou erro de envio, os custos de frete serão de nossa responsabilidade. Para devoluções por outros motivos, o custo de envio será por conta do cliente.</p>
+                    <p><b>5. Análise e Aprovação</b></p>
+                    <p>- Após o recebimento do produto em nosso centro de distribuição, realizaremos uma análise para verificar se o produto atende às condições descritas acima.</p>
+                    <p>- O prazo para análise é de até 7 dias úteis após o recebimento do produto.</p>
+                    <p><b>6. Restituição dos Valores</b></p>
+                    <p>- Reembolso: O reembolso será processado na mesma forma de pagamento utilizada na compra, e o prazo para visualização do crédito pode variar conforme a operadora do cartão ou instituição bancária.</p>
+                    <p><b>7. Exceções</b></p>
+                    <p>- Produtos personalizados ou feitos sob encomenda não são elegíveis para troca ou devolução, exceto em casos de defeitos.</p>
+                    <p><b>8. Contato</b></p>
+                    <p>Para quaisquer dúvidas ou informações adicionais, entre em contato com nossa equipe de Atendimento ao Cliente na seção abaixo.</p>
+                </div>
+            </div>
+<hr>
+        <!-- FAQs -->
+        <div class="section">
+            <div class="section-title" onclick="toggleSection('faqs')">
+                <span>FAQ's</span>
+                <span id="arrow-faqs" class="arrow down">&#9654;</span>
+            </div>
+            <div id="faqs" class="section-content">
+                <p><b>1. O que é o site?</b></p>
+                <p>Nosso site é uma plataforma de compra e venda de produtos artesanais onde artesãos podem criar lojas virtuais para expor seus produtos e clientes podem comprar itens únicos e personalizados diretamente dos artesãos.</p>
+                <p><b>2. Como faço para criar uma loja virtual?</b></p>
+                <p>Para criar uma loja virtual, você precisa se cadastrar como artesão, selecionar um plano de assinatura (Gratuito, Básico ou Premium) e seguir as instruções fornecidas para configurar sua loja e adicionar seus produtos.</p>
+                <p><b>3. Quais são os planos de assinatura disponíveis para os artesãos?</b></p>
+                <p>Oferecemos dois planos de assinatura:</p>
+                <p>- Gratuito: Acesso limitado às funcionalidades básicas do site.</p>
+                <p>- Premium: Acesso completo a todas as funcionalidades do site mediante pagamento mensal.</p>
+                <p><b>4. Como funciona a personalização de produtos?</b></p>
+                <p>Os clientes podem solicitar personalizações diretamente aos artesãos através de um chat no site. Além disso, é possível fazer postagens de demandas para produtos personalizados, detalhando as especificações desejadas.</p>
+                <p><b>6. Posso denunciar um produto ou usuário?</b></p>
+                <p>Após a compra de um produto, você pode deixar uma avaliação na página do produto ou da loja do artesão. As avaliações ajudam outros clientes a tomar decisões informadas.</p>
+                <p><b>7. Quais são os métodos de pagamento aceitos?</b></p>
+                <p>Aceitamos diversos métodos de pagamento, incluindo cartões de crédito, débito e outras formas de pagamento online. Todos os pagamentos são processados de forma segura através de nossos parceiros de pagamento.</p>
+                <p><b>8. Posso cancelar minha assinatura?</b></p>
+                <p>Sim, você pode cancelar sua assinatura a qualquer momento. No entanto, não haverá reembolso para períodos já faturados. As instruções para cancelamento estão disponíveis na sua área de usuário.</p>
+                <p><b>9. Como funcionam os reembolsos e devoluções?</b></p>
+                <p>Os reembolsos e devoluções de produtos são gerenciados diretamente entre o cliente e o artesão, de acordo com as políticas de cada loja. Recomendamos que você entre em contato diretamente com o artesão para resolver quaisquer questões relacionadas a reembolsos ou devoluções.</p>
+                <p><b>10. O que faço se tiver um problema com um pedido?</b></p>
+                <p>Se tiver algum problema com seu pedido, entre em contato diretamente com o artesão através do chat disponível no site. Caso não consiga resolver o problema, você pode entrar em contato com nossa equipe de suporte para assistência adicional.</p>
+                <p><b>11. Como posso entrar em contato com o suporte ao cliente?</b></p>
+                <p>Você pode entrar em contato com nosso suporte ao cliente através da página de contato no site. Estamos aqui para ajudar com qualquer dúvida ou problema que você possa ter.</p>
+                <p><b>12. Como posso atualizar minhas informações de conta?</b></p>
+                <p>Você pode atualizar suas informações de conta acessando a área de configurações da sua conta no site. Lá você pode alterar seu endereço de e-mail, senha e outras informações pessoais.</p>
+                <p><b>13. Posso vender produtos não artesanais no site?</b></p>
+                <p>Não, o foco do nosso site é exclusivamente em produtos artesanais. Produtos que não atendam a essa descrição serão removidos.</p>
+                <p><b>14. Como posso saber mais sobre um artesão antes de comprar?</b></p>
+                <p>Você pode visitar a página da loja do artesão, onde encontrará informações sobre o artesão, avaliações de outros clientes e uma lista completa dos produtos disponíveis.</p>
+                <p><b>15. Há um limite de produtos que posso listar em minha loja?</b></p>
+                <p>O limite de produtos que você pode listar depende do plano de assinatura que você escolher. Consulte a página de planos de assinatura para mais detalhes.</p>
+                <p><b>16. Como faço para postar uma demanda para um produto personalizado?</b></p>
+                <p>Você pode postar uma demanda para um produto personalizado na seção de demandas do site. Descreva o que você está procurando, e artesãos interessados poderão entrar em contato com você para discutir os detalhes.</p>
+                <p><b>17. Posso mudar de plano de assinatura?</b></p>
+                <p>Sim, você pode mudar de plano de assinatura a qualquer momento. As mudanças entrarão em vigor imediatamente, e qualquer diferença de valor será ajustada na próxima fatura.</p>
+                <p><b>18. O que devo fazer se encontrar um problema técnico no site?</b></p>
+                <p>Se você encontrar um problema técnico, entre em contato com nosso suporte ao cliente imediatamente. Estamos aqui para garantir que sua experiência no site seja a melhor possível.</p>
+                <br>
+                <p>Se você tiver outras perguntas que não foram respondidas aqui, não hesite em entrar em contato conosco. Estamos sempre prontos para ajudar!</p>
+            </div>
+        </div>
+<hr>
+        <!-- Fale Conosco -->
+        <div class="section">
+            <div class="section-title" onclick="toggleSection('faleConosco')">
+                <span>Fale Conosco</span>
+                <span id="arrow-faleConosco" class="arrow down">&#9654;</span>
+            </div>
+            <div id="faleConosco" class="section-content">
+                <p>Em caso de dúvidas, trocas, devoluções, reclamações e problemas técnicos com o site  basta preencher o formulário abaixo que daremos início a seu atendimento. </p>
+                <p>O contato também pode ser feito através do email:  suporte@tupaartesanatos.com</p>
+                <form>
+                    <div class="card"> 
+                        <div class="card-body" class="row justify-content-center"> 
+                            <br> 
+                            <div class="row g-3 align-items-center mb-3"> 
+                                <div class="col-md-3"> 
+                                    <input type="text" id="inputNome" class="form-control" aria-describedby="nomeHelpInline" required placeholder="Nome completo"> 
+                                </div> 
+                            </div>                         
+                            <div class="row g-3 align-items-center mb-3"> 
+                                <div class="col-md-3"> 
+                                  <label for="inputDataNascimento" class="col-form-label"></label> 
+                                </div> 
+                                <div class="col-md-8"> 
+                                  <input type="text" id="inputDataNascimento" class="form-control" aria-describedby="dataNascimentoHelpInline" required placeholder="Complemento (Opcional)"> 
+                                </div> 
+                            </div> 
+                        </div> 
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </div>
+        </div>
+        <br>
+        <br>
+
+    <!-- Bootstrap JS e dependências -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleSection(sectionId) {
+            const content = document.getElementById(sectionId);
+            const arrow = document.getElementById('arrow-' + sectionId);
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+                arrow.classList.remove("down");
+                arrow.classList.add("up");
+            } else {
+                content.style.display = "none";
+                arrow.classList.remove("up");
+                arrow.classList.add("down");
+            }
+        }
+    </script>
+</body>
+</html>
+{% endblock %}
