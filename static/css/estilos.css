@@ -405,8 +405,8 @@ body, html {
     line-height: 15px;
 } 
 
-.big-button-gray:hover {
-    background-color: darkgray;
+.big-button-green:hover {
+    background-color: #061002;
 }
  
 
