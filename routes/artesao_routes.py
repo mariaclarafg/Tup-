@@ -25,3 +25,27 @@ async def get_root(request: Request):
 @router.get("/centraldoartesao/produtoscadastrados", response_class=HTMLResponse)
 async def get_root(request: Request):
     return templates.TemplateResponse("pages/central/produtosCadastrados.html", {"request": request})
+
+@router.get("/centraldoartesao/adicionarprodutos", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/central/addProdutos.html", {"request": request})
+
+@router.get("/centraldoartesao/chat", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/central/chat.html", {"request": request})
+
+@router.get("/centraldoartesao/revisoes", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/central/revisoes.html", {"request": request})
+
+@router.get("/centraldoartesao/demandas", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/central/demandas.html", {"request": request})
+
+@router.get("/centraldoartesao/perfildaloja", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/central/perfilLoja.html", {"request": request})
+
+@router.get("/centraldoartesao/configuracoesloja", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/central/configuracoesLoja.html", {"request": request})
