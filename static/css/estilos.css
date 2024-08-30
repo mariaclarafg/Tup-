@@ -529,10 +529,10 @@ img.rounded-full {
     color: #0F2b05;
 }
 
-.select-ass {
+.assn {
     display: flex;
-    font-size: 10px;
+    font-size: 15px;
     padding:  1rem; 
-    color: #0F2b05;
+    color: #7f8891;
     font-weight: bold;
 }
