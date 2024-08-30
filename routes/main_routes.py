@@ -54,6 +54,6 @@ async def get_root(request: Request):
 async def get_root(request: Request):
     return templates.TemplateResponse("pages/suporte.html", {"request": request})
 
-@router.get("/feedhome", response_class=HTMLResponse)
+@router.get("/feedhelena", response_class=HTMLResponse)
 async def get_root(request: Request):
     return templates.TemplateResponse("pages/feed/feedhome.html", {"request": request})
