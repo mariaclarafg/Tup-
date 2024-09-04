@@ -11,7 +11,7 @@
 <body class="d-flex flex-column min-vh-100 bg-green">
     <main class="d-flex flex-column flex-grow-1">
         <div class="d-flex flex-grow-1">
-            <aside class="coluna-esquerda p-3 d-flex flex-column justify-content-between">
+            <aside class="coluna-esquerda p-3 d-flex flex-column justify-content-between bg-white mr-5">
                 <div>
                     <div class="profile-section mb-3">
                         <i class="bi bi-person-circle custom-icon" class="img-thumbnail rounded-full" style="color: #0F2B05;"></i>
@@ -40,18 +40,64 @@
                 </div>
 
             </aside>
-            <section class="flex-grow-1 p-3">
-                <div class="card text">
-                    <div class="card-body">
-                      <h5 class="card-title">Lista de Tarefas</h5>
-                      <p class="card-text">Coisas que você precisa gerenciar.</p>
-                    </div>
-                    <div class="card-footer text-body-secondary">
-                      
-                    </div>
-                  </div>            
+            <section class="flex-grow-1 p-3 bg-light">
+              <h4 class="mb-4 mt-5"><strong>Novo Produto</strong></h4> 
+                
+              <div class="card bg-white card-externo">
+                <div class="card-body">
+                  <h5 class="card-title mb-4">0 Produtos</h5>
+                    <!-- Card interno -->
+                    <div class="card text">
+                        <!-- Barra cinza com título -->
+                        <div class="card-header bg-secondary bg-light text-black">
+                            <h6 class="m-0 smaller-text">Produto(s)</h6>
+                        </div>
+                        
+                        <div class="card-body text-center">
+        
+                            <a href="#adicionarProduto" class="btn btn-custom">
+                              <i class="bi bi-plus-lg fa-2x"></i> 
+                            </a>
+                            <div class="mt-2">
+                              <small class="text-muted">Adicionar Produto</small>
+                          </div>
+                        </div>
+                    </div>            
+                </div>
+            </div>             
                 
             </section>
+
+            <style>
+              .btn-custom {
+                  background-color: white; 
+                  color: #868686; 
+                  border: none; 
+                  font-size: 1.25rem; 
+                  font-weight: bold; 
+                  padding: 0.75rem 1.5rem; 
+              }
+              
+              .btn-custom:hover {
+                  background-color: #f8f9fa; 
+                  border-color: #7c7c7c; 
+                  color: #777777; 
+              }
+
+              .card-body small {
+                color: #757575; /
+              }
+
+              .smaller-text {
+                font-size: 0.80rem; 
+                color: #535353;
+              }
+              .card-externo {
+                min-height: 300px; 
+                padding-bottom: 2rem;
+                }
+          </style>
+
         </div>
     </main>
 </body>
