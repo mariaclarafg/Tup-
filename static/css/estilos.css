@@ -532,7 +532,7 @@ img.rounded-full {
 .assn {
     display: flex;
     font-size: 15px;
-    padding:  1rem; 
+    padding:  0rem; 
     color: #7f8891;
     font-weight: bold;
 }
