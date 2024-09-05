@@ -18,9 +18,9 @@
                         <p class="lead">Nome da loja</p>
                     </div>
                     <nav class="nav nav-pills flex-column mt-2">
-                      <span class="text-dark-beige"><i></i>Tarefas</span>
+                      <span class="text-dark-beige"><i></i>Pedidos</span>
                       <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/listadetarefas">
-                          <i class="bi bi-clipboard-data-fill"></i><strong>Lista de tarefas</strong>
+                          <i class="bi bi-clipboard-data-fill"></i><strong>Gerenciar Pedidos</strong>
                       </a>
                   </nav>                  
                     <nav class="nav nav-pills flex-column mt-3">
@@ -42,7 +42,7 @@
                 </div>
 
             </aside>
-            <section class="flex-grow-1 p-3 bg-light">
+            <section class="flex-grow-1 p-3 " style="background-color: #f3f3f3;">
               <br>
                 <div class="card text" style="border: none;">
                     <div class="card-body">
@@ -51,11 +51,11 @@
                       <p class="card-text">Coisas que você precisa gerenciar.</p>
                       <br>
 
-                      <!-- Seções de tarefas com bordas laterais -->
+                      
                       <div class="row text-center">
                           <div class="col-3" style="border-right: 1px solid #ccc;">
                               <div>
-                                  <p class="display-6">0</p>
+                                  <p class="display-6">1</p>
                                   <p>Pedidos Não Pagos</p>
                               </div>
                           </div>
@@ -108,8 +108,32 @@
                       <br>
                     </div>
                     
-                  </div>            
-                
+                  </div> 
+                <div class="card bg-white mt-5" style="border: none;">
+                  <div class="card-body">
+                    <h5 class="card-title">Pedidos Não Pagos</h5>
+                    <hr>
+                    <div class="card" style="border: none;" >
+                        <div class="card-body">
+                            <ul class="list-group" style="border: none;">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div class="d-flex align-items-center">
+                                        <img src="/static/img/Produtos/ProdutosCasa/banco.jpeg" alt="Produto 1" class="img-fluid rounded mb-3" style="width: 60px; height: 60px; margin-right: 20px;">
+                                        <div>
+                                            <p class="m-0"><strong>Banco de Madeira Rústico</strong></p>
+                                            <br>
+                                            <p style="color: #4d4d4d;">Quantidade: 1 | Preço: R$150,00 | Produto para Casa</p>
+                                            <p style="color: #4d4d4d;">Comprador: João da Silva</p>
+                                            <p style="color: #4d4d4d;">Pedido Nº: 123456</p>
+                                            <p style="color: #4d4d4d;">Forma de Pagamento: Cartão de Crédito</p>
+                                        </div>
+                                    </div>
+                                    <span style="color: #ac0505;">Aguardando Pagamento</span>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
             </section>
         </div>
     </main>
