@@ -45,18 +45,62 @@
                 
               <div class="card bg-white card-externo">
                 <div class="card-body">
-                  <h5 class="card-title mb-4">0 Produtos</h5>
+                  <h5 class="card-title mb-4">3 Produtos</h5>
                     <!-- Card interno -->
                     <div class="card text">
                         <!-- Barra cinza com título -->
                         <div class="card-header bg-secondary bg-light text-black">
-                            <h6 class="m-0 smaller-text">Produto(s)</h6>
+                            <h6 class="m-0 smaller-text"></h6>
                         </div>
                         
-                        <div class="card-body text-center">
+                        <div class="card-body">
+                          <ul class="list-group">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                              <div class="d-flex align-items-center">
+                                <img src="/static/img/Produtos/ProdutosCasa/banco.jpeg" alt="Produto 1" class="img-fluid rounded" style="width: 60px; height: 60px; margin-right: 13px;">
+                                <div>
+                                  <p class="m-0"><strong> Banco de Madeira Rústico</strong></p>
+                                  <p class="smaller-text">Quantidade: 10 | Preço: R$150,00 | Produto para Casa | Categoria(s): Madeira</p>
+                                </div>
+                              </div>
+                              <div>
+                                
+                                <button class="btn btn-sm btn-danger">Remover</button>
+                              </div>
+                            </li>
+                            <hr>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                              <div class="d-flex align-items-center">
+                                <img src="/static/img/Produtos/ProdutosCasa/MesaLateral.jpeg" alt="Produto 2" class="img-fluid rounded" style="width: 60px; height: 60px; margin-right: 13px;">
+                                <div>
+                                  <p class="m-0"><strong>Mesa Lateral de Concreto</strong></p>
+                                  <p class="smaller-text">Quantidade: 5 | Preço: R$100,00 | Produto para Casa | Categoria(s): Concreto</p>
+                                </div>
+                              </div>
+                              <div>
+                                
+                                <button class="btn btn-sm btn-danger">Remover</button>
+                              </div>
+                            </li>
+                            <hr>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                              <div class="d-flex align-items-center">
+                                <img src="/static/img/Produtos/ProdutosCasa/bancoMadeira.jpeg" alt="Produto 3" class="img-fluid rounded" style="width: 60px; height: 60px; margin-right: 13px;">
+                                <div>
+                                  <p class="m-0"><strong>Banco de Madeira com detalhes em Corda de Lã</strong></p>
+                                  <p class="smaller-text">Quantidade: 3 | Preço: R$275,00 | Produto para Casa | Categoria(s): Madeira; Lã</p>
+                                </div>
+                              </div>
+                              <div>
+                                
+                                <button class="btn btn-sm btn-danger">Remover</button>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
         
                             
-                        </div>
+                        
                     </div>            
                 </div>
             </div>             
@@ -79,6 +123,13 @@
                   color: #777777; 
               }
 
+              .btn-danger {
+                background-color: #aa1515; 
+                color: white;
+                border:#0b2003
+              }
+
+
               .card-body small {
                 color: #757575; /
               }
@@ -91,6 +142,15 @@
                 min-height: 300px; 
                 padding-bottom: 2rem;
                 }
+
+                .list-group-item {
+                  border: none;
+                }
+
+                .rounded {
+                  border-radius: 8px;
+                }
+
           </style>
 
         </div>
