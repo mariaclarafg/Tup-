@@ -46,12 +46,15 @@
               <div class="card bg-white card-externo">
                 <div class="card-body">
                   <h5 class="card-title mb-4">3 Produtos</h5>
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Pesquisar produtos" aria-label="Pesquisar produtos">
+                    <button class="btn btn-dark-green" type="button">Pesquisar</button>
+                  </div>
+
+                  
                     <!-- Card interno -->
                     <div class="card text">
-                        <!-- Barra cinza com título -->
-                        <div class="card-header bg-secondary bg-light text-black">
-                            <h6 class="m-0 smaller-text"></h6>
-                        </div>
+                        
                         
                         <div class="card-body">
                           <ul class="list-group">
@@ -64,7 +67,7 @@
                                 </div>
                               </div>
                               <div>
-                                
+                                <button class="btn btn-sm btn-dark-green">Editar</button>
                                 <button class="btn btn-sm btn-danger">Remover</button>
                               </div>
                             </li>
@@ -78,7 +81,7 @@
                                 </div>
                               </div>
                               <div>
-                                
+                                <button class="btn btn-sm btn-dark-green">Editar</button>
                                 <button class="btn btn-sm btn-danger">Remover</button>
                               </div>
                             </li>
@@ -92,7 +95,7 @@
                                 </div>
                               </div>
                               <div>
-                                
+                                <button class="btn btn-sm btn-dark-green">Editar</button>
                                 <button class="btn btn-sm btn-danger">Remover</button>
                               </div>
                             </li>
@@ -128,7 +131,16 @@
                 color: white;
                 border:#0b2003
               }
+              
+              .btn-dark-green {
+                background-color: #818181; 
+                color: white;
+                border:#8a8a8a
+            }
 
+            .btn-dark-green:hover {
+                background-color: #69a854;
+            }
 
               .card-body small {
                 color: #757575; /
