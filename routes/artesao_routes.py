@@ -18,11 +18,11 @@ async def get_root(request: Request):
 async def get_root(request: Request):
     return templates.TemplateResponse("pages/cadastro/fornecerinformacoescpf.html", {"request": request})
 
-@router.get("/cadastro/escolhaseuplanopremiumcredito", response_class=HTMLResponse)
+@router.get("/cadastro/escolhaseuplanopremium/credito", response_class=HTMLResponse)
 async def get_root(request: Request):
     return templates.TemplateResponse("pages/cadastro/escolhaseuplanopremiumcredito.html", {"request": request})
 
-@router.get("/cadastro/escolhaseuplanopremiumdebito", response_class=HTMLResponse)
+@router.get("/cadastro/escolhaseuplanopremium/debito", response_class=HTMLResponse)
 async def get_root(request: Request):
     return templates.TemplateResponse("pages/cadastro/escolhaseuplanopremiumdebito.html", {"request": request})
 
@@ -30,7 +30,7 @@ async def get_root(request: Request):
 async def get_root(request: Request):
     return templates.TemplateResponse("pages/cadastro/escolhaseuplanopremium.html", {"request": request})
 
-@router.get("/cadastro/compraplanoefetuado", response_class=HTMLResponse)
+@router.get("/cadastro/compraplanoefetuada", response_class=HTMLResponse)
 async def get_root(request: Request):
     return templates.TemplateResponse("pages/cadastro/compraplanoefetuado.html", {"request": request})
 
