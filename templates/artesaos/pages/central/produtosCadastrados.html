@@ -18,13 +18,13 @@
                         <p class="lead">Nome da loja</p>
                     </div>
                     <nav class="nav nav-pills flex-column mt-2">
-                        <span class="text-dark-beige"><i></i>Tarefas</span>
-                        <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/listadetarefas"><i class="bi bi-clipboard-data-fill"></i>Lista de tarefas</a>
+                        <span class="text-dark-beige"><i></i>Pedidos</span>
+                        <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/listadetarefas"><i class="bi bi-clipboard-data-fill"></i>Gerenciar Pedidos</a>
                     </nav>
                     <nav class="nav nav-pills flex-column mt-3">
                       <span class="text-dark-beige"><i></i>Produtos</span>
                       <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/produtoscadastrados"><i class="bi bi-journal-check"></i><strong> Produtos cadastrados </strong></a>
-                      <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/adicionarprodutos"><i class="bi bi-plus-square"></i> Adicionar produtos<</a>
+                      <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/adicionarprodutos"><i class="bi bi-plus-square"></i> Adicionar produtos</a>
                     </nav>
                     <nav class="nav nav-pills flex-column mt-3">
                       <span class="text-dark-beige"><i></i>Atendimento ao cliente</span>
@@ -62,42 +62,61 @@
                               <div class="d-flex align-items-center">
                                 <img src="/static/img/Produtos/ProdutosCasa/banco.jpeg" alt="Produto 1" class="img-fluid rounded" style="width: 60px; height: 60px; margin-right: 13px;">
                                 <div>
-                                  <p class="m-0"><strong> Banco de Madeira Rústico</strong></p>
+                                  <p class="m-0"> Banco de Madeira Rústico</p>
                                   <p class="smaller-text">Quantidade: 10 | Preço: R$150,00 | Produto para Casa | Categoria(s): Madeira</p>
                                 </div>
                               </div>
-                              <div>
-                                <button class="btn btn-sm btn-dark-green">Editar</button>
-                                <button class="btn btn-sm btn-danger">Remover</button>
-                              </div>
+                              
+                                <div>
+                                  <button class="btn btn-sm btn-dark-green" title="Editar Produto">
+                                    <i class="bi bi-pencil"></i>
+                                  </button>
+                                  <button class="btn btn-sm btn-danger" title="Excluir Produto">
+                                    <i class="bi bi-trash"></i>
+                                  </button>
+                                </div>
+                              
                             </li>
                             <hr>
                             <li class="list-group-item d-flex justify-content-between align-items-center">
                               <div class="d-flex align-items-center">
                                 <img src="/static/img/Produtos/ProdutosCasa/MesaLateral.jpeg" alt="Produto 2" class="img-fluid rounded" style="width: 60px; height: 60px; margin-right: 13px;">
                                 <div>
-                                  <p class="m-0"><strong>Mesa Lateral de Concreto</strong></p>
+                                  <p class="m-0">Mesa Lateral de Concreto</p>
                                   <p class="smaller-text">Quantidade: 5 | Preço: R$100,00 | Produto para Casa | Categoria(s): Concreto</p>
                                 </div>
                               </div>
-                              <div>
-                                <button class="btn btn-sm btn-dark-green">Editar</button>
-                                <button class="btn btn-sm btn-danger">Remover</button>
-                              </div>
+                              
+                                <div>
+                                  <button class="btn btn-sm btn-dark-green" title="Editar Produto">
+                                    <i class="bi bi-pencil"></i>
+                                  </button>
+                                  <button class="btn btn-sm btn-danger" title="Excluir Produto">
+                                    <i class="bi bi-trash"></i>
+                                  </button>
+                                </div>
+                              
                             </li>
                             <hr>
                             <li class="list-group-item d-flex justify-content-between align-items-center">
                               <div class="d-flex align-items-center">
                                 <img src="/static/img/Produtos/ProdutosCasa/bancoMadeira.jpeg" alt="Produto 3" class="img-fluid rounded" style="width: 60px; height: 60px; margin-right: 13px;">
                                 <div>
-                                  <p class="m-0"><strong>Banco de Madeira com detalhes em Corda de Lã</strong></p>
+                                  <p class="m-0">Banco de Madeira com detalhes em Corda de Lã</p>
                                   <p class="smaller-text">Quantidade: 3 | Preço: R$275,00 | Produto para Casa | Categoria(s): Madeira; Lã</p>
                                 </div>
                               </div>
-                              <div>
-                                <button class="btn btn-sm btn-dark-green">Editar</button>
-                                <button class="btn btn-sm btn-danger">Remover</button>
-                              </div>
+                              
+                                <div>
+                                 
+                                  <button class="btn btn-sm btn-dark-green" title="Editar Produto">
+                                    <i class="bi bi-pencil"></i>
+                                  </button>
+
+                                  <button class="btn btn-sm btn-danger" title="Excluir Produto">
+                                    <i class="bi bi-trash"></i>
+                                  </button>
+                                </div>
                             </li>
                           </ul>
                         </div>
@@ -127,14 +146,14 @@
               }
 
               .btn-danger {
-                background-color: #aa1515; 
-                color: white;
-                border:#0b2003
+                background-color: transparent; 
+                color: rgb(160, 1, 1);
+                border:#b10f0f
               }
               
               .btn-dark-green {
-                background-color: #818181; 
-                color: white;
+                background-color:transparent; 
+                color: rgb(12, 73, 7);
                 border:#8a8a8a
             }
 
