@@ -30,7 +30,7 @@ async def get_root(request: Request):
 async def get_root(request: Request):
     return templates.TemplateResponse("pages/cadastro/escolhaseuplanopremium.html", {"request": request})
 
-@router.get("/cadastro/compraplanoefetuado", response_class=HTMLResponse)
+@router.get("/cadastro/compraplanoefetuada", response_class=HTMLResponse)
 async def get_root(request: Request):
     return templates.TemplateResponse("pages/cadastro/compraplanoefetuado.html", {"request": request})
 

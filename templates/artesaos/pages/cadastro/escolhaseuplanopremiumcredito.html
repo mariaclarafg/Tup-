@@ -261,11 +261,67 @@
                         </div>
                     </div>
                 </div>
-                <br><input type="submit" value="Obter plano" class="btn btn-success big-button-green">
+                <br>
+                <a href="/artesaos/cadastro/compraplanoefetuada" class="btn btn-success big-button-green">Obter plano</a>
                 <br> <br>
             </div>
         </div>
     </div>  
 </main>
- 
-{%endblock%} 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Função para definir um cookie
+      function setCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+          var date = new Date();
+          date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+          expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+      }
+  
+      // Função para obter um cookie
+      function getCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) === ' ') c = c.substring(1);
+          if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+      }
+  
+      // Restaura a posição de rolagem, se disponível
+      const scrollPosition = getCookie('scrollPosition');
+      if (scrollPosition) {
+        window.scrollTo(0, parseInt(scrollPosition));
+        setCookie('scrollPosition', '', -1); // Remove o cookie após usar
+      }
+  
+      // Seleciona os rádio buttons
+      const creditoRadio = document.getElementById('credito');
+      const debitoRadio = document.getElementById('debito');
+      
+      // Adiciona listeners para os eventos de mudança
+      creditoRadio.addEventListener('change', function() {
+        if (this.checked) {
+          // Armazena a posição de rolagem antes do redirecionamento
+          setCookie('scrollPosition', window.scrollY, 1);
+          window.location.href = '/artesaos/cadastro/escolhaseuplanopremium/credito';
+        }
+      });
+  
+      debitoRadio.addEventListener('change', function() {
+        if (this.checked) {
+          // Armazena a posição de rolagem antes do redirecionamento
+          setCookie('scrollPosition', window.scrollY, 1);
+          window.location.href = '/artesaos/cadastro/escolhaseuplanopremium/debito';
+        }
+      });
+    });
+  </script>
+  
+  {% endblock %}
+  
