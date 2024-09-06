@@ -1,13 +1,15 @@
 {% extends "pages/base.html" %}
 {% block subtitulo %}Bordadeiras{% endblock %}
 {% block carousel %}
+<body>
 <nav id="navbar-example2" class="navbar navbar-dark" style="background-color: #0F2B05;">
     <div class="container">
         <a class="navbar-brand">Bordadeiras</a>
     </div>
 </nav>
-{% endblock %}
-{% block conteudo %}
+<div class="background-image"></div>
+    <div class="container">
+        <div class="row w-100 d-flex justify-content-center">
 
 <style>
     body {
@@ -114,4 +116,6 @@
 <!-- Bootstrap JS and dependencies -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+
+</body>
 {% endblock %}
