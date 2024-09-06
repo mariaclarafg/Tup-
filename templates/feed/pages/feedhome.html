@@ -1,10 +1,10 @@
 {% extends "pages/base.html" %}
-{% block subtitulo %}Feed Home{% endblock %}
+{% block subtitulo %}Demandas Atendidas{% endblock %}
 {% block carousel %}
 
 <nav id="navbar-example2" class="navbar navbar-dark" style="background-color: #0F2B05;">
   <div class="container">
-      <a class="navbar-brand">Feed Home</a>
+      <a class="navbar-brand">Demandas Atendidas</a>
   </div>
 </nav>
 
@@ -16,23 +16,17 @@
                   <div class="profile-section mb-3">
                       <i class="bi bi-person-circle custom-icon" class="img-thumbnail rounded-full" style="color: #0F2B05;"></i>
                   </div>
-                  <hr>
                   <p class="text-dark-beige" style="font-size:5;">Página Principal</p>
-                  <hr>
                   <nav class="nav nav-pills flex-column mt-2">
                     <a class="nav-link text-dark-beige" href="/feed/home"><i class="bi bi-plus-square"></i> <strong> Adicionar Demanda</strong></a>
                   </nav>
-                  <hr>
                   <nav class="nav nav-pills flex-column mt-3">
                     <span class="text-dark-beige"><i></i>Postagens Antigas</span>
-                    <hr>
-                    <a class="nav-link text-dark-beige" href=""><i class="bi bi-journal-check"></i> Atendidas</a>
-                    <a class="nav-link text-dark-beige" href=""><i class="bi bi-journal-check"></i> Não Atendidas</a>
+                    <a class="nav-link text-dark-beige" href="/feed/demandasatendidas"><i class="bi bi-journal-check"></i>Atendidas</a>
+                    <a class="nav-link text-dark-beige" href="/feed/demandasnaoatendidas"><i class="bi bi-journal-check"></i> Não Atendidas</a>
                   </nav>
-                  <hr>
                   <nav class="nav nav-pills flex-column mt-3">
                     <span class="text-dark-beige"><i></i>Atendimento ao cliente</span>
-                    <hr>
                     <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/chat"><i class="bi bi-chat-square-text"></i> Chat</a>
                 </nav>
               </div>
