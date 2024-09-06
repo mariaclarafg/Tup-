@@ -1,5 +1,5 @@
 {% extends "pages/base.html" %}
-{% block subtitulo %}Lista de Tarefas{% endblock %}
+{% block subtitulo %}Adicionar Produtos{% endblock %}
 {% block carousel %}
 
 <nav id="navbar-example2" class="navbar navbar-dark" style="background-color: #0F2B05;">
@@ -9,49 +9,120 @@
 </nav>
 
 <body class="d-flex flex-column min-vh-100 bg-green">
-    <main class="d-flex flex-column flex-grow-1">
-        <div class="d-flex flex-grow-1">
-            <aside class="coluna-esquerda p-3 d-flex flex-column justify-content-between">
-                <div>
-                    <div class="profile-section mb-3">
-                        <i class="bi bi-person-circle custom-icon" class="img-thumbnail rounded-full" style="color: #0F2B05;"></i>
-                        <p class="lead">Nome da loja</p>
-                    </div>
-                    <nav class="nav nav-pills flex-column mt-2">
-                        <span class="text-dark-beige"><i></i>Tarefas</span>
-                        <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/listadetarefas"><i class="bi bi-clipboard-data-fill"></i>Lista de tarefas</a>
-                    </nav>
-                    <nav class="nav nav-pills flex-column mt-3">
-                      <span class="text-dark-beige"><i></i>Produtos</span>
-                      <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/produtoscadastrados"><i class="bi bi-journal-check"></i> Produtos cadastrados</a>
-                      <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/adicionarprodutos"><i class="bi bi-plus-square"></i> <strong> Adicionar produtos</strong></a>
-                    </nav>
-                    <nav class="nav nav-pills flex-column mt-3">
-                      <span class="text-dark-beige"><i></i>Atendimento ao cliente</span>
-                      <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/chat"><i class="bi bi-chat-square-text"></i> Chat</a>
-                      <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/revisoes"><i class="bi bi-chat-square-quote"></i> Gerenciamento de revisões</a>
-                      <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/demandas"><i class="bi bi-piggy-bank-fill"></i> Demanda de produtos</a>
-                    </nav>
-                    <nav class="nav nav-pills flex-column mt-3">
-                      <span class="text-dark-beige"><i class="fas fa-shield-alt"></i>Loja</span>
-                      <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/perfildaloja"><i class="bi bi-shop-window"></i> Perfil da Loja</a>
-                      <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/configuracoesloja"><i class="bi bi-gear-fill"></i> Configurações da loja</a>
+  <main class="d-flex flex-column flex-grow-1">
+      <div class="d-flex flex-grow-1">
+          <aside class="coluna-esquerda p-3 d-flex flex-column justify-content-between bg-white mr-5">
+              <div>
+                  <div class="profile-section mb-3">
+                      <i class="bi bi-person-circle custom-icon" class="img-thumbnail rounded-full" style="color: #0F2B05;"></i>
+                      <p class="lead">Nome da loja</p>
+                  </div>
+                  <nav class="nav nav-pills flex-column mt-2">
+                      <span class="text-dark-beige"><i></i>Pedidos</span>
+                      <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/listadetarefas"><i class="bi bi-clipboard-data-fill"></i>Gerenciar Pedidos</a>
                   </nav>
-                </div>
+                  <nav class="nav nav-pills flex-column mt-3">
+                    <span class="text-dark-beige"><i></i>Produtos</span>
+                    <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/produtoscadastrados"><i class="bi bi-journal-check"></i> Produtos cadastrados</a>
+                    <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/adicionarprodutos"><i class="bi bi-plus-square"></i> <strong> Adicionar produtos</strong></a>
+                  </nav>
+                  <nav class="nav nav-pills flex-column mt-3">
+                    <span class="text-dark-beige"><i></i>Atendimento ao cliente</span>
+                    <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/chat"><i class="bi bi-chat-square-text"></i> Chat</a>
+                    <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/revisoes"><i class="bi bi-chat-square-quote"></i> Gerenciamento de revisões</a>
+                    <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/demandas"><i class="bi bi-piggy-bank-fill"></i> Demanda de produtos</a>
+                  </nav>
+                  <nav class="nav nav-pills flex-column mt-3">
+                    <span class="text-dark-beige"><i class="fas fa-shield-alt"></i>Loja</span>
+                    <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/perfildaloja"><i class="bi bi-shop-window"></i> Perfil da Loja</a>
+                    <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/configuracoesloja"><i class="bi bi-gear-fill"></i> Configurações da loja</a>
+                </nav>
+              </div>
 
-            </aside>
-            <section class="flex-grow-1 p-3">
-                <div class="card text">
-                    <div class="card-body">
-                      <h5 class="card-title">Lista de Tarefas</h5>
-                      <p class="card-text">Coisas que você precisa gerenciar.</p>
+          </aside>
+            <section class="flex-grow-1 p-3 bg-light">
+              <h4 class="mb-4 mt-5"><strong>Novo Produto</strong></h4> 
+              
+              <div class="nav nav-pills mb-4" id="pills-tab" role="tablist">
+                  <a class="nav-link custom-tab text-dark-beige" id="tab1" data-bs-toggle="pill" href="#content1" role="tab">Informações Básicas</a>
+                  <a class="nav-link custom-tab text-dark-beige" id="tab2" data-bs-toggle="pill" href="#content2" role="tab">Especificações</a>
+                  <a class="nav-link custom-tab text-dark-beige" id="tab3" data-bs-toggle="pill" href="#content3" role="tab">Informações de Venda</a>
+                  <a class="nav-link custom-tab text-dark-beige" id="tab4" data-bs-toggle="pill" href="#content4" role="tab">Envio</a>
+              </div>
+              
+              <div class="card bg-white card-externo">
+                <div class="card-body">
+                  <!-- Conteúdo dos títulos menores -->
+                  <div class="tab-content">
+                    <div class="tab-pane fade show active" id="content1" role="tabpanel">
+                      <p>Informações Básicas</p>
                     </div>
-                    <div class="card-footer text-body-secondary">
-                      
+                    <div class="tab-pane fade" id="content2" role="tabpanel">
+                      <p>Conteúdo para Título 2</p>
                     </div>
-                  </div>            
-                
+                    <div class="tab-pane fade" id="content3" role="tabpanel">
+                      <p>Conteúdo para Título 3</p>
+                    </div>
+                    <div class="tab-pane fade" id="content4" role="tabpanel">
+                      <p>Conteúdo para Título 4</p>
+                    </div>
+                  </div>
+                </div>
+              </div>             
+              
             </section>
+
+            <style>
+              .btn-custom {
+                  background-color: white; 
+                  color: #868686; 
+                  border: none; 
+                  font-size: 1.25rem; 
+                  font-weight: bold; 
+                  padding: 0.75rem 1.5rem; 
+              }
+              
+              .btn-custom:hover {
+                  background-color: #e0e0e0; 
+                  border-color: #7c7c7c; 
+                  color: #777777; 
+              }
+
+              .card-externo {
+                min-height: 300px; 
+                padding-bottom: 2rem;
+                border:none;
+              }
+              
+              .custom-tab {
+                font-size: 1.25rem; 
+                color: #6c757d; /* Cinza claro quando não ativo */
+                background-color: transparent; /* Remove fundo branco */
+                border: none; /* Remove borda */
+              }
+
+              .custom-tab.active {
+    
+                background-color: transparent; /* Remove fundo branco */
+                border: none; /* Remove borda */
+              }
+              
+            </style>
+
+            <script>
+              document.addEventListener('DOMContentLoaded', function () {
+                var tabs = document.querySelectorAll('.nav-link');
+                tabs.forEach(function (tab) {
+                  tab.addEventListener('click', function () {
+                    tabs.forEach(function (t) {
+                      t.classList.remove('active');
+                    });
+                    tab.classList.add('active');
+                  });
+                });
+              });
+            </script>
+
         </div>
     </main>
 </body>

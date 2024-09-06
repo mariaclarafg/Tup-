@@ -110,8 +110,8 @@
                                         <p class="assn"><small class="text-muted">Renovação automática mensal; cancele quando quiser</small></p>
                                     </div>
                                     <div class="form-check form-check-inline ms-auto">
-                                        <input class="form-check-input" type="radio" name="PlanoGratuito" id="mensal" value="mensal">
-                                        <label class="form-check-label" for="mensal"></label>
+                                        <input class="form-check-input" type="radio" name="PlanoGratuito" id="gratuitoP" value="sim">
+                                        <label class="form-check-label" for="gratuitoP"></label>
                                     </div>
                                 </div>
                             </div> 
@@ -128,8 +128,8 @@
                                         <p class="assn"><small class="text-muted">Pague uma vez só. Faça recargas quando quiser. Sem renovação automática</small></p>
                                     </div>
                                     <div class="form-check form-check-inline ms-auto">
-                                        <input class="form-check-input" type="radio" name="PlanoGratuito" id="12meses" value="12meses">
-                                        <label class="form-check-label" for="12meses"></label>
+                                        <input class="form-check-input" type="radio" name="PlanoGratuito" id="gratuitoP" value="sim">
+                                        <label class="form-check-label" for="gratuitoP"></label>
                                     </div>
                                 </div>
                             </div> 
@@ -146,8 +146,8 @@
                                         <p class="assn"><small class="text-muted">Pague uma vez só. Faça recargas quando quiser. Sem renovação automática</small></p>
                                     </div>
                                     <div class="form-check form-check-inline ms-auto">
-                                        <input class="form-check-input" type="radio" name="PlanoGratuito" id="6meses" value="6meses">
-                                        <label class="form-check-label" for="6meses"></label>
+                                        <input class="form-check-input" type="radio" name="PlanoGratuito" id="gratuitoP" value="sim">
+                                        <label class="form-check-label" for="gratuitoP"></label>
                                     </div>
                                 </div>
                             </div> 
@@ -164,8 +164,8 @@
                                         <p class="assn"><small class="text-muted">Pague uma vez só. Faça recargas quando quiser. Sem renovação automática</small></p>
                                     </div>
                                     <div class="form-check form-check-inline ms-auto">
-                                        <input class="form-check-input" type="radio" name="PlanoGratuito" id="3meses" value="3meses">
-                                        <label class="form-check-label" for="3meses"></label>
+                                        <input class="form-check-input" type="radio" name="PlanoGratuito" id="gratuitoP" value="sim">
+                                        <label class="form-check-label" for="gratuitoP"></label>
                                     </div>
                                 </div>
                             </div> 
@@ -182,8 +182,8 @@
                                         <p class="assn"><small class="text-muted">Pague uma vez só. Faça recargas quando quiser. Sem renovação automática</small></p>
                                     </div>
                                     <div class="form-check form-check-inline ms-auto">
-                                        <input class="form-check-input" type="radio" name="PlanoGratuito" id="1mes" value="1mes">
-                                        <label class="form-check-label" for="1mes"></label>
+                                        <input class="form-check-input" type="radio" name="PlanoGratuito" id="gratuitoP" value="sim">
+                                        <label class="form-check-label" for="gratuitoP"></label>
                                     </div>
                                 </div>
                             </div> 
@@ -205,31 +205,54 @@
                     <hr>
                     <div class="d-flex justify-content-center">
                         <br>
-                        <div class="card col-7 p-3"> 
+                        <div class="card col-7 p-4"> 
                             <div class="row g-2 align-items-center mb-3">
                                 <div class="col-md-12">
                                     <div class="d-flex align-items-center mb-2">
                                         <p class="assn mb-0">Cartão de Crédito</p>
                                         <div class="form-check form-check-inline ms-auto">
-                                            <input class="form-check-input" type="radio" name="formaPagamento" id="credito" value="credito">
-                                            <label class="form-check-label" for="credito"></label>
+                                            <input class="form-check-input" type="radio" name="PlanoGratuito" id="gratuitoP" value="sim">
+                                            <label class="form-check-label" for="gratuitoP"></label>
                                         </div>
                                     </div>
                                     <img src="/static/img/cartaocredito.png" alt="Logotipo" height="45">
+                                    <br> <br>
+                                    <p class="assn" class="text-muted">Dados de Pagamento</p>
+                                    <p class="assn"><small class="text-muted">Número do Cartão</small></p>
+                                    <input type="text" id="inputtext6" class="form-control" aria-describedby="textHelpInline">
+                                    <br>
+                                    <p class="assn"><small class="text-muted">Data de Validade</small></p>
+                                    <input type="text" id="inputtext6" class="form-control" aria-describedby="textHelpInline">
+                                    <br>
+                                    <p class="assn"><small class="text-muted">CVV</small></p>
+                                    <input type="text" id="inputtext6" class="form-control" aria-describedby="textHelpInline">
+                                    <br>
+                                    <p class="assn"><small class="text-muted">Email</small></p>
+                                    <input type="text" id="inputtext6" class="form-control" aria-describedby="textHelpInline">
+                                    <br>
+                                    <p class="assn"><small class="text-muted">CPF</small></p>
+                                    <input type="text" id="inputtext6" class="form-control" aria-describedby="textHelpInline" placeholder="000.000.000-00">
+                                    <br>
+                                    <div class="form-check form-check-inline ms-auto">
+                                        <input class="form-check-input" type="radio" name="PlanoGratuito" id="gratuitoP" value="sim">
+                                        <label class="assn" for="gratuitoP"> Salvar cartão para futuras compras</label>
+                                        <br> <br>
+                                        <p class="assn"><small class="text-muted"></small> Pelo presente, você autoriza a Tupã a cobrar de você todo mês automaticamente até que você cancele sua inscrição. Termos as condições disponíveis AQUI.  Ao clicar em "OBTER PLANO", você dá ciência e aceita os termos e as condições desta transição.</small></p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="d-flex justify-content-center">
                         <br>
-                        <div class="card col-7 p-3"> 
+                        <div class="card col-7 p-4"> 
                             <div class="row g-2 align-items-center mb-3">
                                 <div class="col-md-12">
                                     <div class="d-flex align-items-center mb-2">
                                         <p class="assn mb-0">Cartão de Débito</p>
                                         <div class="form-check form-check-inline ms-auto">
-                                            <input class="form-check-input" type="radio" name="formaPagamento" id="debito" value="debito">
-                                            <label class="form-check-label" for="debito"></label>
+                                            <input class="form-check-input" type="radio" name="PlanoGratuito" id="gratuitoP" value="sim">
+                                            <label class="form-check-label" for="gratuitoP"></label>
                                         </div>
                                     </div>
                                     <img src="/static/img/cartaodebito.png" alt="Logotipo" height="45">
@@ -240,65 +263,65 @@
                 </div>
                 <br>
                 <a href="/artesaos/cadastro/compraplanoefetuada" class="btn btn-success big-button-green">Obter plano</a>
-                <br>
+                <br> <br>
             </div>
         </div>
     </div>  
 </main>
-
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Função para definir um cookie
-    function setCookie(name, value, days) {
-      var expires = "";
-      if (days) {
-        var date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        expires = "; expires=" + date.toUTCString();
+    document.addEventListener('DOMContentLoaded', function() {
+      // Função para definir um cookie
+      function setCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+          var date = new Date();
+          date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+          expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
       }
-      document.cookie = name + "=" + (value || "") + expires + "; path=/";
-    }
-
-    // Função para obter um cookie
-    function getCookie(name) {
-      var nameEQ = name + "=";
-      var ca = document.cookie.split(';');
-      for (var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) === ' ') c = c.substring(1);
-        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+  
+      // Função para obter um cookie
+      function getCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) === ' ') c = c.substring(1);
+          if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
       }
-      return null;
-    }
-
-    // Restaura a posição de rolagem, se disponível
-    const scrollPosition = getCookie('scrollPosition');
-    if (scrollPosition) {
-      window.scrollTo(0, parseInt(scrollPosition));
-      setCookie('scrollPosition', '', -1); // Remove o cookie após usar
-    }
-
-    // Seleciona os rádio buttons
-    const creditoRadio = document.getElementById('credito');
-    const debitoRadio = document.getElementById('debito');
-    
-    // Adiciona listeners para os eventos de mudança
-    creditoRadio.addEventListener('change', function() {
-      if (this.checked) {
-        // Armazena a posição de rolagem antes do redirecionamento
-        setCookie('scrollPosition', window.scrollY, 1);
-        window.location.href = '/artesaos/cadastro/escolhaseuplanopremium/credito';
+  
+      // Restaura a posição de rolagem, se disponível
+      const scrollPosition = getCookie('scrollPosition');
+      if (scrollPosition) {
+        window.scrollTo(0, parseInt(scrollPosition));
+        setCookie('scrollPosition', '', -1); // Remove o cookie após usar
       }
+  
+      // Seleciona os rádio buttons
+      const creditoRadio = document.getElementById('credito');
+      const debitoRadio = document.getElementById('debito');
+      
+      // Adiciona listeners para os eventos de mudança
+      creditoRadio.addEventListener('change', function() {
+        if (this.checked) {
+          // Armazena a posição de rolagem antes do redirecionamento
+          setCookie('scrollPosition', window.scrollY, 1);
+          window.location.href = '/artesaos/cadastro/escolhaseuplanopremium/credito';
+        }
+      });
+  
+      debitoRadio.addEventListener('change', function() {
+        if (this.checked) {
+          // Armazena a posição de rolagem antes do redirecionamento
+          setCookie('scrollPosition', window.scrollY, 1);
+          window.location.href = '/artesaos/cadastro/escolhaseuplanopremium/debito';
+        }
+      });
     });
-
-    debitoRadio.addEventListener('change', function() {
-      if (this.checked) {
-        // Armazena a posição de rolagem antes do redirecionamento
-        setCookie('scrollPosition', window.scrollY, 1);
-        window.location.href = '/artesaos/cadastro/escolhaseuplanopremium/debito';
-      }
-    });
-  });
-</script>
-
-{% endblock %}
+  </script>
+  
+  {% endblock %}
+  

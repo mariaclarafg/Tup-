@@ -1,6 +1,7 @@
 {% extends "pages/base.html" %}
 {% block subtitulo %}Entrar{% endblock %}
 {% block conteudo %}
+
 <body> 
     <div class="background-image"></div>
     <div class="container">
@@ -14,15 +15,15 @@
                                     <form method="post">
                                         <br>
                                         <div class="formulario-inicio">  
-                                            <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline" required placeholder="Email">
+                                            <input type="email" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline" required placeholder="Email">
                                         </div>
                                         <div class="formulario-inicio">  
                                             <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline" required placeholder="Senha">
                                         </div>
                                         <br> 
                                         <div>
-                                            <input type="submit" value="Enviar" class="big-button-green">
-                                        </div>
+                                            <a href="conta/centropessoal/perfil" class="big-button-green">Entrar</a>
+                                        </div>                                        
                                         <div class="conta p">
                                         <br>
                                         <p>
@@ -44,12 +45,8 @@
                     </div>
                 </div>
             </main>                              
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </main>
         </div>
     </div>
+</body>
     
 {%endblock%}
