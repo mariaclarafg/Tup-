@@ -1,7 +1,7 @@
 from fastapi import Depends, FastAPI
 from fastapi.staticfiles import StaticFiles
 from repositories.usuario_repo import UsuarioRepo
-from routes import clientes_routes, main_routes, artesao_routes, produtos_routes
+from routes import clientes_routes, comunidades_routes, main_routes, artesao_routes, produtos_routes
 from util.auth import checar_permissao, middleware_autenticacao
 from util.exceptions import configurar_excecoes
 
@@ -14,3 +14,4 @@ app.include_router(main_routes.router)
 app.include_router(artesao_routes.router)
 app.include_router(clientes_routes.router)
 app.include_router(produtos_routes.router)
+app.include_router(comunidades_routes.router)

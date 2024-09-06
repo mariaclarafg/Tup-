@@ -1,0 +1,117 @@
+{% extends "pages/base.html" %}
+{% block subtitulo %}Bordadeiras{% endblock %}
+{% block carousel %}
+<nav id="navbar-example2" class="navbar navbar-dark" style="background-color: #0F2B05;">
+    <div class="container">
+        <a class="navbar-brand">Bordadeiras</a>
+    </div>
+</nav>
+{% endblock %}
+{% block conteudo %}
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+    }
+    .hero-section {
+        background: url('caminho/para/imagem-de-fundo.jpg') no-repeat center center;
+        background-size: cover;
+        color: #0F2B05;
+        padding: 100px 0;
+        text-align: center;
+        position: relative;
+        height: 400px; /* Ajuste a altura conforme necessário */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    }
+    .hero-section h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+    .hero-section p {
+        font-size: 1.25rem;
+    }
+    .section-title {
+        margin: 40px 0;
+        font-size: 2rem;
+        text-align: center;
+        color: #333;
+    }
+    .card img {
+        max-height: 200px;
+        object-fit: cover;
+    }
+    .footer {
+        background-color: #343a40;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+    }
+</style>
+
+<!-- Seção Hero -->
+<header class="hero-section">
+    <div class="container">
+        <h1>Conheça as Bordadeiras brasileiras</h1>
+        <p>Preservando a arte e tradições dos mestres bordadores.</p>
+    </div>
+</header>
+
+<!-- Sobre -->
+<section id="about" class="container my-5">
+    <h2 class="section-title">Sobre as Bordadeiras</h2>
+    <div class="row">
+        <div class="col-lg-6">
+            <p>As bordadeiras artesanais brasileiras são mestres no bordado, preservando tradições culturais ricas e diversificadas. Cada uma traz um toque único, incorporando técnicas regionais, como os bordados de Minas Gerais, o richelieu do Nordeste e as cores vibrantes de Goiás. Utilizando materiais de qualidade e habilidades apuradas, elas criam peças que vão além da decoração, refletindo identidade cultural e histórias locais. Ao escolher um bordado artesanal brasileiro, você adquire um verdadeiro pedaço da rica tapeçaria cultural do Brasil.</p>
+        </div>     
+    </div>
+</section>
+
+<!-- Cultura -->
+<section id="culture" class="bg-light py-5">
+    <div class="container">
+        <h2 class="section-title">Cultura e Tradições</h2>
+        <div class="row">
+
+            <!-- Card de Regiões (Bordadeiras) -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="/static/img/bordadeiras.png" class="card-img-top w-200 abaproduto-img" alt="Regiões Bordadeiras">
+                    <div class="card-body">
+                        <h5 class="card-title">Regiões</h5>
+                        <p class="card-text">Bordadeiras de diferentes regiões do Brasil trazem técnicas e estilos únicos, como o bordado de Minas Gerais, o richelieu do Nordeste e as cores vibrantes de Goiás.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card de Métodos de Trabalho (Bordadeiras) -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="/static/img/bordadeiras.png" class="card-img-top w-200 abaproduto-img" alt="Métodos de Trabalho">
+                    <div class="card-body">
+                        <h5 class="card-title">Métodos de Trabalho</h5>
+                        <p class="card-text">As bordadeiras utilizam técnicas tradicionais e materiais de qualidade, com habilidades apuradas que transmitem a identidade cultural em cada peça.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card de Arte (Bordadeiras) -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="/static/img/bordadeiras.png" class="card-img-top w-200 abaproduto-img" alt="Arte Bordadeiras">
+                    <div class="card-body">
+                        <h5 class="card-title">Arte</h5>
+                        <p class="card-text">O trabalho das bordadeiras é uma forma de arte que não só decora, mas também conta histórias e preserva tradições culturais através de cada bordado.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+{% endblock %}
