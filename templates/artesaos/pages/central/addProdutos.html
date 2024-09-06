@@ -98,60 +98,52 @@
               
               <div class="tab-pane fade" id="content2" role="tabpanel">
                 <br>
-                <div class="d-flex align-items-center mb-3">
-                  <h5 class="mb-2 me-3">O produto é personalizável?</h5>
-                  <div class="form-check me-3">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
-                      Sim
-                    </label>
-                  </div>
-                  <div class="form-check me-3">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                    <label class="form-check-label" for="flexRadioDefault2">
-                      Não
-                    </label>
-                  </div>
-
-                </div>
-                <br>
-                <div class="d-flex align-items-center mb-3">
-                  <h5 class="col-md-3">Quantidade:</h5>
-                  <div class="input-group input-group-sm" style="width: 100px;">
-                    <button class="btn btn-outline-secondary btn-sm" type="button" id="decrementar">-</button>
-                    <input type="number" class="form-control form-control-sm" id="quantidade" value="0" min="0">
-                    <button class="btn btn-outline-secondary btn-sm" type="button" id="incrementar">+</button>
-                  </div>
-          
-                </div>
-                <br>
-                <div class="d-flex align-items-center mb-3">
-                  <h5 class="col-md-3">Garantia:</h5>
-                  <input type="text" class="form-control me-3" id="tempo-garantia" placeholder="Tempo de garantia" style="width: auto; max-width: 400px;">
-                </div>
-
-                <br>
-                <div class="row g-3 align-items-center mb-3">
-                  <h5 class="col-md-3">Comprimento:</h5>
-                  <input type="text" class="form-control me-3" id="comprimento" placeholder="Comprimento (cm)" style="width: auto; max-width: 400px;">
-                </div>
-
-                <br>
-                <div class="row g-3 align-items-center mb-3">
-                  <h5 class="col-md-3">Largura:</h5>
-                  <input type="text" class="form-control me-3" id="largura" placeholder="Largura (cm)" style="width: auto; max-width: 400px;">
+                <div class="d-flex flex-column mb-3">
+                  <label for="personalizavel-produto" class="form-label mb-2"><strong>O produto é personalizavel?</strong></label>
+                    <div class="form-check me-3">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        Sim
+                      </label>
+                    </div>
+                    <div class="form-check me-3">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        Não
+                      </label>
+                    </div>
                 </div>
                 
-
+                  <div class="d-flex flex-column mb-3">
+                    <label for="quantidade-produto" class="form-label mb-2"><strong>Quantidade</strong></label>
+                    <div class="input-group input-group-sm" style="width: 100px;">
+                      <button class="btn btn-outline-secondary btn-sm" type="button" id="decrementar">-</button>
+                      <input type="number" class="form-control form-control-sm" id="quantidade" value="0" min="0">
+                      <button class="btn btn-outline-secondary btn-sm" type="button" id="incrementar">+</button>
+                    </div>
+                  </div>
+                
+                  <div class="d-flex flex-column mb-3">
+                    <label for="garantia-produto" class="form-label mb-2"><strong>Garantia</strong></label>
+                    <input type="text" class="form-control" id="garantia-produto" placeholder="Tempo de garantia">
+                  </div>
+                  <div class="d-flex flex-column mb-3">
+                    <label for="comprimento-produto" class="form-label mb-2"><strong>Comprimento</strong></label>
+                    <input type="text" class="form-control" id="comprimento-produto" placeholder="comprimento (cm)">
+                  </div>
+                  <div class="d-flex flex-column mb-3">
+                    <label for="largura-produto" class="form-label mb-2"><strong>Largura</strong></label>
+                    <input type="text" class="form-control" id="largura-produto" placeholder="largura">
+                  </div>
+                  </div>
+                <br>
+                  <div class="text-center mb-3">
+                    <br>
+                    <button type="button" class="btn btn-primary" style="background-color: #012001; border-color: #001d00; color: #f5f5f5;">Salvar</button>
+                  </div>
 
               </div>
 
-
-          
-          
-          
-              
-              
               <div class="tab-pane fade" id="content3" role="tabpanel">
                 <br>
                 <div class="row g-3 align-items-center mb-3">

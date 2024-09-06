@@ -1,0 +1,119 @@
+{% extends "pages/base.html" %}
+{% block subtitulo %}Adicionar Produtos{% endblock %}
+{% block carousel %}
+
+<nav id="navbar-example2" class="navbar navbar-dark" style="background-color: #0F2B05;">
+  <div class="container">
+      <a class="navbar-brand">Central do Artesão</a>
+  </div>
+</nav>
+
+<body class="d-flex flex-column min-vh-100 bg-green">
+    <main class="d-flex flex-column flex-grow-1">
+        <div class="d-flex flex-grow-1">
+            <aside class="coluna-esquerda p-3 d-flex flex-column justify-content-between bg-white mr-5">
+                <div>
+                    <div class="profile-section mb-3">
+                        <i class="bi bi-person-circle custom-icon" class="img-thumbnail rounded-full" style="color: #0F2B05;"></i>
+                        <p class="lead">Nome da loja</p>
+                    </div>
+                    <nav class="nav nav-pills flex-column mt-2">
+                        <span class="text-dark-beige"><i></i>Pedidos</span>
+                        <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/listadetarefas"><i class="bi bi-clipboard-data-fill"></i>Gerenciar Pedidos</a>
+                    </nav>
+                    <nav class="nav nav-pills flex-column mt-3">
+                      <span class="text-dark-beige"><i></i>Produtos</span>
+                      <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/produtoscadastrados"><i class="bi bi-journal-check"></i><strong> Produtos cadastrados </strong></a>
+                      <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/adicionarprodutos"><i class="bi bi-plus-square"></i> Adicionar produtos</a>
+                    </nav>
+                    <nav class="nav nav-pills flex-column mt-3">
+                      <span class="text-dark-beige"><i></i>Atendimento ao cliente</span>
+                      <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/chat"><i class="bi bi-chat-square-text"></i> Chat</a>
+                      
+                      <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/demandas"><i class="bi bi-piggy-bank-fill"></i> Demanda de produtos</a>
+                    </nav>
+                    <nav class="nav nav-pills flex-column mt-3">
+                      <span class="text-dark-beige"><i class="fas fa-shield-alt"></i>Loja</span>
+                      <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/perfildaloja"><i class="bi bi-shop-window"></i> Perfil da Loja</a>
+                      <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/configuracoesloja"><i class="bi bi-gear-fill"></i> Configurações da loja</a>
+                  </nav>
+                </div>
+
+            </aside>
+            <section class="flex-grow-1 p-3 bg-light">
+              <h4 class="mb-4 mt-5"><strong>Configurações</strong></h4> 
+                
+                <div class="card bg-white card-externo">
+                    <div class="card-body">
+                    <h5 class="card-title mb-2">Seu Plano</h5>
+                    </div>
+                </div>   
+                <br>
+                <div class="card bg-white card-externo">
+                    <div class="card-body">
+                    
+                    </div>
+                </div>  
+                
+            </section>
+
+            <style>
+              .btn-custom {
+                  background-color: white; 
+                  color: #868686; 
+                  border: none; 
+                  font-size: 1.25rem; 
+                  font-weight: bold; 
+                  padding: 0.75rem 1.5rem; 
+              }
+              
+              .btn-custom:hover {
+                  background-color: #f8f9fa; 
+                  border-color: #7c7c7c; 
+                  color: #777777; 
+              }
+
+              .btn-danger {
+                background-color: transparent; 
+                color: rgb(160, 1, 1);
+                border:#b10f0f
+              }
+              
+              .btn-dark-green {
+                background-color:transparent; 
+                color: rgb(12, 73, 7);
+                border:#8a8a8a
+            }
+
+            .btn-dark-green:hover {
+                background-color: #69a854;
+            }
+
+              .card-body small {
+                color: #757575; /
+              }
+
+              .smaller-text {
+                font-size: 0.80rem; 
+                color: #535353;
+              }
+              .card-externo {
+                min-height: 300px; 
+                padding-bottom: 2rem;
+                }
+
+                .list-group-item {
+                  border: none;
+                }
+
+                .rounded {
+                  border-radius: 8px;
+                }
+
+          </style>
+
+        </div>
+    </main>
+</body>
+
+{% endblock %}
