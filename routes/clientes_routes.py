@@ -12,3 +12,19 @@ templates = obter_jinja_templates("templates/cliente")
 @router.get("/centroPessoal/perfil", response_class=HTMLResponse)
 async def get_root(request: Request):
     return templates.TemplateResponse("pages/centroPessoal/perfil.html", {"request": request})
+
+@router.get("/centroPessoal/contaalterarsenha", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/centroPessoal/contaalterarsenha.html", {"request": request})
+
+@router.get("/centroPessoal/contaalterarnome", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/centroPessoal/contaalterarnome.html", {"request": request})
+
+@router.get("/centroPessoal/contaalterardata", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/centroPessoal/contaalterardata.html", {"request": request})
+
+@router.get("/centroPessoal/contaalteraremail", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/centroPessoal/contaalteraremail.html", {"request": request})

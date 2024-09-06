@@ -1,350 +1,335 @@
 {% extends "pages/base.html" %}
-{% block subtitulo %} Meu Perfil {% endblock %}
+{% block subtitulo %}Feed Home{% endblock %}
 {% block carousel %}
 
 <nav id="navbar-example2" class="navbar navbar-dark" style="background-color: #0F2B05;">
   <div class="container">
-      <a class="navbar-brand" href="#">Feed Home</a>
+      <a class="navbar-brand">Feed Home</a>
   </div>
 </nav>
 
 <body class="d-flex flex-column min-vh-100 bg-green">
-    <main class="d-flex flex-column flex-grow-1">
-        <div class="d-flex flex-grow-1">
-            <aside class="coluna-esquerda p-3 d-flex flex-column justify-content-between">
-                <div>
-                    <div class="profile-section mb-3">
-                        <i class="bi bi-person-circle custom-icon" style="color: #0F2B05;"></i>
-                    </div>
-                    <nav class="nav nav-pills flex-column mt-3">
-                        <span class="text-dark-beige">Página Principal</span>
-                        <a class="nav-link text-dark-beige" href="#"><i class="bi bi-plus-square"></i>Nova Postagem</a>
-                    </nav>
-                    <nav class="nav nav-pills flex-column mt-4">
-                      <span class="text-dark-beige">Postagens Antigas</span>
-                      <a class="nav-link text-dark-beige" href="#"><i class="bi bi-journal-check"></i>Atendidas</a>
-                      <a class="nav-link text-dark-beige" href="#"><i class="bi bi-journal-check"></i>Não Atendidas</a>
-                    </nav>
-                    <nav class="nav nav-pills flex-column mt-4">
-                      <span class="text-dark-beige">Bate papo</span>
-                      <a class="nav-link text-dark-beige" href="#"><i class="bi bi-chat-square-text"></i> Chat</a>
-                    </nav>
-                </div>
-            </aside>
+  <main class="d-flex flex-column flex-grow-1">
+      <div class="d-flex flex-grow-1">
+          <aside class="coluna-esquerda p-3 d-flex flex-column justify-content-between bg-white mr-5">
+              <div>
+                  <div class="profile-section mb-3">
+                      <i class="bi bi-person-circle custom-icon" class="img-thumbnail rounded-full" style="color: #0F2B05;"></i>
+                  </div>
+                  <hr>
+                  <p class="text-dark-beige" style="font-size:5;">Página Principal</p>
+                  <hr>
+                  <nav class="nav nav-pills flex-column mt-2">
+                    <a class="nav-link text-dark-beige" href="/feed/home"><i class="bi bi-plus-square"></i> <strong> Adicionar Demanda</strong></a>
+                  </nav>
+                  <hr>
+                  <nav class="nav nav-pills flex-column mt-3">
+                    <span class="text-dark-beige"><i></i>Postagens Antigas</span>
+                    <hr>
+                    <a class="nav-link text-dark-beige" href=""><i class="bi bi-journal-check"></i> Atendidas</a>
+                    <a class="nav-link text-dark-beige" href=""><i class="bi bi-journal-check"></i> Não Atendidas</a>
+                  </nav>
+                  <hr>
+                  <nav class="nav nav-pills flex-column mt-3">
+                    <span class="text-dark-beige"><i></i>Atendimento ao cliente</span>
+                    <hr>
+                    <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/chat"><i class="bi bi-chat-square-text"></i> Chat</a>
+                </nav>
+              </div>
 
-            <div class="flex-grow-1 d-flex flex-column p-5">
-                <section class="mb-4">
-                    <h2 class="card-title">NOVA DEMANDA</h2>
-                    <hr><br>
-                    <h5 class="card-title">Descrição do Produto:</h5>
-                    <div class="col-md-15">
-                        <label for="descricaoProduto" class="form-label sr-only">Descrição do Produto</label>
-                        <br>
-                        <textarea id="descricaoProduto" class="form-control" rows="6" placeholder="Especifique como você deseja que seu produto seja, fornecendo as seguintes características: Cor, Tamanho, Material específico, Quantidade, Medidas (altura, largura, comprimento, profundidade), Prazo desejado para a entrega." onfocus="removePlaceholder(this)" onblur="addPlaceholder(this)"></textarea>
-                        
-                    </div>
-                    <br>
-                </section>
+          </aside>
+            <section class="flex-grow-1 p-3 bg-light">
+              
+              <div class="card bg-white card-externo" style="padding: 30px;">
+                <div class="card-body">
 
-                <section>
-                    <div class="d-flex align-items-center mb-2">
-                        <h5 class="card-title">Imagens de Inspiração:</h5>
-                        <p class="card-text text-dark-beige me-3">(opcional)</p>
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <a class="nav-link text-dark-beige" href="#">
-                            <i class="bi bi-plus-square icon-large"></i>
-                            Adicione imagens de inspiração para o artesão, exemplificando como você deseja que seja seu produto.
-                        </a>
-                    </div>
-                </section>              
-                <section>
-                    <div class="mb-2">
-                        <h5 class="card-title">
-                            Categoria:
-                            <span class="category-info">(escolha 1 ou mais)</span>
-                        </h5>                        
-                        <br>
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Casa</h5>
-                                <div class="checkbox-container">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="moveis" value="móveis">
-                                        <label class="form-check-label" for="móveis">Móveis</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="velas" value="velas">
-                                        <label class="form-check-label" for="velas">Velas</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="esculturas" value="esculturas">
-                                        <label class="form-check-label" for="esculturas">Esculturas</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="vasos" value="vasos">
-                                        <label class="form-check-label" for="vasos">Vasos</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="cestos" value="cestos">
-                                        <label class="form-check-label" for="cestos">Cestos</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="cama" value="cama">
-                                        <label class="form-check-label" for="cama">Cama/Mesa/Banho</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="almofadas" value="almofadas">
-                                        <label class="form-check-label" for="almofadas">Almofadas</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="utensilios" value="utensílios">
-                                        <label class="form-check-label" for="utensilios">Utensílios</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="quadros" value="quadros">
-                                        <label class="form-check-label" for="quadros">Quadros/Telas</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="bordados" value="bordados">
-                                        <label class="form-check-label" for="bordados">Bordados</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="macrame" value="macramê">
-                                        <label class="form-check-label" for="macrame">Macramê</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="instrumentos" value="instrumentos">
-                                        <label class="form-check-label" for="instrumentos">Instrumentos</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="croche" value="crochê">
-                                        <label class="form-check-label" for="croche">Crochê</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="ceramicas" value="cerâmicas">
-                                        <label class="form-check-label" for="ceramicas">Cerâmicas</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="loucas" value="louças">
-                                        <label class="form-check-label" for="loucas">Louças</label>
-                                    </div>
+                     <h2 class="card-title">NOVA DEMANDA</h2>
+                     <hr><br>
+                        <h5 class="card-title">Descrição do Produto:</h5>
+                            <div class="col-md-15">
+                                 <label for="descricaoProduto" class="form-label sr-only">Descrição do Produto</label>
+                                    <br>
+                                    <textarea id="descricaoProduto" class="form-control" rows="6" placeholder="Especifique como você deseja que seu produto seja, fornecendo as seguintes características: Cor, Tamanho, Material específico, Quantidade, Medidas (altura, largura, comprimento, profundidade), Prazo desejado para a entrega." onfocus="removePlaceholder(this)" onblur="addPlaceholder(this)"></textarea>
+                                    
+                            </div>
+                            <br><br>
+
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="content1" role="tabpanel">
+                            <!-- Título da seção -->
+                            <h5 class="mb-3"><strong>Imagens do Produto</strong></h5>
+                            <br>
+                            <!-- Seção de adicionar imagens -->
+                            <div class="d-flex align-items-center mb-4">
+                                <!-- Ícone para adicionar imagens -->
+                                <div class="add-image-box d-flex flex-column align-items-center justify-content-center text-center bg-light" style="width: 150px; height: 150px; border: 1px dashed #ccc; margin-left: 4px; ">
+                                    <i class="bi bi-plus-lg" style="font-size: 2rem; color: #0F2B05;"></i>
+                                    <small class="text-muted">Adicionar imagens</small>
+                                    <small class="text-muted">(0/9)</small>
                                 </div>
-                                <hr>
-                                <h5 class="card-title">Corpo</h5>
-                                <div class="checkbox-container">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="joias" value="joias">
-                                        <label class="form-check-label" for="joias">Joias</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="bijoias" value="bijoias">
-                                        <label class="form-check-label" for="bijoias">Bijoias</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="roupas" value="roupas">
-                                        <label class="form-check-label" for="roupas">Roupas</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="acessorios" value="acessórios">
-                                        <label class="form-check-label" for="acessorios">Acessórios</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="bolsas" value="bolsas">
-                                        <label class="form-check-label" for="bolsas">Bolsas</label>
-                                    </div>
-                                </div>
-                                <hr>
-                                <h5 class="card-title">Matéria-Prima</h5>
-                                <div class="checkbox-container">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="joias" value="joias">
-                                        <label class="form-check-label" for="joias">Cerâmica</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="bijoias" value="bijoias">
-                                        <label class="form-check-label" for="bijoias">Madeira</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="roupas" value="roupas">
-                                        <label class="form-check-label" for="roupas">Ferro</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="acessorios" value="acessórios">
-                                        <label class="form-check-label" for="acessorios">Lã</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="bolsas" value="bolsas">
-                                        <label class="form-check-label" for="bolsas">Algodão</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="bolsas" value="bolsas">
-                                        <label class="form-check-label" for="bolsas">Miçanga</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="bolsas" value="bolsas">
-                                        <label class="form-check-label" for="bolsas">Barro</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="bolsas" value="bolsas">
-                                        <label class="form-check-label" for="bolsas">Palha</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="bolsas" value="bolsas">
-                                        <label class="form-check-label" for="bolsas">Fibras</label>
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="outro-container">
-                                    <h5 class="card-title">Outro</h5>
-                                    <div class="checkbox-container">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="outro" value="outro">
-                                            <label class="form-check-label" for="outro"></label>
-                                        </div>
-                                        <input type="text" id="inputNome" class="form-control" aria-describedby="nomeHelpInline" required placeholder="Especifique">
-                                    </div>
+            
+                                <!-- Texto de descrição ao lado do ícone -->
+                                <div class="ml-5" style="margin-left: 20px;">
+                                    <p class="text-muted">Adicione imagens de inspiração para o artesão, exemplificando como você deseja que seja seu produto.</p>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </section>
-                <br>
-            
-
-                <div class="container">
-                    <a href="feedhome.html" class="big-button-green">Enviar</a>
-                    <div class="info-text">
-                        <h6>As demandas publicadas estarão disponíveis na sessão "Demandas Antigas".</h6>
-                        <h6>Caso a demanda realizada não seja atendida no prazo de 15 dias, poderá ser republicada na aba "Demandas não atendidas".</h6>
+                            <br>
+                <!-- Categoria do produto -->
+                <div class="d-flex align-items-center mb-3">
+                    <label for="categoria-produto" class="form-label mr-3" style="min-width: 150px; margin-right: 20px;"><strong>Categoria</strong></label>
+                    <div class="d-flex align-items-center">
+                        <input type="text" class="form-control" id="categoria-produto" placeholder="Selecione a categoria" style="width: 300px;">
+                        <button type="button" class="btn btn-outline-secondary ms-2" data-bs-toggle="modal" data-bs-target="#categoriaModal">
+                            <i class="bi bi-plus-lg"></i>
+                        </button>
                     </div>
                 </div>
-                
+                <br><br>
 
-                
-                
-                 <style>
-                    .card {
-                        border-radius: 8px;
-                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                    }
-                    .card-body {
-                        padding: 20px;
-                    }
-                    .form-check {
-                        display: flex;
-                        align-items: center;
-                        margin-right: 15px;
-                    }
-                    .form-check-input {
-                        margin-right: 5px;
-                    }
-                    .form-check-label {
-                        font-size: 14px;
-                        color: #333;
-                    }
-                    .checkbox-container {
-                        display: flex;
-                        flex-wrap: wrap;
-                        gap: 15px;
-                        justify-content: start;
-                    }
-                    .coluna-esquerda {
-                        flex-basis: 250px;
-                        max-width: 250px; 
-                    }
-                
-                    .flex-grow-1 {
-                        flex-grow: 1;
-                        min-width: 0;
-                    }
+                <div style="text-align: center;">
+                    <a href="/feed/home" class="big-button-green" style="display: inline-block; margin-bottom: 10px;">Enviar</a>
+                    <h6 style="color: rgb(160, 159, 159); margin: 5px 0; font-size: 13px;">As demandas publicadas estarão disponíveis na sessão "Demandas Antigas".</h6>
+                    <h6 style="color: rgb(160, 159, 159); margin: 5px 0; font-size: 13px;">Caso a demanda realizada não seja atendida no prazo de 15 dias, poderá ser republicada na aba "Demandas não atendidas".</h6>
+                </div>
 
-                    .checkbox-container {
-                        display: flex;
-                        align-items: center;
-                        gap: 10px;
-                    }
-                    
-                    .form-check {
-                        margin: 0;
-                    }
-                    
-                    .form-control {
-                        flex: 1;
-                    }
-                    
-                   
-                    .icon-large {
-                        font-size: 10rem; 
-                        margin-right: 15px; 
-                    }
-
-                    
-                    .nav-link {
-                        text-decoration: none; 
-                        color: #6c757d; 
-                    }
-
-                   
-                    .text-dark-beige {
-                        color: #d9bfa0; 
-                    }
-
-                    
-                    .nav-link {
-                        display: flex;
-                        align-items: center;
-                        gap: 10px;
-                        font-size: 18px;
-                    }
-
-                    
-                    .container {
-                        text-align: center; 
-                        padding: 20px; 
-                    }
-
-
-                    .big-button-green:hover {
-                        background-color: #218838;
-                    }
-
-
-                    .info-text {
-                        margin-top: 20px; 
-                    }
-
-                    .info-text h6 {
-                        margin: 10px 0;
-                        font-size: 15px; 
-                        color: #919496;
-                        line-height: 1.5; 
-                    }
-
-                   
-                    .card-title {
-                        display: flex;
-                        align-items: center; 
-                        font-size: 1.25rem; 
-                        margin-bottom: 0.5rem; 
-                    }
-
-
-                    .category-info {
-                        font-size: 1rem; 
-                        color: #6c757d; 
-                        margin-left: 10px; 
-                    }
-
-
-
-                </style>    
-                
-                <!-- Obs da página: -->
-                 <!--1 Mudar o ícone de "perfil" para um ícone de vaso artesanal -->
-                 <!--2 Direcionar os botões clicaveis para as páginas e lugares corretos -->
-                             
             </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- Modal de categorias -->
+
+    <div class="modal fade" id="categoriaModal" tabindex="-1" aria-labelledby="categoriaModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+    <div class="modal-header">
+    <h5 class="modal-title" id="categoriaModalLabel">Categorias</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+    <!-- Seções de categorias -->
+    <div class="row mb-4">
+        <div class="col-md-4">
+        <h5 class="card-title">Casa</h5>
+        <div class="checkbox-container">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="moveis" value="móveis">
+            <label class="form-check-label" for="moveis">Móveis</label>
+            </div>
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="velas" value="velas">
+            <label class="form-check-label" for="velas">Velas</label>
+            </div>
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="esculturas" value="esculturas">
+            <label class="form-check-label" for="esculturas">Esculturas</label>
+            </div>
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="vasos" value="vasos">
+            <label class="form-check-label" for="vasos">Vasos</label>
+            </div>
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="cestos" value="cestos">
+            <label class="form-check-label" for="cestos">Cestos</label>
+            </div>
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="cestos" value="cestos">
+            <label class="form-check-label" for="cestos">Cerâmica</label>
+            </div>
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="cestos" value="cestos">
+            <label class="form-check-label" for="cestos">Instrumentos</label>
+            </div>
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="cestos" value="cestos">
+            <label class="form-check-label" for="cestos">Cozinha</label>
+            </div>
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="cestos" value="cestos">
+            <label class="form-check-label" for="cestos">Quadros</label>
+            </div>
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="cestos" value="cestos">
+            <label class="form-check-label" for="cestos">Telas</label>
+            </div>
+        </div>
+        </div>
+        <div class="col-md-4">
+        <h5 class="card-title">Corpo</h5>
+        <div class="checkbox-container">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="joias" value="joias">
+            <label class="form-check-label" for="joias">Joias</label>
+            </div>
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="bijoias" value="bijoias">
+            <label class="form-check-label" for="bijoias">Bijoias</label>
+            </div>
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="roupas" value="roupas">
+            <label class="form-check-label" for="roupas">Roupas</label>
+            </div>
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="acessorios" value="acessórios">
+            <label class="form-check-label" for="acessorios">Acessórios</label>
+            </div>
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="bolsas" value="bolsas">
+            <label class="form-check-label" for="bolsas">Bolsas</label>
+            </div>
+        </div>
+        </div>
+        <div class="col-md-4">
+        <h5 class="card-title">Outro</h5>
+        <div class="checkbox-container mb-3">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="outro" value="outro">
+            <label class="form-check-label" for="outro"></label>
+            </div>
+            <input type="text" id="inputNome" class="form-control" placeholder="Especifique">
+        </div>
+        </div>
+    </div>
+    <h5 class="card-title">Matéria-Prima</h5>
+    <br>
+    <div class="row">
+        <div class="col-md-2">
+        <div class="checkbox-container">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="ceramica" value="cerâmica">
+            <label class="form-check-label" for="ceramica">Cerâmica</label>
+            </div>
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="madeira" value="madeira">
+            <label class="form-check-label" for="madeira">Madeira</label>
+            </div>
+        </div>
+        </div>
+        <div class="col-md-2">
+        <div class="checkbox-container">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="ferro" value="ferro">
+            <label class="form-check-label" for="ferro">Ferro</label>
+            </div>
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="la" value="lã">
+            <label class="form-check-label" for="la">Lã</label>
+            </div>
+        </div>
+        </div>
+        <div class="col-md-2">
+        <div class="checkbox-container">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="algodao" value="algodão">
+            <label class="form-check-label" for="algodao">Algodão</label>
+            </div>
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="micanga" value="miçanga">
+            <label class="form-check-label" for="micanga">Miçanga</label>
+            </div>
+        </div>
+        </div>
+        <div class="col-md-2">
+        <div class="checkbox-container">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="barro" value="barro">
+            <label class="form-check-label" for="barro">Barro</label>
+            </div>
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="palha" value="palha">
+            <label class="form-check-label" for="palha">Palha</label>
+            </div>
+        </div>
+        </div>
+        <div class="col-md-2">
+        <div class="checkbox-container">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="fibras" value="fibras">
+            <label class="form-check-label" for="fibras">Fibras</label>
+            </div>
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="outro_material" value="outro_material">
+            <label class="form-check-label" for="outro_material">Outro</label>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background-color: #aaaaaa; border-color: #aaaaaa; color:rgb(255, 255, 255);">Fechar</button>
+    <button type="button" class="btn btn-primary" style="background-color: #012001; border-color: #001d00; color: #f5f5f5;">Salvar</button>
+
+    </div>
+    </div>
+    </div>
+    </div>
+
+   
+    <!-- Scripts necessários para o funcionamento do modal -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+                                <br>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+                     
+              
+            </section>
+
+            <style>
+              .btn-custom {
+                  background-color: white; 
+                  color: #868686; 
+                  border: none; 
+                  font-size: 1.25rem; 
+                  font-weight: bold; 
+                  padding: 0.75rem 1.5rem; 
+              }
+              
+              .btn-custom:hover {
+                  background-color: #e0e0e0; 
+                  border-color: #7c7c7c; 
+                  color: #777777; 
+              }
+
+              .card-externo {
+                min-height: 300px; 
+                padding-bottom: 2rem;
+                border:none;
+              }
+              
+              .custom-tab {
+                font-size: 1.25rem; 
+                color: #6c757d; /* Cinza claro quando não ativo */
+                background-color: transparent; /* Remove fundo branco */
+                border: none; /* Remove borda */
+              }
+
+              .custom-tab.active {
+    
+                background-color: transparent; /* Remove fundo branco */
+                border: none; /* Remove borda */
+              }
+              
+            </style>
+
+            <script>
+              document.addEventListener('DOMContentLoaded', function () {
+                var tabs = document.querySelectorAll('.nav-link');
+                tabs.forEach(function (tab) {
+                  tab.addEventListener('click', function () {
+                    tabs.forEach(function (t) {
+                      t.classList.remove('active');
+                    });
+                    tab.classList.add('active');
+                  });
+                });
+              });
+            </script>
+
         </div>
     </main>
 </body>
