@@ -57,3 +57,32 @@ async def get_root(request: Request):
 @router.get("/feed/home", response_class=HTMLResponse)
 async def get_root(request: Request):
     return templates.TemplateResponse("pages/feedhome.html", {"request": request})
+
+
+@router.get("/produtosparacasa", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/produtosCasa.html", {"request": request})
+
+@router.get("/produtosparacorpo", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/produtosCorpo.html", {"request": request})
+
+@router.get("/gruposcomunidades", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/gruposComunidades.html", {"request": request})
+
+@router.get("/categorias", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/categorias.html", {"request": request})
+
+@router.get("/materiaprima", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/materiaPrima.html", {"request": request})
+
+@router.get("/regioes", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/regioes.html", {"request": request})
+
+@router.get("/destaques", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/destaques.html", {"request": request})
