@@ -39,25 +39,30 @@
                     <section class="user-comment-section p-3 bg-white mb-4">
                         <div class="d-flex align-items-start">
                           <!-- Foto do perfil do usuário -->
-                          <img src="/static/img/outros/usuarioqualquer.jfif" alt="Foto de Perfil" class="rounded-circle" style="width: 50px; height: 50px; margin-right: 10px;">
+                          <img src="/static/img/outros/images.jfif" alt="Foto de Perfil" class="rounded-circle" style="width: 50px; height: 50px; margin-right: 10px;">
                       
                           <!-- Conteúdo do comentário -->
                           <div>
                             <!-- Nome do usuário e data do post -->
                             <div class="d-flex align-items-center">
-                              <strong class="mr-2">Harriet Styles Calvi Paulino</strong>
-                              <span class="text-muted" style="font-size: 12px;"> @HarryPaulinho • 5 de setembro</span>
+                              <strong class="mr-2">Pierre Bourdie Giro Grilo</strong>
+                              <span class="text-muted" style="font-size: 12px;"> @GirinoBourdie • 2 de julho</span>
                             </div>
                       
                             <!-- Texto do comentário -->
-                            <p class="mt-2 mb-2">Gostaria de uma EcoBag de algodão,  bordada com esse desenho super fofo, quero muito ter algo para lembrar dos meus pets.</p>
-                            <p class="mt-2 mb-2">-Gostaria do bordado na cor preta.</p>
-                            <p class="mt-2 mb-2">-Quero um tamanho grande para a bolsa.</p>
+                            <p class="mt-2 mb-2">Gostaria de adquirir uma escultura de capivara em madeira parecida com essa para o meu filho, ele gosta muito de animais seria o presente perfeito.</p>
+                            <p class="mt-2 mb-2">-Gostaria tivesse um acabamento em verniz.</p>
+                            <p class="mt-2 mb-2">-Quero a escultura em tamanho médio.</p>
                       
                             <!-- Fotos do produto -->
                             <div class="d-flex">
-                              <img src="/static/img/Produtos/ProdutosCorpo/EcoBolsa.jfif" alt="Foto da Bolsa 1" class="img-thumbnail product-image" style="width: 180px; height: auto; margin-right: 10px;" onclick="openModal(this)">
-                              <img src="/static/img/outros/cao-e-gato.jpg" alt="Foto da Bolsa 2" class="img-thumbnail product-image" style="width: 180px; height: auto;" onclick="openModal(this)">
+                              <img src="/static/img/Produtos/ProdutosCasa/capivara.webp" alt="Foto da Bolsa 1" class="img-thumbnail product-image" style="width: 180px; height: auto; margin-right: 10px;" onclick="openModal(this)">
+                              <img src="/static/img/Produtos/ProdutosCasa/capivara 49.jfif"Foto da Bolsa 2" class="img-thumbnail product-image" style="width: 180px; height: auto;" onclick="openModal(this)">
+                          </div>
+
+                          <div class="button-group">
+                            <a href="feed/home" class="big-button-green">Republicar</a>
+                            <a href="#" class="big-button-red">Excluir</a>
                           </div>
                       
                       </section>
@@ -134,8 +139,50 @@
             .product-image:hover {
                 transform: scale(1.05);
             }
+
+            .button-group {
+              justify-content: center; /* Centraliza os botões horizontalmente */
+              gap: 10px; /* Espaçamento entre os botões */
+              margin-top: 20px; /* Espaço superior opcional */
+          }
+      
+          .big-button-green {
+              display: inline-block;
+              padding: 13px 20px;
+              font-size: 16px;
+              font-weight: bold;
+              text-align: center;
+              color: white;
+              background-color: #0F2B05; /* Tom de verde */
+              border: none;
+              border-radius: 5px;
+              text-decoration: none;
+              transition: background-color 0.3s;
+          }
+      
+          .big-button-green:hover {
+              background-color: #0D2404; /* Tom mais escuro ao passar o mouse */
+          }
+      
+          .big-button-red {
+              display: inline-block;
+              padding: 10px 20px;
+              font-size: 16px;
+              font-weight: bold;
+              text-align: center;
+              color: white;
+              background-color: #D9534F; /* Tom de vermelho */
+              border: none;
+              border-radius: 5px;
+              text-decoration: none;
+              transition: background-color 0.3s;
+          }
+      
+          .big-button-red:hover {
+              background-color: #C9302C; /* Tom mais escuro ao passar o mouse */
+          }
               
-            </style>
+             </style>
 
             <script>
               document.addEventListener('DOMContentLoaded', function () {
