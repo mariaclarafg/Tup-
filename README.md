@@ -1,6 +1,3 @@
-﻿# Tupa.com Helena
-teste git maria clara
-
 # Membros do grupo
 1. Maria Luiza Calvi
 2. Maria Clara Friço
