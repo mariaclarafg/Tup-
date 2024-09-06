@@ -1,17 +1,14 @@
-﻿# Tupa.com Helena
-teste git maria clara
-
 # Membros do grupo
 1. Maria Luiza Calvi
 2. Maria Clara Friço
 3. Helena Paulino Cruz
 4. Alice Fin Giro
-
+teste
 # Rotas feitas por cada membro
 1. Maria Calvi - /produtos - /artesaos
 2. Maria Clara - /
 3. Alice Fin - /entrar - /entrar/esquecisenha - /entrar/cadastro - /sejaartesao/tipoloja - artesaos/cadastro/fornecerinformacoescpf - artesaos/cadastro/fornecerinformacoescnpj
-4. Helena - /feed - /carrinho
+4. Helena - /feed 
  
 
 # Alterando o Número da Porta de Saída
