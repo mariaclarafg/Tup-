@@ -1,0 +1,173 @@
+{% extends "pages/base.html" %}
+{% block subtitulo %}Demandas Atendidas{% endblock %}
+{% block carousel %}
+
+<nav id="navbar-example2" class="navbar navbar-dark" style="background-color: #0F2B05;">
+  <div class="container">
+      <a class="navbar-brand">Demandas Atendidas</a>
+  </div>
+</nav>
+
+<body class="d-flex flex-column min-vh-100 bg-green">
+  <main class="d-flex flex-column flex-grow-1">
+      <div class="d-flex flex-grow-1">
+          <aside class="coluna-esquerda p-3 d-flex flex-column justify-content-between bg-white mr-5">
+              <div>
+                  <div class="profile-section mb-3">
+                      <i class="bi bi-person-circle custom-icon" class="img-thumbnail rounded-full" style="color: #0F2B05;"></i>
+                  </div>
+                  <p class="text-dark-beige" style="font-size:5;">Página Principal</p>
+                  <nav class="nav nav-pills flex-column mt-2">
+                    <a class="nav-link text-dark-beige" href="/feed/home"><i class="bi bi-plus-square"></i> Adicionar Demanda</a>
+                  </nav>
+                  <nav class="nav nav-pills flex-column mt-3">
+                    <span class="text-dark-beige"><i></i>Postagens Antigas</span>
+                    <a class="nav-link text-dark-beige" href="/feed/demandasatendidas"><i class="bi bi-journal-check"></i> Atendidas</a>
+                    <a class="nav-link text-dark-beige" href="/feed/demandasnaoatendidas"><i class="bi bi-journal-check"></i><strong> Não Atendidas</strong></a>
+                  </nav>
+                  <nav class="nav nav-pills flex-column mt-3">
+                    <span class="text-dark-beige"><i></i>Atendimento ao cliente</span>
+                    <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/chat"><i class="bi bi-chat-square-text"></i> Chat</a>
+                </nav>
+              </div>
+
+          </aside>
+            <section class="flex-grow-1 p-3 bg-light">
+              
+              <div class="card bg-white card-externo" style="padding: 30px;">
+                <div class="card-body">
+                    <section class="user-comment-section p-3 bg-white mb-4">
+                        <div class="d-flex align-items-start">
+                          <!-- Foto do perfil do usuário -->
+                          <img src="/static/img/outros/usuarioqualquer.jfif" alt="Foto de Perfil" class="rounded-circle" style="width: 50px; height: 50px; margin-right: 10px;">
+                      
+                          <!-- Conteúdo do comentário -->
+                          <div>
+                            <!-- Nome do usuário e data do post -->
+                            <div class="d-flex align-items-center">
+                              <strong class="mr-2">Harriet Styles Calvi Paulino</strong>
+                              <span class="text-muted" style="font-size: 12px;"> @HarryPaulinho • 5 de setembro</span>
+                            </div>
+                      
+                            <!-- Texto do comentário -->
+                            <p class="mt-2 mb-2">Gostaria de uma EcoBag de algodão,  bordada com esse desenho super fofo, quero muito ter algo para lembrar dos meus pets.</p>
+                            <p class="mt-2 mb-2">-Gostaria do bordado na cor preta.</p>
+                            <p class="mt-2 mb-2">-Quero um tamanho grande para a bolsa.</p>
+                      
+                            <!-- Fotos do produto -->
+                            <div class="d-flex">
+                              <img src="/static/img/Produtos/ProdutosCorpo/EcoBolsa.jfif" alt="Foto da Bolsa 1" class="img-thumbnail product-image" style="width: 180px; height: auto; margin-right: 10px;" onclick="openModal(this)">
+                              <img src="/static/img/outros/cao-e-gato.jpg" alt="Foto da Bolsa 2" class="img-thumbnail product-image" style="width: 180px; height: auto;" onclick="openModal(this)">
+                          </div>
+                      
+                      </section>
+
+                      <!-- Modal para exibir a imagem em tamanho maior -->
+                      <div id="imageModal" class="modal" onclick="closeModal()">
+                        <img class="modal-content" id="modalImage">
+                      </div>
+                      
+
+                     
+            </section>
+
+            <style>
+              .btn-custom {
+                  background-color: white; 
+                  color: #868686; 
+                  border: none; 
+                  font-size: 1.25rem; 
+                  font-weight: bold; 
+                  padding: 0.75rem 1.5rem; 
+              }
+              
+              .btn-custom:hover {
+                  background-color: #e0e0e0; 
+                  border-color: #7c7c7c; 
+                  color: #777777; 
+              }
+
+              .card-externo {
+                min-height: 300px; 
+                padding-bottom: 2rem;
+                border:none;
+              }
+              
+              .custom-tab {
+                font-size: 1.25rem; 
+                color: #6c757d; /* Cinza claro quando não ativo */
+                background-color: transparent; /* Remove fundo branco */
+                border: none; /* Remove borda */
+              }
+
+              .custom-tab.active {
+    
+                background-color: transparent; /* Remove fundo branco */
+                border: none; /* Remove borda */
+              }
+
+              .modal {
+                display: none;
+                position: fixed;
+                z-index: 1000;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.8);
+                align-items: center;
+                justify-content: center;
+            }
+        
+            .modal-content {
+                max-width: 60%;
+                max-height: 60%;
+                border-radius: 8px;
+                transition: all 0.3s ease;
+            }
+        
+            .product-image {
+                cursor: pointer;
+                transition: transform 0.2s ease;
+            }
+        
+            .product-image:hover {
+                transform: scale(1.05);
+            }
+              
+            </style>
+
+            <script>
+              document.addEventListener('DOMContentLoaded', function () {
+                var tabs = document.querySelectorAll('.nav-link');
+                tabs.forEach(function (tab) {
+                  tab.addEventListener('click', function () {
+                    tabs.forEach(function (t) {
+                      t.classList.remove('active');
+                    });
+                    tab.classList.add('active');
+                  });
+                });
+              });
+              
+                // Função para abrir o modal com a imagem clicada
+                function openModal(img) {
+                  var modal = document.getElementById("imageModal");
+                  var modalImg = document.getElementById("modalImage");
+                  modal.style.display = "flex";
+                  modalImg.src = img.src;
+              }
+
+              // Função para fechar o modal
+              function closeModal() {
+                  var modal = document.getElementById("imageModal");
+                  modal.style.display = "none";
+              }
+              
+            </script>
+
+        </div>
+    </main>
+</body>
+
+{% endblock %}
