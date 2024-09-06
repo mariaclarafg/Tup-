@@ -33,3 +33,8 @@ async def get_root(request: Request):
 async def get_root(request: Request):
     return templates.TemplateResponse("pages/centroPessoal/enderecossalvos.html", {"request": request})
 
+@router.get("/centroPessoal/cartoescadastrados", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/centroPessoal/cartoescadastrados.html", {"request": request})
+
+

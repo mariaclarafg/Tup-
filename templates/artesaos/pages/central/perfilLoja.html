@@ -1,0 +1,155 @@
+{% extends "pages/base.html" %}
+{% block subtitulo %}Adicionar Produtos{% endblock %}
+{% block carousel %}
+
+<nav id="navbar-example2" class="navbar navbar-dark" style="background-color: #0F2B05;">
+  <div class="container">
+    <a class="navbar-brand">Central do Artesão</a>
+  </div>
+</nav>
+
+<body class="d-flex flex-column min-vh-100 bg-green">
+  <main class="d-flex flex-column flex-grow-1">
+      <div class="d-flex flex-grow-1">
+          <aside class="coluna-esquerda p-3 d-flex flex-column justify-content-between bg-white">
+              <div>
+                  <div class="profile-section mb-3">
+                      <i class="bi bi-person-circle custom-icon" class="img-thumbnail rounded-full" style="color: #0F2B05;"></i>
+                      <p class="lead">Nome da loja</p>
+                  </div>
+                  <nav class="nav nav-pills flex-column mt-2">
+                    <span class="text-dark-beige"><i></i>Pedidos</span>
+                    <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/listadetarefas" style="color: #6c757d; text-decoration: none;">
+                        <i class="bi bi-clipboard-data-fill"></i>Gerenciar Pedidos
+                  </a>
+                </nav>                  
+                  <nav class="nav nav-pills flex-column mt-3">
+                    <span class="text-dark-beige"><i></i>Produtos</span>
+                    <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/produtoscadastrados" style="color: #6c757d; text-decoration: none;"><i class="bi bi-journal-check"></i> Produtos cadastrados</a>
+                    <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/adicionarprodutos" style="color: #6c757d; text-decoration: none;"><i class="bi bi-plus-square"></i> <strong> Adicionar produtos</strong></a>
+                  </nav>
+                  <nav class="nav nav-pills flex-column mt-3">
+                    <span class="text-dark-beige"><i></i>Atendimento ao cliente</span>
+                    <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/chat" style="color: #6c757d; text-decoration: none;"><i class="bi bi-chat-square-text"></i> Chat</a>
+                    <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/demandas" style="color: #6c757d; text-decoration: none;"><i class="bi bi-piggy-bank-fill"></i> Demanda de produtos</a>
+                  </nav>
+                  <nav class="nav nav-pills flex-column mt-3">
+                    <span class="text-dark-beige"><i class="fas fa-shield-alt"></i>Loja</span>
+                    <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/perfildaloja" style="color: #6c757d; text-decoration: none;"><i class="bi bi-shop-window"></i> Perfil da Loja</a>
+                    <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/configuracoesloja" style="color: #6c757d; text-decoration: none;"><i class="bi bi-gear-fill"></i> Configurações da loja</a>
+                </nav>
+              </div>
+          </aside>
+
+          <section class="flex-grow-1 p-3 bg-light">
+            <h4 class="mb-4 mt-5"><strong>Loja</strong></h4> 
+          
+            <!-- Primeiro Card Interno -->
+            <div class="card bg-white card-externo">
+              <div class="card-body p-0">
+                <!-- Imagem de Capa com Ícone de Lápis -->
+                <div class="header-container">
+                  <img src="/static/img/logo/capa2.jpeg" alt="Imagem de Capa" class="img-fluid">
+                  <div class="edit-icon">
+                    <i class="bi bi-pencil"></i>
+                  </div>
+                </div>
+                
+                <!-- Foto de Perfil -->
+                <div class="profile-container">
+                  <img src="/static/img/logo/icon.png" alt="Foto de Perfil" class="profile-img">
+                </div>
+
+                <!-- Nome da Loja -->
+                <div class="profile-info">
+                  <h5 class="card-title mb-1 mt-4">Nome da Loja</h5>
+                  <div class="edit-icon">
+                    <i class="bi bi-pencil"></i>
+                  </div>
+                </div>
+                
+                <!-- Avaliação da Loja -->
+                <div class="rating mt-4 mb-3" style="text-align: right;">
+                  <p>Avaliação da Loja: ★★★★☆</p>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Segundo Card: Avaliações Recebidas -->
+            <div class="card bg-white mt-3">
+              <div class="card-body">
+                <h5 class="card-title mb-4">Avaliações Recebidas</h5>
+                <div class="review">
+                  <p>Ótima loja, atendimento excelente!</p>
+                </div>
+                <div class="review">
+                  <p>Produtos de alta qualidade, recomendo!</p>
+                </div>
+                <!-- Adicione mais avaliações conforme necessário -->
+              </div>
+            </div>
+          </section>
+        
+          <style>
+          .header-container {
+            position: relative;
+          }
+          
+          .header-container img {
+            width: 100%;
+            height: auto;
+          }
+          
+          .edit-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            padding: 5px;
+          }
+          
+          .profile-container {
+            position: relative;
+            margin-top: -50px; /* Ajuste conforme necessário */
+            padding: 15px;
+            display: flex;
+            align-items: center;
+          }
+          
+          .profile-img {
+            width: 150px; /* Ajuste o tamanho conforme necessário */
+            height: 150px; /* Ajuste o tamanho conforme necessário */
+            border-radius: 50%;
+            border: 3px solid white; /* Adiciona uma borda branca ao redor da foto */
+            position: absolute;
+            top: -60px; /* Ajuste conforme necessário */
+            left: 25px; /* Ajuste conforme necessário */
+          }
+          
+          .profile-info {
+            text-align: center;
+            margin-top: 60px; /* Ajuste conforme necessário para posicionar o texto */
+            position: relative;
+            z-index: 1;
+          }
+          
+          .profile-info .edit-icon {
+            display: inline-block;
+            margin-left: 10px;
+          }
+
+          .rating {
+            font-size: 16px;
+          }
+          
+          .review {
+            margin-bottom: 10px;
+          }
+          
+        </style>  
+      </div>
+  </main>
+</body>
+
+{% endblock %}

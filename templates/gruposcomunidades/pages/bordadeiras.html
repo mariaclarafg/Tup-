@@ -10,99 +10,127 @@
 {% block conteudo %}
 
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f8f9fa;
-    }
     .hero-section {
-        background: url('caminho/para/imagem-de-fundo.jpg') no-repeat center center;
+        background: url('/static/img/Produtos/GruposComunidades/bordadeiras.png') no-repeat center center;
         background-size: cover;
-        color: #0F2B05;
+        color: white;
         padding: 100px 0;
         text-align: center;
-        position: relative;
-        height: 400px; /* Ajuste a altura conforme necessário */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     }
-    .hero-section h1 {
-        font-size: 3rem;
-        margin-bottom: 20px;
-    }
-    .hero-section p {
-        font-size: 1.25rem;
-    }
-    .section-title {
-        margin: 40px 0;
-        font-size: 2rem;
+    .hero-text {
         text-align: center;
-        color: #333;
     }
-    .card img {
-        max-height: 200px;
-        object-fit: cover;
+    .gallery-img {
+        max-width: 100%;
+        height: auto;
     }
-    .footer {
-        background-color: #343a40;
-        color: #fff;
-        text-align: center;
-        padding: 20px 0;
+    .product-img {
+        max-width: 100%;
+        height: auto;
     }
 </style>
 
-<!-- Seção Hero -->
 <header class="hero-section">
-    <div class="container">
-        <h1>Conheça as Bordadeiras brasileiras</h1>
-        <p>Preservando a arte e tradições dos mestres bordadores.</p>
+    <div class="hero-text">
+        <h1>Bem-vindo à Comunidade Bordadeiras</h1>
+        <p>Preservando a arte do bordado com tradição e paixão</p>
     </div>
 </header>
 
 <!-- Sobre -->
-<section id="about" class="container my-5">
-    <h2 class="section-title">Sobre as Bordadeiras</h2>
+<section id="sobre" class="container my-5">
+    <h2 class="text-center">Sobre Nós</h2>
+    <p>A Comunidade Bordadeiras é um grupo dedicado a preservar e promover a arte do bordado tradicional. Com anos de experiência e uma paixão compartilhada pelo artesanato, nossa comunidade se reúne para trocar técnicas, compartilhar histórias e criar peças únicas. Desde pequenas oficinas até grandes eventos, estamos sempre em busca de novas formas de celebrar e divulgar nossa arte.</p>
+</section>
+
+<!-- Galeria -->
+<section id="galeria" class="container my-5">
+    <h2 class="text-center">Galeria</h2>
     <div class="row">
-        <div class="col-lg-6">
-            <p>As bordadeiras artesanais brasileiras são mestres no bordado, preservando tradições culturais ricas e diversificadas. Cada uma traz um toque único, incorporando técnicas regionais, como os bordados de Minas Gerais, o richelieu do Nordeste e as cores vibrantes de Goiás. Utilizando materiais de qualidade e habilidades apuradas, elas criam peças que vão além da decoração, refletindo identidade cultural e histórias locais. Ao escolher um bordado artesanal brasileiro, você adquire um verdadeiro pedaço da rica tapeçaria cultural do Brasil.</p>
-        </div>     
+        <div class="col-md-4">
+            <img src="/static/img/15.png" alt="Bordado 1" class="img-fluid gallery-img">
+        </div>
+        <div class="col-md-4">
+            <img src="/static/img/15.png" alt="Bordado 2" class="img-fluid gallery-img">
+        </div>
+        <div class="col-md-4">
+            <img src="/static/img/15.png" alt="Bordado 3" class="img-fluid gallery-img">
+        </div>
     </div>
 </section>
 
-<!-- Cultura -->
-<section id="culture" class="bg-light py-5">
-    <div class="container">
-        <h2 class="section-title">Cultura e Tradições</h2>
-        <div class="row">
-
-            <!-- Card de Regiões (Bordadeiras) -->
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <img src="/static/img/bordadeiras.png" class="card-img-top w-200 abaproduto-img" alt="Regiões Bordadeiras">
-                    <div class="card-body">
-                        <h5 class="card-title">Regiões</h5>
-                        <p class="card-text">Bordadeiras de diferentes regiões do Brasil trazem técnicas e estilos únicos, como o bordado de Minas Gerais, o richelieu do Nordeste e as cores vibrantes de Goiás.</p>
+<!-- Produtos -->
+<section id="produtos" class="container my-5">
+    <h2 class="text-center">Nossos Produtos</h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-4 g-3">
+        <div class="col">
+            <div class="card">
+                <a href="/produtos/portachaves">
+                    <img src="/static/img/Produtos/ProdutosCasa/portachave.png" class="card-img-top w-100 produto-img">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title text-center mb-4">
+                        <a href="/produtos/portachaves" class="text-decoration-none text-black">Porta Chaves</a>
+                    </h5>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p class="lead mb-0">R$ 45,70</p>
+                        <a href="/carrinho" class="btn btn-light btn-heart">
+                            <i class="bi bi-heart"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-            <!-- Card de Métodos de Trabalho (Bordadeiras) -->
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <img src="/static/img/bordadeiras.png" class="card-img-top w-200 abaproduto-img" alt="Métodos de Trabalho">
-                    <div class="card-body">
-                        <h5 class="card-title">Métodos de Trabalho</h5>
-                        <p class="card-text">As bordadeiras utilizam técnicas tradicionais e materiais de qualidade, com habilidades apuradas que transmitem a identidade cultural em cada peça.</p>
+        </div>
+        <div class="col">
+            <div class="card">
+                <a href="/produtos/vasoceramica">
+                    <img src="/static/img/Produtos/ProdutosCasa/vasoCeramica.jpg" class="card-img-top w-100 produto-img">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title text-center mb-4">
+                        <a href="/produtos/vasoceramica" class="text-decoration-none text-black">Vaso de Cerâmica</a>
+                    </h5>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p class="lead mb-0">R$ 399,00</p>
+                        <a href="/carrinho" class="btn btn-light btn-heart">
+                            <i class="bi bi-heart"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-            <!-- Card de Arte (Bordadeiras) -->
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <img src="/static/img/bordadeiras.png" class="card-img-top w-200 abaproduto-img" alt="Arte Bordadeiras">
-                    <div class="card-body">
-                        <h5 class="card-title">Arte</h5>
-                        <p class="card-text">O trabalho das bordadeiras é uma forma de arte que não só decora, mas também conta histórias e preserva tradições culturais através de cada bordado.</p>
+        </div>
+        <div class="col">
+            <div class="card">
+                <a href="/produtos/quadrobordado">
+                    <img src="/static/img/Produtos/ProdutosCasa/quadro.png" class="card-img-top w-100 produto-img">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title text-center mb-4">
+                        <a href="/produtos/quadrobordado" class="text-decoration-none text-black">Quadro Bordado</a>
+                    </h5>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p class="lead mb-0">R$ 250,00</p>
+                        <a href="/carrinho" class="btn btn-light btn-heart">
+                            <i class="bi bi-heart"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <a href="/produtos/bordado">
+                    <img src="/static/img/Produtos/ProdutosCorpo/panoBordadoLavanda.png" class="card-img-top w-100 produto-img">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title text-center mb-4">
+                        <a href="/produtos/bordado" class="text-decoration-none text-black">Bordado</a>
+                    </h5>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p class="lead mb-0">R$ 150,00</p>
+                        <a href="/carrinho" class="btn btn-light btn-heart">
+                            <i class="bi bi-heart"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -110,8 +138,10 @@
     </div>
 </section>
 
+<!-- Contato -->
+<section id="contato" class="container my-5">
+    <h2 class="text-center">Contato</h2>
+    <p class="text-center">Para mais informações ou para entrar em contato conosco, envie um e-mail para <a href="mailto:contato@bordadeiras.com">contato@bordadeiras.com</a>.</p>
+</section>
 
-<!-- Bootstrap JS and dependencies -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
 {% endblock %}
