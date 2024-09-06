@@ -1,6 +1,3 @@
-﻿# Tupa.com Helena
-teste git maria clara
-
 # Membros do grupo
 1. Maria Luiza Calvi
 2. Maria Clara Friço
@@ -11,7 +8,7 @@ teste git maria clara
 1. Maria Calvi - /produtos - /artesaos
 2. Maria Clara - /
 3. Alice Fin - /entrar - /entrar/esquecisenha - /entrar/cadastro - /sejaartesao/tipoloja - artesaos/cadastro/fornecerinformacoescpf - artesaos/cadastro/fornecerinformacoescnpj
-4. Helena - /feed - /carrinho
+4. Helena - /feed 
  
 
 # Alterando o Número da Porta de Saída
