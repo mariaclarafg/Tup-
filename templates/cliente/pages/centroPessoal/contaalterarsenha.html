@@ -1,14 +1,73 @@
-{% extends "pages/base.html" %}
-{% block subtitulo %} Meu Perfil {% endblock %}
-{% block carousel %}
+{% extends "pages/base.html" %} 
+{% block subtitulo %}Cadastro do Artesão{% endblock %} 
+ 
+{% block carousel %} 
+<nav id="navbar-example2" class="navbar navbar-dark" style="background-color: #0F2B05;"> 
+    <div class="container"> 
+        <a class="navbar-brand" href="#">Minha Conta</a> 
+    </div> 
+</nav> 
+{% endblock %} 
+ 
+{% block conteudo %} 
 
-<nav id="navbar-example2" class="navbar navbar-dark" style="background-color: #0F2B05;">
-  <div class="container">
-      <a class="navbar-brand" href="#">Centro Pessoal</a>
-  </div>
-</nav>
+<br> <br>
+<body> 
+    <div class="container">
+        <div class="row w-100 d-flex justify-content-center">
+            <main class="container my-100 d-flex justify-content-center align-items-center" style="min-height: 50vh;">
+                <div class="card text-bg-light mb-5" style="max-width: 30rem; padding:2rem;"> 
+                    <div class="card-body">
+                        <h3 class="card-title" style="color: #5c5e5b; font-weight: bold">Alterar sua senha</h3>
+                        <br>
+                        <h5 class="assn">Senha antiga</h5>
+                        <div class="input-group mb-3">
+                            <input type="password" id="inputtext-old" class="form-control" aria-describedby="textHelpInline">
+                            <span class="input-group-text" onclick="togglePassword('inputtext-old', this)">
+                                <i class="bi bi-eye"></i>
+                            </span>
+                        </div>
+                        <h5 class="assn">Nova senha</h5>
+                        <div class="input-group mb-3">
+                            <input type="password" id="inputtext-new" class="form-control" aria-describedby="textHelpInline">
+                            <span class="input-group-text" onclick="togglePassword('inputtext-new', this)">
+                                <i class="bi bi-eye"></i>
+                            </span>
+                        </div>
+                        <h5 class="assn">Repetir a nova senha</h5>
+                        <div class="input-group mb-3">
+                            <input type="password" id="inputtext-repeat" class="form-control" aria-describedby="textHelpInline">
+                            <span class="input-group-text" onclick="togglePassword('inputtext-repeat', this)">
+                                <i class="bi bi-eye"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div style="display: flex; justify-content: center; gap: 30px;"> 
+                        <a href="/cliente/centroPessoal/perfil" value="Continuar" class="small-button-green" style="background-color: #5c5e5b;">Cancelar</a>
+                        <a href="/cliente/centroPessoal/perfil" value="Inicio" class="small-button-green">Salvar</a>
+                    </div>
+                    <br>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
 
-
-
-
-{% endblock %}
+<script>
+    function togglePassword(id, icon) {
+        var input = document.getElementById(id);
+        var iconElement = icon.querySelector('i');
+        if (input.type === "password") {
+            input.type = "text";
+            iconElement.classList.remove('bi-eye');
+            iconElement.classList.add('bi-eye-slash');
+        } else {
+            input.type = "password";
+            iconElement.classList.remove('bi-eye-slash');
+            iconElement.classList.add('bi-eye');
+        }
+    }
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    
+{%endblock%}
