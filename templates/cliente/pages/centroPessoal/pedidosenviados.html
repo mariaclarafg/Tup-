@@ -47,7 +47,7 @@
                 <div class="row g-2 align-items-center mb-4">
                     <div class="d-flex align-items-center col-md-12">
                         <div>
-                            <label for="inputNome" class="choose">DEVOLUÇÃO DE PEDIDOS</label>
+                            <label for="inputNome" class="choose">PEDIDOS ENVIADOS</label>
                         </div>
                     </div>
                     <hr style="margin: 0;">
@@ -67,14 +67,12 @@
                                     <p class="text-muted" style="color: #0F2B05;"><b>$189,99</b></p>
                                 </div>
                             </div>
-                           <div class="col-6 border-start" style="border-color: #6c757d; margin-left: -30px;">
-                                <div class="d-flex align-items-start flex-column" style="margin-top: 15px; padding-left: 40px;">
+                            <div class="col-6 border-start" style="border-color: #6c757d; margin-left: -30px;">
+                                <div class="d-flex align-items-start flex-column" style="margin-top: 8px; padding-left: 40px;">
                                     <span style="color: #6c757d; font-size: 1.0rem;"><b>ID do pedido</b> 340NR084D</span>
-                                    <span style="color: #6c757d; font-size: 1.0rem; margin-top: 10px;"><b>Prazo de troca ou reembolso</b> 15 horas</span>
-                                    <div class="d-inline-flex mt-2">
-                                        <a href="#" class="me-2" style="color: #0F2B05; font-weight: bold; margin-top: 20px; font-size: small;" data-bs-toggle="modal" data-bs-target="#refundModal">Solicitar Reembolso</a>
-                                        <a href="#" style="color: #0F2B05; font-weight: bold; margin-top: 20px; margin-left: 60px; font-size: small;" data-bs-toggle="modal" data-bs-target="#exchangeModal">Solicitar Troca</a>
-                                    </div>
+                                    <span style="color: #6c757d; font-size: 1.0rem; margin-top: 10px;"><b>Status do pedido</b> Enviado</span>
+                                    <span style="color: #6c757d; font-size: 1.0rem; margin-top: 10px;"><b>Transportadora</b> Loggi</span>
+                                    <span style="color: #6c757d; font-size: 1.0rem; margin-top: 10px;"><b>Código de rastreio</b> 44T6Y8U0P</span>
                                 </div>
                             </div>
                         </div>
@@ -87,42 +85,25 @@
     </section>  
 </main>
 
-<!-- Modal para Solicitar Reembolso -->
-<div class="modal fade" id="refundModal" tabindex="-1" aria-labelledby="refundModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="refundModalLabel">Confirmar Solicitação de Reembolso</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        Tem certeza de que deseja solicitar o reembolso deste pedido?
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
-        <a href="/cliente/centroPessoal/solicitarReembolso" class="btn" style="background-color: #0F2B05; color: white; font-weight: bold;">Sim, solicitar</a>
-      </div>
-    </div>
-  </div>
-</div>
 
-<!-- Modal para Solicitar Troca -->
-<div class="modal fade" id="exchangeModal" tabindex="-1" aria-labelledby="exchangeModalLabel" aria-hidden="true">
+<div class="modal fade" id="cancelModal" tabindex="-1" aria-labelledby="cancelModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exchangeModalLabel">Confirmar Solicitação de Troca</h5>
+        <h5 class="modal-title" id="cancelModalLabel">Confirmar Cancelamento</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        Tem certeza de que deseja solicitar a troca deste pedido?
+        Tem certeza de que deseja cancelar este pedido?
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
-        <a href="/cliente/centroPessoal/solicitarTroca" class="btn" style="background-color: #0F2B05; color: white; font-weight: bold;">Sim, solicitar</a>
+        <a href="/cliente/centroPessoal/cancelarPedido" class="btn" style="background-color: #0F2B05; color: white; font-weight: bold;">Sim, cancelar</a>
       </div>
     </div>
   </div>
 </div>
 
 {% endblock %}
+
+
