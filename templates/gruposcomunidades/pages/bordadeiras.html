@@ -10,23 +10,118 @@
 {% block conteudo %}
 
 <style>
-    .hero-section {
-        background: url('/static/img/Produtos/GruposComunidades/bordadeiras.png') no-repeat center center;
-        background-size: cover;
-        color: white;
-        padding: 100px 0;
-        text-align: center;
+    body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
     }
+
+    .hero-section {
+        width: 80vw; /* Garante que ocupe toda a largura da tela */
+        height: 50vh; /* Define a altura como 50% da altura da tela, ajuste se necessário */
+        background: url('/static/img/Produtos/GruposComunidades/figureiros.png') no-repeat center center;
+        background-size: cover; /* Garante que a imagem cubra todo o espaço sem distorção */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
     .hero-text {
         text-align: center;
+        color: white;
+        font-family: 'Arial', sans-serif;
     }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+
+    .hero-text p {
+        font-size: 1.25rem;
+        margin-top: 10px;
+    }
+
+    .hero-section img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    :root {
+        --verde-padrao: #0F2B05; /* Definindo uma variável de cor verde padrão */
+    }
+
+    .section-title {
+        margin-bottom: 40px;
+        position: relative;
+        font-family: 'Arial', sans-serif;
+        color: var(--verde-padrao); /* Usando a cor verde padrão para o título */
+    }
+
+    .section-title h2 {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .section-title::before {
+        content: "";
+        position: absolute;
+        width: 80px;
+        height: 4px;
+        background-color: var(--verde-padrao); /* Usando a cor verde padrão para a linha abaixo do título */
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .about-content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .about-content .card {
+        background-color: #f8f9fa;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        min-height: 200px; 
+    }
+
+    .about-content .card h3 {
+        margin-top: 0;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--verde-padrao); /* Usando a cor verde padrão para o subtítulo dos cartões */
+    }
+
+    .about-content .card p {
+        font-size: 1rem;
+        color: #333;
+    }
+
     .gallery-img {
         max-width: 100%;
         height: auto;
     }
+
     .product-img {
         max-width: 100%;
         height: auto;
+    }
+    .card {
+        width: 100%;
+        max-width: 100%;
+        /* Define a altura mínima dos cartões */
+        min-height: 200px; 
+    }
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 </style>
 
@@ -37,15 +132,34 @@
     </div>
 </header>
 
-<!-- Sobre -->
 <section id="sobre" class="container my-5">
-    <h2 class="text-center">Sobre Nós</h2>
-    <p>A Comunidade Bordadeiras é um grupo dedicado a preservar e promover a arte do bordado tradicional. Com anos de experiência e uma paixão compartilhada pelo artesanato, nossa comunidade se reúne para trocar técnicas, compartilhar histórias e criar peças únicas. Desde pequenas oficinas até grandes eventos, estamos sempre em busca de novas formas de celebrar e divulgar nossa arte.</p>
+    <div class="section-title text-center">
+        <h2>Sobre Nós</h2>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="text-center">Nossa História</h3>
+                    <p>A Comunidade Bordadeiras foi fundada há mais de uma década com o objetivo de preservar e promover a arte do bordado tradicional. Com raízes profundas na cultura local, nossa comunidade reúne apaixonados pelo bordado para trocar técnicas, histórias e criar peças únicas. Participamos de eventos e feiras, além de realizar workshops para novas gerações.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="text-center">Nossa Missão</h3>
+                    <p>Nossa missão é revitalizar o bordado tradicional e garantir que essa arte rica e significativa continue a prosperar. Através de eventos, oficinas e colaboração com artesãos locais, trabalhamos para inspirar novos bordadores e manter viva a tradição do bordado.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
-<!-- Galeria -->
 <section id="galeria" class="container my-5">
-    <h2 class="text-center">Galeria</h2>
+    <div class="section-title text-center">
+        <h2>Galeria</h2>
+    </div>
     <div class="row">
         <div class="col-md-4">
             <img src="/static/img/15.png" alt="Bordado 1" class="img-fluid gallery-img">
@@ -59,9 +173,10 @@
     </div>
 </section>
 
-<!-- Produtos -->
 <section id="produtos" class="container my-5">
-    <h2 class="text-center">Nossos Produtos</h2>
+    <div class="section-title text-center">
+        <h2>Produtos</h2>
+    </div>
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-4 g-3">
         <div class="col">
             <div class="card">
@@ -137,11 +252,4 @@
         </div>
     </div>
 </section>
-
-<!-- Contato -->
-<section id="contato" class="container my-5">
-    <h2 class="text-center">Contato</h2>
-    <p class="text-center">Para mais informações ou para entrar em contato conosco, envie um e-mail para <a href="mailto:contato@bordadeiras.com">contato@bordadeiras.com</a>.</p>
-</section>
-
 {% endblock %}
