@@ -11,10 +11,10 @@
 
   <style>
     body {
-      background-color: #e4dede67; /* Fundo cinza claro */
+      background-color: #e4dede67;
     }
     .product-card {
-      background-color: #fff; /* Cards brancos */
+      background-color: #fff;
       border-radius: 10px;
       box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
       padding: 20px;
@@ -39,14 +39,14 @@
     }
     .btn-group {
       display: flex;
-      gap: 10px; /* Espaçamento entre os botões */
+      gap: 10px; 
     }
     .btn-gray {
-      background-color: #6c757d; /* Cinza escuro */
+      background-color: #6c757d; 
       color: white;
     }
     .btn-green {
-      background-color: #0F2B05; /* Verde especificado */
+      background-color: #0F2B05;
       color: white;
     }
     .card {
@@ -56,10 +56,10 @@
       margin-bottom: 20px;
     }
     .quantity-container {
-      margin-top: 20px; /* Ajusta a margem superior do campo de quantidade */
+      margin-top: 20px; 
     }
     .vendor-profile-card {
-      background-color: #fff; /* Cards brancos */
+      background-color: #fff; 
       border-radius: 10px;
       box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
       padding: 20px;
@@ -67,8 +67,8 @@
     }
     .vendor-profile-card img {
       border-radius: 50%;
-      width: 150px; /* Aumentar a largura da imagem */
-      height: 150px; /* Aumentar a altura da imagem */
+      width: 150px;
+      height: 150px;
       object-fit: cover;
     }
     .btn-group-container {
@@ -77,46 +77,37 @@
       gap: 10px; /* Espaçamento entre os botões */
     }
     .btn-sm {
-      padding: .25rem .5rem; /* Menor padding para botões menores */
-      font-size: .875rem; /* Tamanho da fonte menor */
-      line-height: 1.5; /* Altura da linha */
-      border-radius: .2rem; /* Arredondamento das bordas */
+      padding: .25rem .5rem; 
+      font-size: .875rem;
+      line-height: 1.5;
+      border-radius: .2rem; 
     }
   </style>
 
-  <!-- Main Container -->
+
   <div class="container my-5">
     <div class="row">
-      <!-- Product Card -->
       <div class="col-md-12">
         <div class="product-card">
           <div class="row">
-            <!-- Product Images Section -->
             <div class="col-md-6">
               <img src="/static/img/Produtos/ProdutosCasa/portachave.png" alt="Porta Chaves" class="img-fluid product-image">
             </div>
-            <!-- Product Info Section -->
             <div class="col-md-6">
               <h1 class="mb-3">Porta Chaves</h1>
               <p class="mb-2"><span class="price">R$ 45,70</span></p>
 
-              <!-- Rating and Reviews -->
               <div class="mb-3">
                 <span class="rating-stars">★★★★★</span>
                 <span>(4.8 de 5)</span>
                 <a href="/denunciarproduto" class="ms-2 text-muted">Denunciar</a>
               </div>
-
-              <!-- Product Description -->
               <p>Porta chaves com acabamento elegante, ideal para organização e decoração.</p>
-
-              <!-- Quantity Section -->
               <div class="quantity-container mb-4">
                 <p><strong>Quantidade:</strong></p>
                 <input type="number" class="form-control" min="1" max="100" value="1">
               </div>
 
-              <!-- Buttons (Add to Cart and Buy Now) -->
               <div class="btn-group-container">
                 <a href="/carrinho" class="btn btn-gray btn">Adicionar ao Carrinho</a>
                 <button class="btn btn-green btn">Comprar Agora</button>
@@ -127,7 +118,6 @@
       </div>
     </div>
 
-    <!-- Vendor Profile Card -->
     <div class="row mt-5">
       <h3>Perfil da Loja</h3>
       <div class="col-md-12">
@@ -140,7 +130,7 @@
               <h4>João Temperos</h4>
               <p>João Temperos vende Chaves e Tempeiros.</p>
               <div class="btn-group-container">
-                <a href="/perfil-loja" class="btn btn-green btn">Visitar Perfil da Loja</a>
+                <a href="/perfilloja" class="btn btn-green btn">Visitar Perfil da Loja</a>
                 <a href="/chat-loja" class="btn btn-gray btn">Bate-Papo</a>
               </div>
             </div>

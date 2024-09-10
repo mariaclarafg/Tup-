@@ -81,3 +81,7 @@ async def get_root(request: Request):
 @router.get("/destaques", response_class=HTMLResponse)
 async def get_root(request: Request):
     return templates.TemplateResponse("pages/destaques.html", {"request": request})
+
+@router.get("/perfilloja", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/perfilLoja.html", {"request": request})

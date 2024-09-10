@@ -1,0 +1,171 @@
+{% extends "pages/base.html" %}
+{% block subtitulo %}Perfil da Loja{% endblock %}
+{% block conteudo %}
+
+<!-- Card de Perfil no Topo da Página -->
+<section class="container-fluid px-0 my-5">
+  <div class="row">
+    <!-- Card de Perfil -->
+    <div class="col-12">
+      <div class="card bg-white">
+        <!-- Imagem de Capa com Ícone de Lápis -->
+        <div class="header-container">
+          <img src="/static/img/logo/capa2.jpeg" alt="Imagem de Capa" class="img-fluid">
+        </div>
+        
+        <!-- Foto de Perfil -->
+        <div class="profile-container">
+          <img src="/static/img/logo/icon.png" alt="Foto de Perfil" class="profile-img">
+        </div>
+
+        <!-- Nome da Loja e Avaliação -->
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="profile-info">
+              <h5 class="card-title mb-3">Nome da Loja</h5>
+            </div>
+            <div class="rating-container">
+              <span class="rating-stars">★★★★★</span>
+              <span>(4.8 de 5)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Produtos da Loja e Informações Sobre -->
+<section class="container my-5">
+  <div class="row">
+    <!-- Card de Produtos da Loja -->
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-4 g-3">
+        <div class="col">
+            <div class="card">
+                <a href="/loja/produto">
+                    <img src="/static/img/Produtos/ProdutosCasa/bordadoCafe.png" class="card-img-top w-100 produto-img">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title text-center mb-4">
+                        <a href="/loja/produto" class="text-decoration-none text-black">Bordado</a>
+                    </h5>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p class="lead mb-0">R$ 300,00</p>
+                        <a href="/loja/carrinho" class="btn btn-light btn-heart">
+                            <i class="bi bi-heart"></i>
+                        </a>
+                    </div>                                     
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <a href="/loja/produto">
+                    <img src="/static/img/Produtos/ProdutosCasa/peixeFofo.jpg" class="card-img-top w-100 produto-img">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title text-center mb-4">
+                        <a href="/loja/produto" class="text-decoration-none text-black">Luminária de Peixe</a>
+                    </h5>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p class="lead mb-0">R$ 400,00</p>
+                        <a href="/loja/carrinho" class="btn btn-light btn-heart">
+                            <i class="bi bi-heart"></i>
+                        </a>
+                    </div>                                     
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <a href="/loja/produto">
+                    <img src="/static/img/Produtos/ProdutosCasa/portachave.png" class="card-img-top w-100 produto-img">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title text-center mb-4">
+                        <a href="/loja/produto" class="text-decoration-none text-black">Porta Chaves</a>
+                    </h5>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p class="lead mb-0">R$ 45,70</p>
+                        <a href="/loja/carrinho" class="btn btn-light btn-heart">
+                            <i class="bi bi-heart"></i>
+                        </a>
+                    </div>                                     
+                </div>
+            </div>
+        </div>
+        <div class="col"></div>
+            <div class="card">
+                <a href="/loja/produto">
+                    <img src="/static/img/Produtos/ProdutosCasa/portachave.png" class="card-img-top w-100 produto-img">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title text-center mb-4">
+                        <a href="/loja/produto" class="text-decoration-none text-black">Porta Chaves</a>
+                    </h5>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p class="lead mb-0">R$ 45,70</p>
+                        <a href="/loja/carrinho" class="btn btn-light btn-heart">
+                            <i class="bi bi-heart"></i>
+                        </a>
+                    </div>                                     
+                </div>
+            </div>
+        </div>
+
+    <!-- Card de Informações Sobre a Loja -->
+    <div class="col-lg-12">
+      <div id="informacoes-sobre" class="card bg-white">
+        <div class="card-body">
+          <h3>Sobre a Loja</h3>
+          <p>A loja "Nome da Loja" é especializada em produtos artesanais e exclusivos. Com uma vasta experiência no mercado, nossa missão é oferecer qualidade e autenticidade em cada produto que vendemos. Confira nossos produtos e descubra o que temos de melhor para você.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.header-container {
+  position: relative;
+}
+
+.header-container img {
+  width: 100%;
+  height: auto;
+}
+
+.profile-container {
+  position: relative;
+  margin-top: -75px; /* Ajuste conforme necessário */
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid white;
+  position: absolute;
+  top: 75px; /* Ajuste conforme necessário */
+  left: 25px;
+}
+
+.profile-info {
+  text-align: left;
+  margin-left: 200px; /* Ajuste conforme necessário */
+}
+
+.rating-container {
+  margin-right: 25px;
+  text-align: right;
+}
+
+.rating-stars {
+  color: gold;
+}
+</style>
+
+{% endblock %}
