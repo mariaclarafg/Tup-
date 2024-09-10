@@ -50,7 +50,7 @@
 
         </div>
 
-        <div class="card bg-white card-externo">
+        <div class="card bg-white card-externo" style="max-height: 800px; margin: 0 auto;">
           <div class="card-body">
             <div class="tab-content">
               <div class="tab-pane fade show active" id="content1" role="tabpanel">
@@ -92,6 +92,10 @@
                     <label for="descricao-produto" class="form-label mb-2"><strong>Descrição do Produto</strong></label>
                     <textarea id="descricao-produto" class="form-control" placeholder="Digite a descrição do produto aqui" style="height: 100px;"></textarea>
                   </div>
+                  <div class="text-center mb-3">
+                    <br>
+                    <button type="button" class="btn btn-primary" style="background-color: #012001; border-color: #001d00; color: #f5f5f5;">Salvar</button>
+                  </div>
                 </div>
                 
               </div>
@@ -112,8 +116,8 @@
                         Não
                       </label>
                     </div>
-                </div>
                 
+                    <br>
                   <div class="d-flex flex-column mb-3">
                     <label for="quantidade-produto" class="form-label mb-2"><strong>Quantidade</strong></label>
                     <div class="input-group input-group-sm" style="width: 100px;">
@@ -122,7 +126,7 @@
                       <button class="btn btn-outline-secondary btn-sm" type="button" id="incrementar">+</button>
                     </div>
                   </div>
-                
+                  
                   <div class="d-flex flex-column mb-3">
                     <label for="garantia-produto" class="form-label mb-2"><strong>Garantia</strong></label>
                     <input type="text" class="form-control" id="garantia-produto" placeholder="Tempo de garantia">
@@ -135,46 +139,39 @@
                     <label for="largura-produto" class="form-label mb-2"><strong>Largura</strong></label>
                     <input type="text" class="form-control" id="largura-produto" placeholder="largura">
                   </div>
-                  </div>
-                <br>
                   <div class="text-center mb-3">
                     <br>
                     <button type="button" class="btn btn-primary" style="background-color: #012001; border-color: #001d00; color: #f5f5f5;">Salvar</button>
                   </div>
-
+                  </div>
+                
               </div>
 
               <div class="tab-pane fade" id="content3" role="tabpanel">
-                <br>
-                <div class="row g-3 align-items-center mb-3">
-                    <h5 class="col-md-3">Comprimento:</h5>
-                    <input type="text" class="form-control me-3" id="comprimento" placeholder="Comprimento (cm)" style="width: auto; max-width: 400px;">
-                  </div>
-  
-                  <br>
-                  <div class="row g-3 align-items-center mb-3"> 
-                    <h5 class="col-md-3">Peso:</h5>
-                    <input type="text" class="form-control me-3" id="peso" placeholder="peso (Kg)" style="width: auto; max-width: 400px;">
+                
+                  <div class="d-flex flex-column mb-3">
+                    <label for="peso-produto" class="form-label mb-2"><strong>Peso</strong></label>
+                    <input type="text" class="form-control" id="peso-produto" placeholder="Peso (Kg)">
                   </div>
                     <br>
-                    <div class="row g-3 align-items-center mb-4"> 
-                    <h5 class="col-md-3">Tamnho do pacote:</h5>
-                    <input type="text" class="form-control me-4" id="tamanho" placeholder="comprimento x largura x altura" style="width: auto; max-width: 500px;">
-                  </div>
+                    <div class="d-flex flex-column mb-3">
+                      <label for="tamanho-produto" class="form-label mb-2"><strong>Tamanho do Pacote</strong></label>
+                      <input type="text" class="form-control" id="tamanho-produto" placeholder="comprimento x largura x altura">
+                    </div>
 
 
                   <br>
-                  <div class="row g-3 align-items-center mb-3"> 
-                    <h5 class="col-md-3">Taxa de envio:</h5>
-                    <input type="text" class="form-control me-4" id="taxa" placeholder="preço" style="width: auto; max-width: 500px;">
+                  <div class="d-flex flex-column mb-3">
+                    <label for="taxa-produto" class="form-label mb-2"><strong>Taxa de Envio</strong></label>
+                    <input type="text" class="form-control" id="taxa-produto" placeholder="Valor em R$">
                   </div>
                   <br>
-                  <small class="text-muted"> *A taxa de frete acima é um valor padrão. O valor exato do custo do frete será calculado no momento da compra baseando-se no endereço do comprador e do vendedor. </small>
+                  <small class="text-muted"> *A taxa de envio acima é um valor padrão. O valor exato do custo do frete será calculado no momento da compra baseando-se no endereço do comprador e do vendedor. </small>
                   <br>
-                  <div class="text-center mb-3">
-                    <br>
-                    <button type="button" class="btn btn-primary" style="background-color: #012001; border-color: #001d00; color: #f5f5f5;">Salvar</button>
-                  </div>
+                    <div class="text-center mb-3">
+                      <br>
+                      <button type="button" class="btn btn-primary" style="background-color: #012001; border-color: #001d00; color: #f5f5f5;">Salvar</button>
+                    </div>
 
                 </div>
               </div>
@@ -193,7 +190,7 @@
 </div>
 </div>
 
-            <!-- Modal de categorias -->
+            <!-- card das categorias -->
 
             <div class="modal fade" id="categoriaModal" tabindex="-1" aria-labelledby="categoriaModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -203,7 +200,8 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-            <!-- Seções de categorias -->
+
+            <!-- seções de categorias -->
             <div class="row mb-4">
             <div class="col-md-4">
             <h5 class="card-title">Casa</h5>
@@ -360,9 +358,6 @@
 </div>
 
 
-
-
-<!-- Scripts necessários para o funcionamento do modal -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
         </div>
@@ -386,22 +381,27 @@
               }
 
               .card-externo {
-                min-height: 300px; 
-                padding-bottom: 2rem;
-                border:none;
+                max-height: 800px; /* Ajuste para o tamanho desejado */
+                margin: 0 auto;
+                border: none; /* Centraliza o card */
               }
+              
+              .card-body {
+                padding: 15px; /* Ajuste o padding se necessário */
+              }
+              
               
               .custom-tab {
                 font-size: 1.25rem; 
-                color: #6c757d; /* Cinza claro quando não ativo */
-                background-color: transparent; /* Remove fundo branco */
-                border: none; /* Remove borda */
+                color: #6c757d; 
+                background-color: transparent; 
+                border: none; 
               }
 
               .custom-tab.active {
     
-                background-color: transparent; /* Remove fundo branco */
-                border: none; /* Remove borda */
+                background-color: transparent; 
+                border: none; 
               }
               
             </style>
