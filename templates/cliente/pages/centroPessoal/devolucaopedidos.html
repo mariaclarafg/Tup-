@@ -92,16 +92,50 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="refundModalLabel">Confirmar Solicitação de Reembolso</h5>
+        <h5 class="modal-title" id="refundModalLabel" style="color: #0F2B05; font-size: 20px;">SOLICITAÇÃO DE REEMBOLSO</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        Tem certeza de que deseja solicitar o reembolso deste pedido?
+        <form>
+          <div class="mb-3">
+            <label for="inputNome" class="form-label">Nome Completo</label>
+            <input type="text" class="form-control" id="inputNome" >
+          </div>
+          <div class="mb-3">
+            <label for="inputEndereco" class="form-label">CPF</label>
+            <input type="text" class="form-control" id="inputCPF" >
+          </div>
+          <div class="mb-3">
+            <label for="inputTelefone" class="form-label">Telefone</label>
+            <input type="text" class="form-control" id="inputTelefone">
+          </div>
+          <div class="mb-3">
+            <label for="inputCidade" class="form-label"> Código do pedido</label>
+            <input type="text" class="form-control" id="inputCidade" >
+          </div>
+          <div class="mb-3">
+            <label for="inputDescricao" class="form-label">Descrição do motivo do reembolso</label>
+            <textarea style="font-size: small;" class="form-control" id="inputDescricao" rows="4" placeholder="Dê uma descrição detalhada do motivo pelo qual você está solicitando um reembolso. Inclua todas as informações relevantes, como descrições de problemas específicos e qualquer outra informação que possa nos ajudar a entender e resolver sua solicitação."></textarea>
+        </div>
+        <br>
+        <div class="mb-3">
+          <label for="inputFotos" class="form-label">Fotos para confirmação do reembolso</label>
+          <p style="font-size: small; color:#6c757d">Por favor, envie duas fotos do produto tiradas em ângulos distintos e capturadas em um ambiente bem iluminado, isso nos permitirá examinar a situação com mais detalhes. Adicionalmente, solicitamos duas fotos da embalagem do produto, também com boa iluminação, em diferentes posições, garantindo que os dados de envio estejam visíveis.</p>
+          <input type="file" class="form-control" id="inputFotos" multiple>
+          <div class="form-text">Selecione as fotos para enviar</div>
+      </div>      
+        </form>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
-        <a href="/cliente/centroPessoal/solicitarReembolso" class="btn" style="background-color: #0F2B05; color: white; font-weight: bold;">Sim, solicitar</a>
-      </div>
+      <div class="modal-footer d-flex flex-column align-items-center">
+        <p style="font-size: small; color:#6c757d;">
+            Após o envio da sua solicitação, responderemos dentro de um prazo de 7 dias úteis com as informações necessárias.
+        </p>
+        <a href="#" class="btn" style="background-color: #0F2B05; color: white; font-weight: bold; margin-top: 18px;">
+            Enviar Solicitação
+        </a>
+        <br>
+    </div>
+    
     </div>
   </div>
 </div>
