@@ -10,72 +10,124 @@
 {% block conteudo %}
 <div class="container mt-4">
     <div class="row">
+        <!-- Itens Pedidos -->
         <div class="col-lg-8 col-md-12">
-            <div class="card mb-4">
-                <div class="card-body">
-                    <br>
-
-                    <div class="row mb-3">
-                        <div class="col-3">
-                            <a href="#"><img src="https://via.placeholder.com/150" alt="Imagem do Produto" class="img-fluid"></a>
-                        </div>
-                        <div class="card">
-                            <br> 
-                            <div class="row g-2 align-items-center mb-3">
-                                <div class="d-flex align-items-center col-md-12">
-                                    <div class="me-3"> 
-                                        <a class="footer-brand" href="#">
-                                            <img src="/static/img/logo/logo_verde.png" alt="Logotipo" height="100">
-                                        </a>
-                                    </div> 
-                                    <div>
-                                        <label for="inputNome" class="choose">ESCOLHA SEU PLANO</label> 
-                                    </div>
-                                </div>
-                                <hr>
-                            </div> 
-                            <div class="d-flex justify-content-center">
-                                <div class="card col-9">
-                                    <br> 
-                                    <div class="row g-2 align-items-center mb-3">
-                                        <div class="d-flex align-items-center col-md-12">
-                                            <div class="form-check form-check-inline me-3"> 
-                                                <input class="form-check-input" type="radio" name="PlanoPremium" id="premiumP" value="sim"> 
-                                                <label class="form-check-label" for="premiumP" style="margin-right: 15px;"></label> 
-                                            </div> 
-                                            <div class="me-3"> 
-                                                <a class="footer-brand" href="#">
-                                                    <img src="/static/img/logo/logo_verde.png" alt="Logotipo" height="150">
-                                                </a>
-                                            </div> 
-                                            <div>
-                                                <label for="inputNome" class="choose">PLANO PREMIUM</label> 
-                                            </div>
-                                        </div>
-                                    </div> 
-                                </div>
-                            </div>
-                    </div>
-
-                    <!-- Mais Itens podem ser adicionados aqui -->
-                    <div class="row mb-3">
-                        <div class="col-3">
-                            <a href="#"><img src="https://via.placeholder.com/150" alt="Imagem do Produto" class="img-fluid"></a>
-                        </div>
-                        <div class="col-9">
-                            <div class="d-flex justify-content-between">
-                                <div>
-                                    <h6>Nome do Produto</h6>
-                                    <p class="text-muted">Tamanho: M | Cor: Preto</p>
-                                    <p>Quantidade: <input type="number" value="1" min="1" class="form-control w-25 d-inline"></p>
-                                    <p class="text-muted"><b>$99,99</b></p>
-                                </div>
-                                <div>
-                                    <a href="#" class="text-danger" onclick="removeItem(event)">
-                                        <i class="bi bi-trash-fill" style="font-size: 1.5rem; color: #0F2B05;"></i>
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row g-2 align-items-center mb-3">
+                            <div class="d-flex align-items-center col-md-12">
+                                <div class="me-3">
+                                    <a class="footer-brand">
+                                        <img src="/static/img/logo/logo_verde.png" alt="Logotipo" height="100">
                                     </a>
                                 </div>
+                                <div>
+                                    <label for="inputNome" class="choose">Produto(s) Pedido(s)</label>
+                                </div>
                             </div>
+                            <hr>
+                        </div>
+                        <!-- Lista de Produtos -->
+                        <div class="row mb-3">
+                            <div class="col-3">
+                                <a><img src="https://via.placeholder.com/150" alt="Imagem do Produto" class="img-fluid"></a>
+                            </div>
+                            <div class="col-9">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <h6>Nome do Produto</h6>
+                                        <p class="text-muted">Tamanho: M | Cor: Preto</p>
+                                        <p class="text-muted"><b>$99,99</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Mais produtos podem ser adicionados aqui -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Método de Pagamento -->
+            <div class="col-12 mt-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row g-2 align-items-center mb-3">
+                            <div class="d-flex align-items-center col-md-12">
+                                <div class="me-3">
+                                    <a class="footer-brand" href="#">
+                                        <img src="/static/img/logo/logo_verde.png" alt="Logotipo" height="100">
+                                    </a>
+                                </div>
+                                <div>
+                                    <label for="inputNome" class="choose">Método de Pagamento</label>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="paymentMethod" value="pix" onclick="showPaymentMethod('pix')">
+                                Pix
+                            </label>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="paymentMethod" value="card" onclick="showPaymentMethod('card')">
+                                Cartão (Débito ou Crédito)
+                            </label>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="paymentMethod" value="boleto" onclick="showPaymentMethod('boleto')">
+                                Boleto
+                            </label>
+                        </div>
+
+                        <!-- Pix Section -->
+                        <div id="pixSection" class="payment-section" style="display:none;">
+                            <h6>QR Code:</h6>
+                            <img src="https://via.placeholder.com/150" alt="QR Code" class="img-fluid">
+                            <p class="mt-2"><b>Código Aleatório:</b> 12345-abcde-67890</p>
+                        </div>
+
+                        <!-- Cartão Section -->
+                        <div id="cardSection" class="payment-section" style="display:none;">
+                            <label>
+                                <input type="radio" name="cardType" value="debit" onclick="showCardFields('debit')"> Cartão de Débito
+                            </label>
+                            <label class="ms-3">
+                                <input type="radio" name="cardType" value="credit" onclick="showCardFields('credit')"> Cartão de Crédito
+                            </label>
+
+                            <!-- Campos para Débito ou Crédito -->
+                            <div id="cardFields" style="display:none;" class="mt-3">
+                                <div class="mb-3">
+                                    <label for="cardNumber" class="form-label">Número do Cartão</label>
+                                    <input type="text" class="form-control" id="cardNumber">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="cardName" class="form-label">Nome no Cartão</label>
+                                    <input type="text" class="form-control" id="cardName">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="cardExpiry" class="form-label">Data de Validade</label>
+                                    <input type="text" class="form-control" id="cardExpiry">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="cardCVC" class="form-label">Código de Segurança (CVC)</label>
+                                    <input type="text" class="form-control" id="cardCVC">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Boleto Section -->
+                        <div id="boletoSection" class="payment-section" style="display:none;">
+                            <div class="mb-3">
+                                <label for="emailBoleto" class="form-label">E-mail para envio do Boleto</label>
+                                <input type="email" class="form-control" id="emailBoleto">
+                            </div>
+                            <button class="btn btn-primary">Enviar Boleto</button>
                         </div>
                     </div>
                 </div>
@@ -104,33 +156,29 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Pagamentos -->
-            <div class="card mt-3">
-                <div class="card-body">
-                    <h5 class="card-title"><b>PAGAMENTO</b></h5>
-                    <div class="d-flex justify-content-around">
-                        <a href="#"><img src="https://via.placeholder.com/50x30" alt="Visa" class="img-fluid"></a>
-                        <a href="#"><img src="https://via.placeholder.com/50x30" alt="MasterCard" class="img-fluid"></a>
-                        <a href="#"><img src="https://via.placeholder.com/50x30" alt="American Express" class="img-fluid"></a>
-                        <a href="#"><img src="https://via.placeholder.com/50x30" alt="PayPal" class="img-fluid"></a>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </div>
 <br>
 
-<!-- JavaScript para remover item -->
 <script>
-    function removeItem(event) {
-        event.preventDefault();
-        const item = event.target.closest('.row.mb-3');
-        if (item) {
-            item.remove();
-        }
+function showPaymentMethod(method) {
+    document.getElementById('pixSection').style.display = 'none';
+    document.getElementById('cardSection').style.display = 'none';
+    document.getElementById('boletoSection').style.display = 'none';
+    
+    if (method === 'pix') {
+        document.getElementById('pixSection').style.display = 'block';
+    } else if (method === 'card') {
+        document.getElementById('cardSection').style.display = 'block';
+    } else if (method === 'boleto') {
+        document.getElementById('boletoSection').style.display = 'block';
     }
+}
+
+function showCardFields(type) {
+    document.getElementById('cardFields').style.display = 'block';
+}
 </script>
 
 {% endblock %}
