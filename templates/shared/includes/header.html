@@ -8,12 +8,25 @@
     <title>Tupã</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm navbar-light bg-light cor-navbar border-bottom">
-        <div class="container">
-            <div class="row w-100">
-                <div class="col-5">
-                    <div class="collapse navbar-collapse p-3" id="collapsibleNavId">
-                        <ul class="navbar-nav mt-2 mt-lg-0 w-100 d-flex justify-content-evenly">
+    <nav class="navbar navbar-expand-lg navbar-light cor-navbar border-bottom" style="color:white">
+        <div class="container-fluid px-5"> <!-- Adicionado px-5 para margens laterais -->
+            <!-- Logotipo centralizado em telas pequenas -->
+            <a class="navbar-brand mx-auto d-lg-none" href="/">
+                <img src="/static/img/logo/logo_tupa.svg" alt="Logotipo" height="64">
+            </a>
+
+            <!-- Botão de toggle para o menu colapsável -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar principal -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="row w-100">
+                    <!-- Primeira coluna com os links (Início, Produtos, Artesãos, Feed) -->
+                    <div class="col-lg-5 d-flex justify-content-start align-items-center">
+                        <ul class="navbar-nav d-flex justify-content-evenly w-100">
                             <li class="nav-item">
                                 <a class="nav-link" href="/">Início</a>
                             </li>
@@ -28,43 +41,44 @@
                             </li>
                         </ul>
                     </div>
-                </div>
-                <div class="col-2">
-                    <a class="navbar-brand" href="/">
-                        <img src="/static/img/logo/logo_tupa.svg" alt="Logotipo" height="64">
-                    </a>
-                </div>
-                <div class="col-5 d-flex align-items-center">
-                    <ul class="navbar-nav mt-2 mt-lg-0 w-100 justify-content-evenly">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/sejaartesao/tipoloja">Seja um Artesão</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/entrar">Conta</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/carrinho">
-                                <i class="bi bi-cart"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <form class="d-flex my-2 my-lg-0">
-                        <div class="input-group">
-                            <input type="text" class="form-control form-control-sm" placeholder="Buscar..." />
-                            <button class="btn bg-white border-1 border-start-0 cor-borda" type="button">
-                                <i class="bi bi-search"></i>
-                            </button>
-                        </div>
-                    </form>
+
+                    <!-- Logotipo centralizado em telas maiores -->
+                    <div class="col-lg-2 d-none d-lg-flex justify-content-center align-items-center">
+                        <a class="navbar-brand" href="/">
+                            <img src="/static/img/logo/logo_tupa.svg" alt="Logotipo" height="64">
+                        </a>
+                    </div>
+
+                    <!-- Segunda coluna com os links (Seja um Artesão, Conta, Carrinho) e o formulário de busca -->
+                    <div class="col-lg-5 d-flex justify-content-end align-items-center">
+                        <ul class="navbar-nav d-flex justify-content-evenly w-100">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/sejaartesao/tipoloja">Seja um Artesão</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/entrar">Conta</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/carrinho">
+                                    <i class="bi bi-cart"></i>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <!-- Formulário de busca -->
+                        <form class="d-flex my-2 my-lg-0">
+                            <div class="input-group">
+                                <input type="text" class="form-control form-control-sm" placeholder="Buscar..." />
+                                <button class="btn border-1 border-start-0 cor-borda" type="button">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
     </nav>
-
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
