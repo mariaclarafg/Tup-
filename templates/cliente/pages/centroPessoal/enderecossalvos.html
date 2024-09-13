@@ -45,53 +45,53 @@
     </aside>
     <section class="flex-grow-1 p-3 bg-light">
         <br>
-        <div class="card text mx-auto" style="max-width: 94%;">
-            <div class="card-body">
-                <div class="row g-2 align-items-center mb-2">
-                    <div class="d-flex align-items-center col-md-12">
-                        <div>
-                            <label for="inputNome" class="choose">ENDEREÇOS SALVOS</label>
-                        </div>
-                    </div>
+        <div class="card mx-auto" style="max-width: 94%;">
+          <div class="card-body">
+            <div class="row g-2 align-items-center mb-2">
+              <div class="d-flex align-items-center col-12">
+                <div>
+                  <label for="inputNome" class="choose">ENDEREÇOS SALVOS</label>
                 </div>
-                <hr>
-                <div class="row g-2 align-items-center mb-2 p-4">
-                    <div class="d-flex align-items-start w-100" style="position: relative;">
-                        <div style="flex-shrink: 0; padding-right: 20px;">
-                            <i class="bi bi-geo-alt-fill" style="font-size: 20px;"></i>
-                        </div>
-                        <div style="flex-grow: 1;">
-                            <span style="font-size: 20px;">MÁRCIA DA SILVA</span>
-                            <br>
-                            <span style="font-size: 15px; padding: 4px; color:rgb(117, 114, 109)">21 38228-1234</span>
-                            <br>
-                            <span style="font-size: 15px; padding: 4px; color:rgb(117, 114, 109)">Botafogo, 22290-240</span>
-                            <br>
-                            <span style="font-size: 15px; padding: 4px; color:rgb(117, 114, 109)">Rio de Janeiro, Brasil</span>
-                            <br>
-                            <span style="font-size: 15px; padding: 4px; color:rgb(117, 114, 109)">Avenida Pasteur, 23</span>
-                            <br>
-                            <div style="position: absolute; bottom: -20px; right: 0; padding: 10px;">
-                                <button type="button" class="btn" style="background-color: #0F2B05; color: white; margin-right: 10px;" data-bs-toggle="modal" data-bs-target="#alterarEnderecoModal">Alterar</button>
-                                <button type="button" class="btn" style="background-color: #0F2B05; color: white;" >Excluir</button>
-                            </div>
-                        </div>
-                    </div>
+              </div>
+            </div>
+            <hr>
+            <div class="row g-2 align-items-center mb-2 p-4">
+                <div class="d-flex flex-column flex-md-row align-items-start w-100">
+                  <div class="me-3">
+                    <i class="bi bi-geo-alt-fill" style="font-size: 20px;"></i>
+                  </div>
+                  <div class="flex-grow-1">
+                    <span style="font-size: 20px;">MÁRCIA DA SILVA</span>
+                    <br>
+                    <span style="font-size: 15px; padding: 4px; color: rgb(117, 114, 109);">21 38228-1234</span>
+                    <br>
+                    <span style="font-size: 15px; padding: 4px; color: rgb(117, 114, 109);">Botafogo, 22290-240</span>
+                    <br>
+                    <span style="font-size: 15px; padding: 4px; color: rgb(117, 114, 109);">Rio de Janeiro, Brasil</span>
+                    <br>
+                    <span style="font-size: 15px; padding: 4px; color: rgb(117, 114, 109);">Avenida Pasteur, 23</span>
+                  </div>
+                  <div class="d-flex flex-column flex-md-row align-items-center">
+                    <button type="button" class="btn mb-2 mb-md-0 me-md-2" style="background-color: #0F2B05; color: white; margin-top: 90px;" data-bs-toggle="modal" data-bs-target="#alterarEnderecoModal">Alterar</button>
+                    <button type="button" class="btn" style="background-color: #0F2B05; color: white;margin-top: 90px;">Excluir</button>
+                  </div>
                 </div>
+              </div>              
             </div>
         </div>
         <br>
         <a href="#" data-bs-toggle="modal" data-bs-target="#categoriaModal" style="text-decoration: none; color: inherit;">
-            <div class="card" style="border: 2px dashed #c4cac3; max-width: 94%; margin: 0 auto;">
-                <div class="card-body d-flex justify-content-center align-items-center" style="height: 100%">
-                    <button type="button" class="btn btn-link" style="border: none; background: transparent; padding: 0;">
-                        <i class="bi bi-plus" style="font-size: 1.5rem; color: #474b46;"></i>
-                    </button>
-                    <span style="font-size: 0.9rem; color: #474b46; margin-left: 0.5rem; font-weight: bold;">Adicionar novo endereço de entrega</span>
-                </div>
+          <div class="card" style="border: 2px dashed #c4cac3; max-width: 94%; margin: 0 auto;">
+            <div class="card-body d-flex justify-content-center align-items-center">
+              <button type="button" class="btn btn-link" style="border: none; background: transparent; padding: 0;">
+                <i class="bi bi-plus" style="font-size: 1.5rem; color: #474b46;"></i>
+              </button>
+              <span style="font-size: 0.9rem; color: #474b46; margin-left: 0.5rem; font-weight: bold;">Adicionar novo endereço de entrega</span>
             </div>
-        </a>      
-    </section> 
+          </div>
+        </a>
+    </section>
+      
     <div class="modal fade" id="alterarEnderecoModal" tabindex="-1" aria-labelledby="alterarEnderecoModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" style="max-width: 500px;">
             <div class="modal-content">
