@@ -43,49 +43,54 @@
                     </div>
                     <hr>
                 </div> 
-                <div class="d-flex justify-content-center">
-                    <div class="card col-9">
-                        <br> 
-                        <div class="row g-2 align-items-center mb-3">
-                            <div class="d-flex align-items-center col-md-12">
-                                <div class="form-check form-check-inline me-3"> 
-                                    <input class="form-check-input" type="radio" name="PlanoPremium" id="premiumP" value="sim"> 
-                                    <label class="form-check-label" for="premiumP" style="margin-right: 15px;"></label> 
-                                </div> 
-                                <div class="me-3"> 
-                                    <a class="footer-brand" href="#">
-                                        <img src="/static/img/logo/logo_verde.png" alt="Logotipo" height="150">
-                                    </a>
-                                </div> 
-                                <div>
-                                    <label for="inputNome" class="choose">PLANO PREMIUM</label> 
+                <div class="container">
+                    <div class="d-flex justify-content-center mb-4">
+                        <div class="card col-12 col-md-10 col-lg-9">
+                            <div class="card-body">
+                                <div class="me-3">
+                                    <div class="d-flex align-items-center col-md-12">
+                                        <div class="form-check form-check-inline me-3"> 
+                                            <input class="form-check-input" type="radio" name="PlanoGratuito" id="gratuitoP" value="sim"> 
+                                            <label class="form-check-label" for="gratuitoP"></label> 
+                                        </div> 
+                                        <div class="me-3"> 
+                                            <a class="footer-brand" href="#">
+                                                <img src="/static/img/logo/logo_verde.png" alt="Logotipo" class="img-fluid" style="max-height: 150px;">
+                                            </a>
+                                        </div> 
+                                        <div>
+                                            <label for="inputNome" class="choose">PLANO PREMIUM</label> 
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div> 
+                        </div>
                     </div>
-                </div>
-                <br> <br>
-                <div class="d-flex justify-content-center">
-                    <div class="card col-9">
-                        <br> 
-                        <div class="row g-2 align-items-center mb-3">
-                            <div class="d-flex align-items-center col-md-12">
-                                <div class="form-check form-check-inline me-3"> 
-                                    <input class="form-check-input" type="radio" name="PlanoGratuito" id="gratuitoP" value="sim"> 
-                                    <label class="form-check-label" for="gratuitoP"></label> 
-                                </div> 
-                                <div class="me-3"> 
-                                    <a class="footer-brand" href="#">
-                                        <img src="/static/img/logo/logo_verde.png" alt="Logotipo" height="150">
-                                    </a>
-                                </div> 
-                                <div>
-                                    <label for="inputNome" class="choose">PLANO GRATUITO</label> 
+                    <div class="d-flex justify-content-center mb-4">
+                        <div class="card col-12 col-md-10 col-lg-9">
+                            <div class="card-body">
+                                <div class="me-3">
+                                    <div class="d-flex align-items-center col-md-12">
+                                        <div class="form-check form-check-inline me-3"> 
+                                            <input class="form-check-input" type="radio" name="PlanoGratuito" id="gratuitoP" value="sim"> 
+                                            <label class="form-check-label" for="gratuitoP"></label> 
+                                        </div> 
+                                        <div class="me-3"> 
+                                            <a class="footer-brand" href="#">
+                                                <img src="/static/img/logo/logo_verde.png" alt="Logotipo" class="img-fluid" style="max-height: 150px;">
+                                            </a>
+                                        </div> 
+                                        <div>
+                                            <label for="inputNome" class="choose">PLANO GRATUITO</label> 
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div> 
+                        </div>
                     </div>
                 </div>
+                
+                
                 <br> <br>
                 <div class="row g-2 align-items-center mb-3">
                     <div class="d-flex align-items-center col-md-12">
@@ -246,9 +251,9 @@
     </div>  
 </main>
 
+
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    // Função para definir um cookie
     function setCookie(name, value, days) {
       var expires = "";
       if (days) {
@@ -259,7 +264,6 @@
       document.cookie = name + "=" + (value || "") + expires + "; path=/";
     }
 
-    // Função para obter um cookie
     function getCookie(name) {
       var nameEQ = name + "=";
       var ca = document.cookie.split(';');
@@ -271,21 +275,18 @@
       return null;
     }
 
-    // Restaura a posição de rolagem, se disponível
     const scrollPosition = getCookie('scrollPosition');
     if (scrollPosition) {
       window.scrollTo(0, parseInt(scrollPosition));
-      setCookie('scrollPosition', '', -1); // Remove o cookie após usar
+      setCookie('scrollPosition', '', -1); 
     }
 
-    // Seleciona os rádio buttons
     const creditoRadio = document.getElementById('credito');
     const debitoRadio = document.getElementById('debito');
     
-    // Adiciona listeners para os eventos de mudança
     creditoRadio.addEventListener('change', function() {
       if (this.checked) {
-        // Armazena a posição de rolagem antes do redirecionamento
+
         setCookie('scrollPosition', window.scrollY, 1);
         window.location.href = '/artesaos/cadastro/escolhaseuplanopremium/credito';
       }
@@ -293,7 +294,6 @@
 
     debitoRadio.addEventListener('change', function() {
       if (this.checked) {
-        // Armazena a posição de rolagem antes do redirecionamento
         setCookie('scrollPosition', window.scrollY, 1);
         window.location.href = '/artesaos/cadastro/escolhaseuplanopremium/debito';
       }
