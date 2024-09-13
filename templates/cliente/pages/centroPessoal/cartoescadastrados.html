@@ -44,45 +44,44 @@
     </aside>
     <section class="flex-grow-1 p-3 bg-light">
         <br>
-        <div class="card text mx-auto" style="max-width: 94%; max-height: 32%; position: relative;">
-            <div class="card-body">
-                <div class="row g-2 align-items-center mb-4">
-                    <div class="d-flex align-items-center col-md-12">
-                        <div>
+        <div class="container">
+            <div class="card mx-auto mb-4" style="max-width: 94%; max-height: 12%; position: relative;">
+                <div class="card-body">
+                    <div class="row g-2 align-items-center mb-4">
+                        <div class="d-flex align-items-center col-12">
                             <label for="inputNome" class="choose">CARTÕES SALVOS</label>
                         </div>
-                    </div>
-                    <hr style="margin: 0;"> 
-                    <div class="d-flex align-items-center" style="margin-top: -15px;">
-                        <div style="flex-shrink: 0; padding-right: 200px;"> 
-                            <i class="bi bi-credit-card-fill" style="font-size: 150px; color: #0F2B05; padding-left: 20px;"></i>
+                        <hr class="my-0"> 
+                        <div class="d-flex align-items-center flex-wrap">
+                            <div class="me-3">
+                                <i class="bi bi-credit-card-fill" style="font-size: 150px; color: #0F2B05;"></i>
+                            </div>
+                            <div class="flex-grow-1">
+                                <p style="font-size: 1.2rem; font-weight: bold; margin: 0; color:#0F2B05;">MASTERCARD</p>
+                                <p style="margin: 0; color:#474b46;">1234 5678 9012 3456</p>
+                                <p style="margin: 0; color:#474b46;">Validade: 12/24</p>
+                                <p style="margin: 0; color:#474b46;">Márcia da Silva</p>
+                            </div>
+                            <div style="font-size: 1.5rem; color: #0F2B05; margin-left: 10px;">
+                                <i class="bi bi-trash3-fill" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal"></i>
+                            </div>                        
                         </div>
-                        <div style="flex-grow: 1; margin-left: 20px;"> 
-                            <p style="font-size: 1.2rem; font-weight: bold; margin: 0; color:#0F2B05">MASTERCARD</p>
-                            <p style="margin: 0; color:#474b46">1234 5678 9012 3456</p>
-                            <p style="margin: 0; color:#474b46">Validade: 12/24</p>
-                            <p style="margin: 0; color:#474b46">Márcia da Silva</p>
-                        </div>
-                        <div style="font-size: 1.5rem; color: #0F2B05; margin-left: 10px;"> 
-                            <i class="bi bi-trash3-fill" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal"></i>
-                        </div>                        
                     </div>
                 </div>
             </div>
+            <a href="#" data-bs-toggle="modal" data-bs-target="#cartaoModal" class="text-decoration-none">
+                <div class="card mx-auto mb-4" style="border: 2px dashed #c4cac3; max-width: 94%;">
+                    <div class="card-body d-flex justify-content-center align-items-center">
+                        <button type="button" class="btn btn-link p-0">
+                            <i class="bi bi-plus" style="font-size: 1.5rem; color: #474b46;"></i>
+                        </button>
+                        <span style="font-size: 0.9rem; color: #474b46; margin-left: 0.5rem; font-weight: bold;">Adicionar novo cartão</span>
+                    </div>
+                </div>
+            </a>
         </div>
-        <br>
-        <a href="#" data-bs-toggle="modal" data-bs-target="#cartaoModal" style="text-decoration: none; color: inherit;">
-            <div class="card" style="border: 2px dashed #c4cac3; max-width: 94%; margin: 0 auto;">
-                <div class="card-body d-flex justify-content-center align-items-center" style="height: 100%">
-                    <button type="button" class="btn btn-link" style="border: none; background: transparent; padding: 0;">
-                        <i class="bi bi-plus" style="font-size: 1.5rem; color: #474b46;"></i>
-                    </button>
-                    <span style="font-size: 0.9rem; color: #474b46; margin-left: 0.5rem; font-weight: bold;">Adicionar novo cartão</span>
-                </div>
-            </div>
-        </a>        
-        <br>
     </section>
+    
     <div class="modal fade" id="cartaoModal" tabindex="-1" aria-labelledby="cartaoModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" style="max-width: 500px;">
             <div class="modal-content">
