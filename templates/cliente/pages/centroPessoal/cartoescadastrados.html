@@ -22,8 +22,9 @@
             <nav class="nav nav-pills flex-column mt-2">
                 <span class="text-dark-beige">Minha conta</span>
                 <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/perfil"><i class="bi bi-clipboard-data-fill"></i> Meu perfil</a>
+                <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/favoritos"><i class="bi bi-clipboard-data-fill"></i> Favoritos </a>
                 <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/enderecossalvos"><i class="bi bi-clipboard-data-fill"></i> Endereços cadastrados</a>
-                <a class="nav-link text-dark-beige" href="#"><i class="bi bi-clipboard-data-fill"></i> Cartões cadastrados</a>
+                <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/cartoescadastrados"><i class="bi bi-clipboard-data-fill"></i><strong> Cartões cadastrados</strong></a>
             </nav>
             <nav class="nav nav-pills flex-column mt-3">
                 <span class="text-dark-beige">Meus pedidos</span>
@@ -63,8 +64,8 @@
                             <p style="margin: 0; color:#474b46">Márcia da Silva</p>
                         </div>
                         <div style="font-size: 1.5rem; color: #0F2B05; margin-left: 10px;"> 
-                            <i class="bi bi-trash3-fill"></i>
-                        </div>
+                            <i class="bi bi-trash3-fill" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal"></i>
+                        </div>                        
                     </div>
                 </div>
             </div>
@@ -118,5 +119,28 @@
         </div>
     </div>
 </main>
+
+<div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="confirmDeleteModalLabel">Confirmar Exclusão</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Tem certeza de que deseja excluir este cartão?</p>
+            </div>
+            <div class="modal-footer">
+                <form method="POST" action="/cliente/centroPessoal/excluircartao">
+                    <input type="hidden" name="cartao_id" value="12345">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" >Cancelar</button>
+                    <button type="submit" class="btn btn"style="background-color: #0F2B05; color: white;">Excluir</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
 {% endblock %}
