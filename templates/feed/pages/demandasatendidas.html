@@ -38,23 +38,21 @@
                 <div class="card-body">
                     <section class="user-comment-section p-3 bg-white mb-4">
                         <div class="d-flex align-items-start">
-                          <!-- Foto do perfil do usuário -->
                           <img src="/static/img/outros/usuarioqualquer.jfif" alt="Foto de Perfil" class="rounded-circle" style="width: 50px; height: 50px; margin-right: 10px;">
                       
-                          <!-- Conteúdo do comentário -->
                           <div>
-                            <!-- Nome do usuário e data do post -->
+
                             <div class="d-flex align-items-center">
                               <strong class="mr-2">Harriet Styles Calvi Paulino</strong>
                               <span class="text-muted" style="font-size: 12px;"> @HarryPaulinho • 5 de setembro</span>
                             </div>
                       
-                            <!-- Texto do comentário -->
+
                             <p class="mt-2 mb-2">Gostaria de uma EcoBag de algodão,  bordada com esse desenho super fofo, quero muito ter algo para lembrar dos meus pets.</p>
                             <p class="mt-2 mb-2">-Gostaria do bordado na cor preta.</p>
                             <p class="mt-2 mb-2">-Quero um tamanho grande para a bolsa.</p>
                       
-                            <!-- Fotos do produto -->
+
                             <div class="d-flex">
                               <img src="/static/img/Produtos/ProdutosCorpo/EcoBolsa.jfif" alt="Foto da Bolsa 1" class="img-thumbnail product-image" style="width: 180px; height: auto; margin-right: 10px;" onclick="openModal(this)">
                               <img src="/static/img/outros/cao-e-gato.jpg" alt="Foto da Bolsa 2" class="img-thumbnail product-image" style="width: 180px; height: auto;" onclick="openModal(this)">
@@ -62,7 +60,7 @@
                       
                       </section>
 
-                      <!-- Modal para exibir a imagem em tamanho maior -->
+
                       <div id="imageModal" class="modal" onclick="closeModal()">
                         <img class="modal-content" id="modalImage">
                       </div>
@@ -95,15 +93,15 @@
               
               .custom-tab {
                 font-size: 1.25rem; 
-                color: #6c757d; /* Cinza claro quando não ativo */
-                background-color: transparent; /* Remove fundo branco */
-                border: none; /* Remove borda */
+                color: #6c757d; 
+                background-color: transparent; 
+                border: none; 
               }
 
               .custom-tab.active {
     
-                background-color: transparent; /* Remove fundo branco */
-                border: none; /* Remove borda */
+                background-color: transparent; 
+                border: none; 
               }
 
               .modal {
@@ -150,7 +148,7 @@
                 });
               });
               
-                // Função para abrir o modal com a imagem clicada
+
                 function openModal(img) {
                   var modal = document.getElementById("imageModal");
                   var modalImg = document.getElementById("modalImage");
@@ -158,7 +156,7 @@
                   modalImg.src = img.src;
               }
 
-              // Função para fechar o modal
+
               function closeModal() {
                   var modal = document.getElementById("imageModal");
                   modal.style.display = "none";

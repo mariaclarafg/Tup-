@@ -23,7 +23,6 @@
                         <h5>Produto(s) Pedido(s)</h5>
                     </div>
                     <hr>
-                    <!-- Lista de Produtos -->
                     <div class="row mb-3">
                         <div class="col-3">
                             <img src="https://via.placeholder.com/150" alt="Imagem do Produto" class="img-fluid">
@@ -38,7 +37,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Card Métodos de Pagamento -->
+
             <div class="card mb-4">
                 <div class="card-body">
                     <div class="d-flex align-items-center mb-3">
@@ -52,7 +51,7 @@
                     </div>
                     <hr>
                     <div class="row">
-                        <!-- Pix -->
+
                         <div class="col-md-12 mb-3">
                             <div class="card p-3">
                                 <div class="d-flex align-items-center">
@@ -73,7 +72,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Cartão -->
+
                         <div class="col-md-12 mb-3">
                             <div class="card p-3">
                                 <div class="d-flex align-items-center">
@@ -90,7 +89,7 @@
                                     <div class="d-flex align-items-center mb-2">
                                         <p class="assn mb-0">Tipo de Cartão</p>
                                     </div>
-                                    <!-- Opções de Tipo de Cartão -->
+
                                     <div class="form-check form-check-inline">
                                         <input
                                             class="form-check-input"
@@ -115,7 +114,7 @@
                                     </div>
                                     <br>
                                     <br>
-                                    <!-- Detalhes do Cartão de Crédito -->
+
                                     <div id="creditCard" class="card-details" style="display:none;">
                                         <img src="/static/img/cartaocredito.png" alt="Logotipo" height="45">
                                         <p class="assn text-muted">Dados de Pagamento</p>
@@ -188,7 +187,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- Detalhes do Cartão de Débito -->
+
                                     <div id="debitCard" class="card-details" style="display:none;">
                                         <img src="/static/img/cartao_debito.png" alt="Logotipo" height="45">
                                         <p class="assn text-muted">Dados de Pagamento</p>
@@ -264,7 +263,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Boleto -->
+
                         <div class="col-md-12 mb-3">
                             <div class="card p-3">
                                 <div class="d-flex align-items-center">
@@ -321,9 +320,9 @@
 <br>
 <script>
 function showPaymentSection(sectionId) {
-    // Ocultar todas as seções
+
     document.querySelectorAll('.payment-section').forEach(section => section.style.display = 'none');
-    // Mostrar a seção selecionada
+    
     document.getElementById(sectionId).style.display = 'block';
 }
 
