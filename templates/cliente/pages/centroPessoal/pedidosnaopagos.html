@@ -3,79 +3,98 @@
 {% block carousel %}
 
 <nav id="navbar-example2" class="navbar navbar-dark" style="background-color: #0F2B05;">
-  <div class="container">
-      <a class="navbar-brand">Centro Pessoal</a>
-  </div>
+    <div class="container">
+        <a class="navbar-brand">Centro Pessoal</a>
+    </div>
 </nav>
 
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 
 <main class="d-flex flex-column flex-grow-1 bg-green">
-  <div class="d-flex flex-grow-1">
-    <aside class="coluna-esquerda p-3 d-flex flex-column justify-content-between bg-white mr-5">
-        <div>
-            <div class="profile-section mb-3">
-                <i class="bi bi-person-circle custom-icon img-thumbnail rounded-full" style="color: #0F2B05;"></i>
-                <p class="lead">Márcia da Silva</p>
-            </div>
-            <nav class="nav nav-pills flex-column mt-2">
-                <span class="text-dark-beige">Minha conta</span>
-                <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/perfil"><i class="bi bi-clipboard-data-fill"></i> Meu perfil</a>
-                <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/favoritos"><i class="bi bi-clipboard-data-fill"></i> Favoritos </a>
-                <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/enderecossalvos"><i class="bi bi-clipboard-data-fill"></i> Endereços cadastrados</a>
-                <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/cartoescadastrados"><i class="bi bi-clipboard-data-fill"></i> Cartões cadastrados</a>
-            </nav>
-            <nav class="nav nav-pills flex-column mt-3">
-                <span class="text-dark-beige">Meus pedidos</span>
-                <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/todosospedidos"><i class="bi bi-journal-check"></i> Todos pedidos</a>
-                <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/pedidosnaopagos"><i class="bi bi-plus-square"></i><strong> Pedidos não pagos</strong></a>
-                <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/pedidosentregues"><i class="bi bi-plus-square"></i> Pedidos entregues</a>
-                <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/processandopedidos"><i class="bi bi-plus-square"></i> Processando pedidos</a>
-                <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/pedidosenviados"><i class="bi bi-plus-square"></i> Pedidos enviados</a>
-                <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/avaliacaoprodutos"><i class="bi bi-plus-square"></i> Avaliação de produtos</a>
-                <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/devolucaopedidos"><i class="bi bi-plus-square"></i> Devoluções e reembolsos</a>
-            </nav>
-            <nav class="nav nav-pills flex-column mt-3">
-                <span class="text-dark-beige">Bate papo</span>
-                <a class="nav-link text-dark-beige" href="#"><i class="bi bi-chat-square-text"></i> Chat</a>
-            </nav>
-        </div>
-    </aside>
-    <section class="flex-grow-1 p-3 bg-light">
-        <br>
-        <div class="card text mx-auto" style="max-width: 94%; position: relative;">
-            <div class="card-body">
-                <div class="row g-2 align-items-center mb-4">
-                    <div class="d-flex align-items-center col-12">
-                        <div>
-                            <label for="inputNome" class="choose">PEDIDOS NÃO PAGOS</label>
-                        </div>
-                    </div>
-                    <hr style="margin: 0;">
+    <div class="d-flex flex-grow-1">
+        <aside class="coluna-esquerda p-3 d-flex flex-column justify-content-between bg-white mr-5">
+            <div>
+                <div class="profile-section mb-3">
+                    <i class="bi bi-person-circle custom-icon img-thumbnail rounded-full" style="color: #0F2B05;"></i>
+                    <p class="lead">Márcia da Silva</p>
                 </div>
-                <div class="row mb-3 align-items-start">
-                    <div class="col-12 col-md-2 d-flex justify-content-center justify-content-md-end">
-                        <a href="#"><img src="https://via.placeholder.com/150" alt="Imagem do Produto" class="img-fluid" style="margin-left: 10px;"></a>
-                    </div>
-                    <div class="col-12 col-md-10">
-                        <div class="row">
-                            <div class="col-12 col-md-6">
-                                <div style="margin-top: 15px;">
-                                    <h6>
-                                        <i class="bi bi-shop-window" style="color: #0F2B05;"></i> Vasos do Brasil
-                                    </h6>
-                                    <p class="text-muted">Kit vasos cerâmica</p>
-                                    <p class="text-muted" style="color: #0F2B05;"><b>$189,99</b></p>
-                                </div>
+                <nav class="nav nav-pills flex-column mt-2">
+                    <span class="text-dark-beige">Minha conta</span>
+                    <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/perfil"><i
+                            class="bi bi-clipboard-data-fill"></i> Meu perfil</a>
+                    <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/favoritos"><i
+                            class="bi bi-clipboard-data-fill"></i> Favoritos </a>
+                    <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/enderecossalvos"><i
+                            class="bi bi-clipboard-data-fill"></i> Endereços cadastrados</a>
+                    <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/cartoescadastrados"><i
+                            class="bi bi-clipboard-data-fill"></i> Cartões cadastrados</a>
+                </nav>
+                <nav class="nav nav-pills flex-column mt-3">
+                    <span class="text-dark-beige">Meus pedidos</span>
+                    <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/todosospedidos"><i
+                            class="bi bi-journal-check"></i> Todos pedidos</a>
+                    <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/pedidosnaopagos"><i
+                            class="bi bi-plus-square"></i><strong> Pedidos não pagos</strong></a>
+                    <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/pedidosentregues"><i
+                            class="bi bi-plus-square"></i> Pedidos entregues</a>
+                    <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/processandopedidos"><i
+                            class="bi bi-plus-square"></i> Processando pedidos</a>
+                    <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/pedidosenviados"><i
+                            class="bi bi-plus-square"></i> Pedidos enviados</a>
+                    <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/avaliacaoprodutos"><i
+                            class="bi bi-plus-square"></i> Avaliação de produtos</a>
+                    <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/devolucaopedidos"><i
+                            class="bi bi-plus-square"></i> Devoluções e reembolsos</a>
+                </nav>
+                <nav class="nav nav-pills flex-column mt-3">
+                    <span class="text-dark-beige">Bate papo</span>
+                    <a class="nav-link text-dark-beige" href="#"><i class="bi bi-chat-square-text"></i> Chat</a>
+                </nav>
+            </div>
+        </aside>
+        <section class="flex-grow-1 p-3 bg-light">
+            <br>
+            <div class="card text mx-auto" style="max-width: 94%; position: relative;">
+                <div class="card-body">
+                    <div class="row g-2 align-items-center mb-4">
+                        <div class="d-flex align-items-center col-12">
+                            <div>
+                                <label for="inputNome" class="choose">PEDIDOS NÃO PAGOS</label>
                             </div>
-                            <div class="col-12 col-md-6 border-start" style="border-color: #6c757d; padding-left: 40px;">
-                                <div class="d-flex flex-column" style="margin-top: 15px;">
-                                    <span style="color: #6c757d; font-size: 1.0rem;"><b>ID do pedido:</b> 340NR084D</span>
-                                    <span style="color: #6c757d; font-size: 1.0rem; margin-top: 10px;"><b>Prazo de pagamento:</b> 12 horas</span>
-                                    <span style="color: #6c757d; font-size: 1.0rem; margin-top: 10px;"><b>Método de pagamento:</b> Cartão de Crédito</span>
-                                    <div class="d-flex flex-column" style="margin-top: 10px; font-size: small;">
-                                        <a href="#" class="mt-2" style="color: #0F2B05; font-weight: bold; margin-left: 100px;" data-bs-toggle="modal" data-bs-target="#cancelModal" >Cancelar pedido</a>
+                        </div>
+                        <hr style="margin: 0;">
+                    </div>
+                    <div class="row mb-3 align-items-start">
+                        <div class="col-12 col-md-2 d-flex justify-content-center justify-content-md-end">
+                            <a href="#"><img src="https://via.placeholder.com/150" alt="Imagem do Produto"
+                                    class="img-fluid" style="margin-left: 10px;"></a>
+                        </div>
+                        <div class="col-12 col-md-10">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div style="margin-top: 15px;">
+                                        <h6>
+                                            <i class="bi bi-shop-window" style="color: #0F2B05;"></i> Vasos do Brasil
+                                        </h6>
+                                        <p class="text-muted">Kit vasos cerâmica</p>
+                                        <p class="text-muted" style="color: #0F2B05;"><b>$189,99</b></p>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 border-start"
+                                    style="border-color: #6c757d; padding-left: 40px;">
+                                    <div class="d-flex flex-column" style="margin-top: 15px;">
+                                        <span style="color: #6c757d; font-size: 1.0rem;"><b>ID do pedido:</b>
+                                            340NR084D</span>
+                                        <span style="color: #6c757d; font-size: 1.0rem; margin-top: 10px;"><b>Prazo de
+                                                pagamento:</b> 12 horas</span>
+                                        <span style="color: #6c757d; font-size: 1.0rem; margin-top: 10px;"><b>Método de
+                                                pagamento:</b> Cartão de Crédito</span>
+                                        <div class="d-flex flex-column" style="margin-top: 10px; font-size: small;">
+                                            <a href="#" class="mt-2"
+                                                style="color: #0F2B05; font-weight: bold; margin-left: 100px;"
+                                                data-bs-toggle="modal" data-bs-target="#cancelModal">Cancelar pedido</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -83,30 +102,28 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <br>
-        <br>
-    </section>   
+            <br>
+            <br>
+        </section>
 </main>
 
 <div class="modal fade" id="cancelModal" tabindex="-1" aria-labelledby="cancelModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="cancelModalLabel">Confirmar Cancelamento</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        Tem certeza de que deseja cancelar este pedido?
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
-        <a href="/cliente/centroPessoal/cancelarPedido" class="btn" style="background-color: #0F2B05; color: white; font-weight: bold;">Sim, cancelar</a>
-      </div>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cancelModalLabel">Confirmar Cancelamento</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Tem certeza de que deseja cancelar este pedido?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
+                <a href="/cliente/centroPessoal/cancelarPedido" class="btn"
+                    style="background-color: #0F2B05; color: white; font-weight: bold;">Sim, cancelar</a>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
 {% endblock %}
-
-

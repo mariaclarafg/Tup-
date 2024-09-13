@@ -1,36 +1,38 @@
-{% extends "pages/base.html" %} 
-{% block subtitulo %}Cadastro do Artesão{% endblock %} 
- 
-{% block carousel %} 
-<nav id="navbar-example2" class="navbar navbar-dark" style="background-color: #0F2B05;"> 
-    <div class="container"> 
-        <a class="navbar-brand">Minha Conta</a> 
-    </div> 
-</nav> 
-{% endblock %} 
- 
-{% block conteudo %} 
+{% extends "pages/base.html" %}
+{% block subtitulo %}Cadastro do Artesão{% endblock %}
+
+{% block carousel %}
+<nav id="navbar-example2" class="navbar navbar-dark" style="background-color: #0F2B05;">
+    <div class="container">
+        <a class="navbar-brand">Minha Conta</a>
+    </div>
+</nav>
+{% endblock %}
+
+{% block conteudo %}
 
 <br> <br>
-<body> 
+
+<body>
     <div class="container">
         <div class="row w-100 d-flex justify-content-center">
             <main class="container my-100 d-flex justify-content-center align-items-center" style="min-height: 50vh;">
-                <div class="card text-bg-light mb-5" style="max-width: 30rem; padding:2rem;"> 
+                <div class="card text-bg-light mb-5" style="max-width: 30rem; padding:2rem;">
                     <div class="card-body">
                         <h3 class="card-title" style="color: #5c5e5b; font-weight: bold">Alterar o email</h3>
                         <br>
                         <h5 class="assn">Email atual</h5>
                         <input type="text" id="inputtext6" class="form-control" aria-describedby="textHelpInline">
-                        <br> 
+                        <br>
                         <h5 class="assn">Novo email</h5>
                         <input type="text" id="inputtext6" class="form-control" aria-describedby="textHelpInline">
                         <br>
                         <h5 class="assn">Repita o novo email</h5>
-                        <input type="text" id="inputtext6" class="form-control" aria-describedby="textHelpInline"> 
+                        <input type="text" id="inputtext6" class="form-control" aria-describedby="textHelpInline">
                     </div>
-                    <div style="display: flex; justify-content: center; gap: 30px;"> 
-                        <a href="/cliente/centroPessoal/perfil" value="Continuar" class="small-button-green" style="background-color: #5c5e5b;">Cancelar</a>
+                    <div style="display: flex; justify-content: center; gap: 30px;">
+                        <a href="/cliente/centroPessoal/perfil" value="Continuar" class="small-button-green"
+                            style="background-color: #5c5e5b;">Cancelar</a>
                         <a href="/cliente/centroPessoal/perfil" value="Inicio" class="small-button-green">Salvar</a>
                     </div>
                     <br>
@@ -39,5 +41,5 @@
         </div>
     </div>
 </body>
-    
+
 {%endblock%}

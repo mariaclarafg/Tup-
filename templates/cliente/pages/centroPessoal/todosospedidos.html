@@ -3,137 +3,157 @@
 {% block carousel %}
 
 <nav id="navbar-example2" class="navbar navbar-dark" style="background-color: #0F2B05;">
-  <div class="container">
-      <a class="navbar-brand">Centro Pessoal</a>
-  </div>
+    <div class="container">
+        <a class="navbar-brand">Centro Pessoal</a>
+    </div>
 </nav>
 
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
 <main class="d-flex flex-column flex-grow-1 bg-green">
-  <div class="d-flex flex-grow-1">
-    <aside class="coluna-esquerda p-3 d-flex flex-column justify-content-between bg-white mr-5">
-        <div>
-            <div class="profile-section mb-3">
-                <i class="bi bi-person-circle custom-icon img-thumbnail rounded-full" style="color: #0F2B05;"></i>
-                <p class="lead">Márcia da Silva</p>
+    <div class="d-flex flex-grow-1">
+        <aside class="coluna-esquerda p-3 d-flex flex-column justify-content-between bg-white mr-5">
+            <div>
+                <div class="profile-section mb-3">
+                    <i class="bi bi-person-circle custom-icon img-thumbnail rounded-full" style="color: #0F2B05;"></i>
+                    <p class="lead">Márcia da Silva</p>
+                </div>
+                <nav class="nav nav-pills flex-column mt-2">
+                    <span class="text-dark-beige">Minha conta</span>
+                    <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/perfil"><i
+                            class="bi bi-clipboard-data-fill"></i> Meu perfil</a>
+                    <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/favoritos"><i
+                            class="bi bi-clipboard-data-fill"></i> Favoritos </a>
+                    <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/enderecossalvos"><i
+                            class="bi bi-clipboard-data-fill"></i> Endereços cadastrados</a>
+                    <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/cartoescadastrados"><i
+                            class="bi bi-clipboard-data-fill"></i> Cartões cadastrados</a>
+                </nav>
+                <nav class="nav nav-pills flex-column mt-3">
+                    <span class="text-dark-beige">Meus pedidos</span>
+                    <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/todosospedidos"><i
+                            class="bi bi-journal-check"></i><strong> Todos pedidos</strong></a>
+                    <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/pedidosnaopagos"><i
+                            class="bi bi-plus-square"></i> Pedidos não pagos</a>
+                    <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/pedidosentregues"><i
+                            class="bi bi-plus-square"></i> Pedidos entregues</a>
+                    <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/processandopedidos"><i
+                            class="bi bi-plus-square"></i> Processando pedidos</a>
+                    <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/pedidosenviados"><i
+                            class="bi bi-plus-square"></i> Pedidos enviados</a>
+                    <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/avaliacaoprodutos"><i
+                            class="bi bi-plus-square"></i> Avaliação de produtos</a>
+                    <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/devolucaopedidos"><i
+                            class="bi bi-plus-square"></i> Devoluções e reembolsos</a>
+                </nav>
+                <nav class="nav nav-pills flex-column mt-3">
+                    <span class="text-dark-beige">Bate papo</span>
+                    <a class="nav-link text-dark-beige" href="#"><i class="bi bi-chat-square-text"></i> Chat</a>
+                </nav>
             </div>
-            <nav class="nav nav-pills flex-column mt-2">
-                <span class="text-dark-beige">Minha conta</span>
-                <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/perfil"><i class="bi bi-clipboard-data-fill"></i> Meu perfil</a>
-                <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/favoritos"><i class="bi bi-clipboard-data-fill"></i> Favoritos </a>
-                <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/enderecossalvos"><i class="bi bi-clipboard-data-fill"></i> Endereços cadastrados</a>
-                <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/cartoescadastrados"><i class="bi bi-clipboard-data-fill"></i> Cartões cadastrados</a>
-            </nav>
-            <nav class="nav nav-pills flex-column mt-3">
-                <span class="text-dark-beige">Meus pedidos</span>
-                <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/todosospedidos"><i class="bi bi-journal-check"></i><strong> Todos pedidos</strong></a>
-                <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/pedidosnaopagos"><i class="bi bi-plus-square"></i> Pedidos não pagos</a>
-                <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/pedidosentregues"><i class="bi bi-plus-square"></i> Pedidos entregues</a>
-                <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/processandopedidos"><i class="bi bi-plus-square"></i> Processando pedidos</a>
-                <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/pedidosenviados"><i class="bi bi-plus-square"></i> Pedidos enviados</a>
-                <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/avaliacaoprodutos"><i class="bi bi-plus-square"></i> Avaliação de produtos</a>
-                <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/devolucaopedidos"><i class="bi bi-plus-square"></i> Devoluções e reembolsos</a>
-            </nav>
-            <nav class="nav nav-pills flex-column mt-3">
-                <span class="text-dark-beige">Bate papo</span>
-                <a class="nav-link text-dark-beige" href="#"><i class="bi bi-chat-square-text"></i> Chat</a>
-            </nav>
-        </div>
-    </aside>
-    <section class="flex-grow-1 p-3 bg-light">
-        <br>
-        <div class="card text mx-auto" style="max-width: 94%; max-height: 92%; position: relative;">
-            <div class="card-body">
-                <div class="row g-2 align-items-center mb-4">
-                    <div class="d-flex align-items-center col-md-12">
-                        <div>
-                            <label for="inputNome" class="choose">TODOS OS PEDIDOS</label>
+        </aside>
+        <section class="flex-grow-1 p-3 bg-light">
+            <br>
+            <div class="card text mx-auto" style="max-width: 94%; max-height: 92%; position: relative;">
+                <div class="card-body">
+                    <div class="row g-2 align-items-center mb-4">
+                        <div class="d-flex align-items-center col-md-12">
+                            <div>
+                                <label for="inputNome" class="choose">TODOS OS PEDIDOS</label>
+                            </div>
+                        </div>
+                        <hr style="margin: 0;">
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-4 d-flex align-items-center justify-content-center">
+                        </div>
+                        <div class="col-4 d-flex align-items-center justify-content-center">
+                            <p class="mb-0" style="color: gray; font-weight: bold;">Reembolso ou Troca</p>
+                        </div>
+                        <div class="col-4 d-flex align-items-center justify-content-center">
+                            <p class="mb-0" style="color: gray; font-weight: bold;">Status do Pedido</p>
                         </div>
                     </div>
-                    <hr style="margin: 0;">
-                </div>
-                <div class="row mb-3">
-                    <div class="col-4 d-flex align-items-center justify-content-center">
-                    </div>
-                    <div class="col-4 d-flex align-items-center justify-content-center">
-                        <p class="mb-0" style="color: gray; font-weight: bold;">Reembolso ou Troca</p>
-                    </div>
-                    <div class="col-4 d-flex align-items-center justify-content-center">
-                        <p class="mb-0" style="color: gray; font-weight: bold;">Status do Pedido</p>
-                    </div>
-                </div>
-                <hr>
-                <div class="row mb-3">
-                    <div class="col-12 col-md-4 d-flex align-items-center">
-                        <a href="#"><img src="https://via.placeholder.com/150" alt="Imagem do Produto" class="img-fluid" style="margin-left: 10px;"></a>
-                        <div class="ms-3">
-                            <h6>
-                                <i class="bi bi-shop-window" style="color: #0F2B05;"></i> Vasos do Brasil
-                            </h6>
-                            <p class="text-muted">Kit vasos cerâmica</p>
-                            <p class="text-muted" style="color: #0F2B05;"><b>$189,99</b></p>
+                    <hr>
+                    <div class="row mb-3">
+                        <div class="col-12 col-md-4 d-flex align-items-center">
+                            <a href="#"><img src="https://via.placeholder.com/150" alt="Imagem do Produto"
+                                    class="img-fluid" style="margin-left: 10px;"></a>
+                            <div class="ms-3">
+                                <h6>
+                                    <i class="bi bi-shop-window" style="color: #0F2B05;"></i> Vasos do Brasil
+                                </h6>
+                                <p class="text-muted">Kit vasos cerâmica</p>
+                                <p class="text-muted" style="color: #0F2B05;"><b>$189,99</b></p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 d-flex align-items-center justify-content-center">
+                            <span style="font-size: 1.0rem;">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#cancelarModal"
+                                    style="color:#6c706b; text-decoration: underline;">Cancelar Compra</a>
+                            </span>
+                        </div>
+                        <div class="col-12 col-md-4 d-flex align-items-center justify-content-center">
+                            <span style="color: #6c757d; font-size: 1.0rem;">Processando</span>
                         </div>
                     </div>
-                    <div class="col-12 col-md-4 d-flex align-items-center justify-content-center">
-                        <span style="font-size: 1.0rem;">
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#cancelarModal" style="color:#6c706b; text-decoration: underline;">Cancelar Compra</a>
-                        </span>
-                    </div>
-                    <div class="col-12 col-md-4 d-flex align-items-center justify-content-center">
-                        <span style="color: #6c757d; font-size: 1.0rem;">Processando</span>
-                    </div>
-                </div>
-                <hr>
-                <div class="row mb-3">
-                    <div class="col-12 col-md-4 d-flex align-items-center">
-                        <a href="#"><img src="https://via.placeholder.com/150" alt="Imagem do Produto" class="img-fluid" style="margin-left: 10px;"></a>
-                        <div class="ms-3">
-                            <h6>
-                                <i class="bi bi-shop-window" style="color: #0F2B05;"></i> Vasos do Brasil
-                            </h6>
-                            <p class="text-muted">Kit vasos cerâmica</p>
-                            <p class="text-muted" style="color: #0F2B05;"><b>$189,99</b></p>
-                            <p style="margin-top: 5px; font-size: 0.8rem; color: #6c757d;">
-                                <a href="/cliente/centroPessoal/rastrearprodutos" style="text-decoration: underline; font-weight: bold; color: #6c757d;">Rastrear produto</a>
-                            </p>
+                    <hr>
+                    <div class="row mb-3">
+                        <div class="col-12 col-md-4 d-flex align-items-center">
+                            <a href="#"><img src="https://via.placeholder.com/150" alt="Imagem do Produto"
+                                    class="img-fluid" style="margin-left: 10px;"></a>
+                            <div class="ms-3">
+                                <h6>
+                                    <i class="bi bi-shop-window" style="color: #0F2B05;"></i> Vasos do Brasil
+                                </h6>
+                                <p class="text-muted">Kit vasos cerâmica</p>
+                                <p class="text-muted" style="color: #0F2B05;"><b>$189,99</b></p>
+                                <p style="margin-top: 5px; font-size: 0.8rem; color: #6c757d;">
+                                    <a href="/cliente/centroPessoal/rastrearprodutos"
+                                        style="text-decoration: underline; font-weight: bold; color: #6c757d;">Rastrear
+                                        produto</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 d-flex align-items-center justify-content-center">
+                            <span style="color: #6c706b; font-size: 1.0rem;">Indisponível para devolução</span>
+                        </div>
+                        <div class="col-12 col-md-4 d-flex align-items-center justify-content-center">
+                            <span style="color: #6c757d; font-size: 1.0rem;">Enviado</span>
                         </div>
                     </div>
-                    <div class="col-12 col-md-4 d-flex align-items-center justify-content-center">
-                        <span style="color: #6c706b; font-size: 1.0rem;">Indisponível para devolução</span>
-                    </div>
-                    <div class="col-12 col-md-4 d-flex align-items-center justify-content-center">
-                        <span style="color: #6c757d; font-size: 1.0rem;">Enviado</span>
-                    </div>
-                </div>
-                <hr>
-                <div class="row mb-3">
-                    <div class="col-12 col-md-4 d-flex align-items-center">
-                        <a href="#"><img src="https://via.placeholder.com/150" alt="Imagem do Produto" class="img-fluid" style="margin-left: 10px;"></a>
-                        <div class="ms-3">
-                            <h6>
-                                <i class="bi bi-shop-window" style="color: #0F2B05;"></i> Brasilidades
-                            </h6>
-                            <p class="text-muted">Bolsa</p>
-                            <p class="text-muted" style="color: #0F2B05;"><b>$200,99</b></p>
-                            <p style="margin-top: 5px; font-size: 0.8rem; color: #6c757d;">
-                                <a href="/cliente/centroPessoal/avaliacaoprodutos" style="text-decoration: underline; font-weight: bold; color: #6c757d;">Avaliar produto</a>
-                            </p>
+                    <hr>
+                    <div class="row mb-3">
+                        <div class="col-12 col-md-4 d-flex align-items-center">
+                            <a href="#"><img src="https://via.placeholder.com/150" alt="Imagem do Produto"
+                                    class="img-fluid" style="margin-left: 10px;"></a>
+                            <div class="ms-3">
+                                <h6>
+                                    <i class="bi bi-shop-window" style="color: #0F2B05;"></i> Brasilidades
+                                </h6>
+                                <p class="text-muted">Bolsa</p>
+                                <p class="text-muted" style="color: #0F2B05;"><b>$200,99</b></p>
+                                <p style="margin-top: 5px; font-size: 0.8rem; color: #6c757d;">
+                                    <a href="/cliente/centroPessoal/avaliacaoprodutos"
+                                        style="text-decoration: underline; font-weight: bold; color: #6c757d;">Avaliar
+                                        produto</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 d-flex align-items-center justify-content-center">
+                            <span style="font-size: 1.0rem;">
+                                <a href="/cliente/centroPessoal/devolucaopedidos"
+                                    style="color:#6c706b; text-decoration: underline;">Solicitar devolução</a>
+                            </span>
+                        </div>
+                        <div class="col-12 col-md-4 d-flex align-items-center justify-content-center">
+                            <span style="color: #6c757d; font-size: 1.0rem; font-weight: bold;">Entregue</span>
                         </div>
                     </div>
-                    <div class="col-12 col-md-4 d-flex align-items-center justify-content-center">
-                        <span style="font-size: 1.0rem;">
-                            <a href="/cliente/centroPessoal/devolucaopedidos" style="color:#6c706b; text-decoration: underline;">Solicitar devolução</a>
-                        </span>
-                    </div>
-                    <div class="col-12 col-md-4 d-flex align-items-center justify-content-center">
-                        <span style="color: #6c757d; font-size: 1.0rem; font-weight: bold;">Entregue</span>
-                    </div>
-                </div>                   
+                </div>
             </div>
-        </div>    
-    </section>           
+        </section>
 </main>
 
 
@@ -149,7 +169,8 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
-                <a href="/cliente/centroPessoal/cancelarPedido" class="btn" style="background-color: #0F2B05; color: white; font-weight: bold;">Sim, cancelar</a>
+                <a href="/cliente/centroPessoal/cancelarPedido" class="btn"
+                    style="background-color: #0F2B05; color: white; font-weight: bold;">Sim, cancelar</a>
             </div>
         </div>
     </div>

@@ -3,121 +3,138 @@
 {% block carousel %}
 
 <nav id="navbar-example2" class="navbar navbar-dark" style="background-color: #0F2B05;">
-  <div class="container">
-      <a class="navbar-brand">Centro Pessoal</a>
-  </div>
+    <div class="container">
+        <a class="navbar-brand">Centro Pessoal</a>
+    </div>
 </nav>
 
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
 <main class="d-flex flex-column flex-grow-1 bg-green">
-  <div class="d-flex flex-grow-1">
-    <aside class="coluna-esquerda p-3 d-flex flex-column justify-content-between bg-white mr-5">
-        <div>
-            <div class="profile-section mb-3">
-                <i class="bi bi-person-circle custom-icon img-thumbnail rounded-full text-site-green"></i>
-                <p class="lead">Márcia da Silva</p>
-            </div>
-            <nav class="nav nav-pills flex-column mt-2">
-                <span class="text-dark-beige">Minha conta</span>
-                <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/perfil"><i class="bi bi-clipboard-data-fill"></i> Meu perfil</a>
-                <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/favoritos"><i class="bi bi-clipboard-data-fill"></i> Favoritos </a>
-                <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/enderecossalvos"><i class="bi bi-clipboard-data-fill"></i> Endereços cadastrados</a>
-                <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/cartoescadastrados"><i class="bi bi-clipboard-data-fill"></i> Cartões cadastrados</a>
-            </nav>
-            <nav class="nav nav-pills flex-column mt-3">
-                <span class="text-dark-beige">Meus pedidos</span>
-                <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/todosospedidos"><i class="bi bi-journal-check"></i> Todos pedidos</a>
-                <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/pedidosnaopagos"><i class="bi bi-plus-square"></i> Pedidos não pagos</a>
-                <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/pedidosentregues"><i class="bi bi-plus-square"></i><strong> Pedidos entregues</strong></a>
-                <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/processandopedidos"><i class="bi bi-plus-square"></i> Processando pedidos</a>
-                <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/pedidosenviados"><i class="bi bi-plus-square"></i> Pedidos enviados</a>
-                <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/avaliacaoprodutos"><i class="bi bi-plus-square"></i> Avaliação de produtos</a>
-                <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/devolucaopedidos"><i class="bi bi-plus-square"></i> Devoluções e reembolsos</a>
-            </nav>
-            <nav class="nav nav-pills flex-column mt-3">
-                <span class="text-dark-beige">Bate papo</span>
-                <a class="nav-link text-dark-beige" href="#"><i class="bi bi-chat-square-text"></i> Chat</a>
-            </nav>
-        </div>
-    </aside>
-    <section class="flex-grow-1 p-3 bg-light position-relative">
-        <br>
-        <div class="card text mx-auto" style="max-width: 94%; max-height: 92%; position: relative;">
-            <div class="card-body">
-                <div class="row g-2 align-items-center mb-4">
-                    <div class="d-flex align-items-center col-12">
-                        <div>
-                            <label for="inputNome" class="choose">RASTREAMENTO</label>
-                        </div>
-                    </div>
-                    <hr style="margin: 0;">
+    <div class="d-flex flex-grow-1">
+        <aside class="coluna-esquerda p-3 d-flex flex-column justify-content-between bg-white mr-5">
+            <div>
+                <div class="profile-section mb-3">
+                    <i class="bi bi-person-circle custom-icon img-thumbnail rounded-full text-site-green"></i>
+                    <p class="lead">Márcia da Silva</p>
                 </div>
-                <div class="d-flex mb-3">
-                    <p class="text-muted font-weight-bold mb-0 ms-2">PEDIDO - R567NW09P3 - 05/09/2024 - 11h16</p>
-                </div>                
-                <hr>
-                <br>
-                <p class="font-weight-bold text-center">Previsão de entrega: 20/09/2024 (até 9 dias úteis)</p>
-                <br>
-                <br>
-                <br>
-                <div class="d-flex flex-column align-items-center">
-                    <div class="progress w-100" style="height: 5px;">
-                        <div class="progress-bar bg-site-green" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <div class="d-flex justify-content-between w-100 mt-2 flex-wrap">
-                        <div class="text-center status-container">
-                            <i class="bi bi-clipboard2-check status-icon text-site-green"></i>
-                            <span class="badge bg-site-green">1</span>
-                            <p class="text-muted mb-0">Pedido recebido</p>
-                        </div>
-                        <div class="text-center status-container">
-                            <i class="bi bi-hourglass-split status-icon text-site-green"></i>
-                            <span class="badge bg-site-green">2</span>
-                            <p class="text-muted mb-0">Em processamento</p>
-                        </div>
-                        <div class="text-center status-container">
-                            <i class="bi bi-truck status-icon text-site-green"></i>
-                            <span class="badge bg-site-green">3</span>
-                            <p class="text-muted mb-0">Enviado</p>
-                        </div>
-                        <div class="text-center status-container">
-                            <i class="bi bi-emoji-smile status-icon text-site-green"></i>
-                            <span class="badge bg-site-green">4</span>
-                            <p class="text-muted mb-0">Entregue</p>
-                        </div>
-                    </div>
-                </div>           
+                <nav class="nav nav-pills flex-column mt-2">
+                    <span class="text-dark-beige">Minha conta</span>
+                    <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/perfil"><i
+                            class="bi bi-clipboard-data-fill"></i> Meu perfil</a>
+                    <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/favoritos"><i
+                            class="bi bi-clipboard-data-fill"></i> Favoritos </a>
+                    <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/enderecossalvos"><i
+                            class="bi bi-clipboard-data-fill"></i> Endereços cadastrados</a>
+                    <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/cartoescadastrados"><i
+                            class="bi bi-clipboard-data-fill"></i> Cartões cadastrados</a>
+                </nav>
+                <nav class="nav nav-pills flex-column mt-3">
+                    <span class="text-dark-beige">Meus pedidos</span>
+                    <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/todosospedidos"><i
+                            class="bi bi-journal-check"></i> Todos pedidos</a>
+                    <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/pedidosnaopagos"><i
+                            class="bi bi-plus-square"></i> Pedidos não pagos</a>
+                    <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/pedidosentregues"><i
+                            class="bi bi-plus-square"></i><strong> Pedidos entregues</strong></a>
+                    <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/processandopedidos"><i
+                            class="bi bi-plus-square"></i> Processando pedidos</a>
+                    <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/pedidosenviados"><i
+                            class="bi bi-plus-square"></i> Pedidos enviados</a>
+                    <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/avaliacaoprodutos"><i
+                            class="bi bi-plus-square"></i> Avaliação de produtos</a>
+                    <a class="nav-link text-dark-beige" href="/cliente/centroPessoal/devolucaopedidos"><i
+                            class="bi bi-plus-square"></i> Devoluções e reembolsos</a>
+                </nav>
+                <nav class="nav nav-pills flex-column mt-3">
+                    <span class="text-dark-beige">Bate papo</span>
+                    <a class="nav-link text-dark-beige" href="#"><i class="bi bi-chat-square-text"></i> Chat</a>
+                </nav>
             </div>
+        </aside>
+        <section class="flex-grow-1 p-3 bg-light position-relative">
             <br>
-            <div class="text-center mb-3">
-                <button type="button" class="btn" style="background-color: #0F2B05; color: white; padding: 0.25rem 0.75rem; font-size: 0.8em;">Cancelar pedido</button>
+            <div class="card text mx-auto" style="max-width: 94%; max-height: 92%; position: relative;">
+                <div class="card-body">
+                    <div class="row g-2 align-items-center mb-4">
+                        <div class="d-flex align-items-center col-12">
+                            <div>
+                                <label for="inputNome" class="choose">RASTREAMENTO</label>
+                            </div>
+                        </div>
+                        <hr style="margin: 0;">
+                    </div>
+                    <div class="d-flex mb-3">
+                        <p class="text-muted font-weight-bold mb-0 ms-2">PEDIDO - R567NW09P3 - 05/09/2024 - 11h16</p>
+                    </div>
+                    <hr>
+                    <br>
+                    <p class="font-weight-bold text-center">Previsão de entrega: 20/09/2024 (até 9 dias úteis)</p>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="d-flex flex-column align-items-center">
+                        <div class="progress w-100" style="height: 5px;">
+                            <div class="progress-bar bg-site-green" role="progressbar" style="width: 50%;"
+                                aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="d-flex justify-content-between w-100 mt-2 flex-wrap">
+                            <div class="text-center status-container">
+                                <i class="bi bi-clipboard2-check status-icon text-site-green"></i>
+                                <span class="badge bg-site-green">1</span>
+                                <p class="text-muted mb-0">Pedido recebido</p>
+                            </div>
+                            <div class="text-center status-container">
+                                <i class="bi bi-hourglass-split status-icon text-site-green"></i>
+                                <span class="badge bg-site-green">2</span>
+                                <p class="text-muted mb-0">Em processamento</p>
+                            </div>
+                            <div class="text-center status-container">
+                                <i class="bi bi-truck status-icon text-site-green"></i>
+                                <span class="badge bg-site-green">3</span>
+                                <p class="text-muted mb-0">Enviado</p>
+                            </div>
+                            <div class="text-center status-container">
+                                <i class="bi bi-emoji-smile status-icon text-site-green"></i>
+                                <span class="badge bg-site-green">4</span>
+                                <p class="text-muted mb-0">Entregue</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="text-center mb-3">
+                    <button type="button" class="btn"
+                        style="background-color: #0F2B05; color: white; padding: 0.25rem 0.75rem; font-size: 0.8em;">Cancelar
+                        pedido</button>
+                </div>
+                <br>
             </div>
-            <br>
-        </div>
-    </section>
-    
-             
+        </section>
+
+
 </main>
 
 <style>
     .bg-site-green {
         background-color: #0F2B05;
     }
+
     .text-site-green {
         color: #0F2B05;
     }
+
     .status-container {
         position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
     .status-icon {
         position: absolute;
-        top: -70px; 
+        top: -70px;
         font-size: 2.0rem;
     }
 </style>
