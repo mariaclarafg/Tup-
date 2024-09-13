@@ -1,13 +1,11 @@
 {% extends "pages/base.html" %}
 {% block subtitulo %}Adicionar Produtos{% endblock %}
 {% block carousel %}
-
 <nav id="navbar-example2" class="navbar navbar-dark" style="background-color: #0F2B05;">
-  <div class="container">
-      <a class="navbar-brand">Central do Artesão</a>
-  </div>
+    <div class="container">
+        <a class="navbar-brand">Central do Artesão</a>
+    </div>
 </nav>
-
 <body class="d-flex flex-column min-vh-100 bg-green">
     <main class="d-flex flex-column flex-grow-1">
         <div class="d-flex flex-grow-1">
@@ -18,146 +16,194 @@
                         <p class="lead">Nome da loja</p>
                     </div>
                     <nav class="nav nav-pills flex-column mt-2">
-                        <span class="text-dark-beige"><i></i>Pedidos</span>
-                        <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/listadetarefas"><i class="bi bi-clipboard-data-fill"></i>Gerenciar Pedidos</a>
+                        <span class="text-dark-beige">
+                            <i></i>Pedidos
+                        </span>
+                        <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/listadetarefas">
+                            <i class="bi bi-clipboard-data-fill"></i>Gerenciar Pedidos
+                        </a>
                     </nav>
                     <nav class="nav nav-pills flex-column mt-3">
-                      <span class="text-dark-beige"><i></i>Produtos</span>
-                      <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/produtoscadastrados"><i class="bi bi-journal-check"></i>Produtos cadastrados </a>
-                      <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/adicionarprodutos"><i class="bi bi-plus-square"></i> Adicionar produtos</a>
+                        <span class="text-dark-beige">
+                            <i></i>Produtos
+                        </span>
+                        <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/produtoscadastrados">
+                            <i class="bi bi-journal-check"></i>Produtos cadastrados
+                        </a>
+                        <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/adicionarprodutos">
+                            <i class="bi bi-plus-square"></i> Adicionar produtos
+                        </a>
                     </nav>
                     <nav class="nav nav-pills flex-column mt-3">
-                      <span class="text-dark-beige"><i></i>Atendimento ao cliente</span>
-                      <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/chat"><i class="bi bi-chat-square-text"></i> Chat</a>
-                      
-                      <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/demandas"><i class="bi bi-piggy-bank-fill"></i> Demanda de produtos</a>
+                        <span class="text-dark-beige">
+                            <i></i>Atendimento ao cliente
+                        </span>
+                        <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/chat">
+                            <i class="bi bi-chat-square-text"></i> Chat
+                        </a>
+                        <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/demandas">
+                            <i class="bi bi-piggy-bank-fill"></i> Demanda de produtos
+                        </a>
                     </nav>
                     <nav class="nav nav-pills flex-column mt-3">
-                      <span class="text-dark-beige"><i class="fas fa-shield-alt"></i>Loja</span>
-                      <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/perfildaloja"><i class="bi bi-shop-window"></i> Perfil da Loja</a>
-                      <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/configuracoesloja"><i class="bi bi-gear-fill"></i><strong> Configurações da loja</strong></a>
-                  </nav>
+                        <span class="text-dark-beige">
+                            <i class="fas fa-shield-alt"></i>Loja
+                        </span>
+                        <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/perfildaloja">
+                            <i class="bi bi-shop-window"></i> Perfil da Loja
+                        </a>
+                        <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/configuracoesloja">
+                            <i class="bi bi-gear-fill"></i>
+                            <strong> Configurações da loja</strong>
+                        </a>
+                    </nav>
                 </div>
-
             </aside>
             <section class="flex-grow-1 p-3 bg-light">
-              <h4 class="mb-4 mt-5"><strong>Configurações</strong></h4> 
-              <br>
-              <h5 class="mb-3">Assinatura e Cobrança</h5>
-              <div class="card bg-white card-externo mb-4">
-                <div class="card-body">
-                  
-                  <div class="d-flex justify-content-between align-items-center mb-3">
-                    <div>
-                      <p><strong>Plano:</strong> Premium</p>
-                      <p><strong>Status:</strong> Ativo</p>
-                    </div>
-                    <a href="#" class="btn btn-primary">Gerenciar assinatura</a>
-                  </div>
-                </div>
-              </div>
-              <br>
-              <h5 class="mb-3">Conta</h5>
-              <div class="card bg-white card-externo mb-4">
-                <div class="card-body">
-                  
-                  <div class="d-flex justify-content-between align-items-center mb-3">
-                    <div>
-                      <p><strong>E-mail:</strong> usuario@email.com</p>
-                    </div>
-                      <a href="/artesaos/centraldoartesao/alteraremail" class="btn btn-sm btn-dark-green" title="Editar Email">
-                        <i class="bi bi-pencil"></i>
-                      </a>
-                  </div>
-                  <div class="d-flex justify-content-between align-items-center mb-3">
-                    <div>
-                      <p><strong>Telefone:</strong> +55 11 99999-9999</p>
-                    </div>
-                    <button href="/artesaos/centraldoartesao/alteraremail" class="btn btn-sm btn-dark-green" title="Editar Telefone">
-                      <i class="bi bi-pencil"></i>
-                    </button>
-                    </div>
-                    </div>
-                  </div>
-              
-                  <br>
-              <h5 class="mb-3">Loja</h5>
-              <div class="card bg-white card-externo mb-4">
-                <div class="card-body">
-                  
-                  <div class="d-flex justify-content-between align-items-center mb-3">
-                    <div>
-                      <p><strong>Nome:</strong> Nome Loja</p>
-                    </div>
-                      <a href="/artesaos/centraldoartesao/alteraremail" class="btn btn-sm btn-dark-green" title="Editar Nome da Loja">
-                        <i class="bi bi-pencil"></i>
-                      </a>
-                  </div>
-                  <div class="d-flex justify-content-between align-items-center mb-3">
-                    <div>
-                      <p><strong>Grupos e Comunidades:</strong> Indígena</p>
-                    </div>
-                    <button href="/artesaos/centraldoartesao/alteraremail" class="btn btn-sm btn-dark-green" title="Editar Telefone">
-                      <i class="bi bi-pencil"></i>
-                    </button>
-                    </div>
-                    </div>
-                  </div>
-                
-              
-              <br>
-              <h5 class="mb-3">Notificações</h5>
-              <div class="card bg-white card-externo mb-3">
-                <div class="card-body">
-                 
-                  <div class="d-flex justify-content-between align-items-center mb-3">
-                    <div>
-                      <p><strong>Atualizações de Pedidos</strong></p>
-                      <p class="smaller-text">Notificar quando houver atualizações sobre meus pedidos, inclusive atualizações relacionadas a pagamentos.</p>
-                    </div>
-                    <div class="form-check form-switch">
-                      <input class="form-check-input custom-switch" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                      <label class="form-check-label" for="flexSwitchCheckDefault"></label>
-                    </div>
-                  </div>
-              
-                  <div class="d-flex justify-content-between align-items-center mb-3">
-                    <div>
-                      <p><strong>Atualização de Produtos</strong></p>
-                      <p class="smaller-text">Notificar quando minha listagem de produto como vendedor estiver esgotada, excluída ou suspensa.</p>
-                    </div>
-                    <div class="form-check form-switch">
-                      <input class="form-check-input custom-switch" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                      <label class="form-check-label" for="flexSwitchCheckDefault"></label>
+                <h4 class="mb-4 mt-5">
+                    <strong>Configurações</strong>
+                </h4>
+                <br>
+                <h5 class="mb-3">Assinatura e Cobrança</h5>
+                <div class="card bg-white card-externo mb-4">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div>
+                                <p>
+                                    <strong>Plano:</strong> Premium
+                                </p>
+                                <p>
+                                    <strong>Status:</strong> Ativo
+                                </p>
+                            </div>
+                            <a href="#" class="btn btn-primary">Gerenciar assinatura</a>
+                        </div>
                     </div>
                 </div>
-                  <div class="d-flex justify-content-between align-items-center mb-3">
-                      <div>
-                        <p><strong>Mensagem no Chat</strong></p>
-                        <p class="smaller-text">Notificar quando houver mensagens de chat não lidas.</p>
-                      </div>
-                      <div class="form-check form-switch">
-                        <input class="form-check-input custom-switch" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                        <label class="form-check-label" for="flexSwitchCheckDefault"></label>
-                      </div>
-                  </div>
-                </div>
-              </div>
-              <br>
-              <h5 class="mb-3">Segurança e Privacidade</h5>
-              <div class="card bg-white card-externo mb-2">
-                <div class="card-body">
-                  
-                  <div class="d-flex justify-content-between align-items-center mb-3">
-                    <div>
-                      <p><strong>Alterar senha:</strong> **********</p>
+                <br>
+                <h5 class="mb-3">Conta</h5>
+                <div class="card bg-white card-externo mb-4">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div>
+                                <p>
+                                    <strong>E-mail:</strong> usuario@email.com
+                                </p>
+                            </div>
+                            <a href="/artesaos/centraldoartesao/alteraremail" class="btn btn-sm btn-dark-green" title="Editar Email">
+                                <i class="bi bi-pencil"></i>
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div>
+                                <p>
+                                    <strong>Telefone:</strong> +55 11 99999-9999
+                                </p>
+                            </div>
+                            <button href="/artesaos/centraldoartesao/alteraremail" class="btn btn-sm btn-dark-green" title="Editar Telefone">
+                                <i class="bi bi-pencil"></i>
+                            </button>
+                        </div>
                     </div>
-                    <a href="#" class="btn btn-sm btn-dark-green">Alterar senha</a>
-                  </div>
                 </div>
-              </div>
-              
-              <style>
+                <br>
+                <h5 class="mb-3">Loja</h5>
+                <div class="card bg-white card-externo mb-4">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div>
+                                <p>
+                                    <strong>Nome:</strong> Nome Loja
+                                </p>
+                            </div>
+                            <a href="/artesaos/centraldoartesao/alteraremail" class="btn btn-sm btn-dark-green" title="Editar Nome da Loja">
+                                <i class="bi bi-pencil"></i>
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div>
+                                <p>
+                                    <strong>Grupos e Comunidades:</strong> Indígena
+                                </p>
+                            </div>
+                            <button href="/artesaos/centraldoartesao/alteraremail" class="btn btn-sm btn-dark-green" title="Editar Telefone">
+                                <i class="bi bi-pencil"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <h5 class="mb-3">Notificações</h5>
+                <div class="card bg-white card-externo mb-3">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div>
+                                <p>
+                                    <strong>Atualizações de Pedidos</strong>
+                                </p>
+                                <p class="smaller-text">Notificar quando houver atualizações sobre meus pedidos, inclusive atualizações relacionadas a pagamentos.</p>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input
+                                    class="form-check-input custom-switch"
+                                    type="checkbox"
+                                    role="switch"
+                                    id="flexSwitchCheckDefault"
+                                >
+                                <label class="form-check-label" for="flexSwitchCheckDefault"></label>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div>
+                                <p>
+                                    <strong>Atualização de Produtos</strong>
+                                </p>
+                                <p class="smaller-text">Notificar quando minha listagem de produto como vendedor estiver esgotada, excluída ou suspensa.</p>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input
+                                    class="form-check-input custom-switch"
+                                    type="checkbox"
+                                    role="switch"
+                                    id="flexSwitchCheckDefault"
+                                >
+                                <label class="form-check-label" for="flexSwitchCheckDefault"></label>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div>
+                                <p>
+                                    <strong>Mensagem no Chat</strong>
+                                </p>
+                                <p class="smaller-text">Notificar quando houver mensagens de chat não lidas.</p>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input
+                                    class="form-check-input custom-switch"
+                                    type="checkbox"
+                                    role="switch"
+                                    id="flexSwitchCheckDefault"
+                                >
+                                <label class="form-check-label" for="flexSwitchCheckDefault"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <h5 class="mb-3">Segurança e Privacidade</h5>
+                <div class="card bg-white card-externo mb-2">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div>
+                                <p>
+                                    <strong>Alterar senha:</strong> **********
+                                </p>
+                            </div>
+                            <a href="#" class="btn btn-sm btn-dark-green">Alterar senha</a>
+                        </div>
+                    </div>
+                </div>
+                <style>
 
                 .card-externo {
                   min-height: 150px;
@@ -199,12 +245,8 @@
                 .custom-switch:focus {
                   box-shadow: 0 0 0 0.2rem rgba(15, 43, 5, 0.25); /* Sombra ao focar */
                 }
-
-                  </style>
-              
-
-        </div>
-    </main>
-</body>
-
-{% endblock %}
+                </style>
+            </div>
+        </main>
+    </body>
+    {% endblock %}
