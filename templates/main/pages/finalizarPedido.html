@@ -10,129 +10,150 @@
 {% block conteudo %}
 <div class="container mt-4">
     <div class="row">
-        <!-- Itens Pedidos -->
-        <div class="col-lg-8 col-md-12">
-            <div class="col-12">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="row g-2 align-items-center mb-3">
-                            <div class="d-flex align-items-center col-md-12">
-                                <div class="me-3">
-                                    <a class="footer-brand">
-                                        <img src="/static/img/logo/logo_verde.png" alt="Logotipo" height="100">
-                                    </a>
-                                </div>
-                                <div>
-                                    <label for="inputNome" class="choose">Produto(s) Pedido(s)</label>
-                                </div>
-                            </div>
-                            <hr>
-                        </div>
-                        <!-- Lista de Produtos -->
-                        <div class="row mb-3">
-                            <div class="col-3">
-                                <a><img src="https://via.placeholder.com/150" alt="Imagem do Produto" class="img-fluid"></a>
-                            </div>
-                            <div class="col-9">
-                                <div class="d-flex justify-content-between">
-                                    <div>
-                                        <h6>Nome do Produto</h6>
-                                        <p class="text-muted">Tamanho: M | Cor: Preto</p>
-                                        <p class="text-muted"><b>$99,99</b></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Mais produtos podem ser adicionados aqui -->
-                    </div>
-                </div>
+        <!-- Coluna Itens do Pedido -->
+<div class="col-lg-8 col-md-12">
+    <div class="card mb-4">
+        <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+                <img src="/static/img/logo/logo_verde.png" alt="Logotipo" height="80" class="me-3">
+                <h5>Produto(s) Pedido(s)</h5>
             </div>
-
-            <!-- Card Método de Pagamento -->
-            <div class="col-12 mt-4">
-                <div class="row">
-                    <!-- Card for Pix -->
-                    <div class="col-md-4">
-                        <div class="card payment-card" id="pixCard">
-                            <div class="card-body">
-                                <label class="form-check-label">
-                                    <input class="form-check-input" type="radio" name="paymentMethod" value="pix" onclick="expandCard('pix')">
-                                    Pix
-                                </label>
-                                <div id="pixSection" class="payment-section" style="display:none;">
-                                    <h6>QR Code:</h6>
-                                    <img src="https://via.placeholder.com/150" alt="QR Code" class="img-fluid">
-                                    <p class="mt-2"><b>Código Aleatório:</b> 12345-abcde-67890</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card for Cartão -->
-                    <div class="col-md-4">
-                        <div class="card payment-card" id="cardCard">
-                            <div class="card-body">
-                                <label class="form-check-label">
-                                    <input class="form-check-input" type="radio" name="paymentMethod" value="card" onclick="expandCard('card')">
-                                    Cartão (Débito ou Crédito)
-                                </label>
-                                <div id="cardSection" class="payment-section" style="display:none;">
-                                    <label>
-                                        <input type="radio" name="cardType" value="debit" onclick="showCardFields('debit')"> Cartão de Débito
-                                    </label>
-                                    <label class="ms-3">
-                                        <input type="radio" name="cardType" value="credit" onclick="showCardFields('credit')"> Cartão de Crédito
-                                    </label>
-                                    <div id="cardFields" style="display:none;" class="mt-3">
-                                        <div class="mb-3">
-                                            <label for="cardNumber" class="form-label">Número do Cartão</label>
-                                            <input type="text" class="form-control" id="cardNumber">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="cardName" class="form-label">Nome no Cartão</label>
-                                            <input type="text" class="form-control" id="cardName">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="cardExpiry" class="form-label">Data de Validade</label>
-                                            <input type="text" class="form-control" id="cardExpiry">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="cardCVC" class="form-label">Código de Segurança (CVC)</label>
-                                            <input type="text" class="form-control" id="cardCVC">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card for Boleto -->
-                    <div class="col-md-4">
-                        <div class="card payment-card" id="boletoCard">
-                            <div class="card-body">
-                                <label class="form-check-label">
-                                    <input class="form-check-input" type="radio" name="paymentMethod" value="boleto" onclick="expandCard('boleto')">
-                                    Boleto
-                                </label>
-                                <div id="boletoSection" class="payment-section" style="display:none;">
-                                    <div class="mb-3">
-                                        <label for="emailBoleto" class="form-label">E-mail para envio do Boleto</label>
-                                        <input type="email" class="form-control" id="emailBoleto">
-                                    </div>
-                                    <button class="btn btn-primary">Enviar Boleto</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <hr>
+            <!-- Lista de Produtos -->
+            <div class="row mb-3">
+                <div class="col-3">
+                    <img src="https://via.placeholder.com/150" alt="Imagem do Produto" class="img-fluid">
+                </div>
+                <div class="col-9">
+                    <h6>Nome do Produto</h6>
+                    <p class="text-muted">Tamanho: M | Cor: Preto</p>
+                    <p class="text-muted"><b>R$ 99,99</b></p>
                 </div>
             </div>
         </div>
+    </div>
+    <!-- Card Métodos de Pagamento -->
+    <div class="card">
+        <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+                <img src="/static/img/logo/logo_verde.png" alt="Logotipo" height="80" class="me-3">
+                <h5>Métodos de Pagamento</h5>
+            </div>
+            <hr>
+            <div class="row">
+                <!-- Pix -->
+                <div class="col-md-12 mb-3">
+                    <div class="card p-3">
+                        <div class="d-flex align-items-center">
+                            <input class="form-check-input me-2" type="radio" name="paymentMethod" id="pixRadio" onclick="showPaymentSection('pixSection')">
+                            <label class="form-check-label" for="pixRadio">Pix</label>
+                        </div>
+                        <div id="pixSection" class="mt-3 payment-section" style="display:none;">
+                            <img src="https://via.placeholder.com/150" alt="QR Code" class="img-fluid mx-auto d-block">
+                            <p class="mt-2 text-center"><b>Código:</b> 12345-abcde-67890</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cartão -->
+                <div class="col-md-12 mb-3">
+                    <div class="card p-3">
+                        <div class="d-flex align-items-center">
+                            <input class="form-check-input me-2" type="radio" name="paymentMethod" id="cardRadio" onclick="showPaymentSection('cardSection')">
+                            <label class="form-check-label" for="cardRadio">Cartão</label>
+                        </div>
+                        <div id="cardSection" class="mt-3 payment-section" style="display:none;">
+                            <div class="d-flex align-items-center mb-2">
+                                <p class="assn mb-0">Tipo de Cartão</p>
+                            </div>
+                            <!-- Opções de Tipo de Cartão -->
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="cardType" id="creditCardRadio" value="credit" onclick="showCardDetails('creditCard')">
+                                <label class="form-check-label" for="creditCardRadio">Cartão de Crédito</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="cardType" id="debitCardRadio" value="debit" onclick="showCardDetails('debitCard')">
+                                <label class="form-check-label" for="debitCardRadio">Cartão de Débito</label>
+                            </div>
+                            <br><br>
+                            <!-- Detalhes do Cartão de Crédito -->
+                            <div id="creditCard" class="card-details" style="display:none;">
+                                <img src="/static/img/cartaocredito.png" alt="Logotipo" height="45">
+                                <p class="assn text-muted">Dados de Pagamento</p>
+                                <p class="assn"><small class="text-muted">Número do Cartão</small></p>
+                                <input type="text" id="creditCardNumber" class="form-control" aria-describedby="textHelpInline">
+                                <br>
+                                <p class="assn"><small class="text-muted">Data de Validade</small></p>
+                                <input type="text" id="creditCardExpiry" class="form-control" aria-describedby="textHelpInline">
+                                <br>
+                                <p class="assn"><small class="text-muted">CVV</small></p>
+                                <input type="text" id="creditCardCvv" class="form-control" aria-describedby="textHelpInline">
+                                <br>
+                                <p class="assn"><small class="text-muted">Email</small></p>
+                                <input type="text" id="creditCardEmail" class="form-control" aria-describedby="textHelpInline">
+                                <br>
+                                <p class="assn"><small class="text-muted">CPF</small></p>
+                                <input type="text" id="creditCardCpf" class="form-control" aria-describedby="textHelpInline" placeholder="000.000.000-00">
+                                <br>
+                                <div class="form-check form-check-inline ms-auto">
+                                    <input class="form-check-input" type="checkbox" id="saveCard" value="yes">
+                                    <label class="assn" for="saveCard">Salvar cartão para futuras compras</label>
+                                    <br><br>
+                                    <p class="assn"><small class="text-muted">Pelo presente, você autoriza a Tupã a cobrar de você todo mês automaticamente até que você cancele sua inscrição. Termos as condições disponíveis AQUI. Ao clicar em "OBTER PLANO", você dá ciência e aceita os termos e as condições desta transição.</small></p>
+                                </div>
+                            </div>
+                            <!-- Detalhes do Cartão de Débito -->
+                            <div id="debitCard" class="card-details" style="display:none;">
+                                <img src="/static/img/cartao_debito.png" alt="Logotipo" height="45">
+                                <p class="assn text-muted">Dados de Pagamento</p>
+                                <p class="assn"><small class="text-muted">Número do Cartão</small></p>
+                                <input type="text" id="debitCardNumber" class="form-control" aria-describedby="textHelpInline">
+                                <br>
+                                <p class="assn"><small class="text-muted">Data de Validade</small></p>
+                                <input type="text" id="debitCardExpiry" class="form-control" aria-describedby="textHelpInline">
+                                <br>
+                                <p class="assn"><small class="text-muted">CVV</small></p>
+                                <input type="text" id="debitCardCvv" class="form-control" aria-describedby="textHelpInline">
+                                <br>
+                                <p class="assn"><small class="text-muted">Email</small></p>
+                                <input type="text" id="debitCardEmail" class="form-control" aria-describedby="textHelpInline">
+                                <br>
+                                <p class="assn"><small class="text-muted">CPF</small></p>
+                                <input type="text" id="debitCardCpf" class="form-control" aria-describedby="textHelpInline" placeholder="000.000.000-00">
+                                <br>
+                                <div class="form-check form-check-inline ms-auto">
+                                    <input class="form-check-input" type="checkbox" id="saveDebitCard" value="yes">
+                                    <label class="assn" for="saveDebitCard">Salvar cartão para futuras compras</label>
+                                    <br><br>
+                                    <p class="assn"><small class="text-muted">Pelo presente, você autoriza a Tupã a cobrar de você todo mês automaticamente até que você cancele sua inscrição. Termos as condições disponíveis AQUI. Ao clicar em "OBTER PLANO", você dá ciência e aceita os termos e as condições desta transição.</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Boleto -->
+                <div class="col-md-12 mb-3">
+                    <div class="card p-3">
+                        <div class="d-flex align-items-center">
+                            <input class="form-check-input me-2" type="radio" name="paymentMethod" id="boletoRadio" onclick="showPaymentSection('boletoSection')">
+                            <label class="form-check-label" for="boletoRadio">Boleto</label>
+                        </div>
+                        <div id="boletoSection" class="mt-3 payment-section" style="display:none;">
+                            <label for="emailBoleto" class="form-label">E-mail</label>
+                            <input type="email" class="form-control" id="emailBoleto" placeholder="Digite seu e-mail">
+                            <button class="btn btn-primary mt-2">Enviar Boleto</button>
+                        </div>
+                    </div>
+                </div>
 
-        <!-- Resumo do Pedido -->
+
+            </div>
+        </div>
+    </div>
+</div>
         <div class="col-lg-4 col-md-12">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title"><b>RESUMO DO PEDIDO</b></h5>
+                    <h5 class="card-title"><b>Resumo do Pedido</b></h5>
                     <div class="d-flex justify-content-between mb-2">
                         <span>Subtotal</span>
                         <span>R$ 199,98</span>
@@ -145,9 +166,6 @@
                         <span>Total</span>
                         <span>R$ 219,98</span>
                     </div>
-                    <div class="d-flex justify-content-center">
-                        <button class="big-button-green">Fechar Pedido</button>
-                    </div>
                 </div>
             </div>
         </div>
@@ -156,35 +174,24 @@
 <br>
 
 <script>
-function showPaymentMethod(method) {
-    document.getElementById('pixSection').style.display = 'none';
-    document.getElementById('cardSection').style.display = 'none';
-    document.getElementById('boletoSection').style.display = 'none';
-    
-    if (method === 'pix') {
-        document.getElementById('pixSection').style.display = 'block';
-    } else if (method === 'card') {
-        document.getElementById('cardSection').style.display = 'block';
-    } else if (method === 'boleto') {
-        document.getElementById('boletoSection').style.display = 'block';
-    }
+function showPaymentSection(sectionId) {
+    // Ocultar todas as seções
+    document.querySelectorAll('.payment-section').forEach(section => section.style.display = 'none');
+    // Mostrar a seção selecionada
+    document.getElementById(sectionId).style.display = 'block';
 }
-
-function showCardFields(type) {
-    document.getElementById('cardFields').style.display = 'block';
-}
-
-function expandCard(method) {
-    let cards = document.querySelectorAll('.payment-card');
-    cards.forEach(card => {
-        card.classList.remove('expanded');
-        card.querySelector('.payment-section').style.display = 'none';
+function showPaymentSection(sectionId) {
+    document.querySelectorAll('.payment-section').forEach(section => {
+        section.style.display = 'none';
     });
+    document.getElementById(sectionId).style.display = 'block';
+}
 
-    let selectedCard = document.getElementById(method + 'Card');
-    selectedCard.classList.add('expanded');
-    let section = selectedCard.querySelector('.payment-section');
-    section.style.display = 'block';
+function showCardDetails(cardType) {
+    document.querySelectorAll('.card-details').forEach(detail => {
+        detail.style.display = 'none';
+    });
+    document.getElementById(cardType).style.display = 'block';
 }
 </script>
 
