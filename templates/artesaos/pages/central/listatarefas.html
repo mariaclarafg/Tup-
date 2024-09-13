@@ -1,13 +1,11 @@
 {% extends "pages/base.html" %}
 {% block subtitulo %}Lista de Tarefas{% endblock %}
 {% block carousel %}
-
 <nav id="navbar-example2" class="navbar navbar-dark" style="background-color: #0F2B05;">
-  <div class="container">
-      <a class="navbar-brand">Central do Artesão</a>
-  </div>
+    <div class="container">
+        <a class="navbar-brand">Central do Artesão</a>
+    </div>
 </nav>
-
 <body class="d-flex flex-column min-vh-100 bg-green">
     <main class="d-flex flex-column flex-grow-1">
         <div class="d-flex flex-grow-1">
@@ -18,128 +16,172 @@
                         <p class="lead">Nome da loja</p>
                     </div>
                     <nav class="nav nav-pills flex-column mt-2">
-                      <span class="text-dark-beige"><i></i>Pedidos</span>
-                      <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/listadetarefas" style="color: #6c757d; text-decoration: none;">
-                          <i class="bi bi-clipboard-data-fill"></i><strong>Gerenciar Pedidos</strong>
-                      </a>
-                  </nav>                  
-                    <nav class="nav nav-pills flex-column mt-3">
-                      <span class="text-dark-beige"><i></i>Produtos</span>
-                      <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/produtoscadastrados" style="color: #6c757d; text-decoration: none;"><i class="bi bi-journal-check"></i> Produtos cadastrados</a>
-                      <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/adicionarprodutos" style="color: #6c757d; text-decoration: none;"><i class="bi bi-plus-square"></i> Adicionar produtos</a>
+                        <span class="text-dark-beige">
+                            <i></i>Pedidos
+                        </span>
+                        <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/listadetarefas" style="color: #6c757d; text-decoration: none;">
+                            <i class="bi bi-clipboard-data-fill"></i>
+                            <strong>Gerenciar Pedidos</strong>
+                        </a>
                     </nav>
                     <nav class="nav nav-pills flex-column mt-3">
-                      <span class="text-dark-beige"><i></i>Atendimento ao cliente</span>
-                      <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/chat" style="color: #6c757d; text-decoration: none;"><i class="bi bi-chat-square-text"></i> Chat</a>
-                      
-                      <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/demandas" style="color: #6c757d; text-decoration: none;"><i class="bi bi-piggy-bank-fill"></i> Demanda de produtos</a>
+                        <span class="text-dark-beige">
+                            <i></i>Produtos
+                        </span>
+                        <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/produtoscadastrados" style="color: #6c757d; text-decoration: none;">
+                            <i class="bi bi-journal-check"></i> Produtos cadastrados
+                        </a>
+                        <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/adicionarprodutos" style="color: #6c757d; text-decoration: none;">
+                            <i class="bi bi-plus-square"></i> Adicionar produtos
+                        </a>
                     </nav>
                     <nav class="nav nav-pills flex-column mt-3">
-                      <span class="text-dark-beige"><i class="fas fa-shield-alt"></i>Loja</span>
-                      <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/perfildaloja" style="color: #6c757d; text-decoration: none;"><i class="bi bi-shop-window"></i> Perfil da Loja</a>
-                      <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/configuracoesloja" style="color: #6c757d; text-decoration: none;"><i class="bi bi-gear-fill"></i> Configurações da loja</a>
-                  </nav>
+                        <span class="text-dark-beige">
+                            <i></i>Atendimento ao cliente
+                        </span>
+                        <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/chat" style="color: #6c757d; text-decoration: none;">
+                            <i class="bi bi-chat-square-text"></i> Chat
+                        </a>
+                        <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/demandas" style="color: #6c757d; text-decoration: none;">
+                            <i class="bi bi-piggy-bank-fill"></i> Demanda de produtos
+                        </a>
+                    </nav>
+                    <nav class="nav nav-pills flex-column mt-3">
+                        <span class="text-dark-beige">
+                            <i class="fas fa-shield-alt"></i>Loja
+                        </span>
+                        <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/perfildaloja" style="color: #6c757d; text-decoration: none;">
+                            <i class="bi bi-shop-window"></i> Perfil da Loja
+                        </a>
+                        <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/configuracoesloja" style="color: #6c757d; text-decoration: none;">
+                            <i class="bi bi-gear-fill"></i> Configurações da loja
+                        </a>
+                    </nav>
                 </div>
             </aside>
             <section class="flex-grow-1 p-3" style="background-color: #f3f3f3;">
-              <br>
+                <br>
                 <div class="card text" style="border: none;">
                     <div class="card-body">
-                      <h5 class="card-title">Lista de Tarefas</h5>
-                      <hr>
-                      <p class="card-text d-inline">Coisas que você precisa gerenciar.</p>
-                      <p class="card-text text-muted d-inline" style="margin-left: 10px;">(Clique na função para mais detalhes)</p><br><br>
-                      <br>
-                      <div class="row text-center">
-                          <div class="col-3" style="border-right: 1px solid #cccccc;">
-                              <div>
-                                  <p class="display-6" id="pedidos-nao-pagos-count">1</p>
-                                  <p><a href="#" onclick="showContent('pedidos-nao-pagos')" style="color: #106b19; text-decoration: none;">Pedidos Não Pagos</a></p>
-                              </div>
-                          </div>
-                          <div class="col-3" style="border-right: 1px solid #ccc;">
-                              <div>
-                                  <p class="display-6" id="pedidos-a-processar-count">0</p>
-                                  <p><a href="#" onclick="showContent('pedidos-a-processar')" style="color: #106b19; text-decoration: none;">Pedidos a Processar</a></p>
-                              </div>
-                          </div>
-                          <div class="col-3" style="border-right: 1px solid #ccc;">
-                              <div>
-                                  <p class="display-6" id="envios-processados-count">2</p>
-                                  <p><a href="#" onclick="showContent('envios-processados')" style="color: #106b19; text-decoration: none;">Envios Processados</a></p>
-                              </div>
-                          </div>
-                          <div class="col-3">
-                              <div>
-                                  <p class="display-6" id="cancelamentos-pendentes-count">0</p>
-                                  <p><a href="#" onclick="showContent('cancelamentos-pendentes')" style="color: #106b19; text-decoration: none;">Cancelamentos Pendentes</a></p>
-                              </div>
-                          </div>
-                      </div>
-                      <br>
-                      <div class="row text-center mt-3">
-                          <div class="col-3" style="border-right: 1px solid #ccc;">
-                              <div>
-                                  <p class="display-6" id="reembolsos-pendentes-count">0</p>
-                                  <p><a href="#" onclick="showContent('reembolsos-pendentes')" style="color: #106b19; text-decoration: none;">Reembolsos Pendentes</a></p>
-                              </div>
-                          </div>
-                          <div class="col-3" style="border-right: 1px solid #ccc;">
-                              <div>
-                                  <p class="display-6" id="produtos-banidos-count">0</p>
-                                  <p><a href="#" onclick="showContent('produtos-banidos')" style="color: #106b19; text-decoration: none;">Produtos Banidos</a></p>
-                              </div>
-                          </div>
-                          <div class="col-3" style="border-right: 1px solid #ccc;">
-                              <div>
-                                  <p class="display-6" id="produtos-esgotados-count">1</p>
-                                  <p><a href="#" onclick="showContent('produtos-esgotados')" style="color: #106b19; text-decoration: none;">Produtos Esgotados</a></p>
-                              </div>
-                          </div>
-                          <div class="col-3">
-                              <div>
-                                  <p class="display-6" id="campanhas-pendentes-count">0</p>
-                                  <p><a href="#" onclick="showContent('campanhas-pendentes')" style="color: #106b19; text-decoration: none;">Campanhas Pendentes</a></p>
-                              </div>
-                          </div>
-                      </div>
-                      <br>
+                        <h5 class="card-title">Lista de Tarefas</h5>
+                        <hr>
+                        <p class="card-text d-inline">Coisas que você precisa gerenciar.</p>
+                        <p class="card-text text-muted d-inline" style="margin-left: 10px;">(Clique na função para mais detalhes)</p>
+                        <br>
+                        <br>
+                        <br>
+                        <div class="row text-center">
+                            <div class="col-3" style="border-right: 1px solid #cccccc;">
+                                <div>
+                                    <p class="display-6" id="pedidos-nao-pagos-count">1</p>
+                                    <p>
+                                        <a href="#" onclick="showContent('pedidos-nao-pagos')" style="color: #106b19; text-decoration: none;">Pedidos Não Pagos</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-3" style="border-right: 1px solid #ccc;">
+                                <div>
+                                    <p class="display-6" id="pedidos-a-processar-count">0</p>
+                                    <p>
+                                        <a href="#" onclick="showContent('pedidos-a-processar')" style="color: #106b19; text-decoration: none;">Pedidos a Processar</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-3" style="border-right: 1px solid #ccc;">
+                                <div>
+                                    <p class="display-6" id="envios-processados-count">2</p>
+                                    <p>
+                                        <a href="#" onclick="showContent('envios-processados')" style="color: #106b19; text-decoration: none;">Envios Processados</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div>
+                                    <p class="display-6" id="cancelamentos-pendentes-count">0</p>
+                                    <p>
+                                        <a href="#" onclick="showContent('cancelamentos-pendentes')" style="color: #106b19; text-decoration: none;">Cancelamentos Pendentes</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row text-center mt-3">
+                            <div class="col-3" style="border-right: 1px solid #ccc;">
+                                <div>
+                                    <p class="display-6" id="reembolsos-pendentes-count">0</p>
+                                    <p>
+                                        <a href="#" onclick="showContent('reembolsos-pendentes')" style="color: #106b19; text-decoration: none;">Reembolsos Pendentes</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-3" style="border-right: 1px solid #ccc;">
+                                <div>
+                                    <p class="display-6" id="produtos-banidos-count">0</p>
+                                    <p>
+                                        <a href="#" onclick="showContent('produtos-banidos')" style="color: #106b19; text-decoration: none;">Produtos Banidos</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-3" style="border-right: 1px solid #ccc;">
+                                <div>
+                                    <p class="display-6" id="produtos-esgotados-count">1</p>
+                                    <p>
+                                        <a href="#" onclick="showContent('produtos-esgotados')" style="color: #106b19; text-decoration: none;">Produtos Esgotados</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div>
+                                    <p class="display-6" id="campanhas-pendentes-count">0</p>
+                                    <p>
+                                        <a href="#" onclick="showContent('campanhas-pendentes')" style="color: #106b19; text-decoration: none;">Campanhas Pendentes</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
                     </div>
                 </div>
                 <div class="card bg-white mt-5" style="border: none;">
-                  <div class="card-body">
-                    <h5 class="card-title" id="card-title">Pedidos Não Pagos</h5>
-                    <hr>
-                    <div class="card" style="border: none;" id="card-content">
-                        <div class="card-body">
-                            <ul class="list-group" style="border: none;">
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    <div class="d-flex align-items-center">
-                                      <br>
-                                      <img src="/static/img/Produtos/ProdutosCasa/banco.jpeg" alt="Produto 1" class="img-fluid rounded mb-3" style="width: 100%; max-width: 200px; margin-right: 20px;">
-                                        <div>
-                                            <p class="m-0"><strong>Banco de Madeira Rústico</strong></p>
+                    <div class="card-body">
+                        <h5 class="card-title" id="card-title">Pedidos Não Pagos</h5>
+                        <hr>
+                        <div class="card" style="border: none;" id="card-content">
+                            <div class="card-body">
+                                <ul class="list-group" style="border: none;">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center">
                                             <br>
-                                            <p style="color: #4d4d4d;">Quantidade: 1 | Preço: R$150,00 | Produto para Casa</p>
-                                            <p style="color: #4d4d4d;">Comprador: João da Silva</p>
-                                            <p style="color: #4d4d4d;">Pedido Nº: 123456</p>
-                                            <p style="color: #4d4d4d;">Forma de Pagamento: Cartão de Crédito</p>
+                                            <img
+                                                src="/static/img/Produtos/ProdutosCasa/banco.jpeg"
+                                                alt="Produto 1"
+                                                class="img-fluid rounded mb-3"
+                                                style="width: 100%; max-width: 200px; margin-right: 20px;"
+                                            >
+                                            <div>
+                                                <p class="m-0">
+                                                    <strong>Banco de Madeira Rústico</strong>
+                                                </p>
+                                                <br>
+                                                <p style="color: #4d4d4d;">Quantidade: 1 | Preço: R$150,00 | Produto para Casa</p>
+                                                <p style="color: #4d4d4d;">Comprador: João da Silva</p>
+                                                <p style="color: #4d4d4d;">Pedido Nº: 123456</p>
+                                                <p style="color: #4d4d4d;">Forma de Pagamento: Cartão de Crédito</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <span style="color: #ac0505;">Aguardando Pagamento</span>
-                                </li>
-                            </ul>
+                                        <span style="color: #ac0505;">Aguardando Pagamento</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                  </div>
                 </div>
-                  </div>
-                </div>
-            </section>
+            </div>
         </div>
-    </main>
+    </section>
+</div>
+</main>
 </body>
-
 <script>
 function showContent(section) {
     const content = {
@@ -266,5 +308,4 @@ function showContent(section) {
     document.getElementById('card-content').innerHTML = content[section] || '<p>Conteúdo não disponível.</p>';
 }
 </script>
-
 {% endblock %}

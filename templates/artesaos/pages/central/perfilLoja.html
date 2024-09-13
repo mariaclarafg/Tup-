@@ -1,194 +1,207 @@
 {% extends "pages/base.html" %}
 {% block subtitulo %}Adicionar Produtos{% endblock %}
 {% block carousel %}
-
 <nav id="navbar-example2" class="navbar navbar-dark" style="background-color: #0F2B05;">
-  <div class="container">
-    <a class="navbar-brand">Central do Artesão</a>
-  </div>
+    <div class="container">
+        <a class="navbar-brand">Central do Artesão</a>
+    </div>
 </nav>
-
 <body class="d-flex flex-column min-vh-100 bg-green">
-  <main class="d-flex flex-column flex-grow-1">
-      <div class="d-flex flex-grow-1">
-          <aside class="coluna-esquerda p-3 d-flex flex-column justify-content-between bg-white">
-              <div>
-                  <div class="profile-section mb-3">
-                      <i class="bi bi-person-circle custom-icon" class="img-thumbnail rounded-full" style="color: #0F2B05;"></i>
-                      <p class="lead">Nome da loja</p>
-                  </div>
-                  <nav class="nav nav-pills flex-column mt-2">
-                    <span class="text-dark-beige"><i></i>Pedidos</span>
-                    <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/listadetarefas" style="color: #6c757d; text-decoration: none;">
-                        <i class="bi bi-clipboard-data-fill"></i>Gerenciar Pedidos
-                  </a>
-                </nav>                  
-                  <nav class="nav nav-pills flex-column mt-3">
-                    <span class="text-dark-beige"><i></i>Produtos</span>
-                    <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/produtoscadastrados" style="color: #6c757d; text-decoration: none;"><i class="bi bi-journal-check"></i> Produtos cadastrados</a>
-                    <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/adicionarprodutos" style="color: #6c757d; text-decoration: none;"><i class="bi bi-plus-square"></i> <strong> Adicionar produtos</strong></a>
-                  </nav>
-                  <nav class="nav nav-pills flex-column mt-3">
-                    <span class="text-dark-beige"><i></i>Atendimento ao cliente</span>
-                    <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/chat" style="color: #6c757d; text-decoration: none;"><i class="bi bi-chat-square-text"></i> Chat</a>
-                    <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/demandas" style="color: #6c757d; text-decoration: none;"><i class="bi bi-piggy-bank-fill"></i> Demanda de produtos</a>
-                  </nav>
-                  <nav class="nav nav-pills flex-column mt-3">
-                    <span class="text-dark-beige"><i class="fas fa-shield-alt"></i>Loja</span>
-                    <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/perfildaloja" style="color: #6c757d; text-decoration: none;"><i class="bi bi-shop-window"></i> Perfil da Loja</a>
-                    <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/configuracoesloja" style="color: #6c757d; text-decoration: none;"><i class="bi bi-gear-fill"></i> Configurações da loja</a>
-                </nav>
-              </div>
-          </aside>
-
-          <section class="flex-grow-1 p-3 bg-light">
-            <h4 class="mb-4 mt-5"><strong>Loja</strong></h4> 
-          
-            <!-- Primeiro Card Interno -->
-            <div class="card bg-white card-externo">
-              <div class="card-body p-0">
-                <!-- Imagem de Capa com Ícone de Lápis -->
-                <div class="header-container">
-                  <img src="/static/img/logo/capa2.jpeg" alt="Imagem de Capa" class="img-fluid">
+    <main class="d-flex flex-column flex-grow-1">
+        <div class="d-flex flex-grow-1">
+            <aside class="coluna-esquerda p-3 d-flex flex-column justify-content-between bg-white">
+                <div>
+                    <div class="profile-section mb-3">
+                        <i class="bi bi-person-circle custom-icon" class="img-thumbnail rounded-full" style="color: #0F2B05;"></i>
+                        <p class="lead">Nome da loja</p>
+                    </div>
+                    <nav class="nav nav-pills flex-column mt-2">
+                        <span class="text-dark-beige">
+                            <i></i>Pedidos
+                        </span>
+                        <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/listadetarefas" style="color: #6c757d; text-decoration: none;">
+                            <i class="bi bi-clipboard-data-fill"></i>
+                            Gerenciar Pedidos
+                        </a>
+                    </nav>
+                    <nav class="nav nav-pills flex-column mt-3">
+                        <span class="text-dark-beige">
+                            <i></i>Produtos
+                        </span>
+                        <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/produtoscadastrados" style="color: #6c757d; text-decoration: none;">
+                            <i class="bi bi-journal-check"></i> Produtos cadastrados
+                        </a>
+                        <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/adicionarprodutos" style="color: #6c757d; text-decoration: none;">
+                            <i class="bi bi-plus-square"></i>
+                            <strong> Adicionar produtos</strong>
+                        </a>
+                    </nav>
+                    <nav class="nav nav-pills flex-column mt-3">
+                        <span class="text-dark-beige">
+                            <i></i>Atendimento ao cliente
+                        </span>
+                        <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/chat" style="color: #6c757d; text-decoration: none;">
+                            <i class="bi bi-chat-square-text"></i> Chat
+                        </a>
+                        <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/demandas" style="color: #6c757d; text-decoration: none;">
+                            <i class="bi bi-piggy-bank-fill"></i> Demanda de produtos
+                        </a>
+                    </nav>
+                    <nav class="nav nav-pills flex-column mt-3">
+                        <span class="text-dark-beige">
+                            <i class="fas fa-shield-alt"></i>Loja
+                        </span>
+                        <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/perfildaloja" style="color: #6c757d; text-decoration: none;">
+                            <i class="bi bi-shop-window"></i> Perfil da Loja
+                        </a>
+                        <a class="nav-link text-dark-beige" href="/artesaos/centraldoartesao/configuracoesloja" style="color: #6c757d; text-decoration: none;">
+                            <i class="bi bi-gear-fill"></i> Configurações da loja
+                        </a>
+                    </nav>
                 </div>
-                
-                <!-- Foto de Perfil -->
-                <div class="profile-container">
-                  <img src="/static/img/logo/icon.png" alt="Foto de Perfil" class="profile-img">
+            </aside>
+            <section class="flex-grow-1 p-3 bg-light">
+                <h4 class="mb-4 mt-5">
+                    <strong>Loja</strong>
+                </h4>
+                <!-- Primeiro Card Interno -->
+                <div class="card bg-white card-externo">
+                    <div class="card-body p-0">
+                        <!-- Imagem de Capa com Ícone de Lápis -->
+                        <div class="header-container">
+                            <img src="/static/img/logo/capa2.jpeg" alt="Imagem de Capa" class="img-fluid">
+                        </div>
+                        <!-- Foto de Perfil -->
+                        <div class="profile-container">
+                            <img src="/static/img/logo/icon.png" alt="Foto de Perfil" class="profile-img">
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mt-5"></div>
+                    <div class="card-body p-0">
+                        <div class="d-flex justify-content-between  mt-4">
+                            <h5 class=" mb-4" style="margin-left: 38px;">Nome da Loja</h5>
+                            <div class="rating-container">
+                                <span class="rating-stars mb-5 ">★★★★★</span>
+                                <span>(4.8 de 5)</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
-              </div>
-              <div class="d-flex justify-content-between align-items-center mt-5">
-                
-              </div>
-
-              
-            
-                <div class="card-body p-0">
-                
-                <div class="d-flex justify-content-between  mt-4">
-                
-                  <h5 class=" mb-4" style="margin-left: 38px;">Nome da Loja</h5>
-                  
-                  <div class="rating-container">
-                    <span class="rating-stars mb-5 ">★★★★★</span>
-                    <span>(4.8 de 5)</span>
-                  </div>
+                <br>
+                <div class="title-container">
+                    <h5 class="display-5">
+                        <b>PRODUTOS DISPONÍVEIS</b>
+                    </h5>
+                    <div class="divisoria-2"></div>
+                    <h5 class="display-6">
+                        <a href="/produtosparacasa" style="color: inherit;">
+                            <b>Ver tudo</b>
+                        </a>
+                    </h5>
                 </div>
-                
-
-            </div>
-            
-
-            </div>
-
-
-
-            <br>
-            <div class="title-container"> 
-              <h5 class="display-5"><b>PRODUTOS DISPONÍVEIS</b></h5> 
-              <div class="divisoria-2"></div> 
-              <h5 class="display-6">
-                  <a href="/produtosparacasa" style="color: inherit;"><b>Ver tudo</b></a>
-              </h5>  
-          </div> 
-      <br> 
-          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-4 g-3">
-              <div class="col">
-                  <div class="card">
-                      <a href="/loja/produto">
-                          <img src="/static/img/Produtos/ProdutosCasa/bordadoCafe.png" class="card-img-top w-100 produto-img">
-                      </a>
-                      <div class="card-body">
-                          <h5 class="card-title text-center mb-4">
-                              <a href="/loja/produto" class="text-decoration-none text-black">Bordado</a>
-                          </h5>
-                          <div class="d-flex justify-content-between align-items-center">
-                              <p class="lead mb-0">R$ 300,00</p>
-                              <a href="/loja/carrinho" class="btn btn-light btn-heart">
-                                  <i class="bi bi-heart"></i>
-                              </a>
-                          </div>                                     
-                      </div>
-                  </div>
-              </div>
-              <div class="col">
-                  <div class="card">
-                      <a href="/loja/produto">
-                          <img src="/static/img/Produtos/ProdutosCasa/peixeFofo.jpg" class="card-img-top w-100 produto-img">
-                      </a>
-                      <div class="card-body">
-                          <h5 class="card-title text-center mb-4">
-                              <a href="/loja/produto" class="text-decoration-none text-black">Luminária de Peixe</a>
-                          </h5>
-                          <div class="d-flex justify-content-between align-items-center">
-                              <p class="lead mb-0">R$ 400,00</p>
-                              <a href="/loja/carrinho" class="btn btn-light btn-heart">
-                                  <i class="bi bi-heart"></i>
-                              </a>
-                          </div>                                     
-                      </div>
-                  </div>
-              </div>
-              <div class="col">
-                  <div class="card">
-                      <a href="/loja/produto">
-                          <img src="/static/img/Produtos/ProdutosCasa/portachave.png" class="card-img-top w-100 produto-img">
-                      </a>
-                      <div class="card-body">
-                          <h5 class="card-title text-center mb-4">
-                              <a href="/loja/produto" class="text-decoration-none text-black">Porta Chaves</a>
-                          </h5>
-                          <div class="d-flex justify-content-between align-items-center">
-                              <p class="lead mb-0">R$ 45,70</p>
-                              <a href="/loja/carrinho" class="btn btn-light btn-heart">
-                                  <i class="bi bi-heart"></i>
-                              </a>
-                          </div>                                     
-                      </div>
-                  </div>
-              </div>
-              <div class="col">
-                  <div class="card">
-                      <a href="/loja/produto">
-                          <img src="/static/img/Produtos/ProdutosCasa/vasoCeramica.jpg" class="card-img-top w-100 produto-img">
-                      </a>
-                      <div class="card-body">
-                          <h5 class="card-title text-center mb-4">
-                              <a href="/loja/produto" class="text-decoration-none text-black">Vaso de Cerâmica</a>
-                          </h5>
-                          <div class="d-flex justify-content-between align-items-center">
-                              <p class="lead mb-0">R$ 250,00</p>
-                              <a href="/loja/carrinho" class="btn btn-light btn-heart">
-                                  <i class="bi bi-heart"></i>
-                              </a>
-                          </div>                                     
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <br>
-          
-            <!-- Segundo Card: Avaliações Recebidas -->
-            <div id="reviews" class="mt-5">
-              <h5 class="display-5"><b>AVALIAÇÕES DE CLIENTES</b></h5> 
-              <br>
-              <div class="card mb-3">
-                <div class="card-body">
-                  <p><strong>João Oliveira</strong> <span class="rating-stars">★★★★☆</span></p>
-                  <p>"Ótimo porta chaves, combina bem com a decoração da minha casa."</p>
+                <br>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-4 g-3">
+                    <div class="col">
+                        <div class="card">
+                            <a href="/loja/produto">
+                                <img src="/static/img/Produtos/ProdutosCasa/bordadoCafe.png" class="card-img-top w-100 produto-img">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title text-center mb-4">
+                                    <a href="/loja/produto" class="text-decoration-none text-black">Bordado</a>
+                                </h5>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="lead mb-0">R$ 300,00</p>
+                                    <a href="/loja/carrinho" class="btn btn-light btn-heart">
+                                        <i class="bi bi-heart"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <a href="/loja/produto">
+                                <img src="/static/img/Produtos/ProdutosCasa/peixeFofo.jpg" class="card-img-top w-100 produto-img">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title text-center mb-4">
+                                    <a href="/loja/produto" class="text-decoration-none text-black">Luminária de Peixe</a>
+                                </h5>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="lead mb-0">R$ 400,00</p>
+                                    <a href="/loja/carrinho" class="btn btn-light btn-heart">
+                                        <i class="bi bi-heart"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <a href="/loja/produto">
+                                <img src="/static/img/Produtos/ProdutosCasa/portachave.png" class="card-img-top w-100 produto-img">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title text-center mb-4">
+                                    <a href="/loja/produto" class="text-decoration-none text-black">Porta Chaves</a>
+                                </h5>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="lead mb-0">R$ 45,70</p>
+                                    <a href="/loja/carrinho" class="btn btn-light btn-heart">
+                                        <i class="bi bi-heart"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <a href="/loja/produto">
+                                <img src="/static/img/Produtos/ProdutosCasa/vasoCeramica.jpg" class="card-img-top w-100 produto-img">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title text-center mb-4">
+                                    <a href="/loja/produto" class="text-decoration-none text-black">Vaso de Cerâmica</a>
+                                </h5>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="lead mb-0">R$ 250,00</p>
+                                    <a href="/loja/carrinho" class="btn btn-light btn-heart">
+                                        <i class="bi bi-heart"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="card mb-3">
-                <div class="card-body">
-                  <p><strong>Fernanda Almeida</strong> <span class="rating-stars">★★★★★</span></p>
-                  <p>"Muito bonito e funcional. Recomendo!"</p>
+                <br>
+                <!-- Segundo Card: Avaliações Recebidas -->
+                <div id="reviews" class="mt-5">
+                    <h5 class="display-5">
+                        <b>AVALIAÇÕES DE CLIENTES</b>
+                    </h5>
+                    <br>
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <p>
+                                <strong>João Oliveira</strong>
+                                <span class="rating-stars">★★★★☆</span>
+                            </p>
+                            <p>"Ótimo porta chaves, combina bem com a decoração da minha casa."</p>
+                        </div>
+                    </div>
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <p>
+                                <strong>Fernanda Almeida</strong>
+                                <span class="rating-stars">★★★★★</span>
+                            </p>
+                            <p>"Muito bonito e funcional. Recomendo!"</p>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </section>
-        
-          <style>
+            </section>
+            <style>
           .header-container {
             position: relative;
           }
@@ -229,12 +242,8 @@
           .rating-stars {
             color: gold;
           }
-
-          
-          
-        </style>  
-      </div>
-  </main>
+            </style>
+        </div>
+    </main>
 </body>
-
 {% endblock %}
