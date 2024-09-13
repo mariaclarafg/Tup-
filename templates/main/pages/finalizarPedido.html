@@ -50,84 +50,78 @@
 
             <!-- Card Método de Pagamento -->
             <div class="col-12 mt-4">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="row g-2 align-items-center mb-3">
-                            <div class="d-flex align-items-center col-md-12">
-                                <div class="me-3">
-                                    <a class="footer-brand" href="#">
-                                        <img src="/static/img/logo/logo_verde.png" alt="Logotipo" height="100">
-                                    </a>
-                                </div>
-                                <div>
-                                    <label for="inputNome" class="choose">Método de Pagamento</label>
-                                </div>
-                            </div>
-                            <hr>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="paymentMethod" value="pix" onclick="showPaymentMethod('pix')">
-                                Pix
-                            </label>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="paymentMethod" value="card" onclick="showPaymentMethod('card')">
-                                Cartão (Débito ou Crédito)
-                            </label>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="paymentMethod" value="boleto" onclick="showPaymentMethod('boleto')">
-                                Boleto
-                            </label>
-                        </div>
-
-                        <!-- Pix Section -->
-                        <div id="pixSection" class="payment-section" style="display:none;">
-                            <h6>QR Code:</h6>
-                            <img src="https://via.placeholder.com/150" alt="QR Code" class="img-fluid">
-                            <p class="mt-2"><b>Código Aleatório:</b> 12345-abcde-67890</p>
-                        </div>
-
-                        <!-- Cartão Section -->
-                        <div id="cardSection" class="payment-section" style="display:none;">
-                            <label>
-                                <input type="radio" name="cardType" value="debit" onclick="showCardFields('debit')"> Cartão de Débito
-                            </label>
-                            <label class="ms-3">
-                                <input type="radio" name="cardType" value="credit" onclick="showCardFields('credit')"> Cartão de Crédito
-                            </label>
-
-                            <!-- Campos para Débito ou Crédito -->
-                            <div id="cardFields" style="display:none;" class="mt-3">
-                                <div class="mb-3">
-                                    <label for="cardNumber" class="form-label">Número do Cartão</label>
-                                    <input type="text" class="form-control" id="cardNumber">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="cardName" class="form-label">Nome no Cartão</label>
-                                    <input type="text" class="form-control" id="cardName">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="cardExpiry" class="form-label">Data de Validade</label>
-                                    <input type="text" class="form-control" id="cardExpiry">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="cardCVC" class="form-label">Código de Segurança (CVC)</label>
-                                    <input type="text" class="form-control" id="cardCVC">
+                <div class="row">
+                    <!-- Card for Pix -->
+                    <div class="col-md-4">
+                        <div class="card payment-card" id="pixCard">
+                            <div class="card-body">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="radio" name="paymentMethod" value="pix" onclick="expandCard('pix')">
+                                    Pix
+                                </label>
+                                <div id="pixSection" class="payment-section" style="display:none;">
+                                    <h6>QR Code:</h6>
+                                    <img src="https://via.placeholder.com/150" alt="QR Code" class="img-fluid">
+                                    <p class="mt-2"><b>Código Aleatório:</b> 12345-abcde-67890</p>
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- Boleto Section -->
-                        <div id="boletoSection" class="payment-section" style="display:none;">
-                            <div class="mb-3">
-                                <label for="emailBoleto" class="form-label">E-mail para envio do Boleto</label>
-                                <input type="email" class="form-control" id="emailBoleto">
+                    <!-- Card for Cartão -->
+                    <div class="col-md-4">
+                        <div class="card payment-card" id="cardCard">
+                            <div class="card-body">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="radio" name="paymentMethod" value="card" onclick="expandCard('card')">
+                                    Cartão (Débito ou Crédito)
+                                </label>
+                                <div id="cardSection" class="payment-section" style="display:none;">
+                                    <label>
+                                        <input type="radio" name="cardType" value="debit" onclick="showCardFields('debit')"> Cartão de Débito
+                                    </label>
+                                    <label class="ms-3">
+                                        <input type="radio" name="cardType" value="credit" onclick="showCardFields('credit')"> Cartão de Crédito
+                                    </label>
+                                    <div id="cardFields" style="display:none;" class="mt-3">
+                                        <div class="mb-3">
+                                            <label for="cardNumber" class="form-label">Número do Cartão</label>
+                                            <input type="text" class="form-control" id="cardNumber">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="cardName" class="form-label">Nome no Cartão</label>
+                                            <input type="text" class="form-control" id="cardName">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="cardExpiry" class="form-label">Data de Validade</label>
+                                            <input type="text" class="form-control" id="cardExpiry">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="cardCVC" class="form-label">Código de Segurança (CVC)</label>
+                                            <input type="text" class="form-control" id="cardCVC">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <button class="btn btn-primary">Enviar Boleto</button>
+                        </div>
+                    </div>
+
+                    <!-- Card for Boleto -->
+                    <div class="col-md-4">
+                        <div class="card payment-card" id="boletoCard">
+                            <div class="card-body">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="radio" name="paymentMethod" value="boleto" onclick="expandCard('boleto')">
+                                    Boleto
+                                </label>
+                                <div id="boletoSection" class="payment-section" style="display:none;">
+                                    <div class="mb-3">
+                                        <label for="emailBoleto" class="form-label">E-mail para envio do Boleto</label>
+                                        <input type="email" class="form-control" id="emailBoleto">
+                                    </div>
+                                    <button class="btn btn-primary">Enviar Boleto</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -178,6 +172,19 @@ function showPaymentMethod(method) {
 
 function showCardFields(type) {
     document.getElementById('cardFields').style.display = 'block';
+}
+
+function expandCard(method) {
+    let cards = document.querySelectorAll('.payment-card');
+    cards.forEach(card => {
+        card.classList.remove('expanded');
+        card.querySelector('.payment-section').style.display = 'none';
+    });
+
+    let selectedCard = document.getElementById(method + 'Card');
+    selectedCard.classList.add('expanded');
+    let section = selectedCard.querySelector('.payment-section');
+    section.style.display = 'block';
 }
 </script>
 
