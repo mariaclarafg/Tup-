@@ -5,8 +5,8 @@
 <body> 
     <div class="background-image"></div>
     <div class="container">
-        <div class="row w-100 d-flex justify-content-center">
-            <main class="container my-100 d-flex justify-content-center align-items-center" style="min-height: 90vh;">
+        <div class="row  d-flex justify-content-center">
+            <main class="container d-flex justify-content-center align-items-center" style="min-height: 90vh;">
                 <div class="card text-bg-light mb-10 text-center" style="max-width: 50rem; padding:3rem;">
                     <div class="card-body">
 
@@ -24,5 +24,19 @@
             </main>
         </div>
     </div>
-    
+
+    <style>
+    .background-image{
+        background-image: url('/static/img/fundo/fundoSemLogo.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 150%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1; 
+    }
+    </style>
 {%endblock%}

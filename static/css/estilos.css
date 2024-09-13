@@ -321,7 +321,7 @@ body, html {
     margin: 0;
 }
 .background-image {
-    background-image: url('/static/img/carrossel/1.png');
+    background-image: url('/static/img/fundo/fundoSemLogo.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
