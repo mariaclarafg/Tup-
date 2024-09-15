@@ -69,3 +69,7 @@ async def get_root(request: Request):
 @router.get("/centraldoartesao/alteraremail", response_class=HTMLResponse)
 async def get_root(request: Request):
     return templates.TemplateResponse("pages/central/alterarEmailArtesao.html", {"request": request})
+
+@router.get("/centraldoartesao/gerenciarAssinatura", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("pages/central/gerenciarAssinatura.html", {"request": request})

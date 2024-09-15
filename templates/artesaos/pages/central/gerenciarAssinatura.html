@@ -1,0 +1,308 @@
+{% extends "pages/base.html" %}
+{% block subtitulo %}Cadastro do Artesão{% endblock %}
+
+{% block carousel %}
+
+{% endblock %}
+
+{% block conteudo %}
+
+<main class="container my-5">
+    <div class="row justify-content-center">
+        
+    </div>
+    <br>
+    <div class="card-body row justify-content-center">
+        <div class="col-9">
+            <div class="card">
+                <br>
+                <div class="row g-2 align-items-center mb-3">
+                    <div class="d-flex align-items-center col-md-12">
+                        <div class="me-3">
+                            <a class="footer-brand" href="#">
+                                <img src="/static/img/logo/logo_verde.png" alt="Logotipo" height="100">
+                            </a>
+                        </div>
+                        <div>
+                            <label for="inputNome" class="choose">ESCOLHA SEU PLANO</label>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="container">
+                    <div class="d-flex justify-content-center mb-4">
+                        <div class="card col-12 col-md-10 col-lg-9">
+                            <div class="card-body">
+                                <div class="me-3">
+                                    <div class="d-flex align-items-center col-md-12">
+                                        <div class="form-check form-check-inline me-3">
+                                            <input class="form-check-input" type="radio" name="PlanoGratuito"
+                                                id="gratuitoP" value="sim">
+                                            <label class="form-check-label" for="gratuitoP"></label>
+                                        </div>
+                                        <div class="me-3">
+                                            <a class="footer-brand" href="#">
+                                                <img src="/static/img/logo/logo_verde.png" alt="Logotipo"
+                                                    class="img-fluid" style="max-height: 150px;">
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <label for="inputNome" class="choose">PLANO PREMIUM</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center mb-4">
+                        <div class="card col-12 col-md-10 col-lg-9">
+                            <div class="card-body">
+                                <div class="me-3">
+                                    <div class="d-flex align-items-center col-md-12">
+                                        <div class="form-check form-check-inline me-3">
+                                            <input class="form-check-input" type="radio" name="PlanoGratuito"
+                                                id="gratuitoP" value="sim">
+                                            <label class="form-check-label" for="gratuitoP"></label>
+                                        </div>
+                                        <div class="me-3">
+                                            <a class="footer-brand" href="#">
+                                                <img src="/static/img/logo/logo_verde.png" alt="Logotipo"
+                                                    class="img-fluid" style="max-height: 150px;">
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <label for="inputNome" class="choose">PLANO GRATUITO</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br> <br>
+                <div class="row g-2 align-items-center mb-3">
+                    <div class="d-flex align-items-center col-md-12">
+                        <div class="me-3">
+                            <a class="footer-brand" href="#">
+                                <img src="/static/img/logo/logo_verde.png" alt="Logotipo" height="100">
+                            </a>
+                        </div>
+                        <div>
+                            <label for="inputNome" class="choose">SELECIONE SUA ASSINATURA</label>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-center">
+                        <div class="card col-8">
+                            <br>
+                            <div class="row g-2 align-items-center mb-3">
+                                <div class="d-flex align-items-center col-md-12">
+                                    <div class="card-body">
+                                        <h5 class="assn">Assinatura Mensal</h5>
+                                        <p class="assn">R$ XX,XX</p>
+                                        <p class="assn"><small class="text-muted">Renovação automática mensal; cancele
+                                                quando quiser</small></p>
+                                    </div>
+                                    <div class="form-check form-check-inline ms-auto">
+                                        <input class="form-check-input" type="radio" name="PlanoGratuito" id="mensal"
+                                            value="mensal">
+                                        <label class="form-check-label" for="mensal"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <div class="card col-8">
+                            <br>
+                            <div class="row g-2 align-items-center mb-3">
+                                <div class="d-flex align-items-center col-md-12">
+                                    <div class="card-body">
+                                        <h5 class="assn">12 meses</h5>
+                                        <p class="assn">Pagamento único de R$ XX,XX</p>
+                                        <p class="assn"><small class="text-muted">Pague uma vez só. Faça recargas quando
+                                                quiser. Sem renovação automática</small></p>
+                                    </div>
+                                    <div class="form-check form-check-inline ms-auto">
+                                        <input class="form-check-input" type="radio" name="PlanoGratuito" id="12meses"
+                                            value="12meses">
+                                        <label class="form-check-label" for="12meses"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <div class="card col-8">
+                            <br>
+                            <div class="row g-2 align-items-center mb-3">
+                                <div class="d-flex align-items-center col-md-12">
+                                    <div class="card-body">
+                                        <h5 class="assn">6 meses</h5>
+                                        <p class="assn">Pagamento único de R$ XX,XX</p>
+                                        <p class="assn"><small class="text-muted">Pague uma vez só. Faça recargas quando
+                                                quiser. Sem renovação automática</small></p>
+                                    </div>
+                                    <div class="form-check form-check-inline ms-auto">
+                                        <input class="form-check-input" type="radio" name="PlanoGratuito" id="6meses"
+                                            value="6meses">
+                                        <label class="form-check-label" for="6meses"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <div class="card col-8">
+                            <br>
+                            <div class="row g-2 align-items-center mb-3">
+                                <div class="d-flex align-items-center col-md-12">
+                                    <div class="card-body">
+                                        <h5 class="assn">3 meses</h5>
+                                        <p class="assn">Pagamento único de R$ XX,XX</p>
+                                        <p class="assn"><small class="text-muted">Pague uma vez só. Faça recargas quando
+                                                quiser. Sem renovação automática</small></p>
+                                    </div>
+                                    <div class="form-check form-check-inline ms-auto">
+                                        <input class="form-check-input" type="radio" name="PlanoGratuito" id="3meses"
+                                            value="3meses">
+                                        <label class="form-check-label" for="3meses"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <div class="card col-8">
+                            <br>
+                            <div class="row g-2 align-items-center mb-3">
+                                <div class="d-flex align-items-center col-md-12">
+                                    <div class="card-body">
+                                        <h5 class="assn">1 mês</h5>
+                                        <p class="assn">Pagamento único de R$ XX,XX</p>
+                                        <p class="assn"><small class="text-muted">Pague uma vez só. Faça recargas quando
+                                                quiser. Sem renovação automática</small></p>
+                                    </div>
+                                    <div class="form-check form-check-inline ms-auto">
+                                        <input class="form-check-input" type="radio" name="PlanoGratuito" id="1mes"
+                                            value="1mes">
+                                        <label class="form-check-label" for="1mes"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row g-2 align-items-center mb-3">
+                    <div class="d-flex align-items-center col-md-12">
+                        <div class="me-3">
+                            <a class="footer-brand" href="#">
+                                <img src="/static/img/logo/logo_verde.png" alt="Logotipo" height="100">
+                            </a>
+                        </div>
+                        <div>
+                            <label for="inputNome" class="choose">SELECIONE SUA FORMA DE PAGAMENTO</label>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="container">
+                        <div class="row justify-content-center mb-4">
+                            <div class="col-12 col-md-7 mb-3">
+                                <div class="card p-3">
+                                    <div class="row g-2 align-items-center mb-3">
+                                        <div class="col-md-12">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <p class="assn mb-0">Cartão de Crédito</p>
+                                                <div class="form-check form-check-inline ms-auto">
+                                                    <input class="form-check-input" type="radio" name="formaPagamento"
+                                                        id="credito" value="credito">
+                                                    <label class="form-check-label" for="credito"></label>
+                                                </div>
+                                            </div>
+                                            <img src="/static/img/cartaocredito.png" alt="Logotipo" class="img-fluid"
+                                                style="max-height: 45px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-7">
+                                <div class="card p-3">
+                                    <div class="row g-2 align-items-center mb-3">
+                                        <div class="col-md-12">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <p class="assn mb-0">Cartão de Débito</p>
+                                                <div class="form-check form-check-inline ms-auto">
+                                                    <input class="form-check-input" type="radio" name="formaPagamento"
+                                                        id="debito" value="debito">
+                                                    <label class="form-check-label" for="debito"></label>
+                                                </div>
+                                            </div>
+                                            <img src="/static/img/cartaodebito.png" alt="Logotipo" class="img-fluid"
+                                                style="max-height: 45px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <a href="/artesaos/centraldoartesao/configuracoesloja" class="btn btn-success big-button-green">Manter Plano</a>
+                <br>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        function setCookie(name, value, days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+
+        function getCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) === ' ') c = c.substring(1);
+                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        const scrollPosition = getCookie('scrollPosition');
+        if (scrollPosition) {
+            window.scrollTo(0, parseInt(scrollPosition));
+            setCookie('scrollPosition', '', -1);
+        }
+
+        const creditoRadio = document.getElementById('credito');
+        const debitoRadio = document.getElementById('debito');
+
+        creditoRadio.addEventListener('change', function () {
+            if (this.checked) {
+
+                setCookie('scrollPosition', window.scrollY, 1);
+                window.location.href = '/artesaos/cadastro/escolhaseuplanopremium/credito';
+            }
+        });
+
+        debitoRadio.addEventListener('change', function () {
+            if (this.checked) {
+                setCookie('scrollPosition', window.scrollY, 1);
+                window.location.href = '/artesaos/cadastro/escolhaseuplanopremium/debito';
+            }
+        });
+    });
+</script>
+
+{% endblock %}
