@@ -8,25 +8,38 @@ SQL_CRIAR_TABELA = """
         token TEXT)
 """
 
-SQL_INSERIR = """
+SQL_CHECAR_CREDENCIAIS = """
+    SELECT nome, email, perfil, senha
+    FROM usuario
+    WHERE email = ?
+"""
+
+SQL_ATUALIZAR_DADOS = """
+    UPDATE usuario
+    SET nome = ?, email = ?, telefone = ?
+    WHERE email = ?
+"""
+
+SQL_ATUALIZAR_SENHA = """
+    UPDATE usuario
+    SET senha = ?
+    WHERE email = ?
+"""
+
+SQL_EXCLUIR_USUARIO = """
+    DELETE FROM usuario
+    WHERE email = ?
+"""
+
+SQL_INSERIR_USUARIO = """
     INSERT INTO usuario(id, nome, email, senha, perfil)
     VALUES (?, ?, ?)
 """
 
-SQL_ALTERAR = """
-    UPDATE usuario
-    SET nome=?, email=?
-    WHERE id=?
-"""
 
 SQL_ALTERAR_TOKEN = """
     UPDATE usuario
     SET token=?
-    WHERE id=?
-"""
-
-SQL_EXCLUIR = """
-    DELETE FROM usuario    
     WHERE id=?
 """
 
