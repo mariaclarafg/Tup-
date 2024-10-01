@@ -121,7 +121,7 @@ async def get_sair():
     return response    
 
 
-@router.get("/artesaos", response_class=HTMLResponse)
+@router.get("/artesao", response_class=HTMLResponse)
 async def get_root(request: Request):
     return templates.TemplateResponse("main/pages/artesaos.html", {"request": request})
 

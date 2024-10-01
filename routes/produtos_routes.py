@@ -7,11 +7,9 @@ import uvicorn
 from util.templates import obter_jinja_templates
 
 router = APIRouter(prefix="/produtos")
-templates = obter_jinja_templates("templates/produtos")
-
-
+templates = Jinja2Templates(directory="templates")
 
 
 @router.get("/detalhes", response_class=HTMLResponse)
 async def get_root(request: Request):
-    return templates.TemplateResponse("pages/produtoDetalhes.html", {"request": request})
+    return templates.TemplateResponse("produtos/pages/produtoDetalhes.html", {"request": request})

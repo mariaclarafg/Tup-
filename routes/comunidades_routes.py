@@ -7,7 +7,7 @@ import uvicorn
 from util.templates import obter_jinja_templates
 
 router = APIRouter(prefix="/gruposecomunidades")
-templates = obter_jinja_templates("templates/gruposcomunidades")
+templates = Jinja2Templates(directory="templates")
 
 @router.get("/bordadeiras", response_class=HTMLResponse)
 async def get_root(request: Request):

@@ -8,31 +8,26 @@ router = APIRouter(prefix="/usuario")
 
 templates = Jinja2Templates(directory="templates")
 
-
-@router.get("/cadastro/fornecerinformacoescnpj", response_class=HTMLResponse)
-async def get_root(request: Request):
-    return templates.TemplateResponse("pages/cadastro/fornecerinformacoescnpj.html", {"request": request})
-
-@router.get("/cadastro/fornecerinformacoescpf", response_class=HTMLResponse)
-async def get_root(request: Request):
-    return templates.TemplateResponse("pages/cadastro/fornecerinformacoescpf.html", {"request": request})
-
-@router.get("/cadastro/escolhaseuplanopremium/credito", response_class=HTMLResponse)
-async def get_root(request: Request):
-    return templates.TemplateResponse("pages/cadastro/escolhaseuplanopremiumcredito.html", {"request": request})
-
-@router.get("/cadastro/escolhaseuplanopremium/debito", response_class=HTMLResponse)
-async def get_root(request: Request):
-    return templates.TemplateResponse("pages/cadastro/escolhaseuplanopremiumdebito.html", {"request": request})
-
-@router.get("/cadastro/escolhaseuplanopremium", response_class=HTMLResponse)
-async def get_root(request: Request):
-    return templates.TemplateResponse("pages/cadastro/escolhaseuplanopremium.html", {"request": request})
-
-@router.get("/cadastro/compraplanoefetuada", response_class=HTMLResponse)
-async def get_root(request: Request):
-    return templates.TemplateResponse("pages/cadastro/compraplanoefetuado.html", {"request": request})
-
 @router.get("/entrar/esquecisenha", response_class=HTMLResponse)
 async def get_root(request: Request):
     return templates.TemplateResponse("pages/entraresquecisenha.html", {"request": request})
+
+@router.get("/entrar/alteraremail", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("artesaos/pages/central/alterarEmailArtesao.html", {"request": request})
+
+@router.get("/centroPessoal/contaalterarsenha", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("cliente/pages/centroPessoal/contaalterarsenha.html", {"request": request})
+
+@router.get("/centroPessoal/contaalterarnome", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("cliente/pages/centroPessoal/contaalterarnome.html", {"request": request})
+
+@router.get("/centroPessoal/contaalterardata", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("cliente/pages/centroPessoal/contaalterardata.html", {"request": request})
+
+@router.get("/centroPessoal/contaalteraremail", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("cliente/pages/centroPessoal/contaalteraremail.html", {"request": request})

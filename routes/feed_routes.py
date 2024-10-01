@@ -7,16 +7,16 @@ import uvicorn
 from util.templates import obter_jinja_templates
 
 router = APIRouter(prefix="/feed")
-templates = obter_jinja_templates("templates/feed")
+templates = Jinja2Templates(directory="templates")
 
 @router.get("/home", response_class=HTMLResponse)
 async def get_root(request: Request):
-    return templates.TemplateResponse("pages/feedhome.html", {"request": request})
+    return templates.TemplateResponse("feed/pages/feedhome.html", {"request": request})
 
 @router.get("/demandasatendidas", response_class=HTMLResponse)
 async def get_root(request: Request):
-    return templates.TemplateResponse("pages/demandasatendidas.html", {"request": request})
+    return templates.TemplateResponse("feed/pages/demandasatendidas.html", {"request": request})
 
 @router.get("/demandasnaoatendidas", response_class=HTMLResponse)
 async def get_root(request: Request):
-    return templates.TemplateResponse("pages/demandasnaoatendidas.html", {"request": request})
+    return templates.TemplateResponse("feed/pages/demandasnaoatendidas.html", {"request": request})
