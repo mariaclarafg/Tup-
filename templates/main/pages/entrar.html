@@ -1,4 +1,5 @@
 {% extends "shared/pages/base.html" %}
+{% from 'shared/macros.html' import input, button %}
 {% block subtitulo %}Entrar{% endblock %}
 {% block conteudo %}
 
@@ -11,37 +12,27 @@
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title text-center">
-                                    <form  action="/post_entrar" method="post">
-                                        <br>
-                                        <div class="formulario-inicio">  
-                                            <input type="email" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline" required placeholder="Email">
+                                    <form action="/post_entrar" method="post">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h3>Entrar</h3>
+                                            </div>
+                                            <div class="card-body pb-0">
+                                                {{ input('email', 'E-mail', 'email') }}
+                                                {{ input('senha', 'Senha', 'password') }}
+                                            </div>
+                                            <div class="card-footer">
+                                                {{ button('Entrar') }}
+                                                <div class="mt-3">
+                                                    Não é cadastrado? <a href="/cadastrar">Clique aqui</a> para se cadastrar.
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="formulario-inicio">  
-                                            <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline" required placeholder="Senha">
-                                        </div>
-                                        <br> 
-                                        <div>
-                                            <a href="cliente/centroPessoal/perfil" class="big-button-green">Entrar</a>
-                                        </div>                                        
-                                        <div class="conta p">
-                                        <br>
-                                        <p>
-                                            <a href="/entrar/esquecisenha" style="color: inherit;">Esqueceu a senha?</a>
-                                        </p>                                                                              
-                                        <hr class="divisoria-1"> 
-                                        <p>
-                                            Ainda não possui cadastro?
-                                        </p>
-                                        </div>                                       
-                                        <div>
-                                            <a href="/entrar/cadastro" value="Cadastre-se" class="big-button-gray">Cadastre-se</a>
-                                        </div>
-                                        <br>
                                     </form>
                                 </h5>
                             </div>
                         </div>
-                    </div>
+                    
                 </div>
             </main>                              
         </div>
