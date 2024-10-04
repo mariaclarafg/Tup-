@@ -1,71 +1,107 @@
 {% extends "shared/pages/base.html" %}
 {% block subtitulo %}Cadastro{% endblock %}
 {% block conteudo %}
-<body> 
-    <div class="background-image"></div>
-    <div class="container-fluid">        
-        <div class="row w-100 d-flex justify-content-center">            
-            <main class="container my-100 d-flex justify-content-center align-items-center" style="min-height: 110vh;">
-                <div class="col-12 col-md-8 col-lg-5">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">
-                                    <form method="post">
-                                        
-                                        <div class="formulario-inicio">
-                                            <br>   
-                                            <h3>Cadastro</h3>
-                                            <br>
-                                            <input type="text" nome ="NomeCompletocompleto" id="txtnomecompleto" size="30" maxlength="30" autocomplete="off" required placeholder="Nome Completo">
-                                        </div> 
-                                        <div class="formulario-inicio">  
-                                            <input type="text" nome ="SenhaCompleta" id="txtdatadenascimento" size="30" maxlength="20" autocomplete="off" required placeholder="Data de Nascimento">
-                                        </div>
-                                        <div class="formulario-inicio">  
-                                            <input type="text" nome ="SenhaCompleta" id="txtsenhacompleta" size="30" maxlength="30" autocomplete="off" required placeholder="Email">
-                                        </div>
-                                        <div class="formulario-inicio">  
-                                            <input type="text" nome ="SenhaCompleta" id="txtsenhacompleta" size="30" maxlength="20" autocomplete="off" required placeholder="Senha">
-                                        </div>
-                                        <div class="formulario-inicio">  
-                                            <input type="text" nome ="SenhaConfirmeCompleta" id="txtsenhaconfirmecompleta" size="30" maxlength="20" autocomplete="off" required placeholder="Confirme a senha">
-                                        </div>
-                                        <br> 
-                                        <div>
-                                            <input type="submit" value="Cadastra-se" class="big-button-green">
-                                        </div>
-                                        <br>
-                                        <div class="conta p"> 
-                                            <p>
-                                                Ao se cadastrar você concorda com os
-                                            </p>
-                                            <p>
-                                                <a href="/suporte" style="color: inherit;">Termos e Condições</a>
-                                            </p>
-                                        </div>
-                                    </form>
-                                </h5>
-                            </div>
+
+<div class="position-absolute top-0 start-0 min-vh-100 min-vw-100 bg-folhas"></div>
+<div class="row d-flex justify-content-center my-4">
+    <div class="col-12 col-md-8 col-lg-5">
+        <div class="bg-white rounded-3 pb-3">
+            <ul class="nav nav-tabs w-100" id="myTab" role="tablist">
+                <li class="nav-item w-50" role="presentation">
+                    <button class="nav-link active w-100" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+                        type="button" role="tab" aria-controls="home" aria-selected="true">
+                        <i class="bi bi-person d-block" style="font-size:128px"></i>
+                        <h2 class="display-5">Cliente</h2>
+                    </button>
+                </li>
+                <li class="nav-item w-50" role="presentation">
+                    <button class="nav-link w-100" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+                        type="button" role="tab" aria-controls="profile" aria-selected="false">
+                        <i class="bi bi-paint-bucket d-block" style="font-size:128px"></i>
+                        <h2 class="display-5">Artesão</h2>
+                    </button>
+                </li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <form method="post" action="/post_cadastrar_cliente">
+                        <div class="formulario-inicio">
+                            <input type="text" nome="NomeCompletocompleto" id="txtnomecompleto" size="30" maxlength="30"
+                                autocomplete="off" required placeholder="Nome Completo">
                         </div>
-                    </div>
+                        <div class="formulario-inicio">
+                            <input type="text" nome="SenhaCompleta" id="txtdatadenascimento" size="30" maxlength="20"
+                                autocomplete="off" required placeholder="Data de Nascimento">
+                        </div>
+                        <div class="formulario-inicio">
+                            <input type="text" nome="SenhaCompleta" id="txtsenhacompleta" size="30" maxlength="30"
+                                autocomplete="off" required placeholder="Email">
+                        </div>
+                        <div class="formulario-inicio">
+                            <input type="text" nome="SenhaCompleta" id="txtsenhacompleta" size="30" maxlength="20"
+                                autocomplete="off" required placeholder="Senha">
+                        </div>
+                        <div class="formulario-inicio mb-3">
+                            <input type="text" nome="SenhaConfirmeCompleta" id="txtsenhaconfirmecompleta" size="30"
+                                maxlength="20" autocomplete="off" required placeholder="Confirme a senha">
+                        </div>
+                        <div>
+                            <input type="submit" value="Cadastrar" class="big-button-green">
+                        </div>                        
+                    </form>
                 </div>
-            </main>
+                <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <form method="post" action="/post_cadastrar_artesao">
+                        <div class="formulario-inicio">
+                            <input type="text" nome="NomeCompletocompleto" id="txtnomecompleto" size="30" maxlength="30"
+                                autocomplete="off" required placeholder="Nome Completo">
+                        </div>
+                        <div class="formulario-inicio">
+                            <input type="text" nome="SenhaCompleta" id="txtdatadenascimento" size="30" maxlength="20"
+                                autocomplete="off" required placeholder="CNPJ">
+                        </div>
+                        <div class="formulario-inicio">
+                            <input type="text" nome="SenhaCompleta" id="txtsenhacompleta" size="30" maxlength="30"
+                                autocomplete="off" required placeholder="Email">
+                        </div>
+                        <div class="formulario-inicio">
+                            <input type="text" nome="SenhaCompleta" id="txtsenhacompleta" size="30" maxlength="20"
+                                autocomplete="off" required placeholder="Senha">
+                        </div>
+                        <div class="formulario-inicio mb-3">
+                            <input type="text" nome="SenhaConfirmeCompleta" id="txtsenhaconfirmecompleta" size="30"
+                                maxlength="20" autocomplete="off" required placeholder="Confirme a senha">
+                        </div>
+                        <div>
+                            <input type="submit" value="Cadastrar" class="big-button-green">
+                        </div>                        
+                    </form>
+                </div>
+            </div>
+            <div class="conta p">
+                <p>
+                    Ao se cadastrar você concorda com os
+                </p>
+                <p>
+                    <a href="/suporte" style="color: inherit;">Termos e Condições</a>
+                </p>
+            </div>
         </div>
-    </div>    
+    </div>
+</div>
 
-    <style>
-        .background-image{
-            background-image: url('/static/img/fundo/fundoSemLogo.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 150%;
-            width: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1; 
-        }
-        </style>
-
+<style>
+    .bg-folhas {
+        background-image: url('/static/img/fundo/fundoSemLogo.png');
+        background-size: 100% 100%;
+        z-index: -1000;
+    }
+    button.nav-link {
+        color: black;
+    }
+    button.active {
+        color: green !important;
+    }
+</style>
 {%endblock%}
