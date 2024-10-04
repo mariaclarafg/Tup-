@@ -22,12 +22,14 @@ class UsuarioRepo:
                 cursor.execute(
                     SQL_INSERIR_USUARIO,
                     (
-                        usuario.id,
                         usuario.nome,
+                        usuario.data_nascimento,
+                        usuario.cpf,
                         usuario.email,
+                        usuario.telefone,
                         usuario.senha,
                         usuario.perfil,
-                    ),
+                    ),                    
                 )
                 if cursor.rowcount > 0:
                     return usuario
@@ -36,11 +38,22 @@ class UsuarioRepo:
             return None
 
     @classmethod
+    def checar_credenciais(cls, email: str, senha: str) -> Optional[Usuario]:
+        with obter_conexao() as db:
+            cursor = db.cursor()
+            (id, nome, email, perfil, senha_hash) = cursor.execute(
+                SQL_CHECAR_CREDENCIAIS, (email,)).fetchone()
+            if nome:
+                if conferir_senha(senha, senha_hash):
+                    return Usuario(id=id, nome=nome, email=email, perfil=perfil)
+            return None
+        
+    @classmethod
     def atualizar_dados(cls, nome: str, email: str, telefone: str) -> bool:
         with obter_conexao() as db:
             cursor = db.cursor()
             resultado = cursor.execute(
-                SQL_ATUALIZAR_DADOS, (nome, email, telefone, email))
+                SQL_ATUALIZAR_DADOS_PESSOAIS, (nome, email, telefone, email))
             return resultado.rowcount > 0
         
     @classmethod
@@ -50,28 +63,6 @@ class UsuarioRepo:
             resultado = cursor.execute(
                 SQL_ATUALIZAR_SENHA, (senha, email))
             return resultado.rowcount > 0
-        
-    @classmethod
-    def checar_credenciais(cls, email: str, senha: str) -> Optional[tuple]:
-        with obter_conexao() as db:
-            cursor = db.cursor()
-            dados = cursor.execute(
-                SQL_CHECAR_CREDENCIAIS, (email,)).fetchone()
-            if dados:
-                if conferir_senha(senha, dados[3]):
-                    return (dados[0], dados[1], dados[2])
-            return None
-
-    @classmethod
-    def alterar_token(cls, id: int, token: str) -> bool:
-        try:
-            with obter_conexao() as conexao:
-                cursor = conexao.cursor()
-                cursor.execute(SQL_ALTERAR_TOKEN, (id, token))
-                return cursor.rowcount > 0
-        except sqlite3.Error as ex:
-            print(ex)
-            return False
 
     @classmethod
     def excluir(cls, id: int) -> bool:
@@ -98,36 +89,6 @@ class UsuarioRepo:
         except sqlite3.Error as ex:
             print(ex)
             return None
-        
-    @classmethod
-    def obter_por_email(cls, email: str) -> Optional[Usuario]:
-        try:
-            with obter_conexao() as conexao:
-                cursor = conexao.cursor()
-                tupla = cursor.execute(SQL_OBTER_POR_EMAIL, (email,)).fetchone()
-                if tupla:
-                    usuario = Usuario(*tupla)
-                    return usuario
-                else:
-                    return None
-        except sqlite3.Error as ex:
-            print(ex)
-            return None
-        
-    @classmethod
-    def obter_por_token(cls, token: str) -> Optional[Usuario]:
-        try:
-            with obter_conexao() as conexao:
-                cursor = conexao.cursor()
-                tupla = cursor.execute(SQL_OBTER_POR_TOKEN, (token,)).fetchone()
-                if tupla:
-                    usuario = Usuario(*tupla)
-                    return usuario
-                else:
-                    return None
-        except sqlite3.Error as ex:
-            print(ex)
-            return None
 
     @classmethod
     def obter_quantidade(cls) -> int:
@@ -139,8 +100,6 @@ class UsuarioRepo:
         except sqlite3.Error as ex:
             print(ex)
             return 0
-        
-    
 
     @classmethod
     def inserir_dados_json(cls):

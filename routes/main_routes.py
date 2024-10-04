@@ -1,3 +1,4 @@
+from datetime import date
 from fastapi import APIRouter, FastAPI, Form, Request, status
 from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
@@ -26,7 +27,6 @@ async def get_cadastrar(request: Request):
     if usuario.perfil == 2:
         return RedirectResponse("/artesao", status_code=status.HTTP_303_SEE_OTHER)
    
-
 @router.post("/post_entrar")
 async def post_entrar(
     email: str = Form(...), 
@@ -35,13 +35,13 @@ async def post_entrar(
     if usuario is None:
         response = RedirectResponse("/entrar", status_code=status.HTTP_303_SEE_OTHER)
         return response
-    token = criar_token(usuario[0], usuario[1], usuario[2])
+    token = criar_token(usuario.nome, usuario.email, usuario.perfil)
     nome_perfil = None
-    match (usuario[2]):
+    match (usuario.perfil):
         case 1: nome_perfil = "cliente"
         case 2: nome_perfil = "artesao"
+        case 3: nome_perfil = "administrador"
         case _: nome_perfil = ""
-    
     response = RedirectResponse(f"/{nome_perfil}", status_code=status.HTTP_303_SEE_OTHER)    
     response.set_cookie(
         key=NOME_COOKIE_AUTH,
@@ -52,25 +52,55 @@ async def post_entrar(
     )
     return response
 
-
 @router.get("/cadastrar")
 async def get_cadastrar(request: Request):
     return templates.TemplateResponse("main/pages/entrarcadastro.html", {"request": request})
 
-@router.post("/post_cadastrar")
-async def post_cadastrar(
+@router.post("/post_cadastrar_cliente")
+async def post_cadastrar_cliente(
     nome: str = Form(...),
+    data_nascimento: date = Form(...),
+    cpf: str = Form(...),
     email: str = Form(...),
     telefone: str = Form(...),
     senha: str = Form(...),
-    confsenha: str = Form(...),
-    perfil: int = Form(...)):
+    confsenha: str = Form(...)):
     if senha != confsenha:
         return RedirectResponse("/cadastrar", status_code=status.HTTP_303_SEE_OTHER)
     senha_hash = obter_hash_senha(senha)
-    usuario = Usuario(None, nome, email, telefone, senha_hash, None, perfil)
+    usuario = Usuario(
+        nome=nome,
+        data_nascimento=data_nascimento,
+        cpf=cpf,
+        email=email,
+        telefone=telefone,
+        senha=senha_hash,
+        perfil=1)
     UsuarioRepo.inserir(usuario)
-    return RedirectResponse("/", status_code=status.HTTP_303_SEE_OTHER)
+    return RedirectResponse("/cliente", status_code=status.HTTP_303_SEE_OTHER)
+
+@router.post("/post_cadastrar_artesao")
+async def post_cadastrar_artesao(
+    nome: str = Form(...),
+    data_nascimento: date = Form(...),
+    cpf: str = Form(...),
+    email: str = Form(...),
+    telefone: str = Form(...),
+    senha: str = Form(...),
+    confsenha: str = Form(...)):
+    if senha != confsenha:
+        return RedirectResponse("/cadastrar", status_code=status.HTTP_303_SEE_OTHER)
+    senha_hash = obter_hash_senha(senha)
+    usuario = Usuario(
+        nome=nome,
+        data_nascimento=data_nascimento,
+        cpf=cpf,
+        email=email,
+        telefone=telefone,
+        senha=senha_hash,
+        perfil=2)
+    UsuarioRepo.inserir(usuario)
+    return RedirectResponse("/artesao", status_code=status.HTTP_303_SEE_OTHER)
 
 @router.get("/sair")
 async def get_sair():
@@ -82,7 +112,6 @@ async def get_sair():
         httponly=True,
         samesite="lax")
     return response    
-
 
 @router.get("/artesao", response_class=HTMLResponse)
 async def get_root(request: Request):

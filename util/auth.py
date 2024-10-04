@@ -39,7 +39,7 @@ async def checar_autorizacao(request: Request):
     usuario = request.state.usuario if hasattr(request.state, "usuario") else None
     area_do_usuario = request.url.path.startswith("/usuario")
     area_do_cliente = request.url.path.startswith("/cliente")
-    area_do_artesaos = request.url.path.startswith("/artesaos")
+    area_do_artesaos = request.url.path.startswith("/artesao")
     area_do_administrador = request.url.path.startswith("/administrador")
     if (area_do_usuario or area_do_cliente or area_do_artesaos or area_do_administrador) and (not usuario or not usuario.perfil):
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED)

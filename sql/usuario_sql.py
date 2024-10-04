@@ -1,30 +1,42 @@
 SQL_CRIAR_TABELA = """
     CREATE TABLE IF NOT EXISTS usuario (
     id INTEGER PRIMARY KEY AUTOINCREMENT, 
-    nome TEXT NOT NULL, 
+    nome TEXT NOT NULL,
+    data_nascimento DATE NOT NULL, 
+    cpf TEXT NOT NULL, 
     email TEXT NOT NULL UNIQUE,
     telefone TEXT NOT NULL UNIQUE, 
     senha TEXT NOT NULL,
-    tema TEXT NOT NULL,
-    perfil INTEGER NOT NULL)
+    perfil INTEGER NOT NULL,
+    endereco_cep TEXT,
+    endereco_logradouro TEXT,
+    endereco_numero TEXT,
+    endereco_complemento TEXT,
+    endereco_bairro TEXT,
+    endereco_cidade TEXT,
+    endereco_uf TEXT,
+    nome_loja TEXT, 
+    cnpj TEXT,
+    telefone_loja TEXT,
+    tipo_comunidade TEXT
+    )
 """
 
 SQL_INSERIR_USUARIO = """
     INSERT INTO usuario 
-    (nome, email, telefone, senha, tema, perfil)
-    VALUES (?, ?, ?, ?, "default", ?)
+    (nome, data_nascimento, cpf, email, telefone, senha, perfil)
+    VALUES (?, ?, ?, ?, ?, ?, ?)
 """
 
-
 SQL_CHECAR_CREDENCIAIS = """
-    SELECT nome, email, perfil, senha
+    SELECT id, nome, email, perfil, senha
     FROM usuario
     WHERE email = ?
 """
 
-SQL_ATUALIZAR_DADOS = """
+SQL_ATUALIZAR_DADOS_PESSOAIS = """
     UPDATE usuario
-    SET nome = ?, email = ?, telefone = ?
+    SET nome = ?, data_nascimento=?, cpf=?, email = ?, telefone = ?
     WHERE email = ?
 """
 
@@ -43,4 +55,16 @@ SQL_ATUALIZAR_TEMA = """
 SQL_EXCLUIR_USUARIO = """
     DELETE FROM usuario
     WHERE email = ?
+"""
+
+SQL_OBTER_POR_ID = """
+
+"""
+
+SQL_OBTER_QUANTIDADE = """
+
+"""
+
+SQL_EMAIL_EXISTE = """
+
 """
