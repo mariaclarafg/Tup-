@@ -27,23 +27,31 @@
                 <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
                     <form method="post" action="/post_cadastrar_cliente">
                         <div class="formulario-inicio">
-                            <input type="text" nome="NomeCompletocompleto" id="txtnomecompleto" size="30" maxlength="30"
+                            <input type="text" name="nome" id="txtnome" size="30" maxlength="30"
                                 autocomplete="off" required placeholder="Nome Completo">
                         </div>
                         <div class="formulario-inicio">
-                            <input type="text" nome="SenhaCompleta" id="txtdatadenascimento" size="30" maxlength="20"
+                            <input type="date" name="data_nascimento" id="txtdata_nascimento" size="30" maxlength="20"
                                 autocomplete="off" required placeholder="Data de Nascimento">
                         </div>
                         <div class="formulario-inicio">
-                            <input type="text" nome="SenhaCompleta" id="txtsenhacompleta" size="30" maxlength="30"
+                            <input type="text" name="cpf" id="txtcpf" size="30" maxlength="30"
+                                autocomplete="off" required placeholder="CPF">
+                        </div>
+                        <div class="formulario-inicio">
+                            <input type="text" name="email" id="txtemail" size="30" maxlength="20"
                                 autocomplete="off" required placeholder="Email">
                         </div>
                         <div class="formulario-inicio">
-                            <input type="text" nome="SenhaCompleta" id="txtsenhacompleta" size="30" maxlength="20"
+                            <input type="text" name="telefone" id="txttelefone" size="30" maxlength="20"
+                                autocomplete="off" required placeholder="Telefone">
+                        </div>
+                        <div class="formulario-inicio">
+                            <input type="password" name="senha" id="txtsenha" size="30" maxlength="20"
                                 autocomplete="off" required placeholder="Senha">
                         </div>
                         <div class="formulario-inicio mb-3">
-                            <input type="text" nome="SenhaConfirmeCompleta" id="txtsenhaconfirmecompleta" size="30"
+                            <input type="password" name="confsenha" id="txtconfsenha" size="30"
                                 maxlength="20" autocomplete="off" required placeholder="Confirme a senha">
                         </div>
                         <div>
@@ -51,26 +59,43 @@
                         </div>                        
                     </form>
                 </div>
+
                 <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                     <form method="post" action="/post_cadastrar_artesao">
                         <div class="formulario-inicio">
-                            <input type="text" nome="NomeCompletocompleto" id="txtnomecompleto" size="30" maxlength="30"
+                            <input type="text" name="nome" id="txtnome" size="30" maxlength="30"
                                 autocomplete="off" required placeholder="Nome Completo">
                         </div>
                         <div class="formulario-inicio">
-                            <input type="text" nome="SenhaCompleta" id="txtdatadenascimento" size="30" maxlength="20"
+                            <input type="date" name="data_nascimento" id="txtdata_nascimento" size="30" maxlength="20"
+                                autocomplete="off" required placeholder="Data de Nascimento">
+                        </div>
+                        <div class="formulario-inicio">
+                            <input type="text" name="cpf" id="txtcpf" size="30" maxlength="30"
+                                autocomplete="off" required placeholder="CPF">
+                        </div>
+                        <div class="formulario-inicio">
+                            <input type="text" name="cnpj" id="txtcnpj" size="30" maxlength="20"
                                 autocomplete="off" required placeholder="CNPJ">
                         </div>
-                        <div class="formulario-inicio">
-                            <input type="text" nome="SenhaCompleta" id="txtsenhacompleta" size="30" maxlength="30"
-                                autocomplete="off" required placeholder="Email">
-                        </div>
-                        <div class="formulario-inicio">
-                            <input type="text" nome="SenhaCompleta" id="txtsenhacompleta" size="30" maxlength="20"
-                                autocomplete="off" required placeholder="Senha">
+                        <div class="formulario-inicio mb-3">
+                            <input type="text" name="nome_loja" id="txtnome_loja" size="30"
+                                maxlength="20" autocomplete="off" required placeholder="Nome da Loja ">
                         </div>
                         <div class="formulario-inicio mb-3">
-                            <input type="text" nome="SenhaConfirmeCompleta" id="txtsenhaconfirmecompleta" size="30"
+                            <input type="text" name="email" id="txtemail" size="30"
+                                maxlength="20" autocomplete="off" required placeholder="Email">
+                        </div>
+                        <div class="formulario-inicio mb-3">
+                            <input type="text" name="telefone" id="txttelefone" size="30"
+                                maxlength="20" autocomplete="off" required placeholder="Telefone">
+                        </div>
+                        <div class="formulario-inicio mb-3">
+                            <input type="text" name="senha" id="txtsenha" size="30"
+                                maxlength="20" autocomplete="off" required placeholder="Digite a senha">
+                        </div>
+                        <div class="formulario-inicio mb-3">
+                            <input type="text" name="confsenha" id="txtconfsenha" size="30"
                                 maxlength="20" autocomplete="off" required placeholder="Confirme a senha">
                         </div>
                         <div>
