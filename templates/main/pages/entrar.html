@@ -13,20 +13,18 @@
                         <div class="card-body">
                             <h5 class="card-title text-center">
                                 <form action="/post_entrar" method="post">
-                                    <div class="card">
-                                        <h3 class="text-center">Entrar</h3> 
-                                        <div class="card-body pb-0">
-                                            {{ input('email', 'E-mail', 'email') }}
-                                            {{ input('senha', 'Senha', 'password') }}
+                                    <h3 class="text-center-title">Entrar</h3> 
+                                    <div class="card-body pb-4">
+                                        {{ input('email', 'E-mail', 'email') }}
+                                        {{ input('senha', 'Senha', 'password') }}
+                                    </div>
+                                    <div class="text-center">
+                                        <button class="btn btn-green">Entrar</button>
+                                        <div class="mt-3">
+                                            <a class="text-gray" href="/cadastrar">Esqueci a senha</a> 
                                         </div>
-                                        <div class="text-center">
-                                            <button class="btn btn-green">Entrar</button>
-                                            <div class="mt-3">
-                                                <a href="/cadastrar">Esqueci a senha</a> 
-                                            </div>
-                                            <div class="mt-3">
-                                                Não é cadastrado? <a href="/cadastrar">Clique aqui</a> para se cadastrar.
-                                            </div>
+                                        <div class="mt-3">
+                                            Não é cadastrado? <a class="text-gray" href="/cadastrar">Clique aqui</a> para se cadastrar.
                                         </div>
                                     </div>
                                 </form>
@@ -71,6 +69,10 @@
         font-size: 0.85rem;
     }
 
+    .text-gray {
+        color: #161515; 
+    }
+
     .btn-green {
         background-color: #0F2B05; 
         color: white; 
@@ -88,10 +90,12 @@
     .btn-green:hover {
         background-color: #0F2B05; 
     }
-    .text-center{
+
+    .text-center {
         font-size: 15px;
     }
 </style>
+
 
     
 {%endblock%}
