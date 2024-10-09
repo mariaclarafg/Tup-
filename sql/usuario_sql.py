@@ -58,6 +58,9 @@ SQL_EXCLUIR_USUARIO = """
 """
 
 SQL_OBTER_POR_ID = """
+ SELECT id, nome, data_nascimento, cpf, email, telefone, senha, perfil, endereco_cep, endereco_logradouro, endereco_numero, endereco_complemento, endereco_bairro, endereco_cidade, endereco_uf
+    FROM usuario
+    WHERE id=?
 
 """
 
@@ -67,4 +70,16 @@ SQL_OBTER_QUANTIDADE = """
 
 SQL_EMAIL_EXISTE = """
 
+"""
+
+SQL_ATUALIZAR_ENDERECO = """
+    UPDATE usuario SET
+    endereco_cep=?,
+    endereco_logradouro=?,
+    endereco_numero=?,
+    endereco_complemento=?,
+    endereco_bairro=?,
+    endereco_cidade=?,
+    endereco_uf=?
+    WHERE id=?
 """
