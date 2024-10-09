@@ -10,6 +10,7 @@ router = APIRouter(prefix="/artesao")
 templates = Jinja2Templates(directory="templates")
 
 
+
 @router.get("/cadastro/fornecerinformacoescnpj", response_class=HTMLResponse)
 async def get_root(request: Request):
     return templates.TemplateResponse("artesaos/pages/cadastro/fornecerinformacoescnpj.html", {"request": request})
