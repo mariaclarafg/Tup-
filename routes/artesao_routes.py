@@ -6,7 +6,7 @@ import uvicorn
 
 from util.templates import obter_jinja_templates
 
-router = APIRouter(prefix="/artesaos")
+router = APIRouter(prefix="/artesao")
 templates = Jinja2Templates(directory="templates")
 
 

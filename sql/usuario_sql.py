@@ -65,12 +65,16 @@ SQL_OBTER_POR_ID = """
 """
 
 SQL_OBTER_QUANTIDADE = """
-
+    SELECT COUNT(*)
+    FROM usuario
 """
 
 SQL_EMAIL_EXISTE = """
-
+    SELECT COUNT(*)
+    FROM usuario
+    WHERE email=?
 """
+
 
 SQL_ATUALIZAR_ENDERECO = """
     UPDATE usuario SET
