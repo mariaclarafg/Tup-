@@ -1,5 +1,5 @@
 from fastapi import APIRouter, FastAPI, Request
-from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 import uvicorn
@@ -9,7 +9,9 @@ from util.templates import obter_jinja_templates
 router = APIRouter(prefix="/artesao")
 templates = Jinja2Templates(directory="templates")
 
-
+@router.get("/")
+async def get_root (request: Request):
+    return RedirectResponse("cadastro/fornecerinformacoescnpj", 303)
 
 @router.get("/cadastro/fornecerinformacoescnpj", response_class=HTMLResponse)
 async def get_root(request: Request):
