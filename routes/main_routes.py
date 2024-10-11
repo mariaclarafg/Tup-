@@ -78,7 +78,7 @@ async def post_cadastrar_cliente(
         senha=senha_hash,
         perfil=1)
     UsuarioRepo.inserir(usuario)
-    return RedirectResponse("/cliente", status_code=status.HTTP_303_SEE_OTHER)
+    return RedirectResponse("/entrar", status_code=status.HTTP_303_SEE_OTHER)
 
 @router.post("/post_cadastrar_artesao")
 async def post_cadastrar_artesao(
@@ -105,7 +105,7 @@ async def post_cadastrar_artesao(
         senha=senha_hash,
         perfil=2)
     UsuarioRepo.inserir(usuario)
-    return RedirectResponse("/artesao", status_code=status.HTTP_303_SEE_OTHER)
+    return RedirectResponse("/entrar", status_code=status.HTTP_303_SEE_OTHER)
 
 @router.get("/sair")
 async def get_sair():
