@@ -15,10 +15,6 @@ templates = Jinja2Templates(directory="templates")
 
 @router.get("/") 
 async def get_root(request: Request):
-    return templates.TemplateResponse("main/pages/index.html", {"request": request})
-
-@router.get("/entrar")
-async def get_cadastrar(request: Request):
     usuario = request.state.usuario if hasattr(request.state, "usuario") else None
     if not usuario or not usuario.email:
         return templates.TemplateResponse("main/pages/entrar.html", {"request": request})
@@ -26,7 +22,12 @@ async def get_cadastrar(request: Request):
         return RedirectResponse("/cliente", status_code=status.HTTP_303_SEE_OTHER)
     if usuario.perfil == 2:
         return RedirectResponse("/artesao", status_code=status.HTTP_303_SEE_OTHER)
+
+@router.get("/entrar")
+async def get_entrar(request: Request):
+    return templates.TemplateResponse("main/pages/entrar.html", {"request": request})
    
+
 @router.post("/post_entrar")
 async def post_entrar(
     email: str = Form(...), 
