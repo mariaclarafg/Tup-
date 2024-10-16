@@ -11,7 +11,11 @@ templates = Jinja2Templates(directory="templates")
 
 @router.get("/")
 async def get_root (request: Request):
-    return RedirectResponse("cadastro/fornecerinformacoescnpj", 303)
+    return RedirectResponse("centraldoartesao/listadetarefas", 303)
+
+@router.get("/centraldoartesao/listadetarefas", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("artesaos/pages/central/listatarefas.html", {"request": request})
 
 @router.get("/cadastro/fornecerinformacoescnpj", response_class=HTMLResponse)
 async def get_root(request: Request):
@@ -38,9 +42,7 @@ async def get_root(request: Request):
     return templates.TemplateResponse("artesaos/pages/cadastro/compraplanoefetuado.html", {"request": request})
 
 
-@router.get("/centraldoartesao/listadetarefas", response_class=HTMLResponse)
-async def get_root(request: Request):
-    return templates.TemplateResponse("artesaos/pages/central/listatarefas.html", {"request": request})
+
 
 @router.get("/centraldoartesao/produtoscadastrados", response_class=HTMLResponse)
 async def get_root(request: Request):
