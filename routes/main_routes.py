@@ -54,7 +54,7 @@ async def post_entrar(
         httponly=True,
         samesite="lax"
     )
-    adicionar_mensagem_sucesso(response, "Credenciais válidas, tente novamente.")
+    adicionar_mensagem_sucesso(response, "Credenciais válidas, login realizado com sucesso.")
     return response
 
 @router.get("/cadastrar")
