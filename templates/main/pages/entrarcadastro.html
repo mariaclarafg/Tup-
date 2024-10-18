@@ -27,11 +27,11 @@
             <div class="tab-content">
                 <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
                     <form method="post" action="/post_cadastrar_cliente"> <br>
-                        {{ input('nome', 'Nome', 'text') }}
-                        {{ input('data_nascimento', 'Data de Nascimento', 'date') }}
-                        {{ input('cpf', 'CPF', 'text') }}
-                        {{ input('email', 'Email', 'text') }}
-                        {{ input('telefone', 'Telefone', 'text') }}
+                        {{ input('nome', 'Nome', attributes="required autofocus data-mask='nome'") }}
+                        {{ input('data_nascimento', 'Data de Nascimento', attributes="required autofocus data-mask='data'") }}
+                        {{ input('cpf', 'CPF', attributes="required autofocus data-mask='cpf'") }}
+                        {{ input('email', 'Email', 'required') }}
+                        {{ input('telefone', 'Telefone', attributes="required autofocus data-mask='telefone'") }}
                         {{ input('senha', 'Senha', 'password') }}
                         {{ input('confsenha', 'Conferir Senha', 'password') }}
                         <div>
@@ -42,13 +42,13 @@
 
                 <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                     <form method="post" action="/post_cadastrar_artesao"> <br>
-                        {{ input('nome', 'Nome', 'text') }}
-                        {{ input('data_nascimento', 'Data de Nascimento', 'date') }}
-                        {{ input('cpf', 'CPF', 'text') }}
-                        {{ input('cnpj', 'CNPJ', 'text') }}
+                        {{ input('nome', 'Nome', attributes="required autofocus data-mask='nome'") }}
+                        {{ input('data_nascimento', 'Data de Nascimento', attributes="required autofocus data-mask='data'") }}
+                        {{ input('cpf', 'CPF', attributes="required autofocus data-mask='cpf'") }}
+                        {{ input('cnpj', 'CNPJ', attributes="required autofocus data-mask='cnpj'") }}
                         {{ input('nome_loja', 'Nome da Loja', 'text') }}
                         {{ input('email', 'Email', 'text') }}
-                        {{ input('telefone', 'Telefone', 'text') }}
+                        {{ input('telefone', 'Telefone', attributes="required autofocus data-mask='telefone'") }}
                         {{ input('senha', 'Senha', 'password') }}
                         {{ input('confsenha', 'Conferir Senha', 'password') }}
                         <div>
@@ -83,4 +83,7 @@
         color: green !important;
     }
 </style>
+
+<script src="/static/js/mascararCampos.js"></script>
+
 {%endblock%}
