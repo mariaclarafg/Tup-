@@ -13,6 +13,10 @@ templates = Jinja2Templates(directory="templates")
 async def get_root (request: Request):
     return RedirectResponse("centroPessoal/perfil", 303)
 
+router.get("/feedhome", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("feed/pages/feedhome.html", {"request": request})
+
 @router.get("/centroPessoal/perfil", response_class=HTMLResponse)
 async def get_root(request: Request):
     return templates.TemplateResponse("cliente/pages/centroPessoal/perfil.html", {"request": request})

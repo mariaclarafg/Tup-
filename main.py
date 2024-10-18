@@ -1,4 +1,4 @@
-from fastapi import Depends, FastAPI
+from fastapi import Depends, FastAPI, exception_handlers
 from fastapi.staticfiles import StaticFiles
 from repositories.usuario_repo import UsuarioRepo
 from routes.main_routes import router as main_routes
@@ -16,6 +16,7 @@ app = FastAPI(dependencies=[Depends(checar_autorizacao)])
 app.mount(path="/static", app=StaticFiles(directory="static"), name="static")
 app.middleware("http")(checar_autenticacao)
 configurar_excecoes(app)
+
 app.include_router(main_routes)
 app.include_router(artesao_routes)
 app.include_router(clientes_routes)
