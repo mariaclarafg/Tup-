@@ -13,6 +13,7 @@
     {% include "shared/includes/header.html" %}
     {% block carousel %}{% endblock %}
     <main class="container">
+        {% include "shared/includes/mensagem.html" with context %}
         {% block conteudo %}{% endblock %}
     </main>
     {% include "shared/includes/footer.html" %}

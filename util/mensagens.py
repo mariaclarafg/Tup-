@@ -8,14 +8,14 @@ def adicionar_mensagem(response, mensagem, tipo):
     )
 
 
-def adicionar_mensagem_danger(response, mensagem):
-    adicionar_mensagem(response, mensagem, "perigo")
+def adicionar_mensagem_erro(response, mensagem):
+    adicionar_mensagem(response, mensagem, "erro")
 
 def adicionar_mensagem_info(response, mensagem):
     adicionar_mensagem(response, mensagem, "info")
 
-def adicionar_mensagem_sucess(response, mensagem):
+def adicionar_mensagem_sucesso(response, mensagem):
     adicionar_mensagem(response, mensagem, "sucesso")
 
-def adicionar_mensagem_warning(response, mensagem):
-    adicionar_mensagem(response, mensagem, "warning")
+def adicionar_mensagem_aviso(response, mensagem):
+    adicionar_mensagem(response, mensagem, "aviso")

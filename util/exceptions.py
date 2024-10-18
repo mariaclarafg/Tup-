@@ -2,7 +2,7 @@ import logging
 from fastapi import FastAPI, HTTPException, Request, status
 from fastapi.responses import RedirectResponse
 from fastapi.templating import Jinja2Templates
-from util.cookies import adicionar_mensagem_erro
+from util.mensagens import adicionar_mensagem_erro
 
 templates = Jinja2Templates(directory="templates")
 
