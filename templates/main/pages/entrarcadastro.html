@@ -1,6 +1,6 @@
 {% extends "shared/pages/base.html" %}
 {% block subtitulo %}Cadastro{% endblock %}
-{% from 'shared/macros.html' import input, button %}
+{% from 'shared/macros.html' import input, button, input_text, input_date, input_email, input_password %}
 {% block conteudo %}
 
 <div class="position-absolute top-0 start-0 min-vh-100 min-vw-100 bg-folhas"></div>
@@ -18,7 +18,7 @@
                 <li class="nav-item w-50" role="presentation">
                     <button class="nav-link w-100" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
                         type="button" role="tab" aria-controls="profile" aria-selected="false">
-                        <i class="bi bi-paint-bucket d-block" style="font-size:60px"></i>
+                        <i class="bi bi-shop d-block" style="font-size:60px"></i>
                         <h2 class="display-5">Artesão</h2>
                     </button>
                 </li>
@@ -27,13 +27,13 @@
             <div class="tab-content">
                 <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
                     <form method="post" action="/post_cadastrar_cliente"> <br>
-                        {{ input('nome', 'Nome', attributes="required autofocus data-mask='nome'") }}
-                        {{ input('data_nascimento', 'Data de Nascimento', attributes="required autofocus data-mask='data'") }}
-                        {{ input('cpf', 'CPF', attributes="required autofocus data-mask='cpf'") }}
-                        {{ input('email', 'Email', 'required') }}
-                        {{ input('telefone', 'Telefone', attributes="required autofocus data-mask='telefone'") }}
-                        {{ input('senha', 'Senha', 'password') }}
-                        {{ input('confsenha', 'Conferir Senha', 'password') }}
+                        {{ input_text('nome', 'Nome', attributes="required autofocus data-mask='nome'") }}
+                        {{ input_date('data_nascimento', 'Data de Nascimento', attributes="required autofocus") }}
+                        {{ input_text('cpf', 'CPF', attributes="required autofocus data-mask='cpf'") }}
+                        {{ input_email('email', 'Email', 'required') }}
+                        {{ input_text('telefone', 'Telefone', attributes="required autofocus data-mask='telefone'") }}
+                        {{ input_password('senha', 'Senha', 'password') }}
+                        {{ input_password('confsenha', 'Confirmar Senha', 'password') }}
                         <div>
                             <input type="submit" value="Cadastrar" class="big-button-green">
                         </div>                        
@@ -42,15 +42,15 @@
 
                 <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                     <form method="post" action="/post_cadastrar_artesao"> <br>
-                        {{ input('nome', 'Nome', attributes="required autofocus data-mask='nome'") }}
-                        {{ input('data_nascimento', 'Data de Nascimento', attributes="required autofocus data-mask='data'") }}
-                        {{ input('cpf', 'CPF', attributes="required autofocus data-mask='cpf'") }}
-                        {{ input('cnpj', 'CNPJ', attributes="required autofocus data-mask='cnpj'") }}
-                        {{ input('nome_loja', 'Nome da Loja', 'text') }}
-                        {{ input('email', 'Email', 'text') }}
-                        {{ input('telefone', 'Telefone', attributes="required autofocus data-mask='telefone'") }}
-                        {{ input('senha', 'Senha', 'password') }}
-                        {{ input('confsenha', 'Conferir Senha', 'password') }}
+                        {{ input_text('nome', 'Nome', attributes="required autofocus data-mask='nome'") }}
+                        {{ input_date('data_nascimento', 'Data de Nascimento', attributes="required autofocus data-mask='data'") }}
+                        {{ input_text('cpf', 'CPF', attributes="required autofocus data-mask='cpf'") }}
+                        {{ input_text('cnpj', 'CNPJ', attributes="required autofocus data-mask='cnpj'") }}
+                        {{ input_text('nome_loja', 'Nome da Loja', 'text') }}
+                        {{ input_email('email', 'Email', 'text') }}
+                        {{ input_text('telefone', 'Telefone', attributes="required autofocus data-mask='telefone'") }}
+                        {{ input_password('senha', 'Senha', 'password') }}
+                        {{ input_password('confsenha', 'Confirmar Senha', 'password') }}
                         <div>
                             <input type="submit" value="Cadastrar" class="big-button-green">
                         </div>                        
@@ -80,7 +80,7 @@
         color: black;
     }
     button.active {
-        color: green !important;
+        color: rgb(11, 43, 11) !important;
     }
 </style>
 
