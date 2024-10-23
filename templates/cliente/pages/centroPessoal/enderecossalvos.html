@@ -1,5 +1,6 @@
 {% extends "shared/pages/base.html" %}
 {% block subtitulo %} Endereços Salvos {% endblock %}
+{% from 'shared/macros.html' import input, button, input_text %}
 {% block carousel %}
 <nav id="navbar-example2" class="navbar navbar-dark" style="background-color: #0F2B05;">
     <div class="container">
@@ -119,43 +120,17 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form>
-                            <div class="mb-3">
-                                <label for="editAddressName" class="form-label">Nome</label>
-                                <input type="text" class="form-control" id="editAddressName"
-                                    placeholder="Digite o nome">
-                            </div>
-                            <div class="mb-3">
-                                <label for="editAddressPhone" class="form-label">Telefone</label>
-                                <input type="text" class="form-control" id="editAddressPhone"
-                                    placeholder="Digite o telefone">
-                            </div>
-                            <div class="mb-3">
-                                <label for="editAddressStreet" class="form-label">Rua</label>
-                                <input type="text" class="form-control" id="editAddressStreet"
-                                    placeholder="Digite o endereço">
-                            </div>
-                            <div class="mb-3">
-                                <label for="editAddressCity" class="form-label">Cidade</label>
-                                <input type="text" class="form-control" id="editAddressCity"
-                                    placeholder="Digite a cidade">
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label for="editAddressState" class="form-label">Estado</label>
-                                    <input type="text" class="form-control" id="editAddressState"
-                                        placeholder="Digite o estado">
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label for="editAddressPostalCode" class="form-label">CEP</label>
-                                    <input type="text" class="form-control" id="editAddressPostalCode"
-                                        placeholder="Digite o CEP">
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-end">
-                                <button type="submit" class="btn btn-primary"
-                                    style="background-color: #0F2B05; color: white;">Salvar Alterações</button>
-                            </div>
+                        <form method="post" action="/post_cadastrar_cliente"> 
+                            {{ input_text('nome', 'Nome', attributes="required autofocus data-mask='nome'") }}
+                            {{ input_text('telefone', 'Telefone', attributes="required autofocus data-mask='telefone'") }}
+                            {{ input_text('rua', 'Rua', attributes="required autofocus") }}
+                            {{ input_text('cidade', 'Cidade', attributes="required autofocus") }}
+                            {{ input_text('estado', 'Estado', 'required') }}
+                            {{ input_text('cep', 'CEP', attributes="required autofocus data-mask='cep'") }}
+                            {{ input_text('numeroresidencia', 'Número da Residência', 'required') }}
+                            <div>
+                                <input type="submit" value="Salvar Alterações" class="big-button-green">
+                            </div>                        
                         </form>
                     </div>
                 </div>
@@ -170,41 +145,17 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form>
-                            <div class="mb-3">
-                                <label for="addressName" class="form-label">Nome</label>
-                                <input type="text" class="form-control" id="addressName" placeholder="Digite o nome">
-                            </div>
-                            <div class="mb-3">
-                                <label for="addressPhone" class="form-label">Telefone</label>
-                                <input type="text" class="form-control" id="addressPhone"
-                                    placeholder="Digite o telefone">
-                            </div>
-                            <div class="mb-3">
-                                <label for="addressStreet" class="form-label">Rua</label>
-                                <input type="text" class="form-control" id="addressStreet"
-                                    placeholder="Digite o endereço">
-                            </div>
-                            <div class="mb-3">
-                                <label for="addressCity" class="form-label">Cidade</label>
-                                <input type="text" class="form-control" id="addressCity" placeholder="Digite a cidade">
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label for="addressState" class="form-label">Estado</label>
-                                    <input type="text" class="form-control" id="addressState"
-                                        placeholder="Digite o estado">
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label for="addressPostalCode" class="form-label">CEP</label>
-                                    <input type="text" class="form-control" id="addressPostalCode"
-                                        placeholder="Digite o CEP">
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-end">
-                                <button type="submit" class="btn btn-primary"
-                                    style="background-color: #0F2B05; color: white;">Salvar</button>
-                            </div>
+                        <form method="post" action="/post_cadastrar_cliente">
+                            {{ input_text('nome', 'Nome', attributes="required autofocus data-mask='nome'") }}
+                            {{ input_text('telefone', 'Telefone', attributes="required autofocus data-mask='telefone'") }}
+                            {{ input_text('rua', 'Rua', attributes="required autofocus") }}
+                            {{ input_text('cidade', 'Cidade', attributes="required autofocus") }}
+                            {{ input_text('estado', 'Estado', 'required') }}
+                            {{ input_text('cep', 'CEP', attributes="required autofocus data-mask='cep'") }}
+                            {{ input_text('numeroresidencia', 'Número da Residência', 'required') }}
+                            <div>
+                                <input type="submit" value="Salvar Alterações" class="big-button-green">
+                            </div>                        
                         </form>
                     </div>
                 </div>

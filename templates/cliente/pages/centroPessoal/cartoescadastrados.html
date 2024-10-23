@@ -1,5 +1,6 @@
 {% extends "shared/pages/base.html" %}
 {% block subtitulo %} Cartões Cadastrados {% endblock %}
+{% from 'shared/macros.html' import input, button, input_text %}
 {% block carousel %}
 
 <nav id="navbar-example2" class="navbar navbar-dark" style="background-color: #0F2B05;">
@@ -92,7 +93,7 @@
                                 style="font-size: 0.9rem; color: #474b46; margin-left: 0.5rem; font-weight: bold;">Adicionar
                                 novo cartão</span>
                         </div>
-                    </div>
+                    </div>              
                 </a>
             </div>
         </section>
@@ -105,31 +106,15 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form>
-                            <div class="mb-3">
-                                <label for="cardNumber" class="form-label">Número do Cartão</label>
-                                <input type="text" class="form-control" id="cardNumber"
-                                    placeholder="Digite o número do cartão">
-                            </div>
-                            <div class="mb-3">
-                                <label for="cardName" class="form-label">Nome no Cartão</label>
-                                <input type="text" class="form-control" id="cardName"
-                                    placeholder="Digite o nome como no cartão">
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label for="cardExpiry" class="form-label">Data de Validade</label>
-                                    <input type="text" class="form-control" id="cardExpiry" placeholder="MM/AA">
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label for="cardCVV" class="form-label">CVV</label>
-                                    <input type="text" class="form-control" id="cardCVV" placeholder="XXX">
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-end">
-                                <button type="submit" class="btn btn-primary"
-                                    style="background-color: #0F2B05; color: white;">Salvar</button>
-                            </div>
+                        <form method="post" action="/post_cadastrar_cliente"> <br>
+                            {{ input_text('numeroCartao', 'Número do Cartão', attributes="required") }}
+                            {{ input_text('nomeCartao', 'Nome do Cartão', attributes="required") }}
+                            {{ input_text('validade', 'Data de Validade do Cartão', attributes="required") }}
+                            {{ input_text('cvv', 'CVV', attributes="required") }}
+                            {{ input_text('estado', 'Estado', 'required') }}
+                            <div>
+                                <input type="submit" value="Salvar Cartão" class="big-button-green">
+                            </div>                        
                         </form>
                     </div>
                 </div>

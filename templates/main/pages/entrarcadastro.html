@@ -26,7 +26,7 @@
 
             <div class="tab-content">
                 <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                    <form method="post" action="/post_cadastrar_cliente"> <br>
+                    <form method="post" action="/post_cadastrar_cliente"> <br> 
                         {{ input_text('nome', 'Nome', attributes="required autofocus data-mask='nome'") }}
                         {{ input_date('data_nascimento', 'Data de Nascimento', attributes="required autofocus") }}
                         {{ input_text('cpf', 'CPF', attributes="required autofocus data-mask='cpf'") }}
@@ -42,8 +42,8 @@
 
                 <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                     <form method="post" action="/post_cadastrar_artesao"> <br>
-                        {{ input_text('nome', 'Nome', attributes="required autofocus data-mask='nome'") }}
-                        {{ input_date('data_nascimento', 'Data de Nascimento', attributes="required autofocus data-mask='data'") }}
+                        {{ input_text('nome', 'Nome', 'text') }}
+                        {{ input_date('data_nascimento', 'Data de Nascimento', attributes="required autofocus") }}
                         {{ input_text('cpf', 'CPF', attributes="required autofocus data-mask='cpf'") }}
                         {{ input_text('cnpj', 'CNPJ', attributes="required autofocus data-mask='cnpj'") }}
                         {{ input_text('nome_loja', 'Nome da Loja', 'text') }}
