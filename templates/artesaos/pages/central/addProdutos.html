@@ -1,5 +1,6 @@
 {% extends "shared/pages/base.html" %}
 {% block subtitulo %}Adicionar Produtos{% endblock %}
+{% from 'shared/macros.html' import input, button, input_text, input_textarea, input_select, input_radios %}
 {% block carousel %}
 <nav id="navbar-example2" class="navbar navbar-dark" style="background-color: #0F2B05;">
     <div class="container">
@@ -104,80 +105,64 @@
                                         <p class="text-muted">A imagem deve ser clara, com boa resolução, e o produto deve estar centralizado. Evite fundos poluídos.</p>
                                     </div>
                                 </div>
-                                <div class="d-flex flex-column">
-                                    <div class="d-flex flex-column mb-3">
-                                        <label for="nome-produto" class="form-label mb-2">
-                                            <strong>Nome do Produto</strong>
-                                        </label>
-                                        <input
-                                            type="text"
-                                            class="form-control"
-                                            id="nome-produto"
-                                            placeholder="Digite o nome do produto"
-                                        >
-                                    </div>
-                                    <div class="d-flex flex-column mb-3">
-                                        <label for="preco-produto" class="form-label mb-2">
-                                            <strong>Preço</strong>
-                                        </label>
-                                        <input
-                                            type="text"
-                                            class="form-control"
-                                            id="preco-produto"
-                                            placeholder="R$"
-                                        >
-                                    </div>
-                                    <div class="d-flex flex-column mb-3">
-                                        <label for="tipo-produto" class="form-label mb-2">
-                                            <strong>Tipo do Produto</strong>
-                                        </label>
-                                        <input
-                                            type="text"
-                                            class="form-control"
-                                            id="tipo-produto"
-                                            placeholder="Materiais, cores, modelos e tamanho"
-                                        >
-                                    </div>
-                                    <div class="d-flex flex-column mb-3">
-                                        <label for="categoria-produto" class="form-label mb-2">
-                                            <strong>Categoria</strong>
-                                        </label>
-                                        <div class="d-flex flex-column flex-sm-row align-items-center">
-                                            <input
-                                                type="text"
-                                                class="form-control"
-                                                id="categoria-produto"
-                                                placeholder="Selecione a categoria"
-                                            >
-                                            <button
-                                                type="button"
-                                                class="btn btn-outline-secondary mt-2 mt-sm-0 ms-sm-2"
-                                                data-bs-toggle="modal"
-                                                data-bs-target="#categoriaModal"
-                                            >
-                                                <i class="bi bi-plus-lg"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex flex-column mb-3">
-                                        <label for="descricao-produto" class="form-label mb-2">
-                                            <strong>Descrição do Produto</strong>
-                                        </label>
-                                        <textarea
-                                            id="descricao-produto"
-                                            class="form-control"
-                                            placeholder="Digite a descrição do produto aqui"
-                                            style="height: 100px;"
-                                        ></textarea>
-                                    </div>
-                                    <div class="text-center mb-3">
-                                        <br>
-                                        <button type="button" class="btn btn-primary" style="background-color: #012001; border-color: #001d00; color: #f5f5f5;">Salvar</button>
-                                    </div>
+                                <form method="post" action="/post_cadastrar_cliente"> <br> 
+                                    <label for="nome-produto" class="form-label mb-2">
+                                        <strong>Nome do Produto</strong>
+                                    </label>
+                                    {{ input_text('nome-produto', 'Nome do Produto', attributes="required autofocus data-mask='nome'") }}
+                                    <label for="preco-produto" class="form-label mb-2">
+                                        <strong>Preço do Produto</strong>
+                                    </label>
+                                    {{ input_text('preco-produto', 'R$', attributes="required autofocus") }}
+                                    <label for="codigo-produto" class="form-label mb-2">
+                                        <strong>Código do Produto</strong>
+                                    </label>
+                                    {{ input_text('codigo-produto', 'Código do Produto', attributes="required autofocus") }}
+                                    <label for="categoria-produto" class="form-label mb-2">
+                                        <strong>Categoria do Produto</strong>
+                                    </label>
+                                    {{ input_text('categoria-produto', 'Categoria do Produto', attributes="required autofocus") }}
+                                    <label for="descricao-produto" class="form-label mb-2">
+                                        <strong>Descrição do Produto</strong>
+                                    </label>
+                                    {{ input_textarea('descricao-produto', 'Descrição do Produto', attributes="required autofocus") }}
+                                    <div>
+                                        <input type="submit" value="Avançar" class="big-button-green">
+                                    </div>                        
+                                </form>
                                 </div>
                             </div>
+
+
+
+
                             <div class="tab-pane fade" id="content2" role="tabpanel">
-                                <br>
+                                <form method="post" action="/post_cadastrar_cliente">
+
+                                    <label for="nome-produto" class="form-label mb-2">
+                                        <strong>Nome do Produto</strong>
+                                    </label>
+                                    {{ input_text('nome-produto', 'Nome do Produto', attributes="required autofocus data-mask='nome'") }}
+                                    <label for="preco-produto" class="form-label mb-2">
+                                        <strong>Preço do Produto</strong>
+                                    </label>
+                                    {{ input_text('preco-produto', 'R$', attributes="required autofocus") }}
+                                    <label for="codigo-produto" class="form-label mb-2">
+                                        <strong>Código do Produto</strong>
+                                    </label>
+                                    {{ input_text('codigo-produto', 'Código do Produto', attributes="required autofocus") }}
+                                    <label for="categoria-produto" class="form-label mb-2">
+                                        <strong>Categoria do Produto</strong>
+                                    </label>
+                                    {{ input_text('categoria-produto', 'Categoria do Produto', attributes="required autofocus") }}
+                                    <label for="descricao-produto" class="form-label mb-2">
+                                        <strong>Descrição do Produto</strong>
+                                    </label>
+                                    {{ input_textarea('descricao-produto', 'Descrição do Produto', attributes="required autofocus") }}
+                                    <div>
+                                        <input type="submit" value="Avançar" class="big-button-green">
+                                    </div>                        
+                                </form>
                                 <div class="d-flex flex-column mb-3">
                                     <label for="personalizavel-produto" class="form-label mb-2">
                                         <strong>O produto é personalizavel?</strong>
