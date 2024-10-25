@@ -1,5 +1,6 @@
 {% extends "shared/pages/base.html" %}
-{% block subtitulo %}Adicionar Produtos{% endblock %}
+{% block subtitulo %}Configurações{% endblock %}
+{% from 'shared/macros.html' import input_switch %}
 {% block carousel %}
 <nav id="navbar-example2" class="navbar navbar-dark" style="background-color: #0F2B05;">
     <div class="container">
@@ -143,15 +144,7 @@
                                 </p>
                                 <p class="smaller-text">Notificar quando houver atualizações sobre meus pedidos, inclusive atualizações relacionadas a pagamentos.</p>
                             </div>
-                            <div class="form-check form-switch">
-                                <input
-                                    class="form-check-input custom-switch"
-                                    type="checkbox"
-                                    role="switch"
-                                    id="flexSwitchCheckDefault"
-                                >
-                                <label class="form-check-label" for="flexSwitchCheckDefault"></label>
-                            </div>
+                            {{ input_switch("quero_atualizacoes_pedidos") }}
                         </div>
                         <div class="d-flex justify-content-between align-items-center mb-3">
                             <div>
@@ -160,15 +153,7 @@
                                 </p>
                                 <p class="smaller-text">Notificar quando minha listagem de produto como vendedor estiver esgotada, excluída ou suspensa.</p>
                             </div>
-                            <div class="form-check form-switch">
-                                <input
-                                    class="form-check-input custom-switch"
-                                    type="checkbox"
-                                    role="switch"
-                                    id="flexSwitchCheckDefault"
-                                >
-                                <label class="form-check-label" for="flexSwitchCheckDefault"></label>
-                            </div>
+                            {{ input_switch("quero_atualizacoes_produtos") }}
                         </div>
                         <div class="d-flex justify-content-between align-items-center mb-3">
                             <div>
@@ -177,15 +162,7 @@
                                 </p>
                                 <p class="smaller-text">Notificar quando houver mensagens de chat não lidas.</p>
                             </div>
-                            <div class="form-check form-switch">
-                                <input
-                                    class="form-check-input custom-switch"
-                                    type="checkbox"
-                                    role="switch"
-                                    id="flexSwitchCheckDefault"
-                                >
-                                <label class="form-check-label" for="flexSwitchCheckDefault"></label>
-                            </div>
+                            {{ input_switch("mensagem") }}
                         </div>
                     </div>
                 </div>
