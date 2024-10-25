@@ -84,6 +84,7 @@ async def post_cadastrar_cliente(
     UsuarioRepo.inserir(usuario)
     return RedirectResponse("/entrar", status_code=status.HTTP_303_SEE_OTHER)
 
+
 @router.post("/post_cadastrar_artesao")
 async def post_cadastrar_artesao(
     nome: str = Form(...),
