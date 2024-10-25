@@ -1,5 +1,6 @@
 {% extends "shared/pages/base.html" %}
 {% block subtitulo %}Adicionar Produtos{% endblock %}
+{% from 'shared/macros.html' import input, button, input_text, input_textarea, input_select, input_radios %}
 {% block carousel %}
 <nav id="navbar-example2" class="navbar navbar-dark" style="background-color: #0F2B05;">
     <div class="container">
@@ -91,15 +92,11 @@
                         <div class="modal-body">
                             <form>
                                 <div class="mb-3">
-                                    <textarea
-                                        class="form-control"
-                                        id="commentText"
-                                        rows="3"
-                                        placeholder="Responda ao pedido de personalização, especificando as suas condições, e fazendo uma oferta de preço."
-                                    ></textarea>
+                                    {{ input_textarea('descricao-produto', 'Responda ao pedido de personalização, especificando as suas condições, e fazendo uma oferta de preço.', attributes="required autofocus") }}  
                                 </div>
                             </form>
                         </div>
+                        
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                             <button type="button" class="btn btn-primary">Enviar</button>
