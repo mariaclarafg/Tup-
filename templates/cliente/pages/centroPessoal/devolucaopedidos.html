@@ -1,5 +1,6 @@
 {% extends "shared/pages/base.html" %}
 {% block subtitulo %} Devolução e Reembolso {% endblock %}
+{% from 'shared/macros.html' import input, button, input_text, input_email, input_textarea %}
 {% block carousel %}
 
 <nav id="navbar-example2" class="navbar navbar-dark" style="background-color: #0F2B05;">
@@ -115,27 +116,35 @@
       </div>
       <div class="modal-body">
         <form>
-          <div class="mb-3">
-            <label for="inputNome" class="form-label">Nome Completo</label>
-            <input type="text" class="form-control" id="inputNome">
-          </div>
-          <div class="mb-3">
-            <label for="inputCPF" class="form-label">CPF</label>
-            <input type="text" class="form-control" id="inputCPF">
-          </div>
-          <div class="mb-3">
-            <label for="inputTelefone" class="form-label">Telefone</label>
-            <input type="text" class="form-control" id="inputTelefone">
-          </div>
-          <div class="mb-3">
-            <label for="inputCodigoPedido" class="form-label">Código do pedido</label>
-            <input type="text" class="form-control" id="inputCodigoPedido">
-          </div>
-          <div class="mb-3">
-            <label for="inputDescricao" class="form-label">Descrição do motivo do reembolso</label>
-            <textarea class="form-control" id="inputDescricao" rows="4" style="font-size: 12px;"
-              placeholder="Dê uma descrição detalhada do motivo pelo qual você está solicitando um reembolso. Inclua todas as informações relevantes, como descrições de problemas específicos e qualquer outra informação que possa nos ajudar a entender e resolver sua solicitação."></textarea>
-          </div>
+          <label for="nome-completo" class="form-label mb-2">
+            <strong>Nome Completo</strong>
+          </label>
+          {{ input_text('nome-completo', 'Nome Completo', attributes="required autofocus data-mask='nome'") }}
+
+          <label for="email" class="form-label mb-2">
+            <strong>E-mail</strong>
+          </label>
+          {{ input_text('email', 'E-mail', attributes="required autofocus data-mask='email'") }}
+
+          <label for="cpf" class="form-label mb-2">
+            <strong>CPF</strong>
+          </label>
+          {{ input_text('cpf', 'CPF', attributes="required autofocus data-mask='cpf'") }}
+
+          <label for="telefone" class="form-label mb-2">
+            <strong>Telefone</strong>
+          </label>
+          {{ input_text('telefone', 'Telefone', attributes="required autofocus data-mask='telefone'") }}
+
+          <label for="codigo-pedido" class="form-label mb-2">
+            <strong>Código do Pedido</strong>
+          </label>
+          {{ input_text('codigo-pedido', 'Código do Pedido', attributes="required autofocus") }}
+
+          <label for="motivo-reembolso" class="form-label mb-2">
+            <strong>Descreva o motivo do Reembolso</strong>
+          </label>
+          {{ input_textarea('motivo-reembolso', 'Dê uma descrição detalhada do motivo da solicitação.', attributes="required autofocus") }}
           <div class="mb-3">
             <label for="inputFotos" class="form-label">Fotos para confirmação do reembolso</label>
             <p style="font-size: small; color: #6c757d;">Por favor, envie duas fotos do produto tiradas em ângulos
@@ -169,27 +178,35 @@
       </div>
       <div class="modal-body">
         <form>
-          <div class="mb-3">
-            <label for="inputNome" class="form-label">Nome Completo</label>
-            <input type="text" class="form-control" id="inputNome">
-          </div>
-          <div class="mb-3">
-            <label for="inputCPF" class="form-label">CPF</label>
-            <input type="text" class="form-control" id="inputCPF">
-          </div>
-          <div class="mb-3">
-            <label for="inputTelefone" class="form-label">Telefone</label>
-            <input type="text" class="form-control" id="inputTelefone">
-          </div>
-          <div class="mb-3">
-            <label for="inputCodigoPedido" class="form-label">Código do pedido</label>
-            <input type="text" class="form-control" id="inputCodigoPedido">
-          </div>
-          <div class="mb-3">
-            <label for="inputDescricao" class="form-label">Descrição do motivo da troca</label>
-            <textarea class="form-control" id="inputDescricao" rows="4" style="font-size: 12px;"
-              placeholder="Dê uma descrição detalhada do motivo pelo qual você está solicitando uma troca. Inclua todas as informações relevantes, como descrições de problemas específicos e qualquer outra informação que possa nos ajudar a entender e resolver sua solicitação."></textarea>
-          </div>
+          <label for="nome-completo" class="form-label mb-2">
+            <strong>Nome Completo</strong>
+          </label>
+          {{ input_text('nome-completo', 'Nome Completo', attributes="required autofocus data-mask='nome'") }}
+
+          <label for="email" class="form-label mb-2">
+            <strong>E-mail</strong>
+          </label>
+          {{ input_text('email', 'E-mail', attributes="required autofocus data-mask='email'") }}
+
+          <label for="cpf" class="form-label mb-2">
+            <strong>CPF</strong>
+          </label>
+          {{ input_text('cpf', 'CPF', attributes="required autofocus data-mask='cpf'") }}
+
+          <label for="telefone" class="form-label mb-2">
+            <strong>Telefone</strong>
+          </label>
+          {{ input_text('telefone', 'Telefone', attributes="required autofocus data-mask='telefone'") }}
+
+          <label for="codigo-pedido" class="form-label mb-2">
+            <strong>Código do Pedido</strong>
+          </label>
+          {{ input_text('codigo-pedido', 'Código do Pedido', attributes="required autofocus") }}
+
+          <label for="motivo-reembolso" class="form-label mb-2">
+            <strong>Descreva o motivo do Reembolso</strong>
+          </label>
+          {{ input_textarea('motivo-reembolso', 'Dê uma descrição detalhada do motivo da solicitação.', attributes="required autofocus") }}
           <div class="mb-3">
             <label for="inputFotos" class="form-label">Fotos para confirmação da troca</label>
             <p style="font-size: small; color: #6c757d;">Por favor, envie duas fotos do produto tiradas em ângulos
