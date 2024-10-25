@@ -1,5 +1,6 @@
 {% extends "shared/pages/base.html" %}
 {% block subtitulo %}Porta Chaves Detalhes{% endblock %}
+{% from 'shared/macros.html' import input, button, input_textarea %}
 {% block carousel %}
 <nav id="navbar-example2" class="navbar navbar-dark" style="background-color: #0F2B05;">
     <div class="container">
@@ -181,9 +182,7 @@
         </div>
         <div class="modal-body">
         <form>
-            <div class="mb-3">
-            <textarea class="form-control" id="commentText" rows="3" placeholder="Descreva como deseja personalizar o produto escolhido, especificando os detalhes."></textarea>
-            </div>
+            {{ input_textarea('personalizar', 'Descreva como deseja personalizar o produto escolhido, especificando os detalhes.', attributes="required autofocus") }}
         </form>
         </div>
         <div class="modal-footer">
