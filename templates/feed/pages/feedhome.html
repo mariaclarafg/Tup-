@@ -57,23 +57,15 @@
                                     <small class="text-muted">Adicionar imagens</small>
                                     <small class="text-muted">(0/9)</small>
                                 </div>
-            
-
                                 <div class="ml-5" style="margin-left: 20px;">
                                     <p class="text-muted">Adicione imagens de inspiração para o artesão, exemplificando como você deseja que seja seu produto.</p>
                                 </div>
                             </div>
                             <br>
-                <div class="d-flex align-items-center mb-3">
-                    <label for="categoria-produto" class="form-label mr-3" style="min-width: 150px; margin-right: 20px;"><strong>Categoria</strong></label>
-                    <div class="d-flex align-items-center">
-                        <input type="text" class="form-control" id="categoria-produto" placeholder="Selecione a categoria" style="width: 300px;">
-                        <button type="button" class="btn btn-outline-secondary ms-2" data-bs-toggle="modal" data-bs-target="#categoriaModal">
-                            <i class="bi bi-plus-lg"></i>
-                        </button>
-                    </div>
-                </div>
-                <br><br>
+                            <label for="categoria-produto" class="form-label mb-2">
+                              <strong>Categoria do Produto</strong>
+                            </label>
+                            <input type="text" class="form-control mb-3" id="categoria-produto" placeholder="Clique para Selecionar Categoria" readonly data-bs-toggle="modal"  data-bs-target="#categoriaModal">
 
                 <div style="text-align: center;">
                     <a href="/feed/home" class="big-button-green" style="display: inline-block; margin-bottom: 10px;">Enviar</a>
@@ -86,175 +78,324 @@
     </div>
     </div>
     </div>
-
-    
-
-    <div class="modal fade" id="categoriaModal" tabindex="-1" aria-labelledby="categoriaModalLabel" aria-hidden="true">
+    <div
+    class="modal fade"
+    id="categoriaModal"
+    tabindex="-1"
+    aria-labelledby="categoriaModalLabel"
+    aria-hidden="true"
+>
     <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
-    <div class="modal-header">
-    <h5 class="modal-title" id="categoriaModalLabel">Categorias</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="categoriaModalLabel">Categorias</h5>
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                ></button>
+            </div>
+            <div class="modal-body">
+                <div class="row mb-4">
+                    <div class="col-md-4">
+                        <h5 class="card-title">Casa</h5>
+                        <div class="checkbox-container">
+                            <div class="form-check">
+                                <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    id="moveis"
+                                    value="móveis"
+                                >
+                                <label class="form-check-label" for="moveis">Móveis</label>
+                            </div>
+                            <div class="form-check">
+                                <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    id="velas"
+                                    value="velas"
+                                >
+                                <label class="form-check-label" for="velas">Velas</label>
+                            </div>
+                            <div class="form-check">
+                                <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    id="esculturas"
+                                    value="esculturas"
+                                >
+                                <label class="form-check-label" for="esculturas">Esculturas</label>
+                            </div>
+                            <div class="form-check">
+                                <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    id="vasos"
+                                    value="vasos"
+                                >
+                                <label class="form-check-label" for="vasos">Vasos</label>
+                            </div>
+                            <div class="form-check">
+                                <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    id="cestos"
+                                    value="cestos"
+                                >
+                                <label class="form-check-label" for="cestos">Cestos</label>
+                            </div>
+                            <div class="form-check">
+                                <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    id="cestos"
+                                    value="cestos"
+                                >
+                                <label class="form-check-label" for="cestos">Cerâmica</label>
+                            </div>
+                            <div class="form-check">
+                                <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    id="cestos"
+                                    value="cestos"
+                                >
+                                <label class="form-check-label" for="cestos">Instrumentos</label>
+                            </div>
+                            <div class="form-check">
+                                <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    id="cestos"
+                                    value="cestos"
+                                >
+                                <label class="form-check-label" for="cestos">Cozinha</label>
+                            </div>
+                            <div class="form-check">
+                                <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    id="cestos"
+                                    value="cestos"
+                                >
+                                <label class="form-check-label" for="cestos">Quadros</label>
+                            </div>
+                            <div class="form-check">
+                                <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    id="cestos"
+                                    value="cestos"
+                                >
+                                <label class="form-check-label" for="cestos">Telas</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h5 class="card-title">Corpo</h5>
+                        <div class="checkbox-container">
+                            <div class="form-check">
+                                <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    id="joias"
+                                    value="joias"
+                                >
+                                <label class="form-check-label" for="joias">Joias</label>
+                            </div>
+                            <div class="form-check">
+                                <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    id="bijoias"
+                                    value="bijoias"
+                                >
+                                <label class="form-check-label" for="bijoias">Bijoias</label>
+                            </div>
+                            <div class="form-check">
+                                <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    id="roupas"
+                                    value="roupas"
+                                >
+                                <label class="form-check-label" for="roupas">Roupas</label>
+                            </div>
+                            <div class="form-check">
+                                <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    id="acessorios"
+                                    value="acessórios"
+                                >
+                                <label class="form-check-label" for="acessorios">Acessórios</label>
+                            </div>
+                            <div class="form-check">
+                                <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    id="bolsas"
+                                    value="bolsas"
+                                >
+                                <label class="form-check-label" for="bolsas">Bolsas</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h5 class="card-title">Outro</h5>
+                        <div class="checkbox-container mb-3">
+                            <div class="form-check">
+                                <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    id="outro"
+                                    value="outro"
+                                >
+                                <label class="form-check-label" for="outro"></label>
+                            </div>
+                            <input
+                                type="text"
+                                id="inputNome"
+                                class="form-control"
+                                placeholder="Especifique"
+                            >
+                        </div>
+                    </div>
+                </div>
+                <h5 class="card-title">Matéria-Prima</h5>
+                <br>
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="checkbox-container">
+                            <div class="form-check">
+                                <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    id="ceramica"
+                                    value="cerâmica"
+                                >
+                                <label class="form-check-label" for="ceramica">Cerâmica</label>
+                            </div>
+                            <div class="form-check">
+                                <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    id="madeira"
+                                    value="madeira"
+                                >
+                                <label class="form-check-label" for="madeira">Madeira</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="checkbox-container">
+                            <div class="form-check">
+                                <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    id="ferro"
+                                    value="ferro"
+                                >
+                                <label class="form-check-label" for="ferro">Ferro</label>
+                            </div>
+                            <div class="form-check">
+                                <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    id="la"
+                                    value="lã"
+                                >
+                                <label class="form-check-label" for="la">Lã</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="checkbox-container">
+                            <div class="form-check">
+                                <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    id="algodao"
+                                    value="algodão"
+                                >
+                                <label class="form-check-label" for="algodao">Algodão</label>
+                            </div>
+                            <div class="form-check">
+                                <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    id="micanga"
+                                    value="miçanga"
+                                >
+                                <label class="form-check-label" for="micanga">Miçanga</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="checkbox-container">
+                            <div class="form-check">
+                                <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    id="barro"
+                                    value="barro"
+                                >
+                                <label class="form-check-label" for="barro">Barro</label>
+                            </div>
+                            <div class="form-check">
+                                <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    id="palha"
+                                    value="palha"
+                                >
+                                <label class="form-check-label" for="palha">Palha</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="checkbox-container">
+                            <div class="form-check">
+                                <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    id="fibras"
+                                    value="fibras"
+                                >
+                                <label class="form-check-label" for="fibras">Fibras</label>
+                            </div>
+                            <div class="form-check">
+                                <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    id="outro_material"
+                                    value="outro_material"
+                                >
+                                <label class="form-check-label" for="outro_material">Outro</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                    style="background-color: #aaaaaa; border-color: #aaaaaa; color:rgb(255, 255, 255);"
+                >Fechar</button>
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-dismiss="modal"
+                    style="background-color: #012001; border-color: #001d00; color: #f5f5f5;"
+                >Salvar</button>
+            </div>
+        </div>
     </div>
-    <div class="modal-body">
-   
-    <div class="row mb-4">
-        <div class="col-md-4">
-        <h5 class="card-title">Casa</h5>
-        <div class="checkbox-container">
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="moveis" value="móveis">
-            <label class="form-check-label" for="moveis">Móveis</label>
-            </div>
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="velas" value="velas">
-            <label class="form-check-label" for="velas">Velas</label>
-            </div>
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="esculturas" value="esculturas">
-            <label class="form-check-label" for="esculturas">Esculturas</label>
-            </div>
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="vasos" value="vasos">
-            <label class="form-check-label" for="vasos">Vasos</label>
-            </div>
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="cestos" value="cestos">
-            <label class="form-check-label" for="cestos">Cestos</label>
-            </div>
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="cestos" value="cestos">
-            <label class="form-check-label" for="cestos">Cerâmica</label>
-            </div>
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="cestos" value="cestos">
-            <label class="form-check-label" for="cestos">Instrumentos</label>
-            </div>
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="cestos" value="cestos">
-            <label class="form-check-label" for="cestos">Cozinha</label>
-            </div>
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="cestos" value="cestos">
-            <label class="form-check-label" for="cestos">Quadros</label>
-            </div>
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="cestos" value="cestos">
-            <label class="form-check-label" for="cestos">Telas</label>
-            </div>
-        </div>
-        </div>
-        <div class="col-md-4">
-        <h5 class="card-title">Corpo</h5>
-        <div class="checkbox-container">
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="joias" value="joias">
-            <label class="form-check-label" for="joias">Joias</label>
-            </div>
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="bijoias" value="bijoias">
-            <label class="form-check-label" for="bijoias">Bijoias</label>
-            </div>
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="roupas" value="roupas">
-            <label class="form-check-label" for="roupas">Roupas</label>
-            </div>
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="acessorios" value="acessórios">
-            <label class="form-check-label" for="acessorios">Acessórios</label>
-            </div>
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="bolsas" value="bolsas">
-            <label class="form-check-label" for="bolsas">Bolsas</label>
-            </div>
-        </div>
-        </div>
-        <div class="col-md-4">
-        <h5 class="card-title">Outro</h5>
-        <div class="checkbox-container mb-3">
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="outro" value="outro">
-            <label class="form-check-label" for="outro"></label>
-            </div>
-            <input type="text" id="inputNome" class="form-control" placeholder="Especifique">
-        </div>
-        </div>
-    </div>
-    <h5 class="card-title">Matéria-Prima</h5>
-    <br>
-    <div class="row">
-        <div class="col-md-2">
-        <div class="checkbox-container">
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="ceramica" value="cerâmica">
-            <label class="form-check-label" for="ceramica">Cerâmica</label>
-            </div>
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="madeira" value="madeira">
-            <label class="form-check-label" for="madeira">Madeira</label>
-            </div>
-        </div>
-        </div>
-        <div class="col-md-2">
-        <div class="checkbox-container">
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="ferro" value="ferro">
-            <label class="form-check-label" for="ferro">Ferro</label>
-            </div>
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="la" value="lã">
-            <label class="form-check-label" for="la">Lã</label>
-            </div>
-        </div>
-        </div>
-        <div class="col-md-2">
-        <div class="checkbox-container">
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="algodao" value="algodão">
-            <label class="form-check-label" for="algodao">Algodão</label>
-            </div>
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="micanga" value="miçanga">
-            <label class="form-check-label" for="micanga">Miçanga</label>
-            </div>
-        </div>
-        </div>
-        <div class="col-md-2">
-        <div class="checkbox-container">
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="barro" value="barro">
-            <label class="form-check-label" for="barro">Barro</label>
-            </div>
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="palha" value="palha">
-            <label class="form-check-label" for="palha">Palha</label>
-            </div>
-        </div>
-        </div>
-        <div class="col-md-2">
-        <div class="checkbox-container">
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="fibras" value="fibras">
-            <label class="form-check-label" for="fibras">Fibras</label>
-            </div>
-            <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="outro_material" value="outro_material">
-            <label class="form-check-label" for="outro_material">Outro</label>
-            </div>
-        </div>
-        </div>
-    </div>
-    </div>
-    <div class="modal-footer">
-    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background-color: #aaaaaa; border-color: #aaaaaa; color:rgb(255, 255, 255);">Fechar</button>
-    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" style="background-color: #012001; border-color: #001d00; color: #f5f5f5;">Salvar</button>
-
-    </div>
-    </div>
-    </div>
-    </div>
-
-   
+</div>
     
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
