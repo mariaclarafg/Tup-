@@ -1,5 +1,5 @@
 from datetime import date
-from fastapi import APIRouter, FastAPI, Form, Request, status
+from fastapi import APIRouter, FastAPI, Form, Query, Request, status
 from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
@@ -20,10 +20,10 @@ async def get_root(request: Request):
 
 
 @router.get("/entrar")
-async def get_entrar(request: Request):
+async def get_entrar(request: Request, return_url: str = Query(None)):
     usuario = request.state.usuario if hasattr(request.state, "usuario") else None
     if not usuario or not usuario.email:
-        return templates.TemplateResponse("main/pages/entrar.html", {"request": request})
+        return templates.TemplateResponse("main/pages/entrar.html", {"request": request, "return_url": return_url})
     if usuario.perfil == 1:
         return RedirectResponse("/cliente", status_code=status.HTTP_303_SEE_OTHER)
     if usuario.perfil == 2:
@@ -32,6 +32,7 @@ async def get_entrar(request: Request):
 
 @router.post("/post_entrar")
 async def post_entrar(
+    return_url: str = Form(None),
     email: str = Form(...), 
     senha: str = Form(...)):
     usuario = UsuarioRepo.checar_credenciais(email, senha)
@@ -46,7 +47,9 @@ async def post_entrar(
         case 2: nome_perfil = "artesao"
         case 3: nome_perfil = "administrador"
         case _: nome_perfil = ""
-    response = RedirectResponse(f"/{nome_perfil}", status_code=status.HTTP_303_SEE_OTHER)    
+    if not return_url:
+        return_url = f"/{nome_perfil}"
+    response = RedirectResponse(return_url, status_code=status.HTTP_303_SEE_OTHER)    
     response.set_cookie(
         key=NOME_COOKIE_AUTH,
         value=token,
