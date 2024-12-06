@@ -7,278 +7,237 @@
         <a class="navbar-brand">Central do Artesão</a>
     </div>
 </nav>
+
 <body class="d-flex flex-column min-vh-100 bg-green">
-    <main class="d-flex flex-column flex-grow-1">
-        <div class="d-flex flex-grow-1">
-            <aside class="coluna-esquerda p-3 d-flex flex-column justify-content-between bg-white">
-                <div>
-                    <div class="profile-section mb-3">
-                        <i class="bi bi-person-circle custom-icon" class="img-thumbnail rounded-full" style="color: #0F2B05;"></i>
-                        <p class="lead">Nome da loja</p>
-                    </div>
-                    <nav class="nav nav-pills flex-column mt-2">
-                        <span class="text-dark-beige">
-                            <i></i>Pedidos
-                        </span>
-                        <a class="nav-link text-dark-beige" href="/artesao/centraldoartesao/listadetarefas" style="color: #6c757d; text-decoration: none;">
-                            <i class="bi bi-clipboard-data-fill"></i>
-                            Gerenciar Pedidos
-                        </a>
-                    </nav>
-                    <nav class="nav nav-pills flex-column mt-3">
-                        <span class="text-dark-beige">
-                            <i></i>Produtos
-                        </span>
-                        <a class="nav-link text-dark-beige" href="/artesao/centraldoartesao/produtoscadastrados" style="color: #6c757d; text-decoration: none;">
-                            <i class="bi bi-journal-check"></i> Produtos cadastrados
-                        </a>
-                        <a class="nav-link text-dark-beige" href="/artesao/centraldoartesao/adicionarprodutos" style="color: #6c757d; text-decoration: none;">
-                            <i class="bi bi-plus-square"></i>
-                            <strong> Adicionar produtos</strong>
-                        </a>
-                    </nav>
-                    <nav class="nav nav-pills flex-column mt-3">
-                        <span class="text-dark-beige">
-                            <i></i>Atendimento ao cliente
-                        </span>
-                        <a class="nav-link text-dark-beige" href="/artesao/centraldoartesao/chat" style="color: #6c757d; text-decoration: none;">
-                            <i class="bi bi-chat-square-text"></i> Chat
-                        </a>
-                        <a class="nav-link text-dark-beige" href="/artesao/centraldoartesao/demandas" style="color: #6c757d; text-decoration: none;">
-                            <i class="bi bi-piggy-bank-fill"></i> Demanda de produtos
-                        </a>
-                    </nav>
-                    <nav class="nav nav-pills flex-column mt-3">
-                        <span class="text-dark-beige">
-                            <i class="fas fa-shield-alt"></i>Loja
-                        </span>
-                        <a class="nav-link text-dark-beige" href="/artesao/centraldoartesao/perfildaloja" style="color: #6c757d; text-decoration: none;">
-                            <i class="bi bi-shop-window"></i> Perfil da Loja
-                        </a>
-                        <a class="nav-link text-dark-beige" href="/artesao/centraldoartesao/configuracoesloja" style="color: #6c757d; text-decoration: none;">
-                            <i class="bi bi-gear-fill"></i> Configurações da loja
-                        </a>
-                        <a class="nav-link text-dark-beige"  onclick="window.location.href='/sair'">
-                            <i class="bi bi-box-arrow-right"></i>
-                            <strong> Sair</strong>
-                        </a>
-                    </nav>
+    <div class="d-flex flex-grow-1">
+        <aside class="coluna-esquerda p-3 d-flex flex-column justify-content-between bg-white">
+            <div>
+                <div class="profile-section mb-3">
+                    <i class="bi bi-person-circle custom-icon" class="img-thumbnail rounded-full"
+                        style="color: #0F2B05;"></i>
+                    <p class="lead">Nome da loja</p>
                 </div>
-            </aside>
-            <section class="flex-grow-1 p-3 bg-light">
-                <h4 class="mb-4 mt-5">
-                    <strong>Novo Produto</strong>
-                </h4>
-                <div class="nav nav-pills mb-4" id="pills-tab" role="tablist">
-                    <a
-                        class="nav-link custom-tab text-dark-beige active"
-                        id="tab1"
-                        data-bs-toggle="pill"
-                        href="#content1"
-                        role="tab"
-                    >Informações Básicas</a>
-                    <a
-                        class="nav-link custom-tab text-dark-beige"
-                        id="tab2"
-                        data-bs-toggle="pill"
-                        href="#content2"
-                        role="tab"
-                    >Especificações</a>
-                    <a
-                        class="nav-link custom-tab text-dark-beige"
-                        id="tab3"
-                        data-bs-toggle="pill"
-                        href="#content3"
-                        role="tab"
-                    >Envio</a>
-                </div>
-                <div class="card bg-white card-externo" style="max-height: 800px; margin: 0 auto;">
-                    <div class="card-body">
-                        <div class="tab-content">
-                            <div class="tab-pane fade show active" id="content1" role="tabpanel">
-                                <h5 class="mb-3">
-                                    <strong>Imagem do Produto</strong>
-                                </h5>
-                                <div class="d-flex flex-column flex-md-row align-items-center mb-4">
-                                    <div class="add-image-box d-flex flex-column align-items-center justify-content-center text-center bg-light" style="width: 150px; height: 150px; border: 1px dashed #ccc;">
-                                        <i class="bi bi-plus-lg" style="font-size: 2rem; color: #0F2B05;"></i>
-                                        <small class="text-muted">Adicionar imagem</small>
-                                        <small class="text-muted">(0/1)</small>
-                                    </div>
-                                    <div class="ms-md-4 mt-3 mt-md-0">
-                                        <p class="text-muted">A imagem deve ser clara, com boa resolução, e o produto deve estar centralizado. Evite fundos poluídos.</p>
-                                    </div>
+                <nav class="nav nav-pills flex-column mt-2">
+                    <span class="text-dark-beige">
+                        <i></i>Pedidos
+                    </span>
+                    <a class="nav-link text-dark-beige" href="/artesao/centraldoartesao/listadetarefas"
+                        style="color: #6c757d; text-decoration: none;">
+                        <i class="bi bi-clipboard-data-fill"></i>
+                        Gerenciar Pedidos
+                    </a>
+                </nav>
+                <nav class="nav nav-pills flex-column mt-3">
+                    <span class="text-dark-beige">
+                        <i></i>Produtos
+                    </span>
+                    <a class="nav-link text-dark-beige" href="/artesao/centraldoartesao/produtoscadastrados"
+                        style="color: #6c757d; text-decoration: none;">
+                        <i class="bi bi-journal-check"></i> Produtos cadastrados
+                    </a>
+                    <a class="nav-link text-dark-beige" href="/artesao/centraldoartesao/adicionarprodutos"
+                        style="color: #6c757d; text-decoration: none;">
+                        <i class="bi bi-plus-square"></i>
+                        <strong> Adicionar produtos</strong>
+                    </a>
+                </nav>
+                <nav class="nav nav-pills flex-column mt-3">
+                    <span class="text-dark-beige">
+                        <i></i>Atendimento ao cliente
+                    </span>
+                    <a class="nav-link text-dark-beige" href="/artesao/centraldoartesao/chat"
+                        style="color: #6c757d; text-decoration: none;">
+                        <i class="bi bi-chat-square-text"></i> Chat
+                    </a>
+                    <a class="nav-link text-dark-beige" href="/artesao/centraldoartesao/demandas"
+                        style="color: #6c757d; text-decoration: none;">
+                        <i class="bi bi-piggy-bank-fill"></i> Demanda de produtos
+                    </a>
+                </nav>
+                <nav class="nav nav-pills flex-column mt-3">
+                    <span class="text-dark-beige">
+                        <i class="fas fa-shield-alt"></i>Loja
+                    </span>
+                    <a class="nav-link text-dark-beige" href="/artesao/centraldoartesao/perfildaloja"
+                        style="color: #6c757d; text-decoration: none;">
+                        <i class="bi bi-shop-window"></i> Perfil da Loja
+                    </a>
+                    <a class="nav-link text-dark-beige" href="/artesao/centraldoartesao/configuracoesloja"
+                        style="color: #6c757d; text-decoration: none;">
+                        <i class="bi bi-gear-fill"></i> Configurações da loja
+                    </a>
+                    <a class="nav-link text-dark-beige" onclick="window.location.href='/sair'">
+                        <i class="bi bi-box-arrow-right"></i>
+                        <strong> Sair</strong>
+                    </a>
+                </nav>
+            </div>
+        </aside>
+        <section class="flex-grow-1 p-3 bg-light">
+            <h4 class="mb-4 mt-5">
+                <strong>Novo Produto</strong>
+            </h4>
+            <div class="nav nav-pills mb-4" id="pills-tab" role="tablist">
+                <a class="nav-link custom-tab text-dark-beige active" id="tab1" data-bs-toggle="pill" href="#content1"
+                    role="tab">Informações Básicas</a>
+                <a class="nav-link custom-tab text-dark-beige" id="tab2" data-bs-toggle="pill" href="#content2"
+                    role="tab">Especificações</a>
+                <a class="nav-link custom-tab text-dark-beige" id="tab3" data-bs-toggle="pill" href="#content3"
+                    role="tab">Envio</a>
+            </div>
+            <div class="card bg-white card-externo" style="margin: 0 auto;">
+                <div class="card-body">
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="content1" role="tabpanel">
+                            <h5 class="mb-3">
+                                <strong>Imagem do Produto</strong>
+                            </h5>
+                            <div class="d-flex flex-column flex-md-row align-items-center mb-4">
+                                <div class="add-image-box d-flex flex-column align-items-center justify-content-center text-center bg-light"
+                                    style="width: 150px; height: 150px; border: 1px dashed #ccc;">
+                                    <i class="bi bi-plus-lg" style="font-size: 2rem; color: #0F2B05;"></i>
+                                    <small class="text-muted">Adicionar imagem</small>
+                                    <small class="text-muted">(0/1)</small>
                                 </div>
-                                <form method="post" action="/post_cadastrar_cliente"> <br> 
-                                    <label for="nome-produto" class="form-label mb-2">
-                                        <strong>Nome do Produto</strong>
-                                    </label>
-                                    {{ input_text('nome-produto', 'Nome do Produto', attributes="required autofocus data-mask='nome'") }}
-                                    <label for="preco-produto" class="form-label mb-2">
-                                        <strong>Preço do Produto</strong>
-                                    </label>
-                                    {{ input_text('preco-produto', 'R$', attributes="required autofocus") }}
-                                    <label for="codigo-produto" class="form-label mb-2">
-                                        <strong>Código do Produto</strong>
-                                    </label>
-                                    {{ input_text('codigo-produto', 'Código do Produto', attributes="required autofocus") }}
-                                    <label for="categoria-produto" class="form-label mb-2">
-                                        <strong>Categoria do Produto</strong>
-                                    </label>
-                                    <input type="text" class="form-control mb-3" id="categoria-produto" placeholder="Clique para Selecionar Categoria" readonly data-bs-toggle="modal" data-bs-target="#categoriaModal">
-                                        <strong>Descrição do Produto</strong>
-                                    </label>
-                                    {{ input_textarea('descricao-produto', 'Descrição do Produto', attributes="required autofocus") }}
-                                    <div>
-                                        <input type="submit" value="Avançar" class="big-button-green">
-                                    </div>                        
-                                </form>
+                                <div class="ms-md-4 mt-3 mt-md-0">
+                                    <p class="text-muted">A imagem deve ser clara, com boa resolução, e o produto deve
+                                        estar centralizado. Evite fundos poluídos.</p>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="content2" role="tabpanel">
-                                <div class="d-flex flex-column mb-3">
-                                    <label for="personalizavel-produto" class="form-label mb-2">
-                                        <strong>O produto é personalizavel?</strong>
-                                    </label>
-                                    <div class="form-check me-3">
-                                        <input
-                                            class="form-check-input"
-                                            type="radio"
-                                            name="flexRadioDefault"
-                                            id="flexRadioDefault1"
-                                        >
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            Sim
-                                        </label>
-                                    </div>
-                                    <div class="form-check me-3">
-                                        <input
-                                            class="form-check-input"
-                                            type="radio"
-                                            name="flexRadioDefault"
-                                            id="flexRadioDefault2"
-                                            checked
-                                        >
-                                        <label class="form-check-label" for="flexRadioDefault2">
-                                            Não
-                                        </label>
-                                    </div>
-                                    <br>
-                                    <div class="d-flex flex-column mb-3">
-                                        <label for="quantidade-produto" class="form-label mb-2">
-                                            <strong>Quantidade</strong>
-                                        </label>
-                                        <div class="input-group input-group-sm" style="width: 100px;">
-                                            <button class="btn btn-outline-secondary btn-sm" type="button" id="decrementar">-</button>
-                                            <input
-                                                type="number"
-                                                class="form-control form-control-sm"
-                                                id="quantidade"
-                                                value="0"
-                                                min="0"
-                                            >
-                                            <button class="btn btn-outline-secondary btn-sm" type="button" id="incrementar">+</button>
-                                        </div>
-                                    </div>
-                                    <label for="garantia-produto" class="form-label mb-2">
-                                        <strong>Tempo de Garantia do Produto</strong>
-                                    </label>
-                                    {{ input_text('garantia-produto', 'Garantia do Produto', attributes="required autofocus") }}
-                                    <label for="garantia-produto" class="form-label mb-2">
-
-                                    <label for="comprimento-produto" class="form-label mb-2">
-                                        <strong>Comprimento do Produto</strong>
-                                    </label>
-                                    {{ input_text('comprimento-produto', 'Comprimento do Produto (cm)', attributes="required autofocus") }}
-                                    <label for="comprimento-produto" class="form-label mb-2">
-
-                                    <label for="largura-produto" class="form-label mb-2">
-                                        <strong>Largura do Produto</strong>
-                                    </label>
-                                    {{ input_text('largura-produto', 'Largura do Produto (cm)', attributes="required autofocus") }}
-                                    <label for="largura-produto" class="form-label mb-2">
-
-                                    <div class="text-center mb-3">
-                                        <br>
-                                        <button type="button" class="btn btn-primary" style="background-color: #012001; border-color: #001d00; color: #f5f5f5;">Salvar</button>
-                                    </div>
+                            <form method="post" action="/post_cadastrar_cliente"> <br>
+                                <label for="nome-produto" class="form-label mb-2">
+                                    <strong>Nome do Produto</strong>
+                                </label>
+                                {{ input_text('nome-produto', 'Nome do Produto', attributes="required autofocus
+                                data-mask='nome'") }}
+                                <label for="preco-produto" class="form-label mb-2">
+                                    <strong>Preço do Produto</strong>
+                                </label>
+                                {{ input_text('preco-produto', 'R$', attributes="required autofocus") }}
+                                <label for="codigo-produto" class="form-label mb-2">
+                                    <strong>Código do Produto</strong>
+                                </label>
+                                {{ input_text('codigo-produto', 'Código do Produto', attributes="required autofocus") }}
+                                <label for="categoria-produto" class="form-label mb-2">
+                                    <strong>Categoria do Produto</strong>
+                                </label>
+                                <input type="text" class="form-control mb-3" id="categoria-produto"
+                                    placeholder="Clique para Selecionar Categoria" readonly data-bs-toggle="modal"
+                                    data-bs-target="#categoriaModal">
+                                <strong>Descrição do Produto</strong>
+                                </label>
+                                {{ input_textarea('descricao-produto', 'Descrição do Produto', attributes="required
+                                autofocus") }}
+                                <div>
+                                    <input type="submit" value="Avançar" class="big-button-green">
                                 </div>
+                            </form>
+                        </div>
 
-
-                                
-                            </div>
-                            <div class="tab-pane fade" id="content3" role="tabpanel">
-                                <div class="d-flex flex-column mb-3">
-                                    <label for="peso-produto" class="form-label mb-2">
-                                        <strong>Peso</strong>
+                        <div class="tab-pane fade" id="content2" role="tabpanel">
+                            <div class="d-flex flex-column mb-3">
+                                <label for="personalizavel-produto" class="form-label mb-2">
+                                    <strong>O produto é personalizavel?</strong>
+                                </label>
+                                <div class="form-check me-3">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Sim
                                     </label>
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        id="peso-produto"
-                                        placeholder="Peso (Kg)"
-                                    >
+                                </div>
+                                <div class="form-check me-3">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        Não
+                                    </label>
                                 </div>
                                 <br>
                                 <div class="d-flex flex-column mb-3">
-                                    <label for="tamanho-produto" class="form-label mb-2">
-                                        <strong>Tamanho do Pacote</strong>
+                                    <label for="quantidade-produto" class="form-label mb-2">
+                                        <strong>Quantidade</strong>
                                     </label>
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        id="tamanho-produto"
-                                        placeholder="comprimento x largura x altura"
-                                    >
+                                    <div class="input-group input-group-sm" style="width: 100px;">
+                                        <button class="btn btn-outline-secondary btn-sm" type="button"
+                                            id="decrementar">-</button>
+                                        <input type="number" class="form-control form-control-sm" id="quantidade"
+                                            value="0" min="0">
+                                        <button class="btn btn-outline-secondary btn-sm" type="button"
+                                            id="incrementar">+</button>
+                                    </div>
                                 </div>
-                                <br>
-                                <div class="d-flex flex-column mb-3">
-                                    <label for="taxa-produto" class="form-label mb-2">
-                                        <strong>Taxa de Envio</strong>
-                                    </label>
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        id="taxa-produto"
-                                        placeholder="Valor em R$"
-                                    >
-                                </div>
-                                <br>
-                                <small class="text-muted"> *A taxa de envio acima é um valor padrão. O valor exato do custo do frete será calculado no momento da compra baseando-se no endereço do comprador e do vendedor.</small>
-                                <br>
+                                <label for="garantia-produto" class="form-label mb-2">
+                                    <strong>Tempo de Garantia do Produto</strong>
+                                </label>
+                                {{ input_text('garantia-produto', 'Garantia do Produto', attributes="required
+                                autofocus") }}
+                                <label for="garantia-produto" class="form-label mb-2"></label>
+
+                                <label for="comprimento-produto" class="form-label mb-2">
+                                    <strong>Comprimento do Produto</strong>
+                                </label>
+                                {{ input_text('comprimento-produto', 'Comprimento do Produto (cm)', attributes="required
+                                autofocus") }}
+                                <label for="comprimento-produto" class="form-label mb-2"></label>
+
+                                <label for="largura-produto" class="form-label mb-2">
+                                    <strong>Largura do Produto</strong>
+                                </label>
+                                {{ input_text('largura-produto', 'Largura do Produto (cm)', attributes="required
+                                autofocus") }}
+                                <label for="largura-produto" class="form-label mb-2"></label>
+
                                 <div class="text-center mb-3">
-                                    <br>
-                                    <button type="button" class="btn btn-primary" style="background-color: #012001; border-color: #001d00; color: #f5f5f5;">Salvar</button>
+
+                                    <input type="submit" value="Avançar" class="big-button-green">
+
                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="content3" role="tabpanel">
+                            <div class="d-flex flex-column mb-3">
+                                <label for="peso-produto" class="form-label mb-2">
+                                    <strong>Peso</strong>
+                                </label>
+                                {{ input_text('peso-produto', 'Peso em Kg', attributes="required autofocus") }}
+                            </div>
+                            <div class="d-flex flex-column mb-3">
+                                <label for="tamanho-pacote" class="form-label mb-2">
+                                    <strong>Tamanho do Pacote</strong>
+                                </label>
+                                {{ input_text('tamanho-pacote', 'comprimento x largura x altura', attributes="required
+                                autofocus") }}
+                            </div>
+                            <div class="d-flex flex-column mb-3">
+                                <label for="taxa-envio" class="form-label mb-2">
+                                    <strong>Taxa de Envio</strong>
+                                </label>
+                                {{ input_text('taxa-envio', 'Valor em R$', attributes="required autofocus") }}
+                            </div>
+                            <small class="text-muted"> *A taxa de envio acima é um valor padrão. O valor exato do custo
+                                do frete será calculado no momento da compra baseando-se no endereço do comprador e do
+                                vendedor.</small>
+                            <br>
+                            <div class="text-center mb-3">
+                                <br>
+                                <button type="button" class="btn btn-primary"
+                                    style="background-color: #012001; border-color: #001d00; color: #f5f5f5;">Salvar</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div
-    class="modal fade"
-    id="categoriaModal"
-    tabindex="-1"
-    aria-labelledby="categoriaModalLabel"
-    aria-hidden="true"
->
+    </div>
+</body>
+<div class="modal fade" id="categoriaModal" tabindex="-1" aria-labelledby="categoriaModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="categoriaModalLabel">Categorias</h5>
-                <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                ></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="row mb-4">
@@ -286,93 +245,43 @@
                         <h5 class="card-title">Casa</h5>
                         <div class="checkbox-container">
                             <div class="form-check">
-                                <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    id="moveis"
-                                    value="móveis"
-                                >
+                                <input class="form-check-input" type="checkbox" id="moveis" value="móveis">
                                 <label class="form-check-label" for="moveis">Móveis</label>
                             </div>
                             <div class="form-check">
-                                <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    id="velas"
-                                    value="velas"
-                                >
+                                <input class="form-check-input" type="checkbox" id="velas" value="velas">
                                 <label class="form-check-label" for="velas">Velas</label>
                             </div>
                             <div class="form-check">
-                                <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    id="esculturas"
-                                    value="esculturas"
-                                >
+                                <input class="form-check-input" type="checkbox" id="esculturas" value="esculturas">
                                 <label class="form-check-label" for="esculturas">Esculturas</label>
                             </div>
                             <div class="form-check">
-                                <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    id="vasos"
-                                    value="vasos"
-                                >
+                                <input class="form-check-input" type="checkbox" id="vasos" value="vasos">
                                 <label class="form-check-label" for="vasos">Vasos</label>
                             </div>
                             <div class="form-check">
-                                <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    id="cestos"
-                                    value="cestos"
-                                >
+                                <input class="form-check-input" type="checkbox" id="cestos" value="cestos">
                                 <label class="form-check-label" for="cestos">Cestos</label>
                             </div>
                             <div class="form-check">
-                                <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    id="cestos"
-                                    value="cestos"
-                                >
+                                <input class="form-check-input" type="checkbox" id="cestos" value="cestos">
                                 <label class="form-check-label" for="cestos">Cerâmica</label>
                             </div>
                             <div class="form-check">
-                                <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    id="cestos"
-                                    value="cestos"
-                                >
+                                <input class="form-check-input" type="checkbox" id="cestos" value="cestos">
                                 <label class="form-check-label" for="cestos">Instrumentos</label>
                             </div>
                             <div class="form-check">
-                                <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    id="cestos"
-                                    value="cestos"
-                                >
+                                <input class="form-check-input" type="checkbox" id="cestos" value="cestos">
                                 <label class="form-check-label" for="cestos">Cozinha</label>
                             </div>
                             <div class="form-check">
-                                <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    id="cestos"
-                                    value="cestos"
-                                >
+                                <input class="form-check-input" type="checkbox" id="cestos" value="cestos">
                                 <label class="form-check-label" for="cestos">Quadros</label>
                             </div>
                             <div class="form-check">
-                                <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    id="cestos"
-                                    value="cestos"
-                                >
+                                <input class="form-check-input" type="checkbox" id="cestos" value="cestos">
                                 <label class="form-check-label" for="cestos">Telas</label>
                             </div>
                         </div>
@@ -381,48 +290,23 @@
                         <h5 class="card-title">Corpo</h5>
                         <div class="checkbox-container">
                             <div class="form-check">
-                                <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    id="joias"
-                                    value="joias"
-                                >
+                                <input class="form-check-input" type="checkbox" id="joias" value="joias">
                                 <label class="form-check-label" for="joias">Joias</label>
                             </div>
                             <div class="form-check">
-                                <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    id="bijoias"
-                                    value="bijoias"
-                                >
+                                <input class="form-check-input" type="checkbox" id="bijoias" value="bijoias">
                                 <label class="form-check-label" for="bijoias">Bijoias</label>
                             </div>
                             <div class="form-check">
-                                <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    id="roupas"
-                                    value="roupas"
-                                >
+                                <input class="form-check-input" type="checkbox" id="roupas" value="roupas">
                                 <label class="form-check-label" for="roupas">Roupas</label>
                             </div>
                             <div class="form-check">
-                                <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    id="acessorios"
-                                    value="acessórios"
-                                >
+                                <input class="form-check-input" type="checkbox" id="acessorios" value="acessórios">
                                 <label class="form-check-label" for="acessorios">Acessórios</label>
                             </div>
                             <div class="form-check">
-                                <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    id="bolsas"
-                                    value="bolsas"
-                                >
+                                <input class="form-check-input" type="checkbox" id="bolsas" value="bolsas">
                                 <label class="form-check-label" for="bolsas">Bolsas</label>
                             </div>
                         </div>
@@ -431,20 +315,10 @@
                         <h5 class="card-title">Outro</h5>
                         <div class="checkbox-container mb-3">
                             <div class="form-check">
-                                <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    id="outro"
-                                    value="outro"
-                                >
+                                <input class="form-check-input" type="checkbox" id="outro" value="outro">
                                 <label class="form-check-label" for="outro"></label>
                             </div>
-                            <input
-                                type="text"
-                                id="inputNome"
-                                class="form-control"
-                                placeholder="Especifique"
-                            >
+                            <input type="text" id="inputNome" class="form-control" placeholder="Especifique">
                         </div>
                     </div>
                 </div>
@@ -454,21 +328,11 @@
                     <div class="col-md-2">
                         <div class="checkbox-container">
                             <div class="form-check">
-                                <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    id="ceramica"
-                                    value="cerâmica"
-                                >
+                                <input class="form-check-input" type="checkbox" id="ceramica" value="cerâmica">
                                 <label class="form-check-label" for="ceramica">Cerâmica</label>
                             </div>
                             <div class="form-check">
-                                <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    id="madeira"
-                                    value="madeira"
-                                >
+                                <input class="form-check-input" type="checkbox" id="madeira" value="madeira">
                                 <label class="form-check-label" for="madeira">Madeira</label>
                             </div>
                         </div>
@@ -476,21 +340,11 @@
                     <div class="col-md-2">
                         <div class="checkbox-container">
                             <div class="form-check">
-                                <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    id="ferro"
-                                    value="ferro"
-                                >
+                                <input class="form-check-input" type="checkbox" id="ferro" value="ferro">
                                 <label class="form-check-label" for="ferro">Ferro</label>
                             </div>
                             <div class="form-check">
-                                <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    id="la"
-                                    value="lã"
-                                >
+                                <input class="form-check-input" type="checkbox" id="la" value="lã">
                                 <label class="form-check-label" for="la">Lã</label>
                             </div>
                         </div>
@@ -498,21 +352,11 @@
                     <div class="col-md-2">
                         <div class="checkbox-container">
                             <div class="form-check">
-                                <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    id="algodao"
-                                    value="algodão"
-                                >
+                                <input class="form-check-input" type="checkbox" id="algodao" value="algodão">
                                 <label class="form-check-label" for="algodao">Algodão</label>
                             </div>
                             <div class="form-check">
-                                <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    id="micanga"
-                                    value="miçanga"
-                                >
+                                <input class="form-check-input" type="checkbox" id="micanga" value="miçanga">
                                 <label class="form-check-label" for="micanga">Miçanga</label>
                             </div>
                         </div>
@@ -520,21 +364,11 @@
                     <div class="col-md-2">
                         <div class="checkbox-container">
                             <div class="form-check">
-                                <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    id="barro"
-                                    value="barro"
-                                >
+                                <input class="form-check-input" type="checkbox" id="barro" value="barro">
                                 <label class="form-check-label" for="barro">Barro</label>
                             </div>
                             <div class="form-check">
-                                <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    id="palha"
-                                    value="palha"
-                                >
+                                <input class="form-check-input" type="checkbox" id="palha" value="palha">
                                 <label class="form-check-label" for="palha">Palha</label>
                             </div>
                         </div>
@@ -542,21 +376,12 @@
                     <div class="col-md-2">
                         <div class="checkbox-container">
                             <div class="form-check">
-                                <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    id="fibras"
-                                    value="fibras"
-                                >
+                                <input class="form-check-input" type="checkbox" id="fibras" value="fibras">
                                 <label class="form-check-label" for="fibras">Fibras</label>
                             </div>
                             <div class="form-check">
-                                <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    id="outro_material"
-                                    value="outro_material"
-                                >
+                                <input class="form-check-input" type="checkbox" id="outro_material"
+                                    value="outro_material">
                                 <label class="form-check-label" for="outro_material">Outro</label>
                             </div>
                         </div>
@@ -564,18 +389,10 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal"
-                    style="background-color: #aaaaaa; border-color: #aaaaaa; color:rgb(255, 255, 255);"
-                >Fechar</button>
-                <button
-                    type="button"
-                    class="btn btn-primary"
-                    data-bs-dismiss="modal"
-                    style="background-color: #012001; border-color: #001d00; color: #f5f5f5;"
-                >Salvar</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                    style="background-color: #aaaaaa; border-color: #aaaaaa; color:rgb(255, 255, 255);">Fechar</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                    style="background-color: #012001; border-color: #001d00; color: #f5f5f5;">Salvar</button>
             </div>
         </div>
     </div>
@@ -585,78 +402,78 @@
 </div>
 </section>
 <style>
-              .btn-custom {
-                  background-color: white; 
-                  color: #868686; 
-                  border: none; 
-                  font-size: 1.25rem; 
-                  font-weight: bold; 
-                  padding: 0.75rem 1.5rem; 
-              }
-              
-              .btn-custom:hover {
-                  background-color: #e0e0e0; 
-                  border-color: #7c7c7c; 
-                  color: #777777; 
-              }
+    .btn-custom {
+        background-color: white;
+        color: #868686;
+        border: none;
+        font-size: 1.25rem;
+        font-weight: bold;
+        padding: 0.75rem 1.5rem;
+    }
 
-              .card-externo {
-                max-height: 800px; 
-                margin: 0 auto;
-                border: none; 
-              }
-              
-              .card-body {
-                padding: 15px; 
-              }
-              
-              
-              .custom-tab {
-                font-size: 1.25rem; 
-                color: #6c757d; 
-                background-color: transparent; 
-                border: none; 
-              }
+    .btn-custom:hover {
+        background-color: #e0e0e0;
+        border-color: #7c7c7c;
+        color: #777777;
+    }
 
-              .custom-tab.active {
-    
-                background-color: transparent; 
-                border: none; 
-              }
+    .card-externo {
+
+        margin: 0 auto;
+        border: none;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+
+
+    .custom-tab {
+        font-size: 1.25rem;
+        color: #6c757d;
+        background-color: transparent;
+        border: none;
+    }
+
+    .custom-tab.active {
+
+        background-color: transparent;
+        border: none;
+    }
 </style>
 <script>
-              document.addEventListener('DOMContentLoaded', function () {
-                var tabs = document.querySelectorAll('.nav-link');
-                tabs.forEach(function (tab) {
-                  tab.addEventListener('click', function () {
-                    tabs.forEach(function (t) {
-                      t.classList.remove('active');
-                    });
-                    tab.classList.add('active');
-                  });
+    document.addEventListener('DOMContentLoaded', function () {
+        var tabs = document.querySelectorAll('.nav-link');
+        tabs.forEach(function (tab) {
+            tab.addEventListener('click', function () {
+                tabs.forEach(function (t) {
+                    t.classList.remove('active');
                 });
-              });
+                tab.classList.add('active');
+            });
+        });
+    });
 </script>
 <script>
-              document.addEventListener('DOMContentLoaded', function () {
-                  const decrementarBtn = document.getElementById('decrementar');
-                  const incrementarBtn = document.getElementById('incrementar');
-                  const quantidadeInput = document.getElementById('quantidade');
-          
-                  decrementarBtn.addEventListener('click', function () {
-                      let value = parseInt(quantidadeInput.value, 10);
-                      if (value > 0) {
-                          quantidadeInput.value = value - 1;
-                      }
-                  });
-          
-                  incrementarBtn.addEventListener('click', function () {
-                      let value = parseInt(quantidadeInput.value, 10);
-                      quantidadeInput.value = value + 1;
-                  });
-              });
+    document.addEventListener('DOMContentLoaded', function () {
+        const decrementarBtn = document.getElementById('decrementar');
+        const incrementarBtn = document.getElementById('incrementar');
+        const quantidadeInput = document.getElementById('quantidade');
+
+        decrementarBtn.addEventListener('click', function () {
+            let value = parseInt(quantidadeInput.value, 10);
+            if (value > 0) {
+                quantidadeInput.value = value - 1;
+            }
+        });
+
+        incrementarBtn.addEventListener('click', function () {
+            let value = parseInt(quantidadeInput.value, 10);
+            quantidadeInput.value = value + 1;
+        });
+    });
 </script>
 </div>
-</main>
+
 </body>
 {% endblock %}
