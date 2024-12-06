@@ -28,13 +28,10 @@ def configurar_excecoes(app: FastAPI):
     async def forbidden_exception_handler(request: Request, _):
         return_url = f"?return_url={request.url.path}"
         usuario = request.state.usuario if hasattr(request.state, "usuario") else None
-
         if usuario:
             match usuario.perfil:
-                case 1:
-                    return_url = "/usuario"
-                case 2:
-                    return_url = "/admin"
+                case _:
+                    return_url = "/entrar"
             response = RedirectResponse(return_url, status_code=status.HTTP_302_FOUND)
             adicionar_mensagem_erro(
                 response,

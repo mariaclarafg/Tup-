@@ -62,7 +62,15 @@ async def post_entrar(
 
 @router.get("/cadastrar")
 async def get_cadastrar(request: Request):
-    return templates.TemplateResponse("main/pages/entrarcadastro.html", {"request": request})
+    options_comunidades = [
+        {"label": "Quilombola", "value": "1"},
+        {"label": "Indígena", "value": "2"},
+        {"label": "Ribeirinho", "value": "3"},
+        {"label": "Paneleiras", "value": "4"},
+        {"label": "Bordadeiras", "value": "5"},
+        {"label": "Pantaneiros", "value": "6"},
+        {"label": "Outro", "value": "7"}]
+    return templates.TemplateResponse("main/pages/entrarcadastro.html", {"request": request, "options_comunidades": options_comunidades})
 
 @router.post("/post_cadastrar_cliente")
 async def post_cadastrar_cliente(
@@ -93,6 +101,7 @@ async def post_cadastrar_artesao(
     nome: str = Form(...),
     data_nascimento: date = Form(...),
     cpf: str = Form(...),
+    tipo_comunidade: str = Form(...),
     cnpj: str =Form(...),
     nome_loja: str = Form(...),
     email: str = Form(...),
@@ -107,6 +116,7 @@ async def post_cadastrar_artesao(
         data_nascimento=data_nascimento,
         cpf=cpf,
         cnpj=cnpj,
+        tipo_comunidade=tipo_comunidade,
         nome_loja=nome_loja,
         email=email,
         telefone=telefone,

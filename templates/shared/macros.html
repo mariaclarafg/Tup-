@@ -82,18 +82,6 @@
 </div>
 {% endmacro %}
 
-{% macro select(name, label, options, attributes='', value='') -%}
-<div class="form-floating">
-    <select class="form-select" id="{{name}}" name="{{name}}" {{attributes|safe}}>
-        <option value="" selected>Escolha uma opção...</option>
-        {% for option in options %}
-        <option value="{{option['value']}}" {% if value==option['value']: %}selected{% endif %}>{{option['label']}}</option>
-        {% endfor %}
-    </select>
-    <label for="{{name}}">{{label}}</label>    
-</div>
-{%- endmacro %}
-
 {%- macro input_switch(name, label, attributes='', value='', div_classes='') -%}
 {% set checked = "checked" if valor else "" %}
 <div class="{{div_classes}}">

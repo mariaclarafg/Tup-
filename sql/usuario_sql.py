@@ -24,8 +24,8 @@ SQL_CRIAR_TABELA = """
 
 SQL_INSERIR_USUARIO = """
     INSERT INTO usuario 
-    (nome, data_nascimento, cpf, email, telefone, senha, perfil)
-    VALUES (?, ?, ?, ?, ?, ?, ?)
+    (nome, data_nascimento, cpf, cnpj, tipo_comunidade, nome_loja,  email, telefone, senha, perfil)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 """
 
 SQL_CHECAR_CREDENCIAIS = """

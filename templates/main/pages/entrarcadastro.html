@@ -1,6 +1,6 @@
 {% extends "shared/pages/base.html" %}
 {% block subtitulo %}Cadastro{% endblock %}
-{% from 'shared/macros.html' import input, button, input_text, input_date, input_email, input_password %}
+{% from 'shared/macros.html' import input, button, input_text, input_date, input_email, input_password, input_select %}
 {% block conteudo %}
 
 <div class="position-absolute top-0 start-0 min-vh-100 min-vw-100 bg-folhas"></div>
@@ -43,16 +43,19 @@
                     <form method="post" action="/post_cadastrar_artesao"> <br>
                         {{ input_text('nome', 'Nome', 'text') }}
                         {{ input_date('data_nascimento', 'Data de Nascimento', attributes="required autofocus") }}
-                        {{ input_text('cpf', 'CPF', attributes="required autofocus data-mask='cpf'") }}
-                        {{ input_text('cnpj', 'CNPJ', attributes="required autofocus data-mask='cnpj'") }}
+                        {{ input_text('cpf', 'CPF', attributes="required autofocus data-mask='cpf'") }}                        
+                        {{ input_select('tipo_comunidade', 'Comunidade', options_comunidades, attributes="required autofocus data-mask='cpf'", div_classes="mb-3") }}                        
+                        {{ input_text('cnpj', 'CNPJ', attributes="required autofocus data-mask='cnpj'" ) }}
                         {{ input_text('nome_loja', 'Nome da Loja', 'text') }}
                         {{ input_email('email', 'Email', 'text') }}
                         {{ input_text('telefone', 'Telefone', attributes="required autofocus data-mask='telefone'") }}
                         {{ input_password('senha', 'Senha', 'password') }}
                         {{ input_password('confsenha', 'Confirmar Senha', 'password') }}
-                        <div>
+                        
+                          <div>
                             <input type="submit" value="Cadastrar" class="big-button-green">
-                        </div>                        
+                        </div>
+                                               
                     </form>
                 </div>
             </div>
