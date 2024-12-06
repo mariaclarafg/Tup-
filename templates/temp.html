@@ -1,0 +1,380 @@
+<html lang="pt-br">
+
+<head></head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tupã: Adicionar Produtos</title>
+<link rel="stylesheet" href="/static/lib/bootstrap/css/bootstrap.css">
+<link rel="stylesheet" href="/static/lib/bootstrap-icons-1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="/static/css/estilos.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white cor-navbar border-bottom" style="color:white">
+        <div class="container-fluid px-5">
+            <a class="navbar-brand mx-auto d-lg-none" href="/">
+                <img src="/static/img/logo/logo_tupa.svg" alt="Logotipo" height="64">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="row w-100">
+                    <div class="col-lg-5 d-flex justify-content-start align-items-center">
+                        <ul class="navbar-nav d-flex justify-content-evenly w-100">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/">Início</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/produtos">Produtos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/homeartesao">Artesãos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/feed">Feed</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 d-none d-lg-flex justify-content-center align-items-center">
+                        <a class="navbar-brand" href="/">
+                            <img src="/static/img/logo/logo_tupa.svg" alt="Logotipo" height="64">
+                        </a>
+                    </div>
+                    <div class="col-lg-5 d-flex justify-content-end align-items-center">
+                        <ul class="navbar-nav d-flex justify-content-evenly w-100">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/sejaartesao/tipoloja"></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/entrar">Conta</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/carrinho">
+                                    <i class="bi bi-cart"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <form class="d-flex my-2 my-lg-0">
+                            <div class="input-group">
+                                <input type="text" class="form-control form-control-sm" placeholder="Buscar...">
+                                <button class="btn border-1 border-start-0 cor-borda" type="button">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <nav id="navbar-example2" class="navbar navbar-dark" style="background-color: #0F2B05;">
+        <div class="container">
+            <a class="navbar-brand">Central do Artesão</a>
+        </div>
+    </nav>
+
+    <main class="d-flex flex-column flex-grow-1">
+        <div class="d-flex flex-grow-1">
+            <aside class="coluna-esquerda p-3 d-flex flex-column justify-content-between bg-white">
+                <div>
+                    <div class="profile-section mb-3">
+                        <i class="bi bi-person-circle custom-icon" style="color: #0F2B05;"></i>
+                        <p class="lead">Nome da loja</p>
+                    </div>
+                    <nav class="nav nav-pills flex-column mt-2">
+                        <span class="text-dark-beige">
+                            <i></i>Pedidos
+                        </span>
+                        <a class="nav-link text-dark-beige" href="/artesao/centraldoartesao/listadetarefas"
+                            style="color: #6c757d; text-decoration: none;">
+                            <i class="bi bi-clipboard-data-fill"></i>
+                            Gerenciar Pedidos
+                        </a>
+                    </nav>
+                    <nav class="nav nav-pills flex-column mt-3">
+                        <span class="text-dark-beige">
+                            <i></i>Produtos
+                        </span>
+                        <a class="nav-link text-dark-beige" href="/artesao/centraldoartesao/produtoscadastrados"
+                            style="color: #6c757d; text-decoration: none;">
+                            <i class="bi bi-journal-check"></i> Produtos cadastrados
+                        </a>
+                        <a class="nav-link text-dark-beige" href="/artesao/centraldoartesao/adicionarprodutos"
+                            style="color: #6c757d; text-decoration: none;">
+                            <i class="bi bi-plus-square"></i>
+                            <strong> Adicionar produtos</strong>
+                        </a>
+                    </nav>
+                    <nav class="nav nav-pills flex-column mt-3">
+                        <span class="text-dark-beige">
+                            <i></i>Atendimento ao cliente
+                        </span>
+                        <a class="nav-link text-dark-beige" href="/artesao/centraldoartesao/chat"
+                            style="color: #6c757d; text-decoration: none;">
+                            <i class="bi bi-chat-square-text"></i> Chat
+                        </a>
+                        <a class="nav-link text-dark-beige" href="/artesao/centraldoartesao/demandas"
+                            style="color: #6c757d; text-decoration: none;">
+                            <i class="bi bi-piggy-bank-fill"></i> Demanda de produtos
+                        </a>
+                    </nav>
+                    <nav class="nav nav-pills flex-column mt-3">
+                        <span class="text-dark-beige">
+                            <i class="fas fa-shield-alt"></i>Loja
+                        </span>
+                        <a class="nav-link text-dark-beige" href="/artesao/centraldoartesao/perfildaloja"
+                            style="color: #6c757d; text-decoration: none;">
+                            <i class="bi bi-shop-window"></i> Perfil da Loja
+                        </a>
+                        <a class="nav-link text-dark-beige" href="/artesao/centraldoartesao/configuracoesloja"
+                            style="color: #6c757d; text-decoration: none;">
+                            <i class="bi bi-gear-fill"></i> Configurações da loja
+                        </a>
+                        <a class="nav-link text-dark-beige" onclick="window.location.href='/sair'">
+                            <i class="bi bi-box-arrow-right"></i>
+                            <strong> Sair</strong>
+                        </a>
+                    </nav>
+                </div>
+            </aside>
+            <section class="flex-grow-1 p-3 bg-light">
+                <h4 class="mb-4 mt-5">
+                    <strong>Novo Produto</strong>
+                </h4>
+                <div class="nav nav-pills mb-4" id="pills-tab" role="tablist">
+                    <a class="nav-link custom-tab text-dark-beige active" id="tab1" data-bs-toggle="pill"
+                        href="#content1" role="tab" aria-selected="true">Informações Básicas</a>
+                    <a class="nav-link custom-tab text-dark-beige" id="tab2" data-bs-toggle="pill" href="#content2"
+                        role="tab" aria-selected="false" tabindex="-1">Especificações</a>
+                    <a class="nav-link custom-tab text-dark-beige" id="tab3" data-bs-toggle="pill" href="#content3"
+                        role="tab" aria-selected="false" tabindex="-1">Envio</a>
+                </div>
+                <div class="card bg-white card-externo" style="margin: 0 auto;">
+                    <div class="card-body">
+                        <div class="tab-content">
+                            <div class="tab-pane fade active show" id="content1" role="tabpanel" aria-labelledby="tab1">
+                                <h5 class="mb-3">
+                                    <strong>Imagem do Produto</strong>
+                                </h5>
+                                <div class="d-flex flex-column flex-md-row align-items-center mb-4">
+                                    <div class="add-image-box d-flex flex-column align-items-center justify-content-center text-center bg-light"
+                                        style="width: 150px; height: 150px; border: 1px dashed #ccc;">
+                                        <i class="bi bi-plus-lg" style="font-size: 2rem; color: #0F2B05;"></i>
+                                        <small class="text-muted">Adicionar imagem</small>
+                                        <small class="text-muted">(0/1)</small>
+                                    </div>
+                                    <div class="ms-md-4 mt-3 mt-md-0">
+                                        <p class="text-muted">A imagem deve ser clara, com boa resolução, e o produto
+                                            deve estar centralizado. Evite fundos poluídos.</p>
+                                    </div>
+                                </div>
+                                <form method="post" action="/post_cadastrar_cliente"> <br>
+                                    <label for="nome-produto" class="form-label mb-2">
+                                        <strong>Nome do Produto</strong>
+                                    </label>
+
+                                    <div class="mb-3">
+                                        <div class="form-floating">
+                                            <input type="text" name="nome-produto" id="nome-produto"
+                                                class="form-control" placeholder=" " required="" autofocus=""
+                                                data-mask="nome" value="">
+                                            <label for="nome-produto">Nome do Produto</label>
+                                        </div>
+                                    </div>
+
+                                    <label for="preco-produto" class="form-label mb-2">
+                                        <strong>Preço do Produto</strong>
+                                    </label>
+
+                                    <div class="mb-3">
+                                        <div class="form-floating">
+                                            <input type="text" name="preco-produto" id="preco-produto"
+                                                class="form-control" placeholder=" " required="" autofocus="" value="">
+                                            <label for="preco-produto">R$</label>
+                                        </div>
+                                    </div>
+
+                                    <label for="codigo-produto" class="form-label mb-2">
+                                        <strong>Código do Produto</strong>
+                                    </label>
+
+                                    <div class="mb-3">
+                                        <div class="form-floating">
+                                            <input type="text" name="codigo-produto" id="codigo-produto"
+                                                class="form-control" placeholder=" " required="" autofocus="" value="">
+                                            <label for="codigo-produto">Código do Produto</label>
+                                        </div>
+                                    </div>
+
+                                    <label for="categoria-produto" class="form-label mb-2">
+                                        <strong>Categoria do Produto</strong>
+                                    </label>
+                                    <input type="text" class="form-control mb-3" id="categoria-produto"
+                                        placeholder="Clique para Selecionar Categoria" readonly=""
+                                        data-bs-toggle="modal" data-bs-target="#categoriaModal">
+                                    <strong>Descrição do Produto</strong>
+
+
+                                    <div class="mb-3">
+                                        <div class="form-floating">
+                                            <textarea name="descricao-produto" id="descricao-produto"
+                                                class="form-control" placeholder=" " required="" autofocus=""
+                                                style="height:6rem;"></textarea>
+                                            <label for="descricao-produto">Descrição do Produto</label>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <input type="submit" value="Avançar" class="big-button-green">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+
+
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+
+        <style>
+            .btn-custom {
+                background-color: white;
+                color: #868686;
+                border: none;
+                font-size: 1.25rem;
+                font-weight: bold;
+                padding: 0.75rem 1.5rem;
+            }
+
+            .btn-custom:hover {
+                background-color: #e0e0e0;
+                border-color: #7c7c7c;
+                color: #777777;
+            }
+
+            .card-externo {
+                max-height: 800px;
+                margin: 0 auto;
+                border: none;
+            }
+
+            .card-body {
+                padding: 15px;
+            }
+
+
+            .custom-tab {
+                font-size: 1.25rem;
+                color: #6c757d;
+                background-color: transparent;
+                border: none;
+            }
+
+            .custom-tab.active {
+
+                background-color: transparent;
+                border: none;
+            }
+        </style>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var tabs = document.querySelectorAll('.nav-link');
+                tabs.forEach(function (tab) {
+                    tab.addEventListener('click', function () {
+                        tabs.forEach(function (t) {
+                            t.classList.remove('active');
+                        });
+                        tab.classList.add('active');
+                    });
+                });
+            });
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const decrementarBtn = document.getElementById('decrementar');
+                const incrementarBtn = document.getElementById('incrementar');
+                const quantidadeInput = document.getElementById('quantidade');
+
+                decrementarBtn.addEventListener('click', function () {
+                    let value = parseInt(quantidadeInput.value, 10);
+                    if (value > 0) {
+                        quantidadeInput.value = value - 1;
+                    }
+                });
+
+                incrementarBtn.addEventListener('click', function () {
+                    let value = parseInt(quantidadeInput.value, 10);
+                    quantidadeInput.value = value + 1;
+                });
+            });
+        </script>
+
+    </main>
+
+
+
+    <footer class="mt-auto text-bg" style="background-color: #0f2b05;">
+        <div class="container-footer">
+            <div class="row-footer">
+                <div class="footer-col">
+                    <br>
+                    <a class="footer-brand" href="/">
+                        <img src="/static/img/logo/logo_imagem_branco.svg" alt="Logotipo" height="150"
+                            style="text-align: start;">
+                    </a>
+                </div>
+                <div class="footer-col">
+                    <h4><a href="/suporte" class="text-decoration-none text-light">Suporte</a></h4>
+                    <ul>
+                        <li><a href="/suporte">Termos de Uso</a></li>
+                        <li><a href="/suporte">Política de Troca</a></li>
+                        <li><a href="/suporte">FAQ´s</a></li>
+                        <li><a href="/suporte">Fale Conosco</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Sociais</h4>
+                    <div class="medias-socias">
+                        <a href="#"> <i class="fa fa-facebook"></i> </a>
+                        <a href="#"> <i class="fa fa-instagram"></i> </a>
+                        <a href="#"> <i class="fa fa-twitter"></i> </a>
+                        <a href="#"> <i class="fa fa-linkedin"></i> </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Fique por dentro das novidades!</h4>
+                    <div class="form-sub">
+                        <form>
+                            <input type="email" placeholder="Digite o seu e-mail" required="">
+                            <button>Cadastrar</button>
+                        </form>
+                    </div>
+                    <br>
+                    <p class="rodape_direitos" style="color: rgb(170, 170, 170);">Copyright ©
+                        2024 – Todos os Direitos Reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/static/lib/bootstrap/js/bootstrap.bundle.js"></script>
+
+</body>
+
+</html>
