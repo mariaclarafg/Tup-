@@ -1,9 +1,9 @@
 {% extends "shared/pages/base.html" %}
-{% block subtitulo %}Cadastro do Artesão{% endblock %}
+{% block subtitulo %}Alterar Data{% endblock %}
 {% block carousel %}
 <nav id="navbar-example2" class="navbar navbar-dark" style="background-color: #0F2B05;">
     <div class="container">
-        <a class="navbar-brand">Minha Conta</a>
+        <a class="navbar-brand">Configurações</a>
     </div>
 </nav>
 {% endblock %}
@@ -43,13 +43,9 @@
                         >
                     </div>
                     <div style="display: flex; justify-content: center; gap: 30px;">
-                        <a
-                            href="/cliente/centroPessoal/perfil"
-                            value="Continuar"
-                            class="small-button-green"
-                            style="background-color: #5c5e5b;"
-                        >Cancelar</a>
-                        <a href="/cliente/centroPessoal/perfil" value="Inicio" class="small-button-green">Salvar</a>
+                        <a href="/usuario/cancelar" value="Continuar" class="small-button-green"
+                            style="background-color: #5c5e5b;">Cancelar</a>
+                            <button type="submit" class="small-button-green">Salvar</button>
                     </div>
                     <br>
                 </div>

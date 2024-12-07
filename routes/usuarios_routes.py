@@ -16,7 +16,7 @@ async def get_root(request: Request):
 
 @router.get("/alterarsenha", response_class=HTMLResponse)
 async def get_root(request: Request):
-    return templates.TemplateResponse("usuarios/Senha.html", {"request": request})
+    return templates.TemplateResponse("usuarios/alterarSenha.html", {"request": request})
 
 @router.get("/alterarnome", response_class=HTMLResponse)
 async def get_root(request: Request):
@@ -25,6 +25,11 @@ async def get_root(request: Request):
 @router.get("/alterardata", response_class=HTMLResponse)
 async def get_root(request: Request):
     return templates.TemplateResponse("usuarios/alterarData.html", {"request": request})
+
+@router.get("/alterartelefone", response_class=HTMLResponse)
+async def get_root(request: Request):
+    return templates.TemplateResponse("usuarios/alterarTelefone.html", {"request": request})
+
 
 @router.get("/cancelar", response_class=HTMLResponse)
 async def get_cancelar(request: Request):
